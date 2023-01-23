@@ -9,7 +9,6 @@ import Container from "../../components/ui/Container";
 import PostHeader from "../../components/Post/PostHeader";
 import PostBody from "../../components/Post/PostBody";
 import MoreStories from "../../components/Post/MoreStories";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { i18n } from "../../constants";
 
@@ -28,7 +27,7 @@ export async function getStaticPaths({ locales }) {
   };
 }
 
-export async function getStaticProps({ params, preview = false, locale }) {
+export async function getStaticProps({ params, locale }) {
   const formattedLocale = locale.split("-")[0];
   const graphqlRequest = {
     query: `

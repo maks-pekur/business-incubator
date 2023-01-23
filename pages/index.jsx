@@ -31,9 +31,7 @@ const Home = () => {
   const { locale } = useRouter();
   return (
     <>
-      <Head>
-        
-      </Head>
+      <Head></Head>
       <main>
         <Slider />
         <section className="max-w-7xl m-auto">

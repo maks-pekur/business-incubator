@@ -331,7 +331,7 @@ export const i18n = {
     ru: "Отзывы",
   },
   footer: {
-    pl: "Łączność",
+    pl: "Kontakty",
     en: "Contacts",
     uk: "Контакты",
     ru: "Контакты",

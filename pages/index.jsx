@@ -2,7 +2,6 @@ import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
-import HeadPage from "../components/HeadPage";
 import Consultation from "../components/Consultation";
 import Button from "../components/ui/Button";
 
@@ -10,6 +9,7 @@ import mainImg from "../public/assets/images/home-main.png";
 import arrowRight from "../public/assets/images/arrow-right.png";
 import Slider from "../components/Slider";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const schemas = {
   pl: "/assets/images/Schema-pl.png",
@@ -31,7 +31,12 @@ const Home = () => {
   const { locale } = useRouter();
   return (
     <>
-      <HeadPage />
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="SB16TdykZEn6_pIqcqEj-m73nn2K-7anuDpSTDORYlA"
+        />
+      </Head>
       <main>
         <Slider />
         <section className="max-w-7xl m-auto">

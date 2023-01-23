@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-
+import { motion } from "framer-motion";
 import ListItem from "./ListItem";
 import { group_1, group_2, group_3 } from "../constants";
 
@@ -19,7 +19,12 @@ const ForWhom = () => {
       </h2>
 
       <div className="grid w-full lg:grid-cols-3 md:grid-cols-2 gap-10 md:gap-20 justify-items-center">
-        <div className="flex flex-col items-center md:w-full">
+        <motion.div
+          whileInView={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 0, scale: 0.3 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center md:w-full"
+        >
           <div>
             <Image src={group1} alt="" height={230} />
           </div>
@@ -28,9 +33,14 @@ const ForWhom = () => {
               <ListItem key={title} title={t(`about:${title}`)} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col items-center w-[300px] md:w-full">
+        <motion.div
+          whileInView={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 0, scale: 0.3 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center w-[300px] md:w-full"
+        >
           <div>
             <Image src={group2} alt="" height={230} />
           </div>
@@ -39,9 +49,14 @@ const ForWhom = () => {
               <ListItem key={title} title={t(`about:${title}`)} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col items-center w-[300px] md:w-full">
+        <motion.div
+          whileInView={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 0, scale: 0.3 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center w-[300px] md:w-full"
+        >
           <div>
             <Image src={group3} alt="" height={205} />
           </div>
@@ -50,7 +65,7 @@ const ForWhom = () => {
               <ListItem key={title} title={t(`about:${title}`)} />
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="my-12">
         <h3 className="text-center text-[24px] md:text-[32px]">

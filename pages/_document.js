@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
             content="SB16TdykZEn6_pIqcqEj-m73nn2K-7anuDpSTDORYlA"
           />
         </Head>
-        <body>
+        <body className="overflowX-hidden">
           <Main />
           <NextScript />
         </body>

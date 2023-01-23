@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { motion } from "framer-motion";
 
 import Consultation from "../components/Consultation";
 import Button from "../components/ui/Button";
@@ -73,7 +74,12 @@ const Home = () => {
           </h2>
 
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 md:gap-10 lg:gap-0 justify-items-center lg:text-[150px] text-[90px] px-10 lg:px-0">
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center">
+            <motion.div
+              whileInView={{ x: 0 }}
+              animate={{ x: "-100%" }}
+              transition={{ duration: 0.8 }}
+              className="grid grid-cols-2 md:grid-cols-3 items-center"
+            >
               <div className="text-[#4B8765] font-bold text-center">1</div>
               <div className="font-bold lg:text-[24px] text-[16px] text-left">
                 {t("home:steps.1")}
@@ -81,9 +87,14 @@ const Home = () => {
               <div className="hidden md:block">
                 <Image src={arrowRight} alt="" />
               </div>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center">
+            <motion.div
+              whileInView={{ x: 0 }}
+              animate={{ x: "-100%" }}
+              transition={{ duration: 1 }}
+              className="grid grid-cols-2 md:grid-cols-3 items-center"
+            >
               <div className="text-[#4B8765] font-bold text-center">2</div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.2")}
@@ -91,9 +102,14 @@ const Home = () => {
               <div className="hidden md:block">
                 <Image src={arrowRight} alt="" />
               </div>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center">
+            <motion.div
+              whileInView={{ x: 0 }}
+              animate={{ x: "-100%" }}
+              transition={{ duration: 1.2 }}
+              className="grid grid-cols-2 md:grid-cols-3 items-center"
+            >
               <div className="text-[#4B8765] font-bold text-center">3</div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.3")}
@@ -101,9 +117,14 @@ const Home = () => {
               <div className="hidden md:block xl:hidden">
                 <Image src={arrowRight} alt="" />
               </div>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center">
+            <motion.div
+              whileInView={{ x: 0 }}
+              animate={{ x: "-100%" }}
+              transition={{ duration: 1.4 }}
+              className="grid grid-cols-2 md:grid-cols-3 items-center"
+            >
               <div className="text-[#4B8765] font-bold text-center">4</div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.4")}
@@ -111,9 +132,14 @@ const Home = () => {
               <div className="hidden md:block">
                 <Image src={arrowRight} alt="" />
               </div>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center">
+            <motion.div
+              whileInView={{ x: 0 }}
+              animate={{ x: "-100%" }}
+              transition={{ duration: 1.4 }}
+              className="grid grid-cols-2 md:grid-cols-3 items-center"
+            >
               <div className="text-[#4B8765] font-bold text-center">5</div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.5")}
@@ -121,14 +147,19 @@ const Home = () => {
               <div className="hidden md:block">
                 <Image src={arrowRight} alt="" />
               </div>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center">
+            <motion.div
+              whileInView={{ x: 0 }}
+              animate={{ x: "-100%" }}
+              transition={{ duration: 1.5 }}
+              className="grid grid-cols-2 md:grid-cols-3 items-center"
+            >
               <div className="text-[#4B8765] font-bold text-center">6</div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.6")}
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 

@@ -53,7 +53,7 @@ const index = ({ props }) => {
           </h3>
         </section>
         <ForWhom />
-        <Consultation btnText={"Оставить заявку"} />
+        <Consultation />
       </main>
     </>
   );

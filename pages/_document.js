@@ -7,7 +7,12 @@ export default class MyDocument extends Document {
     const { lanaguage } = this.props.__NEXT_DATA__.query;
     return (
       <Html lang={lanaguage}>
-        <Head />
+        <Head>
+          <meta
+            name="google-site-verification"
+            content="SB16TdykZEn6_pIqcqEj-m73nn2K-7anuDpSTDORYlA"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

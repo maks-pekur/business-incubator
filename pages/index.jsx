@@ -32,10 +32,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <meta
-          name="google-site-verification"
-          content="SB16TdykZEn6_pIqcqEj-m73nn2K-7anuDpSTDORYlA"
-        />
+        
       </Head>
       <main>
         <Slider />

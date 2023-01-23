@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --white: #ffffff;
+  --text-green: #4B8765;
+  --header-green: #CFDED6;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  
+}
+
+.swiper-slide-active {
+  
+}
+
+.activeLink{
+  color: var(--text-green);
+  border-bottom: 2px solid var(--text-green);
+  transition: all 0.3s;
+}
+
+.button{
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25), 0px 16px 40px rgba(33, 33, 33, 0.16);
+  border-radius: 32.5px;
+  padding: 16px 32px;
+  background: linear-gradient(180deg, #CFE9D9 0%, #4B8765 100%);
+  border: 14px solid #FFFFFF;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Z przyjemnością informujemy, że nasz fundusz prężnie się rozwija, podobnie jak kadra. Poszukujemy zmotywowanych profesjonalistów, którzy chcą rozwijać się razem z nami. Zostaw swoją aplikację.",
+  "text_1": "Być może my",
+  "text_2": "szuka",
+  "text_3": "Dokładnie",
+  "text_4": "ty",
+  "resume": {
+    "title": "Aby wysłać CV",
+    "name": "Twoje imię*",
+    "phone": "Numer telefonu*",
+    "message": "Dodatkowe informacje",
+    "email": "E-mail",
+    "position": "Cel kariery",
+    "upload": "Załącz plik",
+    "policy": "Wyrażam zgodę na przetwarzanie danych osobowych",
+    "btn": "Aby wysłać CV"
+  }
+}

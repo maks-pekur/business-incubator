@@ -1,0 +1,72 @@
+{
+  "title": "Познакомься с нашей командой!",
+  "subtitle": "За каждым успешным проектом стоят сильные специалисты. Каждый из нас ежедневно трудиться для того, чтобы твой предпринимательский путь был легким, понятным и безопасным.",
+  "founders": "Оснаватели",
+  "team_1": "Наша",
+  "team_2": "Команда",
+
+  "andrii_name": "Андрей Деркач",
+  "andrii_position": "Основатель",
+  "andrii_phone": "+4899999999",
+  "andrii_mail": "mail@mail.ru",
+
+  "vitaliy_name": "Виталий Сухой",
+  "vitaliy_position": "Основатель",
+  "vitaliy_phone": "+4899999999",
+  "vitaliy_mail": "mail@mail.ru",
+
+  "vlad_name": "Владислав Будейко",
+  "vlad_position": "Основатель",
+  "vlad_phone": "+4899999999",
+  "vlad_mail": "mail@mail.ru",
+
+
+  "kateryna_name": "Катерина Стасюк",
+  "kateryna_position": "Менеджер",
+  "kateryna_phone": "+48799273979",
+  "kateryna_mail": "kstasiuk@fba.ink",
+
+  "ilona_name": "Илона Завальна",
+  "ilona_position": "Координатор",
+  "ilona_phone": "+48736861303",
+  "ilona_mail": "ilona.zavalna@fba.ink",
+
+  "yevgen_name": "Евгений Тесля",
+  "yevgen_position": "Администратор баз данных",
+  "yevgen_phone": "+4899999999",
+  "yevgen_mail": "y.teslia@fba.ink",
+
+  "tetiana_name": "Татьяна Светкина",
+  "tetiana_position": "Специалист по легализации",
+  "tetiana_phone": "+48010635651",
+  "tetiana_mail": "t.s.legal@fba.ink",
+
+  "elena_name": "Елена Золотарь",
+  "elena_position": "Юрист по легализации",
+  "elena_phone": "+48799287518",
+  "elena_mail": "a.z.legal@fba.ink",
+
+  "pavel_name": "Павел Броска",
+  "pavel_position": "Менеджер",
+  "pavel_phone": "+48519717040",
+  "pavel_mail": "european.fba@gmail.com",
+
+  "maksym_name": "Пекур Максим",
+  "maksym_position": "IT специалист",
+  "maksym_phone": "",
+  "maksym_mail": "maxpekur88@gmail.com",
+
+  "yelisaveta_name": "Елизавета Даниленко",
+  "yelisaveta_position": "Графический дизайнер",
+  "yelisaveta_phone": "",
+  "yelisaveta_mail": "eliz.design18@gmail.com",
+
+  "sofiia_name": "София Сизоненко",
+  "sofiia_position": "SMM-специалист",
+  "sofiia_phone": "",
+  "sofiia_mail": "sofiia.socialmedia@gmail.com",
+
+  "text_1": "Ты можешь стать частью нашей команды",
+  "text_2": "Мы создаём условия, в которых тебе будет удобно и спокойно развивать свои проекты и воплощать идеи в жизнь.",
+  "btn": "Карьера"
+} 

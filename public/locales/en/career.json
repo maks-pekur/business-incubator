@@ -1,0 +1,18 @@
+{
+  "title": "We are pleased to announce that our fund is growing rapidly, as is the staff. We are looking for motivated professionals who want to grow with us. Leave your application.",
+  "text_1": "Perhaps we",
+  "text_2": "are looking for",
+  "text_3": "exactly",
+  "text_4": "you",
+  "resume": {
+    "title": "To send a resume",
+    "name": "Your name*",
+    "phone": "Phone number*",
+    "message": "Additional Information",
+    "email": "Email",
+    "position": "Career objective",
+    "upload": "Attach file",
+    "policy": "I agree to the processing of personal data",
+    "btn": "To send a resume"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "slider": {
+    "slide_1": {
+      "text": "Do you have a business idea, but don't know how to implement it? Do you lack tools or is the fear of failure stopping you?",
+      "link": "Join"
+    },
+    "slide_2": {
+      "text_1": "a business incubator that will become the backbone of your business!",
+      "text_2": "We help to conduct legal business without registration of a legal entity in Poland and mandatory contributions to ZUS.",
+      "link": "Join"
+    },
+    "slide_3": {
+      "text_1": "Decided to change the business incubator? The first month of service in the Freedom Business Area is free.",
+      "text_2": "The cost of a full package of services in the Freedom Business Area fund is only",
+      "text_3": "PLN500/MONTH",
+      "link": "To learn more"
+    }
+  },
+  "title": "Foundation",
+  "title_span": "Freedom Business Area",
+  "text_1": "The Freedom Business Area Foundation sees its mission as helping: Digital, IT professionals and freelancers from all over the world run virtual businesses in Poland. The FBA Foundation provides a unique opportunity to test your business ideas in the marketplace.",
+  "text_2": "What will you get",
+  "text_3": "within the fund?",
+  "button_1": "Read more",
+  "text_4": "How",
+  "text_5": "we are working?",
+  "steps": {
+    "1": "Your call or application on the site",
+    "2": "Data processing by managers",
+    "3": "Free consultation",
+    "4": "Online collection of necessary data",
+    "5": "Signing documents online",
+    "6": "Start your activity"
+  }
+}

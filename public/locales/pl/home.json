@@ -1,0 +1,35 @@
+{
+  "slider": {
+    "slide_1": {
+      "text": "Masz pomysł na biznes, ale nie wiesz jak go zrealizować? Brak narzędzi czy strach przed porażką?",
+      "link": "Dołączyć"
+    },
+    "slide_2": {
+      "text_1": "inkubator przedsiębiorczości, który stanie się kręgosłupem Twojego biznesu!",
+      "text_2": "Pomagamy prowadzić legalną działalność gospodarczą bez rejestracji osoby prawnej w Polsce i obowiązkowych składek do ZUS.",
+      "link": "Dołączyć"
+    },
+    "slide_3": {
+      "text_1": "Zdecydowałeś się na zmianę inkubatora przedsiębiorczości? Pierwszy miesiąc pracy w Freedom Business Area jest bezpłatny.",
+      "text_2": "Koszt pełnego pakietu usług w funduszu Freedom Business Area to tylko",
+      "text_3": "500zł/MIESIĄC",
+      "link": "Uczyć się więcej"
+    }
+  },
+  "title": "Fundacja",
+  "title_span": "Freedom Business Area",
+  "text_1": "Fundacja Freedom Business Area swoją misję widzi w pomaganiu: specjalistom Digital, IT i freelancerom z całego świata w prowadzeniu wirtualnych biznesów w Polsce. Fundacja FBA zapewnia wyjątkową okazję do przetestowania pomysłów biznesowych na rynku.",
+  "text_2": "Co dostaniesz",
+  "text_3": "w ramach funduszu?",
+  "button_1": "Czytaj więcej",
+  "text_4": "Jak",
+  "text_5": "pracujemy?",
+  "steps": {
+    "1": "Twoje wezwanie lub aplikacja na stronie",
+    "2": "Przetwarzanie danych przez menedżerów",
+    "3": "Darmowa konsultacja",
+    "4": "Zbieranie niezbędnych danych online",
+    "5": "Podpisywanie dokumentów online",
+    "6": "Rozpocznij swoją działalność"
+  }
+}

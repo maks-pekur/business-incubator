@@ -1,0 +1,51 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@datocms/cma-client": "^1.1.22",
+    "@datocms/cma-client-node": "^1.1.22",
+    "@next/font": "13.1.0",
+    "@react-spring/parallax": "^9.6.1",
+    "@react-spring/web": "^9.6.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "classnames": "^2.3.2",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.1.0",
+    "flag-icons": "^6.6.6",
+    "formik": "^2.2.9",
+    "framer-motion": "^8.2.4",
+    "hamburger-react": "^2.5.0",
+    "next": "13.1.0",
+    "next-language-detector": "^1.0.2",
+    "nodemailer": "^6.9.0",
+    "react": "18.2.0",
+    "react-datocms": "^4.0.8",
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.1.4",
+    "remixicon": "^2.5.0",
+    "swiper": "^8.4.5",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tiny-json-http": "^7.4.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "next-i18next": "^13.0.3",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next-i18next.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

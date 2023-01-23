@@ -1,0 +1,12 @@
+{
+  "title": "Blog",
+  "filters": {
+    "all": "All",
+    "legalization": "Legalization",
+    "marketing": "Marketing",
+    "it": "IT"
+  },
+  "posts": {
+    "btn": "More"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "title": "The cost of a full package of services in the Freedom Business Area fund is only:",
+  "price": "PLN 500/MONTH",
+  "text_1": "Which, compared to starting and running your own business, is a more profitable solution.",
+  "text_2": "Full responsibility",
+  "text_3": "for business implementation",
+  "text_4": "carries the FBA fund, not you",
+  "text_5": ". This means only one thing: You do not need to be afraid of inspections by the tax office, the migration police and other state authorities. organs.",
+  "text_6": "Additional services",
+  "text_7": "specialists",
+  "dop": {
+    "1": "Credit Broker",
+    "2": "Tax consultant",
+    "3": "Sworn translator"
+  },
+  "title_2": "Business incubator",
+  "title_3": "in numbers",
+  "text_8": "Why pay more when you can pay less. The choice is always yours.",
+  "text_9": "And now more about",
+  "text_10": "what do you get by joining",
+  "text_11": "to the fund:",
+  "service_cards": {
+    "card_1": {
+      "title": "Relocation to Poland for DIGITAL, IT specialists and freelancers",
+      "text": "We also deal with legalization in Poland and will be happy to help you resolve any issue related to legal stay in the Republic of Poland.",
+      "description": "We provide all the necessary documents for obtaining a PBH visa and give the opportunity to move to Poland with your family. Through the virtual company created by us, you will be able to work with local and international clients directly, via platforms or B2B. Also, our fund provides the opportunity to issue one general invoice for a company instead of separate invoices for payment from each client."
+    },
+    "card_2": {
+      "title": "Use of the legal entity of the Fund:",
+      "description": "You have the opportunity to officially conduct a business without having to register it with the administrative authorities and make payments to the Social Insurance Fund (ZUS)."
+    },
+    "card_3": {
+      "title": "Lawyer consulting:",
+      "description": "Our fund will be engaged in the full calculation of accounting and financial documentation."
+    },
+    "card_4": {
+      "title": "Accounting and tax services:",
+      "description": "You will also get access to a bank sub-account in PLN and USD for the financial transactions of your company."
+    },
+    "card_5": {
+      "title": "Bank account:",
+      "description": "Each beneficiary gets access to a personal account in the CPM system. This system will give you the opportunity to issue invoices and create all the necessary documentation for the withdrawal of funds from a sub-account."
+    },
+    "card_6": {
+      "title": "Access to the CRM system:",
+      "description": "Each beneficiary gets access to a personal account in the CRM system. This system will give you the opportunity to issue invoices and create all the necessary documentation for the withdrawal of funds from a sub-account."
+    },
+    "card_7": {
+      "title": "Document archiving:",
+      "description": "Concerning the conduct of Your business: Creation and verification of contracts and other documents concluded between You and clients."
+    },
+    "card_8": {
+      "title": "Manager's mentoring",
+      "description": "All current issues you can consult online with your manager. You will not need to write emails and wait for answers for 24 hours, we work quickly and in a format convenient for you."
+    }
+  },
+  "vs_text_1": "WITHOUT US",
+  "vs_text_2": "WITH US",
+  "vsList_1": {
+    "1": "at least a month",
+    "2": "12% or 19%",
+    "3": "670-1753 PLN",
+    "4": "400 PLN",
+    "5": "600 PLN",
+    "6": "250 PLN",
+    "7": "400 PLN",
+    "8": "250 PLN"
+  },
+  "vsList_2": {
+    "1": "Self-registration of a company",
+    "2": "Income tax",
+    "3": "Contribution to social insurance",
+    "4": "Office rent",
+    "5": "Accounting consultation",
+    "6": "Legal services",
+    "7": "Web site",
+    "8": "Marketing consulting"
+  },
+  "vsList_3": {
+    "1": "With us 30 minutes",
+    "2": "With us 6% or 9.5%",
+    "3": "With us = 0 PLN",
+    "4": "With us = 0 PLN",
+    "5": "With us = 0 PLN",
+    "6": "With us = 0 PLN",
+    "7": "With us = 0 PLN",
+    "8": "With us = 0 PLN"
+  }
+}

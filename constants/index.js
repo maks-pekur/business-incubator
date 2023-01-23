@@ -106,11 +106,13 @@ import pavel from "../public/assets/images/Pavel_Semchuk.png";
 import maksym from "../public/assets/images/Maksym_Pekur.png";
 import yelisaveta from "../public/assets/images/Yelizaveta_Danilenka.png";
 import sofiia from "../public/assets/images/Sofiia_Syzonenko.png";
+import kateryna from "../public/assets/images/kateryna.png";
+import ilona from "../public/assets/images/ilona.png";
 
 export const personal = [
   {
     id: "01",
-    img: "",
+    img: kateryna,
     name: "kateryna_name",
     position: "kateryna_position",
     mail: "kateryna_mail",
@@ -118,7 +120,7 @@ export const personal = [
   },
   {
     id: "02",
-    img: "",
+    img: ilona,
     name: "ilona_name",
     position: "ilona_position",
     mail: "ilona_mail",

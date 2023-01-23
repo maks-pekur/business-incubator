@@ -7,9 +7,16 @@ import Consultation from "../components/Consultation";
 import Button from "../components/ui/Button";
 
 import mainImg from "../public/assets/images/home-main.png";
-import schemaImg from "../public/assets/images/schema.png";
 import arrowRight from "../public/assets/images/arrow-right.png";
 import Slider from "../components/Slider";
+import { useRouter } from "next/router";
+
+const schemas = {
+  pl: "/assets/images/Schema-pl.png",
+  en: "/assets/images/Schema-en.png",
+  uk: "/assets/images/Schema-uk.png",
+  ru: "/assets/images/Schema-ru.png",
+};
 
 export async function getStaticProps({ locale }) {
   return {
@@ -21,6 +28,7 @@ export async function getStaticProps({ locale }) {
 
 const Home = () => {
   const { t } = useTranslation();
+  const { locale } = useRouter();
   return (
     <>
       <HeadPage />
@@ -50,7 +58,7 @@ const Home = () => {
               {}
             </h2>
             <div className="max-w-[80%]">
-              <Image src={schemaImg} alt="" width={1000} height={1000} />
+              <Image src={schemas[locale]} alt="" width={1000} height={1000} />
             </div>
             <Button title={t("home:button_1")} />
           </div>

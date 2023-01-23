@@ -2,7 +2,7 @@ export const navLinks = [
   {
     id: "01",
     title: {
-      pl: "Dom",
+      pl: "Główna",
       en: "Home",
       uk: "Головна",
       ru: "Главная",
@@ -32,7 +32,7 @@ export const navLinks = [
   {
     id: "04",
     title: {
-      pl: "Komenda",
+      pl: "Zespół",
       en: "Team",
       uk: "Команда",
       ru: "Команда",
@@ -62,7 +62,7 @@ export const navLinks = [
   {
     id: "07",
     title: {
-      pl: "Łączność",
+      pl: "Kontakty",
       en: "Contacts",
       uk: "Контакти",
       ru: "Контакти",
@@ -204,7 +204,7 @@ export const group_3 = [
 export const slider = {
   slide_1: {
     text: {
-      pl: "Masz pomysł na biznes, ale nie wiesz jak go zrealizować? Brak narzędzi czy strach przed porażką?",
+      pl: "Masz pomysł na biznes, ale nie wiesz jak go zrealizować? Powstrzymuje Cię brak narzędzi lub strach przed porażką?",
       en: "Do you have a business idea but don't know how to implement it? Lack of tools or fear of failure?",
       uk: "У тебе є бізнес-ідея, але ти не знаєш, як її реалізувати? Бракує інструментів чи зупиняє страх невдачі?",
       ru: "У тебя есть бизнес-идея, но ты не знаешь как её реализовать? Не хватает инструментов или останавливает страх неудачи?",
@@ -218,14 +218,14 @@ export const slider = {
   },
   slide_2: {
     text_1: {
-      pl: "inkubator przedsiębiorczości, który stanie się kręgosłupem Twojego biznesu!",
-      en: "a business incubator that will become the backbone of your business!",
+      pl: "BUSINESS INKUBATOR, KTÓRY STANIE SIĘ TRZONEM (PODPORĄ?) TWOJEGO BIZNESU!",
+      en: "THE BUSINESS FUNNEL THAT WILL SUPPORT YOUR BUSINESS!",
       uk: "бізнес-інкубатор, який стане опорою твого бізнесу!",
       ru: "бизнес-инкубатор, который станет опорой твоего бизнеса!",
     },
     text_2: {
-      pl: "Pomagamy prowadzić legalną działalność gospodarczą bez rejestracji osoby prawnej w Polsce i obowiązkowych składek do ZUS.",
-      en: "We help to conduct legal business without registration of a legal entity in Poland and mandatory contributions to ZUS.",
+      pl: "Pomagamy w prowadzeniu legalnej działalności gospodarczej bez rejestracji podmiotu prawnego w Polsce i obowiązkowych składek do ZUS.",
+      en: "Without having to register as a legal entity in Poland or make ZUS contributions, we assist in conducting legitimate business.",
       uk: "Ми допомагаємо вести легальний бізнес без реєстрації юридичної особи у Польщі та обов'язкових внесків до ZUS.",
       ru: "Мы помогаем вести легальный бизнес без регистрации юридического лица в Польше и обязательных взносов в ZUS.",
     },
@@ -238,26 +238,26 @@ export const slider = {
   },
   slide_3: {
     text_1: {
-      pl: "Zdecydowałeś się na zmianę inkubatora przedsiębiorczości? Pierwszy miesiąc pracy w Freedom Business Area jest bezpłatny.",
-      en: "Decided to change the business incubator? The first month of service in the Freedom Business Area is free.",
+      pl: "Zdecydowałeś się na zmianę inkubatora przedsiębiorczości? Pierwszy miesiąc w Freedom Business Area jest bezpłatny.",
+      en: "Had changed your mind about the business funnel? The Freedom Business Area provides a free first month of service.",
       uk: "Вирішив поміняти бізнес-інкубатор? Перший місяць обслуговування у Freedom Business Area – безкоштовно.",
       ru: "Решил поменять бизнес-инкубатор? Первый месяц обслуживания в Freedom Business Area - бесплатно.",
     },
     text_2: {
-      pl: "Koszt pełnego pakietu usług w funduszu Freedom Business Area to tylko",
-      en: "The cost of a full package of services in the Freedom Business Area fund is only",
+      pl: "Koszt pełnego pakietu usług w naszej fundacji to tylko",
+      en: "In our fund, a complete set of services only costs",
       uk: "Вартість повного пакету послуг у фонді Freedom Business Area складає лише",
       ru: "Стоимость полного пакета услуг в фонде Freedom Business Area составляет всего лишь",
     },
     text_3: {
-      pl: "500 zł/MIESIĄC",
-      en: "PLN 500/MONTH",
+      pl: "500 ZŁ/MIESIĄC",
+      en: "500PLN/MONTH",
       uk: "500ЗЛ/МІСЯЦЬ",
       ru: "500ЗЛ/МЕСЯЦ",
     },
     link: {
-      pl: "Uczyć się więcej",
-      en: "More",
+      pl: "Dowiedz się więcej",
+      en: "To find out more",
       uk: "Дізнатися більше",
       ru: "Узнать больше",
     },
@@ -280,7 +280,7 @@ export const consultation = {
   text: {
     pl: "Specjaliści naszej firmy odpowiedzą na wszystkie Twoje pytania! Zostaw prośbę, a nasz menedżer skontaktuje się z Tobą.",
     en: "The specialists of our company will answer all your questions! Leave a request and our manager will contact you.",
-    uk: "Фахівці нашої компанії дадуть відповідь на всі питання, що цікавлять! Залишай заявку та наш менеджер зв'яжеться з тобою.",
+    uk: "Фахівці нашої компанії нададуть відповідь на всі питання, що цікавлять! Залишай заявку та наш менеджер зв'яжеться з тобою.",
     ru: "Специалисты нашей компании ответят на все интересующие вопросы! Оставляй заявку и наш менеджер свяжется с тобой.",
   },
   name: {

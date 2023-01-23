@@ -12,7 +12,7 @@ const Header = () => {
           <Logo width={70} variant={"black"} />
           <Link
             href="/"
-            className="text-[22px] border-l-2 border-white items-center pl-4 ml-4 hidden lg:flex"
+            className="text-[22px] border-l-2 border-black items-center pl-4 ml-4 hidden lg:flex"
           >
             Freedom Business Area
           </Link>

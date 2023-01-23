@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { consultation } from "../../constants/";
+import { consultation } from "../../constants";
 
 import { sendContactForm } from "../../lib/api";
 

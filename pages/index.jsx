@@ -3,7 +3,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 
-import Consultation from "../components/Consultation";
 import Button from "../components/ui/Button";
 
 import mainImg from "../public/assets/images/home-main.png";
@@ -11,8 +10,6 @@ import arrowRight from "../public/assets/images/arrow-right.png";
 import Slider from "../components/Slider";
 import { useRouter } from "next/router";
 import Head from "next/head";
-
-import { i18n } from "../lib/i18n";
 
 const schemas = {
   pl: "/assets/images/Schema-pl.png",
@@ -45,7 +42,7 @@ const Home = () => {
           property="og:description"
           content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
         />
-        <meta name="twitter:title" content="Freedom Business Area" />
+        <meta name="twitter:title" content="Freedom Business Area - Home" />
         <meta name="twitter:description" content="None" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Freedom Business Area" />
@@ -74,7 +71,6 @@ const Home = () => {
               <span className="text-[var(--text-green)]">
                 {t("home:text_2")}
               </span>{" "}
-              {}
             </h2>
             <div className="max-w-[80%]">
               <Image src={schemas[locale]} alt="" width={1000} height={1000} />
@@ -180,8 +176,6 @@ const Home = () => {
             </motion.div>
           </div>
         </section>
-
-        <Consultation btnText={"Оставить заявку"} />
       </main>
     </>
   );

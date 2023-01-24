@@ -1,12 +1,11 @@
+import Head from "next/head";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 
 import ForWhom from "../../components/ForWhom";
-import Consultation from "../../components/Consultation";
 import Slider from "../../components/Slider";
 import mainImg from "../../public/assets/images/about-main.png";
-import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -66,7 +65,6 @@ const index = ({ props }) => {
           </h3>
         </section>
         <ForWhom />
-        <Consultation />
       </main>
     </>
   );

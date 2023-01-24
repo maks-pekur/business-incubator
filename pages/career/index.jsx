@@ -2,8 +2,6 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import Resume from "../../components/Resume";
-
 import teamImg from "../../public/assets/images/team.png";
 import Head from "next/head";
 
@@ -54,9 +52,6 @@ const index = ({ props }) => {
             !
           </div>
         </section>
-        <div className="mt-10">
-          <Resume />
-        </div>
       </div>
     </>
   );

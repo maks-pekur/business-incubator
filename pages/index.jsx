@@ -3,20 +3,13 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 
-import Button from "../components/ui/Button";
-
 import mainImg from "../public/assets/images/home-main.png";
 import arrowRight from "../public/assets/images/arrow-right.png";
 import Slider from "../components/Slider";
 import { useRouter } from "next/router";
 import Head from "next/head";
-
-const schemas = {
-  pl: "/assets/images/Schema-pl.png",
-  en: "/assets/images/Schema-en.png",
-  uk: "/assets/images/Schema-uk.png",
-  ru: "/assets/images/Schema-ru.png",
-};
+import Heading from "../components/ui/Heading";
+import Schema from "../components/Schema";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -28,7 +21,6 @@ export async function getStaticProps({ locale }) {
 
 const Home = () => {
   const { t } = useTranslation();
-  const { locale } = useRouter();
   return (
     <>
       <Head>
@@ -51,32 +43,23 @@ const Home = () => {
       <main>
         <Slider />
         <section className="max-w-7xl m-auto">
-          <h2 className="lg:text-[40px] tracking-wide	leading-tight	font-bold uppercase my-10 text-center">
+          <Heading tag={"h1"}>
             {t("home:title")}{" "}
             <span className="text-[var(--text-green)]">
               {t("home:title_span")}
             </span>
-          </h2>
-          <div className="flex flex-col items-center lg:flex-row space-y-8">
-            <div className="lg:w-[65%] md:text-[32px] text-center px-6">
+          </Heading>
+
+          <div className="grid lg:grid-cols-2">
+            <Heading tag={"h3"} classNames={"text-justify"}>
               {t("home:text_1")}
-            </div>
-            <div className="lg:w-[35%]">
-              <Image src={mainImg} alt="" height={470} />
+            </Heading>
+            <div className="flex items-center justify-center">
+              <Image src={mainImg} alt="" height={450} width={450} />
             </div>
           </div>
 
-          <div className="my-10 text-center flex flex-col items-center justify-center space-y-16">
-            <h2 className="lg:text-[40px] tracking-wide	leading-tight	font-bold uppercase">
-              <span className="text-[var(--text-green)]">
-                {t("home:text_2")}
-              </span>{" "}
-            </h2>
-            <div className="max-w-[80%]">
-              <Image src={schemas[locale]} alt="" width={1000} height={1000} />
-            </div>
-            <Button title={t("home:button_1")} />
-          </div>
+          <Schema />
         </section>
 
         <section className="max-w-[1440px] m-auto">

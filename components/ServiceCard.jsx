@@ -28,7 +28,7 @@ const ServiceCard = ({
           </div>
         </div>
         {description && (
-          <div className="bg-[#2C5F40] text-white rounded-[30px] px-6 py-10 absolute bottom-0 top-[93%] hover:top-16 transition-all duration-300 overflow-y-auto">
+          <div className="bg-[#2C5F40] text-white rounded-[30px] px-6 py-10 absolute bottom-2 top-[90%] hover:top-16 transition-all duration-300 overflow-y-auto">
             {description}
             <div className="absolute top-1 left-0 w-full text-center text-gray-200">
               {i18n.service.btn[locale]}

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
-import HeadPage from "../../components/HeadPage";
 
 import ForWhom from "../../components/ForWhom";
 import Consultation from "../../components/Consultation";
 import Slider from "../../components/Slider";
 import mainImg from "../../public/assets/images/about-main.png";
+import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -20,7 +20,20 @@ const index = ({ props }) => {
   const { t } = useTranslation();
   return (
     <>
-      <HeadPage />
+      <Head>
+        <title>Freedom Business Area - About</title>
+        <meta property="og:title" content="Freedom Business Area" />
+        <meta
+          name="description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta
+          property="og:description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta name="twitter:title" content="Freedom Business Area " />
+        <meta name="twitter:description" content="None" />
+      </Head>
       <main>
         <Slider />
         <section className="px-6 pt-10">

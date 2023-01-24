@@ -6,12 +6,12 @@ import { useTranslation } from "next-i18next";
 import Button from "../../components/ui/Button";
 import SocialLinks from "../../components/ui/SocialLinks";
 import Partners from "../../components/Partners";
-import HeadPage from "../../components/HeadPage";
 
 import mail from "../../public/assets/images/icon_mail.png";
 import location from "../../public/assets/images/location.png";
 import phone from "../../public/assets/images/icon_phone.png";
 import insta from "../../public/assets/images/insta.png";
+import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -26,7 +26,20 @@ const index = ({ props }) => {
 
   return (
     <>
-      <HeadPage />
+      <Head>
+        <title>Freedom Business Area - Contact</title>
+        <meta property="og:title" content="Freedom Business Area" />
+        <meta
+          name="description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta
+          property="og:description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta name="twitter:title" content="Freedom Business Area " />
+        <meta name="twitter:description" content="None" />
+      </Head>
       <div>
         <div className="bg-[#CFDED6]">
           <div className="max-w-7xl m-auto pt-10 pb-40 px-4">

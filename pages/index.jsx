@@ -12,6 +12,8 @@ import Slider from "../components/Slider";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
+import { i18n } from "../lib/i18n";
+
 const schemas = {
   pl: "/assets/images/Schema-pl.png",
   en: "/assets/images/Schema-en.png",
@@ -32,7 +34,23 @@ const Home = () => {
   const { locale } = useRouter();
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Freedom Business Area - Home</title>
+        <meta property="og:title" content="Freedom Business Area" />
+        <meta
+          name="description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta
+          property="og:description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta name="twitter:title" content="Freedom Business Area" />
+        <meta name="twitter:description" content="None" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Freedom Business Area" />
+        <meta property="og:title" content="Freedom Business Area" />
+      </Head>
       <main>
         <Slider />
         <section className="max-w-7xl m-auto">

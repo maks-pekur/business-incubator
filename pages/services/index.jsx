@@ -4,7 +4,6 @@ import { useTranslation } from "next-i18next";
 import ServiceCard from "../../components/ServiceCard";
 import VS from "../../components/VS";
 import Reviews from "../../components/Reviews";
-import HeadPage from "../../components/HeadPage";
 import Slider from "../../components/Slider";
 
 import img1 from "../../public/assets/images/service-img-1.png";
@@ -17,6 +16,7 @@ import img7 from "../../public/assets/images/service-img-7.png";
 import img8 from "../../public/assets/images/service-img-8.png";
 import { request } from "../../lib/datocms";
 import { useQuerySubscription } from "react-datocms";
+import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   const formattedLocale = locale.split("-")[0];
@@ -51,7 +51,20 @@ const index = ({ props, subscription }) => {
   const { allComments } = data;
   return (
     <>
-      <HeadPage />
+      <Head>
+        <title>Freedom Business Area - Service</title>
+        <meta property="og:title" content="Freedom Business Area" />
+        <meta
+          name="description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta
+          property="og:description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta name="twitter:title" content="Freedom Business Area " />
+        <meta name="twitter:description" content="None" />
+      </Head>
       <Slider />
       <div className="px-6">
         <section className="flex flex-col items-center py-10">
@@ -68,9 +81,9 @@ const index = ({ props, subscription }) => {
             </div>
           </div>
 
-          <div className="space-y-6 text-center text-[32px] max-w-6xl">
+          <div className="space-y-6 text-center text-[24px] max-w-6xl lg:text-[36px]">
             <span className="font-bold">{t("services:text_2")}</span>{" "}
-            {t("services:text_3")}
+            {t("services:text_3")}{" "}
             <span className="font-bold">{t("services:text_4")}</span>
             {t("services:text_5")}
           </div>

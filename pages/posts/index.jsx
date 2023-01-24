@@ -3,7 +3,6 @@ import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
 import { request } from "../../lib/datocms";
 
-
 import HeroPost from "../../components/Post/HeroPost";
 import MoreStories from "../../components/Post/MoreStories";
 import Container from "../../components/ui/Container";

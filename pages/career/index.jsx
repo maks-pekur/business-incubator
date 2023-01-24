@@ -3,9 +3,9 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Resume from "../../components/Resume";
-import HeadPage from "../../components/HeadPage";
 
 import teamImg from "../../public/assets/images/team.png";
+import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -20,7 +20,20 @@ const index = ({ props }) => {
 
   return (
     <>
-      <HeadPage />
+      <Head>
+        <title>Freedom Business Area - Career</title>
+        <meta
+          name="description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta
+          property="og:description"
+          content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+        />
+        <meta name="twitter:title" content="Freedom Business Area" />
+        <meta name="twitter:description" content="None" />
+        <meta property="og:title" content="Freedom Business Area" />
+      </Head>
       <div>
         <div className="flex items-center justify-center px-4 my-10">
           <Image src={teamImg} alt="" />

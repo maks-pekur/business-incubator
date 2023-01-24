@@ -13,7 +13,7 @@ const ServiceCard = ({
   return (
     <div className="rounded-[30px] border-[1px] border-black relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[30px] rounded-t-[30px] bg-gradient-to-b from-[#2C5F40] to-[#ffffff]"></div>
-      <div className="h-full w-full pt-8 flex flex-col justify-between">
+      <div className="h-full w-full pt-8 flex flex-col justify-between overflow-hidden">
         <div className="text-[24px] lg:text-[32px] font-bold text-center px-2">
           {title}
         </div>
@@ -28,7 +28,7 @@ const ServiceCard = ({
           </div>
         </div>
         {description && (
-          <div className="bg-[#2C5F40] text-white rounded-[30px] px-6 absolute top-[90%] bottom-0 hover:top-16 transition-all duration-300 overflow-y-auto">
+          <div className="bg-[#2C5F40] text-white rounded-[30px] px-6 absolute top-[89%] bottom-0 hover:top-16 transition-all duration-300 overflow-y-auto">
             <div className="w-full text-center text-gray-200 mb-4 mt-2">
               {i18n.service.btn[locale]}
             </div>

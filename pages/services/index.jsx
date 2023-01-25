@@ -24,11 +24,14 @@ export async function getStaticProps({ locale }) {
     query: `
       {
         allComments(locale: ${formattedLocale}) {
-          id
           slug
           text
           user
           date
+          rating
+          picture {
+            url(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100})
+          }
         }
       }
     `,

@@ -65,7 +65,7 @@ export const navLinks = [
       pl: "Kontakty",
       en: "Contacts",
       uk: "Контакти",
-      ru: "Контакти",
+      ru: "Контакты",
     },
     path: "/contact",
   },

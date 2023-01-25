@@ -1,11 +1,10 @@
-import React from "react";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import Person from "../../components/Person";
 
-import teamPhoto from "../../public/assets/images/team.png";
+import teamPhoto from "../../public/assets/images/new-team.png";
 
 import { founders, personal } from "../../constants";
 import Link from "next/link";
@@ -40,7 +39,7 @@ const Team = ({ props }) => {
       <div className="pt-22 px-6">
         <div>
           <div className="my-10 flex items-center justify-center">
-            <Image alt="team" height="400" width="full" src={teamPhoto} />
+            <Image alt="team" height="1000" width="1200" src={teamPhoto} />
           </div>
           <div>
             <h2 className="text-center text-[32px] mb-8">{t("team:title")}</h2>

@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 
-import Button from "./ui/Button";
 import Heading from "./ui/Heading";
 
 const schemas = {
@@ -24,7 +24,9 @@ const Schema = () => {
       <div className="max-w-7xl m-auto px-6">
         <Image src={schemas[locale]} alt="" width={1000} height={1000} />
       </div>
-      <Button title={t("home:button_1")} />
+      <Link href={"/services"} className="button">
+        {t("home:button_1")}
+      </Link>
     </div>
   );
 };

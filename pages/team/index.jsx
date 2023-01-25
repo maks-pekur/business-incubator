@@ -65,10 +65,10 @@ const Team = ({ props }) => {
           </section>
 
           <section>
-            <h2 className="text-center my-10 text-5xl">
+            <Heading tag={"h2"}>
               {t("team:team_1")}{" "}
               <span className="text-green-700">{t("team:team_2")}</span>
-            </h2>
+            </Heading>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
               {personal.map((person) => (
                 <Person
@@ -84,10 +84,8 @@ const Team = ({ props }) => {
           </section>
 
           <div className="text-center space-y-6 mb-10">
-            <h3 className="text-[48px] font-bold">{t("team:text_1")}</h3>
-            <p className="text-[24px] max-w-4xl text-center m-auto">
-              {t("team:text_2")}
-            </p>
+            <Heading tag={"h2"}>{t("team:text_1")} </Heading>
+            <Heading tag={"h3"}>{t("team:text_2")}</Heading>
             <div className="py-10 flex items-center justify-center">
               <Link href="/career" className="button">
                 {t("team:btn")}

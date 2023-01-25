@@ -12,11 +12,11 @@ const Reviews = ({ reviews }) => {
         {i18n.reviews[locale]}
       </h3>
 
-      <div className="flex flex-nowrap overflow-x-scroll overflow-y-hidden w-[90%] snap-x-mandatory scroll-p-6 rounded-xl gap-6 scrollbar-hide">
+      <div className="flex flex-nowrap overflow-x-scroll overflow-y-hidden w-full snap-x-mandatory scroll-p-6 rounded-xl gap-4 scrollbar-hide">
         {reviews.map(({ id, text, user, rating, picture, date }) => (
           <div
             key={id}
-            className="p-6 snap-start flex-none w-[290px] lg:w-[500px] border-2 rounded-2xl shadow-lg"
+            className="p-4 snap-start flex-none w-[300px] lg:w-[450px] border-[1px] rounded-2xl shadow-md"
           >
             <div>
               <div className="flex justify-between">
@@ -30,7 +30,9 @@ const Reviews = ({ reviews }) => {
                     {date}
                   </div>
                 </div>
-                <div className="text-[12px]">{text}</div>
+                <div className="text-[12px] lg:max-h-[150px] max-h-[80px] overflow-y-scroll">
+                  {text}
+                </div>
               </div>
             </div>
           </div>

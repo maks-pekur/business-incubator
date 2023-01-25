@@ -37,7 +37,7 @@ const Navbar = () => {
           >
             X
           </div>
-          <div className="flex flex-col items-center justify-between h-full pb-10 pt-32">
+          <div className="flex flex-col items-center justify-between h-full pb-10 pt-26">
             <ul className="flex flex-col space-y-6 w-full items-center text-[26px]">
               {navLinks.map((link) => (
                 <li key={link.id} onClick={() => setOpen(false)}>

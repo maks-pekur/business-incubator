@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import mainImg from "../public/assets/images/home-main.png";
 import arrowRight from "../public/assets/images/arrow-right.png";
 import Slider from "../components/Slider";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import Heading from "../components/ui/Heading";
 import Schema from "../components/Schema";
@@ -50,7 +49,7 @@ const Home = () => {
             </span>
           </Heading>
 
-          <div className="grid lg:grid-cols-2">
+          <div className="grid lg:grid-cols-2 px-6">
             <Heading tag={"h3"} classNames={"text-justify"}>
               {t("home:text_1")}
             </Heading>

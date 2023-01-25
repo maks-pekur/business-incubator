@@ -8,18 +8,6 @@
   --header-green: #CFDED6;
 }
 
-.swiper {
-  width: 100%;
-}
-
-.swiper-slide {
-  
-}
-
-.swiper-slide-active {
-  
-}
-
 .activeLink{
   color: var(--text-green);
   border-bottom: 2px solid var(--text-green);

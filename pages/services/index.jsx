@@ -1,10 +1,14 @@
+import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { request } from "../../lib/datocms";
+import { useQuerySubscription } from "react-datocms";
 
 import ServiceCard from "../../components/ServiceCard";
 import VS from "../../components/VS";
 import Reviews from "../../components/Reviews";
 import Slider from "../../components/Slider";
+import Heading from "../../components/ui/Heading";
 
 import img1 from "../../public/assets/images/service-img-1.png";
 import img2 from "../../public/assets/images/service-img-2.png";
@@ -14,9 +18,6 @@ import img5 from "../../public/assets/images/service-img-5.png";
 import img6 from "../../public/assets/images/service-img-6.png";
 import img7 from "../../public/assets/images/service-img-7.png";
 import img8 from "../../public/assets/images/service-img-8.png";
-import { request } from "../../lib/datocms";
-import { useQuerySubscription } from "react-datocms";
-import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   const formattedLocale = locale.split("-")[0];
@@ -71,9 +72,7 @@ const index = ({ props, subscription }) => {
       <Slider />
       <div className="px-6">
         <section className="flex flex-col items-center py-10">
-          <h2 className="text-[24px] lg:text-[48px] font-bold text-center">
-            {t("services:title")}
-          </h2>
+          <Heading tag={"h1"}>{t("services:title")}</Heading>
 
           <div className="flex flex-col items-center justify-center space-y-4 shadow-xl w-[80%] p-10 text-[var(--text-green)] shadow-[var(--text-green)] my-10">
             <div className="text-[36px] lg:text-[96px] font-bold text-center">
@@ -84,18 +83,18 @@ const index = ({ props, subscription }) => {
             </div>
           </div>
 
-          <div className="space-y-6 text-center text-[24px] max-w-6xl lg:text-[36px]">
+          <Heading tag={"h3"}>
             <span className="font-bold">{t("services:text_2")}</span>{" "}
             {t("services:text_3")}{" "}
             <span className="font-bold">{t("services:text_4")}</span>
             {t("services:text_5")}
-          </div>
+          </Heading>
 
           <div className="max-w-7xl m-auto my-10">
-            <h2 className="text-[32px] lg:text-[48px] text-center my-20 font-bold">
+            <Heading tag={"h2"}>
               <span className="text-[#4B8765]">{t("services:text_6")}</span>{" "}
               {t("services:text_7")}
-            </h2>
+            </Heading>
             <div className="grid lg:grid-cols-3 gap-10">
               <ServiceCard
                 img="/assets/images/broker.png"
@@ -115,22 +114,22 @@ const index = ({ props, subscription }) => {
             </div>
           </div>
 
-          <h2 className="text-[32px] lg:text-[48px] text-center my-10 font-bold">
+          <Heading tag={"h2"}>
             {t("services:title_2")}
             <span className="text-[#4B8765]"> {t("services:title_3")}</span>
-          </h2>
+          </Heading>
         </section>
 
         <VS />
 
-        <h3 className="text-center my-10">{t("services:text_8")}</h3>
-        <h2 className="text-[24px] lg:text-[48px] text-center max-w-5xl m-auto">
+        <Heading tag={"h3"}>{t("services:text_8")}</Heading>
+        <Heading tag={"h2"}>
           {t("services:text_9")}
           <span className="text-[#4B8765]">{t("services:text_10")}</span>{" "}
           {t("services:text_11")}
-        </h2>
+        </Heading>
 
-        <section className="max-w-6xl m-auto space-y-10 lg:space-y-20 my-10">
+        <section className="max-w-6xl m-auto space-y-10 lg:space-y-20 my-8">
           <ServiceCard
             classNames={"flex-row-reverse items-center w-full flex-col md:flex"}
             img={img1}

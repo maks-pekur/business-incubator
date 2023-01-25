@@ -8,15 +8,16 @@ import { group_1, group_2, group_3 } from "../constants";
 import group1 from "../public/assets/images/Group1.png";
 import group2 from "../public/assets/images/Group3.png";
 import group3 from "../public/assets/images/Group2.png";
+import Heading from "./ui/Heading";
 
 const ForWhom = () => {
   const { t } = useTranslation();
   return (
     <section className="max-w-7xl m-auto px-6">
-      <h2 className="md:text-[48px] my-10 text-center text-[32px]">
+      <Heading tag={"h2"}>
         {t("about:text_10")}{" "}
-        <span className="text-[#4B8765]">{t("about:text_11")}</span>?
-      </h2>
+        <span className="text-[var(--text-green)]">{t("about:text_11")}</span>?
+      </Heading>
 
       <div className="grid w-full lg:grid-cols-3 md:grid-cols-2 gap-10 md:gap-20 justify-items-center">
         <motion.div
@@ -68,9 +69,7 @@ const ForWhom = () => {
         </motion.div>
       </div>
       <div className="my-12">
-        <h3 className="text-center text-[24px] md:text-[32px]">
-          {t("about:text_12")}
-        </h3>
+        <Heading tag={"h3"}>{t("about:text_12")}</Heading>
       </div>
     </section>
   );

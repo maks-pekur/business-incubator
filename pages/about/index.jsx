@@ -3,6 +3,8 @@ import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 
+import Heading from "../../components/ui/Heading";
+
 import ForWhom from "../../components/ForWhom";
 import Slider from "../../components/Slider";
 import mainImg from "../../public/assets/images/about-main.png";
@@ -36,13 +38,13 @@ const index = ({ props }) => {
       <main>
         <Slider />
         <section className="px-6 pt-10">
-          <h2 className="text-[24px] md:text-[48px] mb-4 text-center">
+          <Heading tag={"h1"}>
             {t("about:title_1")}{" "}
             <span className="text-[#4B8765]">{t("about:title_2")}</span>
-          </h2>
+          </Heading>
           <div className="grid lg:grid-cols-3">
             <div className="lg:col-span-2 text-center lg:text-start text-[24px]">
-              <p className="py-10">
+              <p className="py-10 text-justify">
                 {t("about:text")}{" "}
                 <span className="text-[#4B8765]">{t("about:text_2")} </span>
                 {t("about:text_3")}{" "}
@@ -58,12 +60,7 @@ const index = ({ props }) => {
             </div>
           </div>
         </section>
-        {/* <section className="w-full h-[400px] bg-gray-400 my-10"></section> */}
-        <section className="px-6">
-          <h3 className="text-center text-[24px] md:text-[32px]">
-            {t("about:text_9")}
-          </h3>
-        </section>
+        <Heading tag={"h3"}>{t("about:text_9")}</Heading>
         <ForWhom />
       </main>
     </>

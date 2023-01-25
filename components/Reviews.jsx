@@ -3,15 +3,13 @@ import { i18n } from "../constants";
 import StarRating from "./ui/Rating";
 import Avatar from "./ui/Avatar";
 import Google from "./ui/Google";
+import Heading from "./ui/Heading";
 
 const Reviews = ({ reviews }) => {
   const { locale } = useRouter();
   return (
-    <section className="w-full space-y-10 flex flex-col items-center py-14">
-      <h3 className="font-bold text-[24px] lg:text-[48px] pt-10 uppercase">
-        {i18n.reviews[locale]}
-      </h3>
-
+    <section className="w-full space-y-6 flex flex-col items-center py-8">
+      <Heading tag={"h2"}>{i18n.reviews[locale]}</Heading>
       <div className="flex flex-nowrap overflow-x-scroll overflow-y-hidden w-full snap-x-mandatory scroll-p-6 rounded-xl gap-4 scrollbar-hide">
         {reviews.map(({ id, text, user, rating, picture, date }) => (
           <div

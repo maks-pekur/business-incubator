@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import Person from "../../components/Person";
+import Heading from "../../components/ui/Heading";
 
 import teamPhoto from "../../public/assets/images/new-team.png";
 
@@ -42,16 +43,14 @@ const Team = ({ props }) => {
             <Image alt="team" height="1000" width="1200" src={teamPhoto} />
           </div>
           <div>
-            <h2 className="text-center text-[32px] mb-8">{t("team:title")}</h2>
-            <p className="text-center text-[24px] lg:text-[32px]">
-              {t("team:subtitle")}
-            </p>
+            <Heading tag={"h1"}>{t("team:title")}</Heading>
+            <Heading tag={"h3"}>{t("team:subtitle")}</Heading>
           </div>
 
           <section>
-            <h2 className="text-center my-10 text-5xl">
+            <Heading tag={"h2"}>
               <span className="text-green-700">{t("team:founders")}</span>
-            </h2>
+            </Heading>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
               {founders.map((founder) => (
                 <Person

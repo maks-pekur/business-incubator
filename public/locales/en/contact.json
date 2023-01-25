@@ -5,7 +5,7 @@
     "name": "Name*",
     "phone": "Phone*",
     "email": "E-mail",
-    "nik": "Nick in Telegram",
+    "telegram": "Nick in Telegram",
     "btn": "Submit"
   },
   "text_2": "We are in SOC. NETWORKS",

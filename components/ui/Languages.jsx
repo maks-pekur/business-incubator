@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -10,7 +11,6 @@ const flags = {
 };
 
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-import Image from "next/image";
 
 const Languages = ({ classNames }) => {
   const { locale, locales, asPath } = useRouter();

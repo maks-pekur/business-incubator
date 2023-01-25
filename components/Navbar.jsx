@@ -3,30 +3,42 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
 
+import SocialLinks from "./ui/SocialLinks";
 import { navLinks } from "../constants";
-import Languages from "../components/ui/Languages";
+import Image from "next/image";
+
+const flags = {
+  pl: "/assets/images/pl.svg",
+  en: "/assets/images/gb.svg",
+  uk: "/assets/images/ua.svg",
+  ru: "/assets/images/ru.svg",
+};
 
 const Navbar = () => {
-  const { pathname, locale } = useRouter();
+  const { pathname, locale, locales, asPath } = useRouter();
+  const [lang, setLang] = useState(locale);
   const [isOpen, setOpen] = useState(false);
+
+  const handleClick = (locale) => {
+    setLang(locale);
+    setOpen(false);
+  };
+
   return (
     <nav>
       <div className="md:hidden">
         <Hamburger size={22} toggled={isOpen} toggle={setOpen} />
       </div>
       {isOpen && (
-        <div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-[#14532D] flex flex-col items-center">
+        <div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-white">
           <div
-            className="absolute top-8 right-8 text-xl text-white"
+            className="absolute top-6 right-6 text-xl"
             onClick={() => setOpen(false)}
           >
             X
           </div>
-          <div>
-            <div className="pt-20 pb-10 flex items-center justify-center">
-              <Languages classNames={"top-20"} />
-            </div>
-            <ul className="flex flex-col space-y-6 font-bold w-full h-full items-center justify-center text-white text-xl">
+          <div className="flex flex-col items-center justify-between h-full pb-10 pt-32">
+            <ul className="flex flex-col space-y-6 w-full items-center text-[26px]">
               {navLinks.map((link) => (
                 <li key={link.id} onClick={() => setOpen(false)}>
                   <Link
@@ -38,6 +50,34 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            <div>
+              <div className="flex items-center justify-center my-10 space-x-6">
+                {locales.map((l, index) => {
+                  return (
+                    <Link
+                      key={l}
+                      href={asPath}
+                      locale={l}
+                      onClick={() => handleClick(l)}
+                      className={`${
+                        lang === l ? "opacity-40" : ""
+                      } border-[1px] border-black`}
+                    >
+                      <Image src={flags[l]} width={22} height={22} alt="" />
+                    </Link>
+                  );
+                })}
+              </div>
+              <div className="flex flex-col items-center justify-center text-gray-500 text-[18px] space-y-8">
+                <div className="flex flex-col items-center justify-center space-y-2">
+                  <span>Ogrodowa 58, Warszawa, 00-876</span>
+                  <Link href="tel:48737308669">+48 737 308 669</Link>
+                </div>
+                <div>
+                  <SocialLinks fill={"#929292"} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}

@@ -2,8 +2,7 @@ import { useRouter } from "next/router";
 import { i18n } from "../constants";
 import StarRating from "./ui/Rating";
 import Avatar from "./ui/Avatar";
-import Image from "next/image";
-import google from "../public/assets/images/google-logo.png";
+import Google from "./ui/Google";
 
 const Reviews = ({ reviews }) => {
   const { locale } = useRouter();
@@ -22,7 +21,7 @@ const Reviews = ({ reviews }) => {
             <div>
               <div className="flex justify-between">
                 <Avatar picture={picture} name={user} />
-                <Image src={google} width={50} height={50} />
+                <Google />
               </div>
               <div className="pl-12">
                 <div className="flex items-center space-x-3">

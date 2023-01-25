@@ -3,9 +3,10 @@ import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
-import Button from "../../components/ui/Button";
 import SocialLinks from "../../components/ui/SocialLinks";
 import Partners from "../../components/Partners";
+import Heading from "../../components/ui/Heading";
+import ContactForm from "../../components/ui/ContactForm";
 
 import mail from "../../public/assets/images/icon_mail.png";
 import location from "../../public/assets/images/location.png";
@@ -43,12 +44,8 @@ const index = ({ props }) => {
       <div>
         <div className="bg-[#CFDED6]">
           <div className="max-w-7xl m-auto pt-10 pb-40 px-4">
-            <h3 className="text-[48px] font-bold text-center">
-              {t("contact:title")}
-            </h3>
-            <div className="text-[32px] text-center my-10">
-              {t("contact:text_1")}
-            </div>
+            <Heading tag={"h1"}>{t("contact:title")}</Heading>
+            <Heading tag={"h3"}>{t("contact:text_1")}</Heading>
             <div className="grid lg:grid-cols-3 justify-items-center text-[32px] font-bold space-y-8">
               <div className="flex flex-col items-center justify-center space-y-6">
                 <Image src={mail} alt="" />
@@ -69,25 +66,9 @@ const index = ({ props }) => {
         </div>
         <section className="flex items-center justify-center relative">
           <div className="absolute top-0 left-0 right-0 h-[150px] bg-[#CFDED6] -z-10"></div>
-          <form className="lg:w-[50%] w-[90%] py-10 lg:py-20 lg:px-40 px-4 bg-white shadow-2xl flex flex-col items-center space-y-6 -top-[20%] mb-20">
-            <input
-              className="border-[2px] border-black rounded-full py-3 px-8 w-full"
-              placeholder={t("contact:form.name")}
-            />
-            <input
-              className="border-[2px] border-black rounded-full py-3 px-8 w-full"
-              placeholder={t("contact:form.phone")}
-            />
-            <input
-              className="border-[2px] border-black rounded-full py-3 px-8 w-full"
-              placeholder={t("contact:form.email")}
-            />
-            <input
-              className="border-[2px] border-black rounded-full py-3 px-8 w-full"
-              placeholder={t("contact:form.telegram")}
-            />
-            <Button title={t("contact:form.btn")} />
-          </form>
+          <div className="lg:w-[50%] w-[90%] py-10 lg:py-20  px-4 bg-white shadow-2xl flex flex-col items-center space-y-6 -top-[20%] mb-20">
+            <ContactForm />
+          </div>
         </section>
 
         <section>

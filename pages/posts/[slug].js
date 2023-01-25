@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
-
 import { request } from "../../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
 
@@ -9,8 +8,6 @@ import Container from "../../components/ui/Container";
 import PostHeader from "../../components/Post/PostHeader";
 import PostBody from "../../components/Post/PostBody";
 import MoreStories from "../../components/Post/MoreStories";
-import { useRouter } from "next/router";
-import { i18n } from "../../constants";
 
 export async function getStaticPaths({ locales }) {
   const data = await request({ query: `{ allPosts { slug } }` });
@@ -105,7 +102,6 @@ export async function getStaticProps({ params, locale }) {
 }
 
 const Post = ({ subscription }) => {
-  const { locale } = useRouter();
   const {
     data: { post, morePosts },
   } = useQuerySubscription(subscription);

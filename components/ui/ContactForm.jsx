@@ -1,8 +1,9 @@
+import * as Yup from "yup";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Formik } from "formik";
-import * as Yup from "yup";
-import { consultation } from "../../constants";
+
+import { contactForm } from "../../constants";
 
 import { sendContactForm } from "../../lib/api";
 
@@ -29,6 +30,7 @@ const ContactForm = () => {
         name: "",
         email: "",
         phone: "",
+        telegram: "",
       }}
       validationSchema={ValidationSchema}
       onSubmit={async (values) => {
@@ -48,7 +50,7 @@ const ContactForm = () => {
         >
           <input
             className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent lg:w-[60%]"
-            placeholder={consultation.name[locale]}
+            placeholder={contactForm.name[locale]}
             type="text"
             name="name"
             onChange={handleChange}
@@ -58,7 +60,7 @@ const ContactForm = () => {
           {errors.name && touched.name ? <div>{errors.name}</div> : null}
           <input
             className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent lg:w-[60%]"
-            placeholder={consultation.phone[locale]}
+            placeholder={contactForm.phone[locale]}
             type="tel"
             name="phone"
             onChange={handleChange}
@@ -68,7 +70,7 @@ const ContactForm = () => {
           {errors.phone && touched.phone ? <div>{errors.phone}</div> : null}
           <input
             className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent lg:w-[60%]"
-            placeholder={consultation.mail[locale]}
+            placeholder={contactForm.mail[locale]}
             type="email"
             name="email"
             onChange={handleChange}
@@ -76,6 +78,18 @@ const ContactForm = () => {
             required
           />
           {errors.email && touched.email ? <div>{errors.email}</div> : null}
+          <input
+            className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent lg:w-[60%]"
+            placeholder={contactForm.telegram[locale]}
+            type="text"
+            name="telegram"
+            onChange={handleChange}
+            value={values.telegram}
+          />
+          {errors.telegram && touched.telegram ? (
+            <div>{errors.telegram}</div>
+          ) : null}
+
           <div className="w-full flex justify-center items-center">
             <button type="submit" className="button">
               {isLoading ? (
@@ -100,7 +114,7 @@ const ContactForm = () => {
                   ></path>
                 </svg>
               ) : (
-                "Отправить"
+                contactForm.btn[locale]
               )}
             </button>
           </div>

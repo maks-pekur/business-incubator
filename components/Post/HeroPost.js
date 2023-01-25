@@ -1,7 +1,9 @@
-import Date from "../ui/Date";
 import Link from "next/link";
+
+import Date from "../ui/Date";
 import Avatar from "../ui/Avatar";
 import CoverImage from "../ui/CoverImage";
+import Heading from "../ui/Heading";
 
 export default function HeroPost({
   title,
@@ -20,14 +22,12 @@ export default function HeroPost({
           slug={slug}
         />
       </div>
-      <div className="md:grid  md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-xl lg:text-4xl leading-tight">
-            <Link href={`/posts/${slug}`}>{title}</Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <Date dateString={date} />
-          </div>
+      <div className="md:grid  md:gap-x-16 lg:gap-x-4 mb-20 md:mb-28">
+        <Heading tag={"h3"} classNames={"text-start"}>
+          <Link href={`/posts/${slug}`}>{title}</Link>
+        </Heading>
+        <div className="mb-4 md:mb-0 text-lg">
+          <Date dateString={date} />
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>

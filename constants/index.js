@@ -266,7 +266,7 @@ export const slider = {
   },
 };
 
-export const consultation = {
+export const contactForm = {
   title_1: {
     pl: "Bezpłatny",
     en: "Free",
@@ -302,6 +302,18 @@ export const consultation = {
     en: "E-mail",
     uk: "E-mail",
     ru: "E-mail",
+  },
+  telegram: {
+    pl: "Nikname",
+    en: "Nikname",
+    uk: "Ваш нік",
+    ru: "Ваш ник",
+  },
+  btn: {
+    pl: "Wyślij",
+    en: "Send",
+    uk: "Відправити",
+    ru: "Отправить",
   },
 };
 

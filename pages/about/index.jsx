@@ -50,8 +50,8 @@ const index = ({ props }) => {
                 {t("about:text_3")}{" "}
                 <span className="text-[#4B8765]">{t("about:text_4")} </span>
                 {t("about:text_5")}{" "}
-                <span className="text-[#4B8765]">{t("about:text_6")} </span>{" "}
-                <p>{t("about:text_7")}</p>
+                <span className="text-[#4B8765]">{t("about:text_6")} </span>
+                <span>{t("about:text_7")}</span>
                 <p className="mt-8">{t("about:text_8")}</p>
               </p>
             </div>

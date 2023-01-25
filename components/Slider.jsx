@@ -23,7 +23,7 @@ const Slider = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 5000,
+          delay: 8000,
         }}
         className="h-[400px] lg:h-[500px]"
       >

@@ -76,7 +76,9 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="grid grid-cols-2 md:grid-cols-3 items-center"
             >
-              <div className="text-[#4B8765] font-bold text-center">1</div>
+              <div className="text-[#4B8765] font-bold text-center w-full">
+                1
+              </div>
               <div className="font-bold lg:text-[24px] text-[16px] text-left">
                 {t("home:steps.1")}
               </div>
@@ -91,7 +93,9 @@ const Home = () => {
               transition={{ duration: 1 }}
               className="grid grid-cols-2 md:grid-cols-3 items-center"
             >
-              <div className="text-[#4B8765] font-bold text-center">2</div>
+              <div className="text-[#4B8765] font-bold text-center w-full">
+                2
+              </div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.2")}
               </div>
@@ -106,7 +110,9 @@ const Home = () => {
               transition={{ duration: 1.2 }}
               className="grid grid-cols-2 md:grid-cols-3 items-center"
             >
-              <div className="text-[#4B8765] font-bold text-center">3</div>
+              <div className="text-[#4B8765] font-bold text-center w-full">
+                3
+              </div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.3")}
               </div>
@@ -121,7 +127,9 @@ const Home = () => {
               transition={{ duration: 1.4 }}
               className="grid grid-cols-2 md:grid-cols-3 items-center"
             >
-              <div className="text-[#4B8765] font-bold text-center">4</div>
+              <div className="text-[#4B8765] font-bold text-center  w-full">
+                4
+              </div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.4")}
               </div>
@@ -136,7 +144,9 @@ const Home = () => {
               transition={{ duration: 1.4 }}
               className="grid grid-cols-2 md:grid-cols-3 items-center"
             >
-              <div className="text-[#4B8765] font-bold text-center">5</div>
+              <div className="text-[#4B8765] font-bold text-center w-full">
+                5
+              </div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.5")}
               </div>
@@ -151,7 +161,9 @@ const Home = () => {
               transition={{ duration: 1.5 }}
               className="grid grid-cols-2 md:grid-cols-3 items-center"
             >
-              <div className="text-[#4B8765] font-bold text-center">6</div>
+              <div className="text-[#4B8765] font-bold text-center w-full">
+                6
+              </div>
               <div className="font-bold lg:text-[24px] text-[16px]">
                 {t("home:steps.6")}
               </div>

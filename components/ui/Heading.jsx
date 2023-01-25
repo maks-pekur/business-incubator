@@ -1,7 +1,7 @@
 const styles = {
   h1: "text-[26px] lg:text-[40px] tracking-wide	leading-tight	font-bold uppercase my-8 text-center",
-  h2: "lg:text-[36px] tracking-wide	leading-tight	font-bold uppercase my-8",
-  h3: "md:text-[30px] text-center my-8",
+  h2: "text-[24px] lg:text-[36px] tracking-wide	leading-tight	font-bold uppercase my-8",
+  h3: "text-[18px] lg:text-[30px] text-center my-8",
 };
 
 const Heading = ({ children, tag, classNames = "" }) => {

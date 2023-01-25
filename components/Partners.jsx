@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next";
 import Image from "next/image";
-
+import Heading from "../components/ui/Heading";
+import { useTranslation } from "next-i18next";
 const partners = [
   {
     id: "01",

@@ -1,13 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import SocialLinks from "./ui/SocialLinks";
 import Logo from "./ui/Logo";
+import PointIcon from "./ui/PointIcon";
+import PhoneIcon from "./ui/PhoneIcon";
+import MailIcon from "./ui/MailIcon";
 import { i18n } from "../constants";
-import phone from "../public/assets/images/phone.svg";
-import mail from "../public/assets/images/mail.svg";
-import point from "../public/assets/images/point.svg";
-import { useRouter } from "next/router";
 
 const Footer = () => {
   const { locale } = useRouter();
@@ -33,13 +32,13 @@ const Footer = () => {
               {i18n.footer[locale]}
             </h3>
             <div className="flex items-center text-[#929292] space-x-2">
-              <Image src={phone} alt="phone" height={15} />
+              <PhoneIcon width={15} height={15} fill={"#929292"} />
               <Link href="tel:+48737308669" className="text-[17px] ">
                 +48 737 308 669
               </Link>
             </div>
             <div className="flex items-center text-[#929292] space-x-2">
-              <Image src={mail} alt="mail" height={15} />
+              <MailIcon width={15} height={15} fill={"#929292"} />
               <Link
                 href="mailto:manager@mtk-logistics.ru"
                 className="text-[17px] text-[#929292]"
@@ -48,7 +47,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex items-center text-[#929292] space-x-2">
-              <Image src={point} alt="point" height={20} />
+              <PointIcon width={15} height={15} fill={"#929292"} />
               <Link href="" className="text-[17px] text-[#929292]">
                 Ogrodowa 58, <br /> Warszawa, 00-876
               </Link>

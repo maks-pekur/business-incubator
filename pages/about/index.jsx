@@ -87,10 +87,10 @@ const index = ({ props, subscription }) => {
               <Image src={mainImg} alt="" />
             </div>
           </div>
+          <Heading tag={"h3"}>{t("about:text_9")}</Heading>
+          <ForWhom />
+          <Reviews reviews={allComments} />
         </section>
-        <Heading tag={"h3"}>{t("about:text_9")}</Heading>
-        <ForWhom />
-        <Reviews reviews={allComments} />
       </main>
     </>
   );

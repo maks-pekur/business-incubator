@@ -19,7 +19,8 @@ const Schema = () => {
   return (
     <div className="my-8 text-center flex flex-col items-center justify-center space-y-8">
       <Heading tag={"h2"}>
-        <span className="text-[var(--text-green)]">{t("home:text_2")}</span>
+        <span className="text-[var(--text-green)]">{t("home:text_2")} </span>
+        {t("home:text_3")}
       </Heading>
       <div className="max-w-7xl m-auto px-6">
         <Image src={schemas[locale]} alt="" width={1000} height={1000} />

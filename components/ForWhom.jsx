@@ -15,8 +15,8 @@ const ForWhom = () => {
   return (
     <section className="max-w-7xl m-auto px-6">
       <Heading tag={"h2"}>
-        {t("about:text_10")}{" "}
-        <span className="text-[var(--text-green)]">{t("about:text_11")}</span>?
+        <span className="text-[var(--text-green)]">{t("about:text_10")} </span>
+        {t("about:text_11")}
       </Heading>
 
       <div className="grid w-full lg:grid-cols-3 md:grid-cols-2 gap-10 md:gap-20 justify-items-center">

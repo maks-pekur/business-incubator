@@ -1,13 +1,13 @@
 {
-  "title": "The cost of a full package of services in the Freedom Business Area fund is only:",
+  "title": "The cost of a full package of services in the Freedom Business Area fund is only",
   "price": "PLN 500/MONTH",
-  "text_1": "Which, compared to starting and running your own business, is a more profitable solution.",
-  "text_2": "Full responsibility",
-  "text_3": "for business implementation",
-  "text_4": "carries the FBA fund, not you",
-  "text_5": ". This means only one thing: You do not need to be afraid of inspections by the tax office, the migration police and other state authorities. organs.",
-  "text_6": "Additional services",
-  "text_7": "specialists",
+  "text_1": "Which, in comparison to founding and operating your own firm, is a more lucrative choice.",
+  "text_2": "You are not in charge",
+  "text_3": "of running the business",
+  "text_4": "the FBA foundation is.",
+  "text_5": "There is only one thing this can mean: you don't need to be terrified of audits by the tax office, the immigration police, or other government agencies.",
+  "text_6": "Additional specialist",
+  "text_7": "services",
   "dop": {
     "1": "Credit Broker",
     "2": "Tax consultant",
@@ -15,15 +15,44 @@
   },
   "title_2": "Business incubator",
   "title_3": "in numbers",
-  "text_8": "Why pay more when you can pay less. The choice is always yours.",
-  "text_9": "And now more about",
-  "text_10": "what do you get by joining",
-  "text_11": "to the fund:",
+  "text_8": "Why pay more when you can pay less with us. The choice is always yours.",
+  "vs_text_1": "WITHOUT US",
+  "vs_text_2": "WITH US",
+  "vsList_1": {
+    "1": "At least one month",
+    "2": "12% or 19%",
+    "3": "670-1753 PLN",
+    "4": "400 PLN",
+    "5": "600 PLN",
+    "6": "250 PLN",
+    "7": "400 PLN"
+  },
+  "vsList_2": {
+    "1": "Self-registration of a company",
+    "2": "Income tax",
+    "3": "Contribution to social insurance",
+    "4": "Office rent",
+    "5": "Accounting service",
+    "6": "Legal services",
+    "7": "Marketing consulting"
+  },
+  "vsList_3": {
+    "1": "With us 30 minutes",
+    "2": "With us 6% or 9.5%",
+    "3": "With us = 0 PLN",
+    "4": "With us = 0 PLN",
+    "5": "With us = 0 PLN",
+    "6": "With us = 0 PLN",
+    "7": "With us = 0 PLN"
+  },
+  "text_9": "Now let's talk",
+  "text_10": "more about the benefits",
+  "text_11": "of joining the foundation:",
   "service_cards": {
     "card_1": {
       "title": "Relocation to Poland for DIGITAL, IT specialists and freelancers",
-      "text": "We also deal with legalization in Poland and will be happy to help you resolve any issue related to legal stay in the Republic of Poland.",
-      "description": "We provide all the necessary documents for obtaining a PBH visa and give the opportunity to move to Poland with your family. Through the virtual company created by us, you will be able to work with local and international clients directly, via platforms or B2B. Also, our fund provides the opportunity to issue one general invoice for a company instead of separate invoices for payment from each client."
+      "text": "We also deal with legalization in Poland, and we'll be pleased to assist you with any problem relating to your ability to remain in the country legally.",
+      "description": "Zapewniamy wszystkie niezbędne dokumenty do uzyskania wizy PBH i dajemy możliwość przeniesienia się do Polski wraz z rodziną. Poprzez naszą wirtualną firmę będziesz mógł współpracować z klientami lokalnymi i zagranicznymi bezpośrednio lub B2B. Ponadto nasza Fundacja pozwala na wystawienie jednej wspólnej faktury dla firmy, zamiast oddzielnych faktur do zapłaty od każdego klienta."
     },
     "card_2": {
       "title": "Use of the legal entity of the Fund:",
@@ -53,37 +82,5 @@
       "title": "Manager's mentoring",
       "description": "All current issues you can consult online with your manager. You will not need to write emails and wait for answers for 24 hours, we work quickly and in a format convenient for you."
     }
-  },
-  "vs_text_1": "WITHOUT US",
-  "vs_text_2": "WITH US",
-  "vsList_1": {
-    "1": "at least a month",
-    "2": "12% or 19%",
-    "3": "670-1753 PLN",
-    "4": "400 PLN",
-    "5": "600 PLN",
-    "6": "250 PLN",
-    "7": "400 PLN",
-    "8": "250 PLN"
-  },
-  "vsList_2": {
-    "1": "Self-registration of a company",
-    "2": "Income tax",
-    "3": "Contribution to social insurance",
-    "4": "Office rent",
-    "5": "Accounting consultation",
-    "6": "Legal services",
-    "7": "Web site",
-    "8": "Marketing consulting"
-  },
-  "vsList_3": {
-    "1": "With us 30 minutes",
-    "2": "With us 6% or 9.5%",
-    "3": "With us = 0 PLN",
-    "4": "With us = 0 PLN",
-    "5": "With us = 0 PLN",
-    "6": "With us = 0 PLN",
-    "7": "With us = 0 PLN",
-    "8": "With us = 0 PLN"
   }
 }

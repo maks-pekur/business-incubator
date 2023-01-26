@@ -13,7 +13,7 @@ export const navLinks = [
     id: "02",
     title: {
       pl: "O nas",
-      en: "About",
+      en: "About us",
       uk: "Про нас",
       ru: "О нас",
     },
@@ -207,12 +207,12 @@ export const slider = {
   slide_1: {
     text: {
       pl: "Masz pomysł na biznes, ale nie wiesz jak go zrealizować? Powstrzymuje Cię brak narzędzi lub strach przed porażką?",
-      en: "Do you have a business idea but don't know how to implement it? Lack of tools or fear of failure?",
+      en: "Do you have a business concept but are unsure about how to put it into practice? Lack of tools or failure-related fear?",
       uk: "У тебе є бізнес-ідея, але ти не знаєш, як її реалізувати? Бракує інструментів чи зупиняє страх невдачі?",
       ru: "У тебя есть бизнес-идея, но ты не знаешь как её реализовать? Не хватает инструментов или останавливает страх неудачи?",
     },
     link: {
-      pl: "Dołączyć",
+      pl: "Chcę dołączyć",
       en: "Join",
       uk: "Приєднатися",
       ru: "Присоедениться",
@@ -220,7 +220,7 @@ export const slider = {
   },
   slide_2: {
     text_1: {
-      pl: "BUSINESS INKUBATOR, TO NARZĘDZIE, KTÓRE STANIE SIĘ PODPORĄ TWOJEGO BIZNESU!",
+      pl: "THE BUSINESS FUNNEL THAT WILL SUPPORT YOUR BUSINESS!",
       en: "THE BUSINESS FUNNEL THAT WILL SUPPORT YOUR BUSINESS!",
       uk: "бізнес-інкубатор, який стане опорою твого бізнесу!",
       ru: "бизнес-инкубатор, который станет опорой твоего бизнеса!",
@@ -232,7 +232,7 @@ export const slider = {
       ru: "Мы помогаем вести легальный бизнес без регистрации юридического лица в Польше и обязательных взносов в ZUS.",
     },
     link: {
-      pl: "Dołączyć",
+      pl: "Chcę dołączyć",
       en: "Join",
       uk: "Приєднатися",
       ru: "Присоедениться",
@@ -258,7 +258,7 @@ export const slider = {
       ru: "500ЗЛ/МЕСЯЦ",
     },
     link: {
-      pl: "Dowiedz się więcej",
+      pl: "Czytaj więcej",
       en: "To find out more",
       uk: "Дізнатися більше",
       ru: "Узнать больше",

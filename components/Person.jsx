@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 import arrowUp from "../public/assets/images/arrow-up.png";
 
@@ -15,7 +14,7 @@ const Person = ({ img, name, position, mail, phone }) => {
         <div className="absolute top-[80%] left-0 right-0 bottom-0 text-white hover:top-[40%] transition-all duration-500">
           <div className="w-full h-full bg-black opacity-70 z-0"></div>
           <div className="absolute top-0 flex flex-col items-center justify-center w-full">
-            <div className="text-center text-md mt-1">{name}</div>
+            <div className="text-center text-md mt-3">{name}</div>
             <div className="w-full flex items-end justify-center h-8 animate-bounce">
               <Image src={arrowUp} alt="" />
             </div>

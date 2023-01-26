@@ -30,7 +30,7 @@ const ForWhom = () => {
             <Image src={group1} alt="" height={230} />
           </div>
           <div className="w-full my-8 px-6">
-            {group_1.map((title) => (
+            {group_1.map((title, index) => (
               <ListItem key={title} title={t(`about:${title}`)} />
             ))}
           </div>
@@ -46,7 +46,7 @@ const ForWhom = () => {
             <Image src={group2} alt="" height={230} />
           </div>
           <div className="w-full my-8 px-6">
-            {group_2.map((title) => (
+            {group_2.map((title, index) => (
               <ListItem key={title} title={t(`about:${title}`)} />
             ))}
           </div>
@@ -62,7 +62,7 @@ const ForWhom = () => {
             <Image src={group3} alt="" height={205} />
           </div>
           <div className="w-full my-8 px-6">
-            {group_3.map((title) => (
+            {group_3.map((title, index) => (
               <ListItem key={title} title={t(`about:${title}`)} />
             ))}
           </div>

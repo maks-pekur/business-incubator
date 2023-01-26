@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -7,12 +8,11 @@ import SocialLinks from "../../components/ui/SocialLinks";
 import Partners from "../../components/Partners";
 import Heading from "../../components/ui/Heading";
 import ContactForm from "../../components/ui/ContactForm";
+import MailIcon from "../../components/ui/MailIcon";
+import PhoneIcon from "../../components/ui/PhoneIcon";
+import PointIcon from "../../components/ui/PointIcon";
 
-import mail from "../../public/assets/images/icon_mail.png";
-import location from "../../public/assets/images/location.png";
-import phone from "../../public/assets/images/icon_phone.png";
 import insta from "../../public/assets/images/insta.png";
-import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -46,19 +46,24 @@ const index = ({ props }) => {
           <div className="max-w-7xl m-auto pt-10 pb-40 px-4">
             <Heading tag={"h1"}>{t("contact:title")}</Heading>
             <Heading tag={"h3"}>{t("contact:text_1")}</Heading>
-            <div className="grid lg:grid-cols-3 justify-items-center text-[32px] font-bold space-y-8">
+            <div className="grid lg:grid-cols-3 justify-items-center text-[24px] font-bold space-y-8">
               <div className="flex flex-col items-center justify-center space-y-6">
-                <Image src={mail} alt="" />
-                <div className="text-center">office@fba.ink</div>
+                <MailIcon width={50} height={50} fill={"#000"} />
+                <Link href={"mailto:office@fba.ink"} className="text-center">
+                  office@fba.ink
+                </Link>
               </div>
               <div className="flex flex-col items-center justify-center space-y-6">
-                <Image src={location} alt="" />
-                <div className="text-center">
+                <PointIcon width={50} height={50} fill={"#000"} />
+                <Link
+                  href={"https://goo.gl/maps/sUhsAFsmjaRGcGPAA"}
+                  className="text-center"
+                >
                   Ogrodowa 58 <br /> Warszawa, 00-876
-                </div>
+                </Link>
               </div>
               <div className="flex flex-col items-center justify-center space-y-6">
-                <Image src={phone} alt="" />
+                <PhoneIcon width={50} height={50} fill={"#000"} />
                 <Link href="tel:+48737308669">+48 737 308 669</Link>
               </div>
             </div>

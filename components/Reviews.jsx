@@ -19,7 +19,7 @@ const Reviews = ({ reviews }) => {
             <div>
               <div className="flex justify-between">
                 <Avatar picture={picture} name={user} />
-                <Google />
+                <Google width={20} height={20} />
               </div>
               <div className="pl-12">
                 <div className="flex items-center space-x-3">

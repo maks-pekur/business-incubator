@@ -1,13 +1,13 @@
-import React from "react";
-
 const ListItem = ({ title }) => {
   return (
     <div className="w-full text-center relative">
-      <div className="border-l-2 border-black border-dotted h-full py-3 font-bold">
-        {title}
+      <div className="font-bold flex space-x-10 py-4 ml-8">
+        <div className="h-5 w-5 rounded-full bg-[#4B8765]"></div>
+        <div
+          className={`border-[1px] border-black border-dashed absolute left-0 -z-10 ${""}`}
+        ></div>
+        <div>{title}</div>
       </div>
-      <div className="absolute top-0 -left-[7px] h-4 w-4 rounded-full bg-[#4B8765]"></div>
-      <div className="absolute -bottom-4 -left-[7px] h-4 w-4 rounded-full bg-[#4B8765]"></div>
     </div>
   );
 };

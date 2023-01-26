@@ -6,7 +6,7 @@ import Logo from "./ui/Logo";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-10 bg-[#CFDED6]">
+    <header className="sticky top-0 z-50 bg-[#CFDED6]">
       <div className="flex items-center justify-between h-12 lg:h-20 px-6 overflow-hidden">
         <div className="flex items-center">
           <Logo width={70} variant={"black"} />

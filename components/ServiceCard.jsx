@@ -13,8 +13,8 @@ const ServiceCard = ({
   return (
     <div className="rounded-[30px] border-[1px] border-black relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[30px] rounded-t-[30px] bg-gradient-to-b from-[#2C5F40] to-[#ffffff]"></div>
-      <div className="h-full w-full pt-8 flex flex-col justify-between overflow-hidden">
-        <div className="text-[24px] lg:text-[32px] font-bold text-center px-2">
+      <div className="h-full w-full pt-10 flex flex-col justify-between overflow-hidden">
+        <div className="text-[24px] lg:text-[32px] font-bold text-center px-2 mb-3">
           {title}
         </div>
         <div className={`mb-16 ${classNames}`}>

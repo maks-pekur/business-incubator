@@ -18,6 +18,10 @@ import img5 from "../../public/assets/images/service-img-5.png";
 import img6 from "../../public/assets/images/service-img-6.png";
 import img7 from "../../public/assets/images/service-img-7.png";
 import img8 from "../../public/assets/images/service-img-8.png";
+import broker from "../../public/assets/images/broker.png";
+import nalogoviy from "../../public/assets/images/nalogoviy.png";
+import translator from "../../public/assets/images/translator.png";
+import Image from "next/image";
 
 export async function getStaticProps({ locale }) {
   const formattedLocale = locale.split("-")[0];
@@ -91,22 +95,19 @@ const index = ({ props, subscription }) => {
               <span className="text-[#4B8765]">{t("services:text_6")}</span>{" "}
               {t("services:text_7")}
             </Heading>
-            <div className="grid lg:grid-cols-3 gap-10">
-              <ServiceCard
-                img="/assets/images/broker.png"
-                title={t("services:dop.1")}
-                classNames={"flex items-center justify-center"}
-              />
-              <ServiceCard
-                img={"/assets/images/nalogoviy.png"}
-                title={t("services:dop.2")}
-                classNames={"flex items-center justify-center"}
-              />
-              <ServiceCard
-                img={"/assets/images/translator.png"}
-                title={t("services:dop.3")}
-                classNames={"flex items-center justify-center"}
-              />
+            <div className="grid lg:grid-cols-3 lg:gap-10 gap-0">
+              <div className="flex flex-col items-center justify-center space-y-10 shadow-xl p-8 shadow-[var(--text-green)] lg:my-10 rounded-lg">
+                <Heading tag={"span"}>{t("services:dop.1")}</Heading>
+                <Image src={broker} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-10 shadow-xl p-8 shadow-[var(--text-green)] lg:my-10 my-4 rounded-lg">
+                <Heading tag={"span"}>{t("services:dop.2")}</Heading>
+                <Image src={nalogoviy} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-10 shadow-xl p-8 shadow-[var(--text-green)] lg:my-10 rounded-lg">
+                <Heading tag={"span"}>{t("services:dop.3")}</Heading>
+                <Image src={translator} alt="" />
+              </div>
             </div>
           </div>
 

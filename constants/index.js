@@ -215,7 +215,7 @@ export const slider = {
       pl: "Chcę dołączyć",
       en: "Join",
       uk: "Приєднатися",
-      ru: "Присоедениться",
+      ru: "Присоединиться",
     },
   },
   slide_2: {
@@ -235,7 +235,7 @@ export const slider = {
       pl: "Chcę dołączyć",
       en: "Join",
       uk: "Приєднатися",
-      ru: "Присоедениться",
+      ru: "Присоединиться",
     },
   },
   slide_3: {

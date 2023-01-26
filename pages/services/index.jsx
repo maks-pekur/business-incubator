@@ -96,15 +96,15 @@ const index = ({ props, subscription }) => {
               {t("services:text_7")}
             </Heading>
             <div className="grid lg:grid-cols-3 lg:gap-10 gap-0">
-              <div className="flex flex-col items-center justify-center space-y-10 shadow-xl p-8 shadow-[var(--text-green)] lg:my-10 rounded-lg">
+              <div className="flex flex-col items-center justify-center space-y-10 shadow-lg p-8 shadow-[var(--text-green)] lg:my-10 rounded-lg">
                 <Heading tag={"span"}>{t("services:dop.1")}</Heading>
                 <Image src={broker} alt="" />
               </div>
-              <div className="flex flex-col items-center justify-center space-y-10 shadow-xl p-8 shadow-[var(--text-green)] lg:my-10 my-4 rounded-lg">
+              <div className="flex flex-col items-center justify-center space-y-10 shadow-lg p-8 shadow-[var(--text-green)] lg:my-10 my-4 rounded-lg">
                 <Heading tag={"span"}>{t("services:dop.2")}</Heading>
                 <Image src={nalogoviy} alt="" />
               </div>
-              <div className="flex flex-col items-center justify-center space-y-10 shadow-xl p-8 shadow-[var(--text-green)] lg:my-10 rounded-lg">
+              <div className="flex flex-col items-center justify-center space-y-10 shadow-lg p-8 shadow-[var(--text-green)] lg:my-10 rounded-lg">
                 <Heading tag={"span"}>{t("services:dop.3")}</Heading>
                 <Image src={translator} alt="" />
               </div>

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
 
 import SocialLinks from "./ui/SocialLinks";
 import { navLinks } from "../constants";
-import Image from "next/image";
 
 const flags = {
   pl: "/assets/images/pl.svg",
@@ -37,7 +37,7 @@ const Navbar = () => {
           >
             X
           </div>
-          <div className="flex flex-col items-center justify-between h-full pb-10 pt-26">
+          <div className="flex flex-col items-center justify-between h-full py-24">
             <ul className="flex flex-col space-y-6 w-full items-center text-[26px]">
               {navLinks.map((link) => (
                 <li key={link.id} onClick={() => setOpen(false)}>
@@ -70,7 +70,9 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col items-center justify-center text-gray-500 text-[18px] space-y-8">
                 <div className="flex flex-col items-center justify-center space-y-2">
-                  <span>Ogrodowa 58, Warszawa, 00-876</span>
+                  <Link href={"https://goo.gl/maps/sUhsAFsmjaRGcGPAA"}>
+                    Ogrodowa 58, Warszawa, 00-876
+                  </Link>
                   <Link href="tel:48737308669">+48 737 308 669</Link>
                 </div>
                 <div>

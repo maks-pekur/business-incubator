@@ -70,24 +70,31 @@ const index = ({ props, subscription }) => {
             {t("about:title_1")}{" "}
             <span className="text-[#4B8765]">{t("about:title_2")}</span>
           </Heading>
-          <div className="grid lg:grid-cols-3">
-            <div className="lg:col-span-2 text-center lg:text-start text-[24px]">
-              <p className="py-10 text-justify">
-                {t("about:text")}{" "}
-                <span className="text-[#4B8765]">{t("about:text_2")} </span>
-                {t("about:text_3")}{" "}
-                <span className="text-[#4B8765]">{t("about:text_4")} </span>
-                {t("about:text_5")}{" "}
-                <span className="text-[#4B8765]">{t("about:text_6")} </span>
-                <span>{t("about:text_7")}</span>
-                <p className="mt-8">{t("about:text_8")}</p>
-              </p>
+          <div className="text-[18px] lg:text-[30px] grid lg:grid-cols-3 items-center">
+            <div className="text-justify lg:col-span-2 space-y-4">
+              {t("about:text")}{" "}
+              <span className="text-[#4B8765]">{t("about:text_2")} </span>
+              {t("about:text_3")}{" "}
+              <span className="text-[#4B8765]">{t("about:text_4")} </span>
+              {t("about:text_5")}{" "}
+              <span className="text-[#4B8765]">{t("about:text_6")} </span>
+              <span>{t("about:text_7")}</span>
+              <div className="text-justify hidden md:block">
+                {t("about:text_8")}
+              </div>
             </div>
-            <div className="flex items-center justify-center">
-              <Image src={mainImg} alt="" />
+            <div>
+              <div className="flex items-center justify-center mb-2">
+                <Image src={mainImg} alt="" />
+              </div>
+              <div className="text-justify col-span-2 md:hidden">
+                {t("about:text_8")}
+              </div>
             </div>
           </div>
-          <Heading tag={"h3"}>{t("about:text_9")}</Heading>
+          <Heading tag={"h3"} classNames={"text-justify"}>
+            {t("about:text_9")}
+          </Heading>
           <ForWhom />
           <Reviews reviews={allComments} />
         </section>

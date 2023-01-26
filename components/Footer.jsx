@@ -48,7 +48,10 @@ const Footer = () => {
             </div>
             <div className="flex items-center text-[#929292] space-x-2">
               <PointIcon width={15} height={15} fill={"#929292"} />
-              <Link href="" className="text-[17px] text-[#929292]">
+              <Link
+                href="https://goo.gl/maps/sUhsAFsmjaRGcGPAA"
+                className="text-[17px] text-[#929292]"
+              >
                 Ogrodowa 58, <br /> Warszawa, 00-876
               </Link>
             </div>

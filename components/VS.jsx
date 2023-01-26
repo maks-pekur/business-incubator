@@ -19,17 +19,24 @@ const VS = () => {
         <div>{t("services:vs_text_2")}</div>
       </div>
 
-      <div className="grid gap-10 lg:grid-cols-3 lg:gap-20">
+      <div className="grid lg:grid-cols-3 gap-6">
         <BlockList
           name={"vsList_1"}
           img={img1}
-          className={"bg-gradient-to-r from-[#D8D8D8] to-[#979899] font-bold"}
+          className={
+            "bg-gradient-to-r from-[#D8D8D8] to-[#979899] font-bold p-8"
+          }
         />
-        <BlockList className={"bg-transparent font-bold"} name={"vsList_2"} />
+        <BlockList
+          className={"bg-transparent font-bold min-w-[280px] py-8"}
+          name={"vsList_2"}
+        />
         <BlockList
           img={img2}
           name={"vsList_3"}
-          className={"bg-gradient-to-r from-[#4B8765] to-[#E5EEE9] font-bold"}
+          className={
+            "bg-gradient-to-r from-[#4B8765] to-[#E5EEE9] font-bold p-8"
+          }
         />
       </div>
     </section>

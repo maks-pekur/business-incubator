@@ -1,14 +1,14 @@
 {
   "title": "Skontaktuj się z nami",
-  "text_1": "Chętnie odpowiemy na wszystkie Twoje pytania! Prześlij swoją aplikację, a nasz menedżer skontaktuje się z Tobą.",
+  "text_1": "Chętnie odpowiemy na wszystkie pytania! Prześlij zapytanie, a nasz menadżer skontaktuje się z Tobą.",
   "form": {
     "name": "Twoje imię*",
     "phone": "Numer telefonu*",
-    "email": "E-mail",
-    "telegram": "Nick in Telegram",
+    "email": "Adres e-mail",
+    "telegram": "Nickname w Telegramie",
     "btn": "Prześlij swoją aplikację"
   },
-  "text_2": "Jesteśmy w SOC. SIECI",
-  "partners": "NASI PRZYJACIELE I PARTNERZY:"
+  "text_2": "Jesteśmy w sieciach społecznościowych",
+  "partners": "Nasi przyjaciele i partnerzy:"
 
 }

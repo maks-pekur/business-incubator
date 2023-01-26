@@ -7,18 +7,46 @@ import Heading from "../../components/ui/Heading";
 
 import ForWhom from "../../components/ForWhom";
 import Slider from "../../components/Slider";
+import Reviews from "../../components/Reviews";
+
 import mainImg from "../../public/assets/images/about-main.png";
+import { request } from "../../lib/datocms";
+import { useQuerySubscription } from "react-datocms/use-query-subscription";
 
 export async function getStaticProps({ locale }) {
+  const formattedLocale = locale.split("-")[0];
+  const graphqlRequest = {
+    query: `
+      {
+        allComments(locale: ${formattedLocale}) {
+          slug
+          text
+          user
+          date
+          rating
+          picture {
+            url(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100})
+          }
+        }
+      }
+    `,
+  };
+
   return {
     props: {
+      subscription: {
+        enabled: false,
+        initialData: await request(graphqlRequest),
+      },
       ...(await serverSideTranslations(locale, ["about"])),
     },
   };
 }
 
-const index = ({ props }) => {
+const index = ({ props, subscription }) => {
   const { t } = useTranslation();
+  const { data } = useQuerySubscription(subscription);
+  const { allComments } = data;
   return (
     <>
       <Head>
@@ -62,6 +90,7 @@ const index = ({ props }) => {
         </section>
         <Heading tag={"h3"}>{t("about:text_9")}</Heading>
         <ForWhom />
+        <Reviews reviews={allComments} />
       </main>
     </>
   );

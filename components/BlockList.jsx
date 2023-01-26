@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
-const list = ["1", "2", "3", "4", "5", "6", "7", "8"];
+const list = ["1", "2", "3", "4", "5", "6", "7"];
 
 const BlockList = ({ className, name = "", img }) => {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ const BlockList = ({ className, name = "", img }) => {
       <div className="flex items-center justify-center">
         {img && <Image src={img} alt="" />}
       </div>
-      <div className={`p-8 rounded-xl ${className}`}>
+      <div className={`rounded-xl ${className}`}>
         <ul className="flex flex-col items-center space-y-8 text-center">
           {list.map((item) => (
             <li key={item}>{t(`services:${name}.${item}`)}</li>

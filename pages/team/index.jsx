@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -8,8 +10,6 @@ import Heading from "../../components/ui/Heading";
 import teamPhoto from "../../public/assets/images/new-team.png";
 
 import { founders, personal } from "../../constants";
-import Link from "next/link";
-import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {

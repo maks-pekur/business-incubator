@@ -220,7 +220,7 @@ export const slider = {
   },
   slide_2: {
     text_1: {
-      pl: "BUSINESS INKUBATOR, KTÓRY STANIE SIĘ TRZONEM (PODPORĄ?) TWOJEGO BIZNESU!",
+      pl: "BUSINESS INKUBATOR, TO NARZĘDZIE, KTÓRE STANIE SIĘ PODPORĄ TWOJEGO BIZNESU!",
       en: "THE BUSINESS FUNNEL THAT WILL SUPPORT YOUR BUSINESS!",
       uk: "бізнес-інкубатор, який стане опорою твого бізнесу!",
       ru: "бизнес-инкубатор, который станет опорой твоего бизнеса!",
@@ -252,7 +252,7 @@ export const slider = {
       ru: "Стоимость полного пакета услуг в фонде Freedom Business Area составляет всего лишь",
     },
     text_3: {
-      pl: "500 ZŁ/MIESIĄC",
+      pl: "500ZŁ/MIESIĄC",
       en: "500PLN/MONTH",
       uk: "500ЗЛ/МІСЯЦЬ",
       ru: "500ЗЛ/МЕСЯЦ",
@@ -339,7 +339,7 @@ export const i18n = {
     },
   },
   reviews: {
-    pl: "Recenzje",
+    pl: "Opinie",
     en: "Reviews",
     uk: "Відгуки",
     ru: "Отзывы",

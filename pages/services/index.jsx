@@ -82,7 +82,7 @@ const index = ({ props, subscription }) => {
           <Heading tag={"h3"}>
             <span className="font-bold">{t("services:text_2")}</span>{" "}
             {t("services:text_3")}{" "}
-            <span className="font-bold">{t("services:text_4")}</span>
+            <span className="font-bold">{t("services:text_4")}</span>{" "}
             {t("services:text_5")}
           </Heading>
 

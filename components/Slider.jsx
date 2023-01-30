@@ -49,7 +49,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide className="h-full rounded-xl lg:rounded-b-[100px] overflow-hidden relative">
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 z-10"></div>
-          <div className="flex items-center justify-start ">
+          <div className="flex items-center justify-start bg-gradient-to-b from-white to-[#4B8765] w-full h-full">
             <Image
               src={"/assets/images/slide-2.png"}
               alt=""

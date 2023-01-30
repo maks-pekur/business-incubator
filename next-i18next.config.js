@@ -3,6 +3,5 @@ module.exports = {
     locales: ["pl", "en", "uk", "ru"],
     defaultLocale: "pl",
     localeDetection: false,
-    // trailingSlash: true,
   },
 };

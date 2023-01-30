@@ -71,6 +71,11 @@ const ForWhom = () => {
       <div className="my-12">
         <Heading tag={"h3"}>{t("about:text_12")}</Heading>
       </div>
+      <div className="my-12">
+        <Heading tag={"h3"} classNames={"text-[var(--text-green)]"}>
+          {t("about:text_13")}
+        </Heading>
+      </div>
     </section>
   );
 };

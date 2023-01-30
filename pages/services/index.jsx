@@ -79,7 +79,9 @@ const index = ({ props, subscription }) => {
           <Heading tag={"h1"}>{t("services:title")}</Heading>
 
           <div className="flex flex-col items-center justify-center space-y-4 shadow-xl w-[80%] p-10 text-[var(--text-green)] shadow-[var(--text-green)] my-10 rounded-lg">
-            <Heading tag={"h2"}>{t("services:price")}</Heading>
+            <Heading tag={"h2"} classNames={"lg:text-[100px]"}>
+              {t("services:price")}
+            </Heading>
             <Heading tag={"h3"}>{t("services:text_1")}</Heading>
           </div>
 
@@ -110,16 +112,15 @@ const index = ({ props, subscription }) => {
               </div>
             </div>
           </div>
-
+        </section>
+        <div>
           <Heading tag={"h2"}>
             {t("services:title_2")}
             <span className="text-[#4B8765]"> {t("services:title_3")}</span>
           </Heading>
-        </section>
+          <VS />
+        </div>
 
-        <VS />
-
-        <Heading tag={"h3"}>{t("services:text_8")}</Heading>
         <Heading tag={"h2"}>
           {t("services:text_9")}
           <span className="text-[#4B8765]">{t("services:text_10")}</span>{" "}

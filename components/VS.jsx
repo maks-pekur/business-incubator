@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 import BlockList from "./BlockList";
+import Heading from "./ui//Heading";
 
 import vs from "../public/assets/images/vs.png";
 import img1 from "../public/assets/images/girl-1.png";
@@ -11,6 +12,13 @@ const VS = () => {
   const { t } = useTranslation();
   return (
     <section className="max-w-6xl m-auto flex flex-col items-center mb-16">
+      <Heading tag={"h3"}>
+        {t("services:vs_text_3")}{" "}
+        <span className="text-[var(--text-green)]">
+          {t("services:vs_text_4")}
+        </span>
+        <p>{t("services:vs_text_5")}</p>
+      </Heading>
       <div className="flex items-center font-bold">
         <div>{t("services:vs_text_1")}</div>
         <div className="mx-4">
@@ -18,7 +26,6 @@ const VS = () => {
         </div>
         <div>{t("services:vs_text_2")}</div>
       </div>
-
       <div className="grid">
         <div className="grid grid-cols-3 lg:gap-6">
           <Image src={img1} alt="" width={300} height={300} />

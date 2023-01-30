@@ -37,7 +37,7 @@ const Partners = () => {
   const { t } = useTranslation();
   return (
     <section className="w-full flex flex-col items-center">
-      <Heading tag={"h3"}>{t("contact:partners")}</Heading>
+      <Heading tag={"h2"}>{t("contact:partners")}</Heading>
       <div className="flex flex-nowrap overflow-x-scroll overflow-y-hidden w-[90%] snap-x-mandatory scroll-p-6 rounded-xl lg:gap-12 scrollbar-hide">
         {partners.map(({ id, image }) => (
           <div key={id} className="p-6 snap-start flex-none items-center flex">

@@ -1,6 +1,8 @@
 {
   "title": "Contact us",
   "text_1": "We will be happy to answer all your questions! Submit your application and our manager will contact you.",
+  "street": "Ogrodowa 58",
+  "warsaw": "Warsaw",
   "form": {
     "name": "Name*",
     "phone": "Phone*",

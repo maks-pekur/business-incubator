@@ -59,7 +59,7 @@ const index = ({ props }) => {
                   href={"https://goo.gl/maps/sUhsAFsmjaRGcGPAA"}
                   className="text-center"
                 >
-                  Ogrodowa 58 <br /> Warszawa, 00-876
+                  {t("contact:street")} <br /> {t("contact:warsaw")}, 00-876
                 </Link>
               </div>
               <div className="flex flex-col items-center justify-center space-y-6">

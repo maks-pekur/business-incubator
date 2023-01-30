@@ -87,7 +87,7 @@ const Team = ({ props }) => {
             <Heading tag={"h2"}>{t("team:text_1")} </Heading>
             <Heading tag={"h3"}>{t("team:text_2")}</Heading>
             <div className="py-10 flex items-center justify-center">
-              <Link href="/career" className="button">
+              <Link href="/career" className="button px-10 py-4">
                 {t("team:btn")}
               </Link>
             </div>

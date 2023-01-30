@@ -18,7 +18,7 @@ const ServiceCard = ({
           {title}
         </div>
         <div className={`mb-16 ${classNames}`}>
-          {img && <Image src={img} alt="img" width={250} height={250} />}
+          {img && <Image src={img} alt="img" width={280} height={280} />}
           <div>
             {text ? (
               <div className="text-[20px] lg:text-[24px] text-center mb-4 px-3">
@@ -28,7 +28,7 @@ const ServiceCard = ({
           </div>
         </div>
         {description && (
-          <div className="bg-[#2C5F40] text-white rounded-[30px] px-6 absolute top-[89%] bottom-0 hover:top-16 transition-all duration-300 overflow-y-auto">
+          <div className="bg-[#2C5F40] text-white rounded-[30px] px-6 absolute top-[89%] bottom-0 hover:top-16 transition-all duration-300 overflow-y-auto text-xl">
             <div className="w-full text-center text-gray-200 mb-4 mt-2">
               {i18n.service.btn[locale]}
             </div>

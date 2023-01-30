@@ -6,7 +6,7 @@ import arrowUp from "../public/assets/images/arrow-up.png";
 const Person = ({ img, name, position, mail, phone }) => {
   return (
     <article className="flex justify-center items-center">
-      <div className="rounded-full bg-gradient-to-t from-[#2C5F40] to-[#D9D9D9] w-[330px] h-[330px] overflow-hidden relative ">
+      <div className="rounded-full bg-gradient-to-t from-[#2C5F40] to-white w-[330px] h-[330px] overflow-hidden relative ">
         <div className="w-full h-full flex items-end justify-center">
           <Image src={img} alt="photo" height={280} />
         </div>

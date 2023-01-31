@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next";
 import Heading from "./ui/Heading";
 
 const schemas = {
-  pl: "/assets/images/Schema-pl.png",
-  en: "/assets/images/Schema-en.png",
-  uk: "/assets/images/Schema-uk.png",
-  ru: "/assets/images/Schema-ru.png",
+  pl: "/assets/images/Schema-pl.svg",
+  en: "/assets/images/Schema-en.svg",
+  uk: "/assets/images/Schema-uk.svg",
+  ru: "/assets/images/Schema-ru.svg",
 };
 
 const Schema = () => {

@@ -9,7 +9,7 @@ import ForWhom from "../../components/ForWhom";
 import Slider from "../../components/Slider";
 import Reviews from "../../components/Reviews";
 
-import mainImg from "../../public/assets/images/about-main.png";
+import mainImg from "../../public/assets/images/about-main.svg";
 import { request } from "../../lib/datocms";
 import { useQuerySubscription } from "react-datocms/use-query-subscription";
 

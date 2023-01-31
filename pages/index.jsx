@@ -3,7 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 
-import mainImg from "../public/assets/images/home-main.png";
+import mainImg from "../public/assets/images/home-main.svg";
 import arrowRight from "../public/assets/images/arrow-right.png";
 import Slider from "../components/Slider";
 import Head from "next/head";

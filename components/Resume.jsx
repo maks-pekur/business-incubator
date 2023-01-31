@@ -2,7 +2,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import Image from "next/image";
 import Button from "./ui/Button";
-import plain from "../public/assets/images/plain.png";
+import plain from "../public/assets/images/plain.svg";
 import uploadImg from "../public/assets/images/upload.png";
 import { useTranslation } from "next-i18next";
 

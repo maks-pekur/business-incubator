@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next";
 import Person from "../../components/Person";
 import Heading from "../../components/ui/Heading";
 
-import teamPhoto from "../../public/assets/images/new-team.png";
+import teamPhoto from "../../public/assets/images/new-team.svg";
 
 import { founders, personal } from "../../constants";
 

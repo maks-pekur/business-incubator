@@ -4,9 +4,9 @@ import { useTranslation } from "next-i18next";
 import BlockList from "./BlockList";
 import Heading from "./ui//Heading";
 
-import vs from "../public/assets/images/vs.png";
-import img1 from "../public/assets/images/girl-1.png";
-import img2 from "../public/assets/images/girl-2.png";
+import vs from "../public/assets/images/vs.svg";
+import img1 from "../public/assets/images/girl-1.svg";
+import img2 from "../public/assets/images/girl-2.svg";
 
 const VS = () => {
   const { t } = useTranslation();

@@ -1,13 +1,12 @@
-import React from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 import ListItem from "./ListItem";
 import { group_1, group_2, group_3 } from "../constants";
 
-import group1 from "../public/assets/images/Group1.png";
-import group2 from "../public/assets/images/Group3.png";
-import group3 from "../public/assets/images/Group2.png";
+import group1 from "../public/assets/images/Group1.svg";
+import group2 from "../public/assets/images/Group3.svg";
+import group3 from "../public/assets/images/Group2.svg";
 import Heading from "./ui/Heading";
 
 const ForWhom = () => {

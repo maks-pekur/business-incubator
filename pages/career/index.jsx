@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import teamImg from "../../public/assets/images/team.png";
+import Resume from "../../components/Resume";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -36,7 +37,7 @@ const index = ({ props }) => {
         <div className="flex items-center justify-center px-4 my-10">
           <Image src={teamImg} alt="" />
         </div>
-        <section className="max-w-7xl m-auto space-y-10">
+        <div className="max-w-7xl m-auto space-y-10">
           <div className="text-[24px] lg:text-[32px] text-center">
             {t("career:title")}{" "}
           </div>
@@ -51,7 +52,8 @@ const index = ({ props }) => {
             </span>
             !
           </div>
-        </section>
+          <Resume />
+        </div>
       </div>
     </>
   );

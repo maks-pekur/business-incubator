@@ -78,10 +78,10 @@ const index = ({ props, subscription }) => {
         <section className="flex flex-col items-center py-10">
           <Heading tag={"h1"}>{t("services:title")}</Heading>
 
-          <div className="flex flex-col items-center justify-center space-y-4 shadow-xl w-[80%] p-10 text-[var(--text-green)] shadow-[var(--text-green)] my-10 rounded-lg">
-            <Heading tag={"h2"} classNames={"lg:text-[100px]"}>
+          <div className="flex flex-col items-center justify-center space-y-4 shadow-xl lg:w-[80%] p-10 text-[var(--text-green)] shadow-[var(--text-green)] my-10 rounded-lg">
+            <div className="text-[50px] text-center lg:text-[100px]">
               {t("services:price")}
-            </Heading>
+            </div>
             <Heading tag={"h3"}>{t("services:text_1")}</Heading>
           </div>
 

@@ -87,13 +87,13 @@ const index = ({ props }) => {
             <Heading tag={"h3"}>{t("contact:text_1")}</Heading>
             <div className="grid lg:grid-cols-3 justify-items-center text-[24px] font-bold space-y-8">
               <div className="flex flex-col items-center justify-center space-y-6">
-                <MailIcon width={40} height={40} />
+                <MailIcon width={35} height={35} />
                 <Link href={"mailto:office@fba.ink"} className="text-center">
                   office@fba.ink
                 </Link>
               </div>
               <div className="flex flex-col items-center justify-center space-y-6">
-                <PointIcon width={40} height={40} />
+                <PointIcon width={35} height={35} />
                 <Link
                   href={"https://goo.gl/maps/sUhsAFsmjaRGcGPAA"}
                   className="text-center"
@@ -102,7 +102,7 @@ const index = ({ props }) => {
                 </Link>
               </div>
               <div className="flex flex-col items-center justify-center space-y-6">
-                <PhoneIcon width={40} height={40} />
+                <PhoneIcon width={35} height={35} />
                 <Link href="tel:+48737308669">+48 737 308 669</Link>
               </div>
             </div>
@@ -121,8 +121,8 @@ const index = ({ props }) => {
           </h3>
           <div className="flex items-center justify-center">
             <SocialLinks
-              width={60}
-              height={60}
+              width={40}
+              height={40}
               className={"my-20"}
               fill={"#a2a2a2"}
             />

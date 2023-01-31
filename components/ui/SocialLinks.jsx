@@ -7,7 +7,7 @@ const SocialLinks = ({
   fill = "none",
 }) => {
   return (
-    <div className={`h-full flex items-end space-x-2 ${className}`}>
+    <div className={`flex items-end space-x-2 ${className}`}>
       <Link href="/">
         <svg
           width={width}

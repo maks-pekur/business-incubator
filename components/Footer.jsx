@@ -3,10 +3,11 @@ import { useRouter } from "next/router";
 
 import SocialLinks from "./ui/SocialLinks";
 import Logo from "./ui/Logo";
-import PointIcon from "./ui/PointIcon";
-import PhoneIcon from "./ui/PhoneIcon";
-import MailIcon from "./ui/MailIcon";
 import { i18n } from "../constants";
+
+import PointIcon from "../components/ui/PointIcon";
+import PhoneIcon from "../components/ui/PhoneIcon";
+import MailIcon from "../components/ui/MailIcon";
 
 const Footer = () => {
   const { locale } = useRouter();
@@ -32,13 +33,13 @@ const Footer = () => {
               {i18n.footer[locale]}
             </h3>
             <div className="flex items-center text-[#929292] space-x-2">
-              <PhoneIcon width={15} height={15} fill={"#929292"} />
+              <PhoneIcon width={15} height={15} fill={""} />
               <Link href="tel:+48737308669" className="text-[17px] ">
                 +48 737 308 669
               </Link>
             </div>
             <div className="flex items-center text-[#929292] space-x-2">
-              <MailIcon width={15} height={15} fill={"#929292"} />
+              <MailIcon width={15} height={15} fill={""} />
               <Link
                 href="mailto:manager@mtk-logistics.ru"
                 className="text-[17px] text-[#929292]"
@@ -47,7 +48,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex items-center text-[#929292] space-x-2">
-              <PointIcon width={15} height={15} fill={"#929292"} />
+              <PointIcon width={15} height={15} fill={""} />
               <Link
                 href="https://goo.gl/maps/sUhsAFsmjaRGcGPAA"
                 className="text-[17px] text-[#929292]"

@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
             content="SB16TdykZEn6_pIqcqEj-m73nn2K-7anuDpSTDORYlA"
           />
         </Head>
-        <body className="overflowX-hidden tracking-tighter leading-tight">
+        <body className="overflow-x-hidden tracking-tighter leading-tight">
           <Main />
           <NextScript />
         </body>

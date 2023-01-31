@@ -5,14 +5,14 @@
   "text_3": "właśnie",
   "text_4": "Ciebie",
   "resume": {
-    "title": "Aby wysłać CV",
+    "title": "Wyślij swoje CV",
     "name": "Twoje imię*",
     "phone": "Numer telefonu*",
-    "message": "Dodatkowe informacje",
+    "message": "Informacje dodatkowe",
     "email": "E-mail",
-    "position": "Cel kariery",
-    "upload": "Załącz plik",
-    "policy": "Wyrażam zgodę na przetwarzanie danych osobowych",
-    "btn": "Aby wysłać CV"
+    "position": "Pożądane stanowisko*",
+    "upload": "Dołączenie pliku",
+    "policy": "Wyrażam zgodę na przetwarzanie moich danych osobowych",
+    "btn": "Wyślij"
   }
 }

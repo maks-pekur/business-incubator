@@ -33,15 +33,15 @@ const index = ({ props }) => {
         <meta name="twitter:description" content="None" />
         <meta property="og:title" content="Freedom Business Area" />
       </Head>
-      <div>
+      <div className="flex flex-col items-center justify-center">
         <div className="flex items-center justify-center px-4 my-10">
           <Image src={teamImg} alt="" />
         </div>
         <div className="max-w-7xl m-auto space-y-10">
-          <div className="text-[24px] lg:text-[32px] text-center">
+          <div className="text-[24px] lg:text-[32px] text-center px-4">
             {t("career:title")}{" "}
           </div>
-          <div className="font-bold text-center lg:text-[48px] text-[24px]">
+          <div className="font-bold text-center lg:text-[48px] text-[24px] pb-8">
             {t("career:text_1")}{" "}
             <span className="text-[var(--text-green)]">
               {t("career:text_2")}{" "}

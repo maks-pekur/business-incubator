@@ -5,14 +5,14 @@
   "text_3": "exactly",
   "text_4": "you",
   "resume": {
-    "title": "To send a resume",
+    "title": "Send CV",
     "name": "Your name*",
     "phone": "Phone number*",
     "message": "Additional Information",
     "email": "Email",
-    "position": "Career objective",
-    "upload": "Attach file",
-    "policy": "I agree to the processing of personal data",
-    "btn": "To send a resume"
+    "position": "Desired position*",
+    "upload": "Submit file",
+    "policy": "The processing of my personal data is acceptable to me",
+    "btn": "Send"
   }
 }

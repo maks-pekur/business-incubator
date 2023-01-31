@@ -33,13 +33,23 @@ const Footer = () => {
               {i18n.footer[locale]}
             </h3>
             <div className="flex items-center text-[#929292] space-x-2">
-              <PhoneIcon width={15} height={15} fill={""} />
+              <PhoneIcon
+                width={15}
+                height={15}
+                fill={"#929292"}
+                stroke={"#929292"}
+              />
               <Link href="tel:+48737308669" className="text-[17px] ">
                 +48 737 308 669
               </Link>
             </div>
             <div className="flex items-center text-[#929292] space-x-2">
-              <MailIcon width={15} height={15} fill={""} />
+              <MailIcon
+                width={15}
+                height={15}
+                fill={"#929292"}
+                stroke={"#929292"}
+              />
               <Link
                 href="mailto:manager@mtk-logistics.ru"
                 className="text-[17px] text-[#929292]"
@@ -48,7 +58,12 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex items-center text-[#929292] space-x-2">
-              <PointIcon width={15} height={15} fill={""} />
+              <PointIcon
+                width={15}
+                height={15}
+                fill={"#929292"}
+                stroke={"#929292"}
+              />
               <Link
                 href="https://goo.gl/maps/sUhsAFsmjaRGcGPAA"
                 className="text-[17px] text-[#929292]"

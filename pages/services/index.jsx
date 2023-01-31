@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -10,18 +11,17 @@ import Reviews from "../../components/Reviews";
 import Slider from "../../components/Slider";
 import Heading from "../../components/ui/Heading";
 
-import img1 from "../../public/assets/images/service-img-1.png";
-import img2 from "../../public/assets/images/service-img-2.png";
-import img3 from "../../public/assets/images/service-img-3.png";
-import img4 from "../../public/assets/images/service-img-4.png";
-import img5 from "../../public/assets/images/service-img-5.png";
-import img6 from "../../public/assets/images/service-img-6.png";
-import img7 from "../../public/assets/images/service-img-7.png";
-import img8 from "../../public/assets/images/service-img-8.png";
-import broker from "../../public/assets/images/broker.png";
-import nalogoviy from "../../public/assets/images/nalogoviy.png";
-import translator from "../../public/assets/images/translator.png";
-import Image from "next/image";
+import img1 from "../../public/assets/images/service-img-1.svg";
+import img2 from "../../public/assets/images/service-img-2.svg";
+import img3 from "../../public/assets/images/service-img-3.svg";
+import img4 from "../../public/assets/images/service-img-4.svg";
+import img5 from "../../public/assets/images/service-img-5.svg";
+import img6 from "../../public/assets/images/service-img-6.svg";
+import img7 from "../../public/assets/images/service-img-7.svg";
+import img8 from "../../public/assets/images/service-img-8.svg";
+import broker from "../../public/assets/images/broker.svg";
+import nalogoviy from "../../public/assets/images/nalogoviy.svg";
+import translator from "../../public/assets/images/translator.svg";
 
 export async function getStaticProps({ locale }) {
   const formattedLocale = locale.split("-")[0];

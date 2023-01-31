@@ -82,7 +82,7 @@ const Slider = () => {
               className="absolute top-0 left-0 right-0 bottom-0"
             />
             <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-10 space-y-6">
-              <div className="text-white text-[20px] lg:text-[48px] lg:w-[80%] text-center space-y-6">
+              <div className="text-white text-[20px] lg:text-[40px] lg:w-[80%] text-center space-y-6">
                 <p className="uppercase">{slider.slide_3.text_1[locale]}</p>
                 <p>{slider.slide_3.text_2[locale]}</p>
                 <p className="text-[#4FDB8C] uppercase font-bold text-[24px] lg:text-[48px]">

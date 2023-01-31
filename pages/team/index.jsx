@@ -84,8 +84,8 @@ const Team = ({ props }) => {
           </section>
 
           <div className="text-center space-y-6 mb-10">
-            <Heading tag={"h2"}>{t("team:text_1")} </Heading>
-            <Heading tag={"h3"}>{t("team:text_2")}</Heading>
+            <Heading tag={"h3"}>{t("team:text_1")} </Heading>
+            <Heading tag={"h4"}>{t("team:text_2")}</Heading>
             <div className="py-10 flex items-center justify-center">
               <Link href="/career" className="button px-10 py-4">
                 {t("team:btn")}

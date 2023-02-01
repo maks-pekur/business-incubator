@@ -7,8 +7,8 @@ const Layout = ({ children }) => {
     <>
       <Header />
       {children}
-      <Feedback />
       <Footer />
+      <Feedback />
     </>
   );
 };

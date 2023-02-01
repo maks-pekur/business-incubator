@@ -73,7 +73,7 @@ const ContactForm = () => {
           required: true,
         })}
       />
-      <div>
+      <div className="lg:w-[400px]">
         <Controller
           control={control}
           name="phone"
@@ -89,7 +89,7 @@ const ContactForm = () => {
               country="pl"
               onlyCountries={["pl", "ua", "ru"]}
               inputStyle={{
-                width: "400px",
+                width: "100%",
                 borderRadius: "9999px",
                 border: "2px solid #4B8765",
                 padding: "22px 48px",

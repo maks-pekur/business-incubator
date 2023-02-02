@@ -1,11 +1,20 @@
 import { Dialog } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
 import ContactForm from "../components/ui/ContactForm";
 import { useModal } from "../contexts/ModalContext";
 import Heading from "./ui/Heading";
 
+const trl = {
+  pl: "Informacje kontaktowe",
+  gb: "Contact information",
+  uk: "Контактна інформація",
+  ru: "Контактная информация",
+};
+
 const Modal = () => {
   const { isOpen, hide } = useModal();
+  const { locale } = useRouter();
 
   return (
     <AnimatePresence>
@@ -27,7 +36,7 @@ const Modal = () => {
               >
                 X
               </div>
-              <Heading tag={"h3"}>Informacje kontaktowe</Heading>
+              <Heading tag={"h3"}>{trl[locale]}</Heading>
               <div className="w-full">
                 <ContactForm />
               </div>

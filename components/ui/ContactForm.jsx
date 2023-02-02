@@ -1,5 +1,3 @@
-import * as yup from "yup";
-import "yup-phone";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Controller, useForm } from "react-hook-form";
@@ -8,15 +6,6 @@ import PhoneInput from "react-phone-input-2";
 import { contactForm } from "../../constants";
 
 import "react-phone-input-2/lib/style.css";
-
-const ValidationSchema = yup.object().shape({
-  name: yup
-    .string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
-  email: yup.string().email("Invalid email").required("Required"),
-});
 
 const ContactForm = () => {
   const { locale } = useRouter();

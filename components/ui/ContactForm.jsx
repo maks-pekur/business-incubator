@@ -21,7 +21,12 @@ const ValidationSchema = yup.object().shape({
 const ContactForm = () => {
   const { locale } = useRouter();
   const [isLoading, setLoading] = useState(false);
-  const { register, handleSubmit, control } = useForm({
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    control,
+  } = useForm({
     mode: "onBlur",
     defaultValues: {
       name: "",
@@ -65,15 +70,23 @@ const ContactForm = () => {
       className="w-full flex flex-col space-y-6 md:items-center"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <input
-        className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent lg:w-[60%]"
-        placeholder={contactForm.name[locale]}
-        type="text"
-        {...register("name", {
-          required: true,
-        })}
-      />
-      <div className="lg:w-[400px]">
+      <div className="w-full">
+        <label for="name" className="sr-only" />
+        <input
+          className={`w-full border-2  py-3 px-6 rounded-full bg-transparent ${
+            errors.name?.type === "required"
+              ? "border-red-400"
+              : "border-[#4B8765]"
+          }`}
+          placeholder={contactForm.name[locale]}
+          type="text"
+          {...register("name", {
+            required: true,
+          })}
+        />
+      </div>
+
+      <div className="w-full">
         <Controller
           control={control}
           name="phone"
@@ -112,23 +125,38 @@ const ContactForm = () => {
           )}
         />
       </div>
-      <input
-        className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent lg:w-[60%]"
-        placeholder={contactForm.mail[locale]}
-        type="email"
-        {...register("email", {
-          required: true,
-        })}
-      />
-      <input
-        className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent lg:w-[60%]"
-        placeholder={contactForm.telegram[locale]}
-        type="text"
-        name="telegram"
-        {...register("telegram", {
-          required: true,
-        })}
-      />
+      <div className="w-full">
+        <label for="email" className="sr-only" />
+        <input
+          className={`w-full border-2  py-3 px-6 rounded-full bg-transparent ${
+            errors.name?.type === "required"
+              ? "border-red-400"
+              : "border-[#4B8765]"
+          }`}
+          placeholder={contactForm.mail[locale]}
+          type="email"
+          {...register("email", {
+            required: true,
+          })}
+        />
+      </div>
+      <div className="w-full">
+        <label for="telegram" className="sr-only" />
+        <input
+          className={`w-full border-2  py-3 px-6 rounded-full bg-transparent ${
+            errors.name?.type === "required"
+              ? "border-red-400"
+              : "border-[#4B8765]"
+          }`}
+          placeholder={contactForm.telegram[locale]}
+          type="text"
+          name="telegram"
+          {...register("telegram", {
+            required: true,
+          })}
+        />
+      </div>
+
       <div className="w-full flex justify-center items-center">
         <button type="submit" className="button">
           {isLoading ? (

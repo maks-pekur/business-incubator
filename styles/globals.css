@@ -36,3 +36,6 @@
   background: linear-gradient(180deg, #CFE9D9 0%, #2d503c 100%);
 }
 
+.swiper {
+  z-index: 0 !important;
+}

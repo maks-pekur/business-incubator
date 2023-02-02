@@ -92,7 +92,7 @@ const ContactForm = () => {
               onlyCountries={["pl", "ua", "ru"]}
               inputStyle={{
                 width: "100%",
-                borderRadius: "9999px",
+                borderRadius: "999px",
                 border: "2px solid #4B8765",
                 padding: "22px 48px",
               }}
@@ -103,7 +103,7 @@ const ContactForm = () => {
                 borderBottom: "2px solid #4B8765",
               }}
               dropdownStyle={{
-                width: "400px",
+                width: "300px",
                 marginTop: "4px",
                 outline: "none",
                 padding: "10px",

@@ -110,7 +110,7 @@ const index = ({ props }) => {
         </div>
         <section className="flex items-center justify-center relative">
           <div className="absolute top-0 left-0 right-0 h-[150px] bg-[#CFDED6] -z-10"></div>
-          <div className="lg:w-[50%] w-[90%] py-10 lg:py-20 lg:px-32  px-4 bg-white shadow-2xl flex flex-col items-center space-y-6 -top-[20%] mb-20">
+          <div className="lg:w-[50%] py-10 lg:py-20 lg:px-32 px-4 bg-white shadow-2xl flex flex-col items-center space-y-6 -top-[20%] mb-20">
             <ContactForm />
           </div>
         </section>

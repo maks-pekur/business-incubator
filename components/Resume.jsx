@@ -4,15 +4,15 @@ import plain from "../public/assets/images/plain.svg";
 import uploadImg from "../public/assets/images/upload.svg";
 import { useTranslation } from "next-i18next";
 
-// initialValues={{
-//   name: "",
-//   email: "",
-//   phone: "+4",
-//   message: "",
-//   position: "",
-//   personalData: false,
-//   file: "",
-// }}
+const initialValues = {
+  name: "",
+  email: "",
+  phone: "+4",
+  message: "",
+  position: "",
+  personalData: false,
+  file: "",
+};
 
 const onSubmit = (values) => {
   console.log(values);
@@ -45,7 +45,7 @@ const Resume = () => {
       <div className="py-10 px-6 lg:px-20">
         <form
           className="grid gap-6 lg:grid-cols-3 lg:gap-20"
-          onSubmit={handleSubmit}
+          onSubmit={onSubmit}
         >
           <div className="flex flex-col items-center space-y-6 w-full">
             <input
@@ -53,21 +53,18 @@ const Resume = () => {
               placeholder={t("career:resume.name")}
               type="text"
               name="name"
-              onChange={() => {}}
             />
             <input
               className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent placeholder:text-gray-800"
               placeholder={t("career:resume.phone")}
               type="tel"
               name="phone"
-              onChange={() => {}}
             />
             <textarea
               className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-[30px] bg-transparent h-40 resize-none placeholder:text-gray-800"
               placeholder={t("career:resume.message")}
               type="text"
               name="message"
-              onChange={() => {}}
             />
           </div>
           <div className="flex flex-col items-center space-y-6 w-full">
@@ -76,14 +73,12 @@ const Resume = () => {
               placeholder={t("career:resume.email")}
               type="email"
               name="email"
-              onChange={() => {}}
             />
             <input
               className="w-full border-2 border-[#4B8765] py-3 px-6 rounded-full bg-transparent  placeholder:text-gray-800"
               placeholder={t("career:resume.position")}
               type="text"
               name="position"
-              onChange={() => {}}
             />
             <div className="flex flex-col space-y-6 items-center w-full justify-center">
               <div className="relative">
@@ -107,7 +102,6 @@ const Resume = () => {
               <div className="flex space-x-2">
                 <input
                   type="checkbox"
-                  onChange={() => {}}
                   name="personalData"
                   className="border-2 border-black placeholder:text-gray-800"
                 />

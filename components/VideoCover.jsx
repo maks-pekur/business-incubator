@@ -20,7 +20,7 @@ const VideoCover = () => {
     if (!videoRef.current) return;
     if (!videoRef.current.duration) return;
 
-    let currentTime = scrollY / videoRef.current.duration;
+    let currentTime = scrollY / (videoRef.current.duration * 30);
 
     if (Number.isFinite(currentTime)) {
       videoRef.current.currentTime = currentTime;
@@ -28,15 +28,11 @@ const VideoCover = () => {
   }, [scrollY]);
 
   return (
-    <video
-      ref={videoRef}
-      controls={false}
-      loop
-      playsInline
-      className="fixed top-0 left-0 right-0"
-    >
-      <source src="/preview.mp4" type="video/mp4" />
-    </video>
+    <div className="w-screen overflow-y-scroll fixed top-0">
+      <video ref={videoRef} controls={false} loop playsInline className="">
+        <source src="/preview.mp4" type="video/mp4" />
+      </video>
+    </div>
   );
 };
 

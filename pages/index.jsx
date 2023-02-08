@@ -51,6 +51,7 @@ const Home = () => {
       <main>
         {/* <Slider /> */}
         <VideoCover />
+        <div className="h-[450vh]"></div>
         <section className="max-w-7xl m-auto">
           <Heading tag={"h1"}>
             {t("home:title")}{" "}

@@ -1,12 +1,21 @@
 import { useRef, useEffect, useCallback, useState } from "react";
 
 const VideoCover = () => {
-  const [scrollY, setScrollY] = useState(0);
+  const [scroll, setScroll] = useState(0);
   const videoRef = useRef(null);
 
-  const onScroll = useCallback((event) => {
-    const { scrollY } = window;
-    setScrollY(window.scrollY);
+  const onScroll = useCallback(() => {
+    let { scrollY } = window;
+    console.log(scrollY / (videoRef.current.duration * 9));
+    setScroll(scrollY);
+    if (!videoRef.current) return;
+    if (!videoRef.current.duration) return;
+
+    let currentTime = scrollY / (videoRef.current.duration * 9);
+
+    if (Number.isFinite(currentTime)) {
+      videoRef.current.currentTime = currentTime;
+    }
   }, []);
 
   useEffect(() => {
@@ -15,17 +24,6 @@ const VideoCover = () => {
       window.removeEventListener("scroll", onScroll, { passive: true });
     };
   }, []);
-
-  useEffect(() => {
-    if (!videoRef.current) return;
-    if (!videoRef.current.duration) return;
-
-    let currentTime = scrollY / (videoRef.current.duration * 30);
-
-    if (Number.isFinite(currentTime)) {
-      videoRef.current.currentTime = currentTime;
-    }
-  }, [scrollY]);
 
   return (
     <div className="w-screen overflow-y-scroll fixed top-0">

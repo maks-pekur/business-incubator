@@ -1,45 +1,42 @@
-import { useRef, useEffect } from "react";
-import { motion, useScroll } from "framer-motion";
+import { useRef, useEffect, useCallback, useState } from "react";
 
 const VideoCover = () => {
+  const [scrollY, setScrollY] = useState(0);
   const videoRef = useRef(null);
-  const { scrollYProgress } = useScroll();
+
+  const onScroll = useCallback((event) => {
+    const { scrollY } = window;
+    setScrollY(window.scrollY);
+  }, []);
 
   useEffect(() => {
-    console.log(scrollYProgress);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll, { passive: true });
+    };
+  }, []);
 
+  useEffect(() => {
     if (!videoRef.current) return;
     if (!videoRef.current.duration) return;
 
-    const currentTime = scrollYProgress * videoRef.current.duration;
+    let currentTime = scrollY / videoRef.current.duration;
+
     if (Number.isFinite(currentTime)) {
       videoRef.current.currentTime = currentTime;
     }
-  }, [scrollYProgress]);
+  }, [scrollY]);
 
   return (
-    <motion.div
-      style={{
-        width: "100%",
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+    <video
+      ref={videoRef}
+      controls={false}
+      loop
+      playsInline
+      className="fixed top-0 left-0 right-0"
     >
-      <motion.video
-        ref={videoRef}
-        style={{
-          objectFit: "cover",
-          width: "100%",
-          height: "100vh",
-        }}
-        controls={false}
-        loop
-        playsInline
-      >
-        <source src="/preview.mp4" type="video/mp4" />
-      </motion.video>
-    </motion.div>
+      <source src="/preview.mp4" type="video/mp4" />
+    </video>
   );
 };
 

@@ -130,7 +130,7 @@ const index = ({ props }) => {
           <div className="max-w-7xl m-auto lg:my-10 px-4 grid grid-cols-2 md:grid-cols-3 gap-4">
             {insta.map(({ id, href, img }) => (
               <Link href={href} key={id}>
-                <Image src={img} width={500} height={500} />
+                <Image src={img} width={500} height={500} alt="" />
               </Link>
             ))}
           </div>

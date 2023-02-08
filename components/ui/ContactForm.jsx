@@ -26,8 +26,8 @@ const ContactForm = () => {
   });
 
   const onSubmit = async ({ name, email, phone, telegram }) => {
-    setLoading(true);
     try {
+      setLoading(true);
       const queryUrl = `${process.env.NEXT_PUBLIC_BITRIX_URL}/crm.lead.add.json`;
 
       const queryData = {
@@ -60,7 +60,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="w-full">
-        <label for="name" className="sr-only" />
+        <label htmlFor="name" className="sr-only" />
         <input
           className={`w-full border-2  py-3 px-6 rounded-full bg-transparent ${
             errors.name?.type === "required"
@@ -115,7 +115,7 @@ const ContactForm = () => {
         />
       </div>
       <div className="w-full">
-        <label for="email" className="sr-only" />
+        <label htmlFor="email" className="sr-only" />
         <input
           className={`w-full border-2  py-3 px-6 rounded-full bg-transparent ${
             errors.name?.type === "required"
@@ -130,7 +130,7 @@ const ContactForm = () => {
         />
       </div>
       <div className="w-full">
-        <label for="telegram" className="sr-only" />
+        <label htmlFor="telegram" className="sr-only" />
         <input
           className={`w-full border-2  py-3 px-6 rounded-full bg-transparent ${
             errors.name?.type === "required"
@@ -150,13 +150,13 @@ const ContactForm = () => {
         <button type="submit" className="button">
           {isLoading ? (
             <svg
-              class="animate-spin h-5 w-5 mr-3"
+              className="animate-spin h-5 w-5 mr-3"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
             >
               <circle
-                class="opacity-25"
+                className="opacity-25"
                 cx="12"
                 cy="12"
                 r="10"
@@ -164,7 +164,7 @@ const ContactForm = () => {
                 strokeWidth="4"
               ></circle>
               <path
-                class="opacity-75"
+                className="opacity-75"
                 fill="currentColor"
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               ></path>

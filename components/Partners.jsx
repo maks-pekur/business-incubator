@@ -41,7 +41,12 @@ const Partners = () => {
       <div className="flex flex-nowrap overflow-x-scroll overflow-y-hidden w-[90%] snap-x-mandatory scroll-p-6 rounded-xl lg:gap-12 scrollbar-hide">
         {partners.map(({ id, image }) => (
           <div key={id} className="p-6 snap-start flex-none items-center flex">
-            <Image src={`/assets/images${image}`} width={150} height={150} />
+            <Image
+              src={`/assets/images${image}`}
+              width={150}
+              height={150}
+              alt=""
+            />
           </div>
         ))}
       </div>

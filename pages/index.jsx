@@ -8,7 +8,16 @@ import arrowRight from "../public/assets/images/arrow-right.png";
 import Slider from "../components/Slider";
 import Head from "next/head";
 import Heading from "../components/ui/Heading";
-import Schema from "../components/Schema";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import VideoCover from "../components/VideoCover";
+
+const schemas = {
+  pl: "/assets/images/Schema-pl.svg",
+  en: "/assets/images/Schema-en.svg",
+  uk: "/assets/images/Schema-uk.svg",
+  ru: "/assets/images/Schema-ru.svg",
+};
 
 export async function getStaticProps({ locale }) {
   return {
@@ -17,8 +26,8 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
-
 const Home = () => {
+  const { locale } = useRouter();
   const { t } = useTranslation();
   return (
     <>
@@ -40,7 +49,8 @@ const Home = () => {
         <meta property="og:title" content="Freedom Business Area" />
       </Head>
       <main>
-        <Slider />
+        {/* <Slider /> */}
+        <VideoCover />
         <section className="max-w-7xl m-auto">
           <Heading tag={"h1"}>
             {t("home:title")}{" "}
@@ -54,11 +64,24 @@ const Home = () => {
               {t("home:text_1")}
             </Heading>
             <div className="flex items-center justify-center">
-              <Image src={mainImg} alt="" height={450} width={450} />
+              <Image src={mainImg} alt="" height="auto" width="auto" />
             </div>
           </div>
 
-          <Schema />
+          <div className="my-8 text-center flex flex-col items-center justify-center space-y-8">
+            <Heading tag={"h2"}>
+              <span className="text-[var(--text-green)]">
+                {t("home:text_2")}{" "}
+              </span>
+              {t("home:text_3")}
+            </Heading>
+            <div className="max-w-7xl m-auto px-6">
+              <Image src={schemas[locale]} alt="" width={1000} height={1000} />
+            </div>
+            <Link href={"/services"} className="button">
+              {t("home:button_1")}
+            </Link>
+          </div>
         </section>
 
         <section className="max-w-[1440px] m-auto">
@@ -83,7 +106,7 @@ const Home = () => {
                 {t("home:steps.1")}
               </div>
               <div className="hidden md:block">
-                <Image src={arrowRight} alt="" />
+                <Image width="auto" height="auto" src={arrowRight} alt="" />
               </div>
             </motion.div>
 
@@ -100,7 +123,7 @@ const Home = () => {
                 {t("home:steps.2")}
               </div>
               <div className="hidden md:block">
-                <Image src={arrowRight} alt="" />
+                <Image width="auto" height="auto" src={arrowRight} alt="" />
               </div>
             </motion.div>
 
@@ -117,7 +140,7 @@ const Home = () => {
                 {t("home:steps.3")}
               </div>
               <div className="hidden md:block xl:hidden">
-                <Image src={arrowRight} alt="" />
+                <Image width="auto" height="auto" src={arrowRight} alt="" />
               </div>
             </motion.div>
 
@@ -134,7 +157,7 @@ const Home = () => {
                 {t("home:steps.4")}
               </div>
               <div className="hidden md:block">
-                <Image src={arrowRight} alt="" />
+                <Image width="auto" height="auto" src={arrowRight} alt="" />
               </div>
             </motion.div>
 
@@ -151,7 +174,7 @@ const Home = () => {
                 {t("home:steps.5")}
               </div>
               <div className="hidden md:block">
-                <Image src={arrowRight} alt="" />
+                <Image width="auto" height="auto" src={arrowRight} alt="" />
               </div>
             </motion.div>
 

@@ -22,7 +22,7 @@ const VS = () => {
       <div className="flex items-center font-bold">
         <div>{t("services:vs_text_1")}</div>
         <div className="mx-4">
-          <Image src={vs} alt="" />
+          <Image src={vs} alt="" width={100} height={100} />
         </div>
         <div>{t("services:vs_text_2")}</div>
       </div>

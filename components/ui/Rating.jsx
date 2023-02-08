@@ -5,6 +5,7 @@ const StarRating = ({ value }) => {
         index += 1;
         return (
           <span
+            key={index}
             className={index <= value ? "text-yellow-400" : "text-gray-400"}
           >
             &#9733;

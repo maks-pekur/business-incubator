@@ -85,7 +85,7 @@ const index = ({ props, subscription }) => {
             </div>
             <div>
               <div className="flex items-center justify-center mb-2">
-                <Image src={mainImg} alt="" />
+                <Image src={mainImg} alt="" width="auto" height="auto" />
               </div>
               <div className="text-justify col-span-2 md:hidden">
                 {t("about:text_8")}

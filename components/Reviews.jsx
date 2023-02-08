@@ -13,7 +13,7 @@ const Reviews = ({ reviews }) => {
       <div className="flex flex-nowrap overflow-x-scroll overflow-y-hidden w-full snap-x-mandatory scroll-p-6 rounded-xl gap-4 scrollbar-hide">
         {reviews.map(({ id, text, user, rating, picture, date }) => (
           <div
-            key={id}
+            key={user}
             className="p-4 snap-start flex-none w-[300px] lg:w-[450px] border-[1px] rounded-2xl shadow-md"
           >
             <div>

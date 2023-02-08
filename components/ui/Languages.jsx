@@ -25,7 +25,7 @@ const Languages = ({ classNames }) => {
   return (
     <div>
       <div onClick={() => setOpen(!isOpen)} className="relative">
-        <Image src={flags[locale]} width={22} height={22} />
+        <Image src={flags[locale]} width={22} height={22} alt="" />
       </div>
       {isOpen && (
         <div
@@ -39,7 +39,7 @@ const Languages = ({ classNames }) => {
                 locale={l}
                 onClick={() => handleClick(l)}
               >
-                <Image src={flags[l]} width={22} height={22} />
+                <Image src={flags[l]} width={22} height={22} alt="" />
               </Link>
             );
           })}

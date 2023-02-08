@@ -16,7 +16,7 @@ const Person = ({ img, name, position, mail, phone }) => {
           <div className="absolute top-0 flex flex-col items-center justify-center w-full">
             <div className="text-center text-md mt-3">{name}</div>
             <div className="w-full flex items-end justify-center h-8 animate-bounce">
-              <Image src={arrowUp} alt="" />
+              <Image src={arrowUp} alt="" width={30} height={30} />
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <div className="text-center text-md">{position}</div>

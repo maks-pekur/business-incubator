@@ -35,7 +35,7 @@ const index = ({ props }) => {
       </Head>
       <div className="flex flex-col items-center justify-center">
         <div className="flex items-center justify-center px-4 my-10">
-          <Image src={teamImg} alt="" />
+          <Image src={teamImg} alt="" width="auto" height="auto" />
         </div>
         <div className="max-w-7xl m-auto space-y-10">
           <div className="text-[24px] lg:text-[32px] text-center px-4">

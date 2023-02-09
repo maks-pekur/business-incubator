@@ -3,15 +3,19 @@ import { useRef, useEffect, useCallback, useState } from "react";
 const VideoCover = () => {
   const [scroll, setScroll] = useState(0);
   const videoRef = useRef(null);
+  const playbackConst = 50;
 
   const onScroll = useCallback(() => {
     let { scrollY } = window;
-    console.log(scrollY / (videoRef.current.duration * 9));
     setScroll(scrollY);
+
     if (!videoRef.current) return;
     if (!videoRef.current.duration) return;
 
-    let currentTime = scrollY / (videoRef.current.duration * 9);
+    // let currentTime = scrollY / videoRef.current.duration;
+    let currentTime = Math.fround(scrollY / 4 / videoRef.current.duration);
+
+    console.log(currentTime);
 
     if (Number.isFinite(currentTime)) {
       videoRef.current.currentTime = currentTime;
@@ -26,10 +30,19 @@ const VideoCover = () => {
   }, []);
 
   return (
-    <div className="w-screen overflow-y-scroll fixed top-0">
-      <video ref={videoRef} controls={false} loop playsInline className="">
-        <source src="/preview.mp4" type="video/mp4" />
-      </video>
+    <div className="overflow-auto w-full h-screen pt-1">
+      <div className={`min-h-${Math.floor(10) * playbackConst + "px"}`}>
+        <video
+          ref={videoRef}
+          controls={false}
+          loop
+          playsInline
+          autoPlay
+          className=""
+        >
+          <source src="/preview.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   );
 };

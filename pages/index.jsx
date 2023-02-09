@@ -11,6 +11,7 @@ import Heading from "../components/ui/Heading";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import VideoCover from "../components/VideoCover";
+import ImagePlayer from "../components/ImagePlayer";
 
 const schemas = {
   pl: "/assets/images/Schema-pl.svg",
@@ -50,8 +51,8 @@ const Home = () => {
       </Head>
       <main>
         {/* <Slider /> */}
-        <VideoCover />
-        <div className="h-[450vh]"></div>
+        {/* <VideoCover /> */}
+        <ImagePlayer />
         <section className="max-w-7xl m-auto">
           <Heading tag={"h1"}>
             {t("home:title")}{" "}

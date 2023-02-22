@@ -11,33 +11,7 @@
 
 :root{
   --white: #ffffff;
-  --text-green: #4B8765;
-  --header-green: #CFDED6;
+  --green: #BCEF30;
+  --dark-gray: #1D1D1D;
+  --light-gray: #ECECE8;
 }
-
-
-.button{
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25), 0px 16px 40px rgba(33, 33, 33, 0.16);
-  border-radius: 32px;
-  padding: 16px 32px;
-  background: linear-gradient(180deg, #CFE9D9 0%, #4B8765 100%);
-  border: 8px solid #FFFFFF;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.button:hover{
-  background: linear-gradient(180deg, #CFE9D9 0%, #2d503c 100%);
-}
-
-.swiper {
-  z-index: 0 !important;
-}
-
-
-.intro{
-  height: 100vh;
-}
-

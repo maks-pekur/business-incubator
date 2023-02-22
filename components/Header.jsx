@@ -6,11 +6,14 @@ import Logo from './ui/Logo'
 
 const Header = () => {
 	return (
-		<header className="text-white font-['Roboto-100'] fixed top-0 w-full z-10 pt-6 px-10">
+		<header className="text-white font-['Roboto-100'] fixed top-0 w-full z-10 pt-10 px-10">
 			<div className="flex items-center justify-between">
-				<div className="flex flex-col items-center space-y-2">
+				<div className="flex items-center space-x-6">
 					<Logo width={70} height={70} variant={'white'} />
-					<Link href="/" className="text-lg items-center hidden lg:flex">
+					<Link
+						href="/"
+						className="text-lg items-center hidden lg:flex border-l-2 border-white pl-4"
+					>
 						Freedom Business Area
 					</Link>
 				</div>

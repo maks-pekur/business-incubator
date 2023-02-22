@@ -13,7 +13,7 @@ const VideoCover = () => {
     if (!videoRef.current.duration) return;
 
     // let currentTime = scrollY / videoRef.current.duration;
-    let currentTime = Math.fround(scrollY / 4 / videoRef.current.duration);
+    let currentTime = Math.fround(scrollY / 100 / videoRef.current.duration);
 
     console.log(currentTime);
 

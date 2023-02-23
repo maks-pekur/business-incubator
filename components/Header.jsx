@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Languages from './ui/Languages'
 import Logo from './ui/Logo'
 
-const Header = () => {
+export const Header = () => {
 	return (
 		<header className="text-white font-['Roboto-100'] fixed top-0 w-full z-10 pt-10 px-10">
 			<div className="flex items-center justify-between">
@@ -25,5 +25,3 @@ const Header = () => {
 		</header>
 	)
 }
-
-export default Header

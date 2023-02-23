@@ -7,7 +7,7 @@ import { request } from '../../lib/datocms'
 
 import Reviews from '../../components/Reviews'
 import ServiceCard from '../../components/ServiceCard'
-import Heading from '../../components/ui/Heading'
+import {Heading} from '../../components/ui/Heading'
 import VS from '../../components/VS'
 
 import broker from '../../public/assets/images/broker.svg'

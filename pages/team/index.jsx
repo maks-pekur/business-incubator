@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import Person from "../../components/Person";
-import Heading from "../../components/ui/Heading";
+import {Heading} from "../../components/ui/Heading";
 
 import teamPhoto from "../../public/assets/images/new-team.svg";
 

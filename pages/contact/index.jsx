@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 
 import SocialLinks from "../../components/ui/SocialLinks";
 import Partners from "../../components/Partners";
-import Heading from "../../components/ui/Heading";
+import {Heading} from "../../components/ui/Heading";
 import ContactForm from "../../components/ui/ContactForm";
 
 import MailIcon from "../../components/ui/MailIcon";

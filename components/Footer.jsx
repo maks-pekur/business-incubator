@@ -9,7 +9,7 @@ import MailIcon from '../components/ui/MailIcon'
 import PhoneIcon from '../components/ui/PhoneIcon'
 import PointIcon from '../components/ui/PointIcon'
 
-const Footer = () => {
+export const Footer = () => {
 	const { locale } = useRouter()
 	return (
 		<footer className="w-full min-h-80 bg-[var(--dark-gray)] text-white">
@@ -87,5 +87,3 @@ const Footer = () => {
 		</footer>
 	)
 }
-
-export default Footer

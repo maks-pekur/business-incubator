@@ -4,19 +4,12 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { AboutUs } from '../components/AboutUs'
 import { Callback } from '../components/Callback'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import { Footer } from '../components/Footer'
+import { Header } from '../components/Header'
 import { HowWeWork } from '../components/HowWeWork'
 import { Hero } from '../components/ui/Hero'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
-
-const schemas = {
-	pl: '/assets/images/Schema-pl.svg',
-	en: '/assets/images/Schema-en.svg',
-	uk: '/assets/images/Schema-uk.svg',
-	ru: '/assets/images/Schema-ru.svg',
-}
 
 export async function getStaticProps({ locale }) {
 	return {

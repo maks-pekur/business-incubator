@@ -15,3 +15,7 @@
   --dark-gray: #1D1D1D;
   --light-gray: #ECECE8;
 }
+
+.react-swipe-container div{
+  height: 300px;
+}

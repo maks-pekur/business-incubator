@@ -1,0 +1,25 @@
+const styles = {
+	left: '',
+	right: 'rotate-180',
+	black: 'border-black bg-black fill-white',
+	outline: 'border-black fill-black hover:fill-white hover:bg-black',
+}
+
+export const NavigateArrow = ({ onClick, variant, direction }) => {
+	return (
+		<svg
+			width="8"
+			height="12"
+			viewBox="0 0 8 12"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			className={`border-[1px] rounded-full w-20 h-20 p-6 transition-colors duration-100 ${styles[direction]} ${styles[variant]}`}
+			onClick={onClick}
+		>
+			<path
+				d="M7.42188 1.40625L2.82812 6L7.42188 10.5938L6.01562 12L0.015625 6L6.01562 0L7.42188 1.40625Z"
+				fill=""
+			/>
+		</svg>
+	)
+}

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { AboutUs } from '../components/AboutUs'
 import { Callback } from '../components/Callback'
+import { Consultation } from '../components/Consultation'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { HowWeWork } from '../components/HowWeWork'
@@ -48,6 +49,7 @@ const Home = () => {
 				<Callback />
 				<HowWeWork />
 				<VS />
+				<Consultation />
 				<Footer />
 			</main>
 		</>

@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 
-/* @layer base {
+@layer base {
   html {
-    font-family: Montserrat;
+    font-family: Tahoma, Geneva, Verdana, sans-serif
   }
-} */
+}
 
 :root{
   --white: #ffffff;
@@ -16,6 +16,8 @@
   --light-gray: #ECECE8;
 }
 
-.react-swipe-container div{
-  height: 300px;
+.react-tel-input .form-control{
+  border-radius: 0%;
+  outline: none;
+  border: none;
 }

@@ -6,7 +6,7 @@ export const AboutUs = () => {
 	return (
 		<section className="bg-white rounded-3xl p-14">
 			<div className="grid grid-cols-2 h-full">
-				<NumSection number={'01'} title={'О нас'} />
+				<NumSection number={'01'} title={'О нас'} variant={'green'} />
 				<div className="space-y-8">
 					<Heading tag={'h2'}>Фонд Freedom Business Area</Heading>
 					<div className="text-gray-500 space-y-4">
@@ -23,7 +23,7 @@ export const AboutUs = () => {
 							легально вести свой бизнес.
 						</p>
 					</div>
-					<Button title={'Подробнее'} variant={'outline'} iconColor={'black'} />
+					<Button title={'Подробнее'} variant={'outline'} />
 				</div>
 			</div>
 		</section>

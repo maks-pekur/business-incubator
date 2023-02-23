@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-import { navLinks } from '../constants'
+import { navLinks } from '../translations/header'
 import SocialLinks from './ui/SocialLinks'
 
 const flags = {
@@ -26,6 +26,25 @@ const Navbar = () => {
 
 	return (
 		<nav>
+			<div className="hidden md:block font-thin	">
+				<div>
+					<ul className="flex space-x-6 items-center text-[14px]">
+						{navLinks.map(link => (
+							<li key={link.id} onClick={() => setOpen(false)}>
+								<Link
+									className={`${
+										pathname === link.path && 'text-[#bcef30]'
+									} hover:text-[#bcef30] transition-colors duration-200`}
+									href={link.path}
+								>
+									{link.title[locale]}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+
 			<div className="md:hidden">
 				<Hamburger size={22} toggled={isOpen} toggle={setOpen} />
 			</div>
@@ -83,25 +102,6 @@ const Navbar = () => {
 					</div>
 				</div>
 			)}
-
-			<div className="hidden md:block font-thin	">
-				<div>
-					<ul className="flex space-x-6 items-center text-[14px]">
-						{navLinks.map(link => (
-							<li key={link.id} onClick={() => setOpen(false)}>
-								<Link
-									className={`${
-										pathname === link.path && 'text-[#bcef30]'
-									} hover:text-[#bcef30] transition-colors duration-200`}
-									href={link.path}
-								>
-									{link.title[locale]}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</div>
-			</div>
 		</nav>
 	)
 }

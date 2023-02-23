@@ -9,6 +9,7 @@ export const WhatYouGet = () => {
 					<NumSection
 						number={'02'}
 						title={'Что ты получишь'}
+						variant={'green'}
 						classNames={'text-white'}
 					/>
 				</div>

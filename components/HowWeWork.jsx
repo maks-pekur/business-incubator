@@ -49,7 +49,11 @@ export const HowWeWork = () => {
 			<div className="grid grid-cols-3 h-full">
 				<div className="flex flex-col justify-between p-14">
 					<div>
-						<NumSection number={'03'} title={'Как мы работаем'} />
+						<NumSection
+							number={'03'}
+							title={'Как мы работаем'}
+							variant={'green'}
+						/>
 					</div>
 					<div className="flex items-center space-x-6">
 						<NavigateArrow

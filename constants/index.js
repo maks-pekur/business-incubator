@@ -61,9 +61,9 @@ export const navLinks = [
 	},
 ]
 
-import andrii from '../public/assets/images/Andrii_Derkach.png'
-import vitaliy from '../public/assets/images/Vitaliy_Sukhoy.png'
-import vlad from '../public/assets/images/Vladyslav_Buidenko.png'
+import andrii from '../public/assets/images/team/Andrii_Derkach.png'
+import vitaliy from '../public/assets/images/team/Vitaliy_Sukhoy.png'
+import vlad from '../public/assets/images/team/Vladyslav_Buidenko.png'
 
 export const founders = [
 	{
@@ -89,15 +89,14 @@ export const founders = [
 	},
 ]
 
-import elena from '../public/assets/images/Elena.png'
-import ilona from '../public/assets/images/ilona.png'
-import kateryna from '../public/assets/images/kateryna.png'
-import maksym from '../public/assets/images/Maksym_Pekur.png'
-import pavel from '../public/assets/images/Pavel_Semchuk.png'
-import sofiia from '../public/assets/images/Sofiia_Syzonenko.png'
-import tetiana from '../public/assets/images/Tetiana_Svietkina.png'
-import yelisaveta from '../public/assets/images/Yelizaveta_Danilenka.png'
-import yevgen from '../public/assets/images/Yevgen_Teslia.png'
+import elena from '../public/assets/images/team/Elena.png'
+import ilona from '../public/assets/images/team/ilona.png'
+import kateryna from '../public/assets/images/team/kateryna.png'
+import maksym from '../public/assets/images/team/Maksym_Pekur.png'
+import pavel from '../public/assets/images/team/Pavel_Semchuk.png'
+import sofiia from '../public/assets/images/team/Sofiia_Syzonenko.png'
+import yelisaveta from '../public/assets/images/team/Yelizaveta_Danilenka.png'
+import yevgen from '../public/assets/images/team/Yevgen_Teslia.png'
 
 export const personal = [
 	{
@@ -123,14 +122,6 @@ export const personal = [
 		position: 'yevgen_position',
 		mail: 'yevgen_mail',
 		phone: 'yevgen_phone',
-	},
-	{
-		id: '04',
-		img: tetiana,
-		name: 'tetiana_name',
-		position: 'tetiana_position',
-		mail: 'tetiana_mail',
-		phone: 'tetiana_phone',
 	},
 	{
 		id: '05',

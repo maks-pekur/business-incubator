@@ -12,7 +12,6 @@ export const WhatYouGet = () => {
 						classNames={'text-white'}
 					/>
 				</div>
-
 				<CircleSlider />
 			</div>
 		</section>

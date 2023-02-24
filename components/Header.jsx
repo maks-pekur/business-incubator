@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import Navbar from './Navbar'
+import { Button } from './ui/Button'
 import Languages from './ui/Languages'
 import Logo from './ui/Logo'
 
@@ -20,6 +21,7 @@ export const Header = () => {
 				<div className="hidden md:block lg:flex items-center space-x-10">
 					<Navbar />
 					<Languages classNames={'top-7'} />
+					<Button variant={"green"} title={'Присоедениться'} />
 				</div>
 			</div>
 		</header>

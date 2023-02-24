@@ -3,7 +3,7 @@ const styles = {
 		'bg-transparent fill-black text-black hover:bg-black hover:text-white hover:fill-white',
 	black:
 		'bg-black text-white hover:bg-[var(--green)] hover:text-black fill-white',
-	green: 'bg-[var(--green)] hover:bg-black hover:text-white',
+	green: 'bg-[var(--green)] hover:bg-black hover:text-white text-black',
 }
 
 export const Button = ({ title, variant, isLoading, onClick }) => {

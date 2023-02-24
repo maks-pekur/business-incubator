@@ -86,7 +86,7 @@ export const ContactForm = () => {
 									autoFocus: true,
 								}}
 								country="pl"
-								onlyCountries={['pl', 'ua', 'ru']}
+								onlyCountries={['pl', 'ua', 'ru', 'by']}
 								inputStyle={{
 									width: '100%',
 									borderBottom: '2px solid var(--dark-gray)',
@@ -103,6 +103,7 @@ export const ContactForm = () => {
 									marginTop: '4px',
 									outline: 'none',
 									padding: '10px',
+									borderRadius: '10px',
 									boxShadow:
 										'0px 4px 40px rgba(0, 0, 0, 0.25), 0px 16px 40px rgba(33, 33, 33, 0.16)',
 								}}

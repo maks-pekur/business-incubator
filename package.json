@@ -30,10 +30,9 @@
     "react-hook-form": "^7.43.0",
     "react-i18next": "^12.1.4",
     "react-phone-input-2": "^2.15.1",
-    "react-slick": "^0.29.0",
-    "react-swipe": "^6.0.4",
     "remixicon": "^2.5.0",
     "sharp": "^0.31.3",
+    "swiper": "^9.0.5",
     "tailwind-scrollbar-hide": "^1.1.7",
     "tiny-json-http": "^7.4.2"
   },

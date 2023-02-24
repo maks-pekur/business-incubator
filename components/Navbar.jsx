@@ -14,7 +14,7 @@ const flags = {
 	ru: '/assets/images/ru.svg',
 }
 
-const Navbar = () => {
+export const Navbar = () => {
 	const { pathname, locale, locales, asPath } = useRouter()
 	const [lang, setLang] = useState(locale)
 	const [isOpen, setOpen] = useState(false)
@@ -105,5 +105,3 @@ const Navbar = () => {
 		</nav>
 	)
 }
-
-export default Navbar

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import figure from '../../public/assets/images/fgs-hero.jpeg'
-import { Heading } from '../ui/Heading'
+import figure from '../public/assets/images/fgs-hero.jpeg'
+import { Heading } from './ui/Heading'
 
 export const Hero = () => {
 	// const { t } = useTranslation()

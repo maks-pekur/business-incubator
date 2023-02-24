@@ -12,7 +12,7 @@ const flags = {
 
 import '/node_modules/flag-icons/css/flag-icons.min.css'
 
-const Languages = ({ classNames }) => {
+export const Languages = ({ classNames }) => {
 	const { locale, locales, asPath } = useRouter()
 	const [lang, setLang] = useState(locale)
 	const [isOpen, setOpen] = useState(false)
@@ -55,5 +55,3 @@ const Languages = ({ classNames }) => {
 		</div>
 	)
 }
-
-export default Languages

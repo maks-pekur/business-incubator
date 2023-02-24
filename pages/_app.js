@@ -1,13 +1,15 @@
 import { appWithTranslation } from 'next-i18next'
+import { Modal } from '../components/Modal'
+import { RootLayout } from '../components/RootLayout'
 import { ModalProvider } from '../contexts/ModalContext'
-
-import Modal from '../components/Modal'
 import '../styles/globals.css'
 
 const App = ({ Component, pageProps }) => {
 	return (
 		<ModalProvider>
-			<Component {...pageProps} />
+			<RootLayout>
+				<Component {...pageProps} />
+			</RootLayout>
 			<Modal />
 		</ModalProvider>
 	)

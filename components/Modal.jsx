@@ -12,7 +12,7 @@ const trl = {
 	ru: 'Контактная информация',
 }
 
-const Modal = () => {
+export const Modal = () => {
 	const { isOpen, hide } = useModal()
 	const { locale } = useRouter()
 
@@ -47,5 +47,3 @@ const Modal = () => {
 		</AnimatePresence>
 	)
 }
-
-export default Modal

@@ -1,18 +1,18 @@
-import Head from "next/head";
-import { renderMetaTags, useQuerySubscription } from "react-datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
-import { request } from "../../lib/datocms";
+import Head from 'next/head'
+import { renderMetaTags, useQuerySubscription } from 'react-datocms'
+import { request } from '../../lib/datocms'
+import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 
-import HeroPost from "../../components/Post/HeroPost";
-import MoreStories from "../../components/Post/MoreStories";
-import Container from "../../components/ui/Container";
+import HeroPost from '../../components/Post/HeroPost'
+import MoreStories from '../../components/Post/MoreStories'
+import { Container } from '../../components/ui/Container'
 
-const filters = ["all", "legalization", "marketing", "it"];
+const filters = ['all', 'legalization', 'marketing', 'it']
 
 export async function getStaticProps({ locale }) {
-  const formattedLocale = locale.split("-")[0];
-  const graphqlRequest = {
-    query: `
+	const formattedLocale = locale.split('-')[0]
+	const graphqlRequest = {
+		query: `
       {
         blog {
           seo: _seoMetaTags {
@@ -40,16 +40,16 @@ export async function getStaticProps({ locale }) {
       ${metaTagsFragment}
       ${responsiveImageFragment}
     `,
-  };
+	}
 
-  return {
-    props: {
-      subscription: {
-        enabled: false,
-        initialData: await request(graphqlRequest),
-      },
-    },
-  };
+	return {
+		props: {
+			subscription: {
+				enabled: false,
+				initialData: await request(graphqlRequest),
+			},
+		},
+	}
 }
 
 // const handleFilterChange = (filter) => {
@@ -60,32 +60,32 @@ export async function getStaticProps({ locale }) {
 //   }
 // };
 
-function index({ subscription }) {
-  const {
-    data: { allPosts, blog },
-  } = useQuerySubscription(subscription);
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-  const metaTags = blog.seo;
+const index = ({ subscription }) => {
+	const {
+		data: { allPosts, blog },
+	} = useQuerySubscription(subscription)
+	const heroPost = allPosts[0]
+	const morePosts = allPosts.slice(1)
+	const metaTags = blog.seo
 
-  return (
-    <>
-      <Head>{renderMetaTags(metaTags)}</Head>
-      <Container>
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </>
-  );
+	return (
+		<>
+			<Head>{renderMetaTags(metaTags)}</Head>
+			<Container>
+				{heroPost && (
+					<HeroPost
+						title={heroPost.title}
+						coverImage={heroPost.coverImage}
+						date={heroPost.date}
+						author={heroPost.author}
+						slug={heroPost.slug}
+						excerpt={heroPost.excerpt}
+					/>
+				)}
+				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+			</Container>
+		</>
+	)
 }
 
-export default index;
+export default index

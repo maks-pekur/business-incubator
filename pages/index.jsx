@@ -5,10 +5,8 @@ import { useRouter } from 'next/router'
 import { AboutUs } from '../components/AboutUs'
 import { Callback } from '../components/Callback'
 import { Consultation } from '../components/Consultation'
-import { Footer } from '../components/Footer'
-import { Header } from '../components/Header'
+import { Hero } from '../components/Hero'
 import { HowWeWork } from '../components/HowWeWork'
-import { Hero } from '../components/ui/Hero'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
 
@@ -22,6 +20,7 @@ export async function getStaticProps({ locale }) {
 const Home = () => {
 	const { locale } = useRouter()
 	const { t } = useTranslation()
+
 	return (
 		<>
 			<Head>
@@ -41,8 +40,7 @@ const Home = () => {
 				<meta property="og:site_name" content="Freedom Business Area" />
 				<meta property="og:title" content="Freedom Business Area" />
 			</Head>
-			<main className="px-4 relative">
-				<Header />
+			<main className="relative overflow-x-hidden px-4">
 				<Hero />
 				<AboutUs />
 				<WhatYouGet />
@@ -50,7 +48,6 @@ const Home = () => {
 				<HowWeWork />
 				<VS />
 				<Consultation />
-				<Footer />
 			</main>
 		</>
 	)

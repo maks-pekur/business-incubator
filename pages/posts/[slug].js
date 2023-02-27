@@ -1,33 +1,31 @@
-import Head from "next/head";
-import { renderMetaTags, useQuerySubscription } from "react-datocms";
-import { request } from "../../lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
+import Head from 'next/head'
+import { renderMetaTags, useQuerySubscription } from 'react-datocms'
+import { request } from '../../lib/datocms'
+import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 
-import SectionSeparator from "../../components/ui/SectionSeparator";
-import Container from "../../components/ui/Container";
-import PostHeader from "../../components/Post/PostHeader";
-import PostBody from "../../components/Post/PostBody";
-import MoreStories from "../../components/Post/MoreStories";
+import { MoreStories } from '../../components/Post/MoreStories'
+import { PostBody } from '../../components/Post/PostBody'
+import { PostHeader } from '../../components/Post/PostHeader'
 
 export async function getStaticPaths({ locales }) {
-  const data = await request({ query: `{ allPosts { slug } }` });
-  const pathsArray = [];
-  data.allPosts.map((post) => {
-    locales.map((language) => {
-      pathsArray.push({ params: { slug: post.slug }, locale: language });
-    });
-  });
+	const data = await request({ query: `{ allPosts { slug } }` })
+	const pathsArray = []
+	data.allPosts.map(post => {
+		locales.map(language => {
+			pathsArray.push({ params: { slug: post.slug }, locale: language })
+		})
+	})
 
-  return {
-    paths: pathsArray,
-    fallback: false,
-  };
+	return {
+		paths: pathsArray,
+		fallback: false,
+	}
 }
 
 export async function getStaticProps({ params, locale }) {
-  const formattedLocale = locale.split("-")[0];
-  const graphqlRequest = {
-    query: `
+	const formattedLocale = locale.split('-')[0]
+	const graphqlRequest = {
+		query: `
       query PostBySlug($slug: String) {
         post(locale: ${formattedLocale}, filter: {slug: {eq: $slug}}) {
           seo: _seoMetaTags {
@@ -86,46 +84,44 @@ export async function getStaticProps({ params, locale }) {
       ${responsiveImageFragment}
       ${metaTagsFragment}
     `,
-    variables: {
-      slug: params.slug,
-    },
-  };
+		variables: {
+			slug: params.slug,
+		},
+	}
 
-  return {
-    props: {
-      subscription: {
-        enabled: false,
-        initialData: await request(graphqlRequest),
-      },
-    },
-  };
+	return {
+		props: {
+			subscription: {
+				enabled: false,
+				initialData: await request(graphqlRequest),
+			},
+		},
+	}
 }
 
 const Post = ({ subscription }) => {
-  const {
-    data: { post, morePosts },
-  } = useQuerySubscription(subscription);
+	const {
+		data: { post, morePosts },
+	} = useQuerySubscription(subscription)
 
-  const metaTags = post.seo;
+	const metaTags = post.seo
 
-  return (
-    <>
-      <Head>{renderMetaTags(metaTags)}</Head>
-      <Container>
-        <article>
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={post.content} />
-        </article>
-        <SectionSeparator />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </>
-  );
-};
+	return (
+		<>
+			<Head>{renderMetaTags(metaTags)}</Head>
 
-export default Post;
+			<article>
+				<PostHeader
+					title={post.title}
+					coverImage={post.coverImage}
+					date={post.date}
+					author={post.author}
+				/>
+				<PostBody content={post.content} />
+			</article>
+			{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+		</>
+	)
+}
+
+export default Post

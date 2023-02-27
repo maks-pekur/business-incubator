@@ -1,11 +1,9 @@
 import Head from 'next/head'
 import { renderMetaTags, useQuerySubscription } from 'react-datocms'
-import { request } from '../../lib/datocms'
-import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
-
 import { HeroPost } from '../../components/Post/HeroPost'
 import MoreStories from '../../components/Post/MoreStories'
-import { Container } from '../../components/ui/Container'
+import { request } from '../../lib/datocms'
+import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 
 export async function getStaticProps({ locale }) {
 	const formattedLocale = locale.split('-')[0]
@@ -61,19 +59,17 @@ const index = ({ subscription }) => {
 	return (
 		<>
 			<Head>{renderMetaTags(metaTags)}</Head>
-			<Container>
-				{heroPost && (
-					<HeroPost
-						title={heroPost.title}
-						coverImage={heroPost.coverImage}
-						date={heroPost.date}
-						author={heroPost.author}
-						slug={heroPost.slug}
-						excerpt={heroPost.excerpt}
-					/>
-				)}
-				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
-			</Container>
+			{heroPost && (
+				<HeroPost
+					title={heroPost.title}
+					coverImage={heroPost.coverImage}
+					date={heroPost.date}
+					author={heroPost.author}
+					slug={heroPost.slug}
+					excerpt={heroPost.excerpt}
+				/>
+			)}
+			{morePosts.length > 0 && <MoreStories posts={morePosts} />}
 		</>
 	)
 }

@@ -3,11 +3,9 @@ import { renderMetaTags, useQuerySubscription } from 'react-datocms'
 import { request } from '../../lib/datocms'
 import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 
-import HeroPost from '../../components/Post/HeroPost'
+import { HeroPost } from '../../components/Post/HeroPost'
 import MoreStories from '../../components/Post/MoreStories'
 import { Container } from '../../components/ui/Container'
-
-const filters = ['all', 'legalization', 'marketing', 'it']
 
 export async function getStaticProps({ locale }) {
 	const formattedLocale = locale.split('-')[0]
@@ -51,14 +49,6 @@ export async function getStaticProps({ locale }) {
 		},
 	}
 }
-
-// const handleFilterChange = (filter) => {
-//   setActiveFilter(filter);
-//   setState(posts.filter((post) => post.theme === filter));
-//   if (filter === "all") {
-//     setState(posts);
-//   }
-// };
 
 const index = ({ subscription }) => {
 	const {

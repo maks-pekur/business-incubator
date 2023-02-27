@@ -2,7 +2,7 @@ import { format, parseISO } from 'date-fns'
 import { useRouter } from 'next/router'
 const { pl, en, uk, ru } = require('date-fns/locale')
 
-export const Date = ({ dateString }) => {
+export default function Date({ dateString }) {
 	let { locale } = useRouter()
 	const date = parseISO(dateString)
 

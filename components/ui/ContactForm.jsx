@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
 
-import { contactForm } from '../../translations/contactForm'
+import { translationContactForm } from '../../translations/contactForm'
 
 import 'react-phone-input-2/lib/style.css'
 import { Button } from './Button'
@@ -64,7 +64,7 @@ export const ContactForm = () => {
 						className={`w-full border-b-2 border-[var(--dark-gray)] py-3 px-6 bg-transparent outline-none ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
-						placeholder={contactForm.name[locale]}
+						placeholder={translationContactForm.name[locale]}
 						type="text"
 						{...register('name', {
 							required: true,
@@ -117,7 +117,7 @@ export const ContactForm = () => {
 						className={`w-full border-b-2 border-[var(--dark-gray)] py-3 px-6 bg-transparent outline-none ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
-						placeholder={contactForm.mail[locale]}
+						placeholder={translationContactForm.mail[locale]}
 						type="email"
 						{...register('email', {
 							required: true,
@@ -130,7 +130,7 @@ export const ContactForm = () => {
 						className={`w-full border-b-2 border-[var(--dark-gray)] py-3 px-6 bg-transparent outline-none ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
-						placeholder={contactForm.telegram[locale]}
+						placeholder={translationContactForm.telegram[locale]}
 						type="text"
 						name="telegram"
 						{...register('telegram', {

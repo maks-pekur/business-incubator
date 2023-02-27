@@ -1,4 +1,4 @@
-export const contactForm = {
+export const translationContactForm = {
 	title_1: {
 		pl: 'Bezpłatny',
 		en: 'Free',

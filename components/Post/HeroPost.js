@@ -1,18 +1,18 @@
 import Link from 'next/link'
 
-import Avatar from '../ui/Avatar'
-import CoverImage from '../ui/CoverImage'
-import Date from '../ui/Date'
+import { Avatar } from '../ui/Avatar'
+import { CoverImage } from '../ui/CoverImage'
+import  Date  from '../ui/Date'
 import { Heading } from '../ui/Heading'
 
-export default function HeroPost({
+export const HeroPost = ({
 	title,
 	coverImage,
 	date,
 	excerpt,
 	author,
 	slug,
-}) {
+}) => {
 	return (
 		<section>
 			<div className="mb-8 md:mb-16">

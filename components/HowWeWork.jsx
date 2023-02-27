@@ -78,7 +78,7 @@ export const HowWeWork = () => {
 					</div>
 				</div>
 
-				<div className="col-span-2 py-14 h-full">
+				<div className="col-span-2 p-14 h-full">
 					<Swiper
 						loop={true}
 						modules={[Navigation]}
@@ -92,7 +92,7 @@ export const HowWeWork = () => {
 					>
 						{slides.map(slide => (
 							<SwiperSlide key={slide.id}>
-								<div className="border-2 border-black h-full rounded-2xl p-20 grid grid-rows-2">
+								<div className="border-2 border-black h-full rounded-2xl p-14 grid grid-rows-2">
 									<div className="flex items-center justify-center w-full">
 										<Image src={slide.image} width={150} height={150} alt="" />
 									</div>

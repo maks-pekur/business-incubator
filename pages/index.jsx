@@ -3,8 +3,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { AboutUs } from '../components/AboutUs'
-import { Callback } from '../components/Callback'
 import { Consultation } from '../components/Consultation'
+import { GreenSection } from '../components/GreenSection'
 import { Hero } from '../components/Hero'
 import { HowWeWork } from '../components/HowWeWork'
 import { VS } from '../components/VS'
@@ -44,7 +44,10 @@ const Home = () => {
 				<Hero />
 				<AboutUs />
 				<WhatYouGet />
-				<Callback />
+				<GreenSection
+					title={'Бесплатная консультация'}
+					textBtn={'Присоединиться'}
+				></GreenSection>
 				<HowWeWork />
 				<VS />
 				<Consultation />

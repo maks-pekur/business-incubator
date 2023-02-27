@@ -1,82 +1,91 @@
-import Image from "next/image";
-import { useTranslation } from "next-i18next";
-import { motion } from "framer-motion";
-import ListItem from "./ListItem";
-import { group_1, group_2, group_3 } from "../constants";
+import Image from 'next/image'
+import img1 from '../public/assets/images/forWhom-1.svg'
+import img2 from '../public/assets/images/forWhom-2.svg'
+import img3 from '../public/assets/images/forWhom-3.svg'
+import { Heading } from './ui/Heading'
+import { NumSection } from './ui/NumSection'
 
-import group1 from "../public/assets/images/Group1.svg";
-import group2 from "../public/assets/images/Group3.svg";
-import group3 from "../public/assets/images/Group2.svg";
-import Heading from "./ui/Heading";
+const items = [
+	{
+		id: '01',
+		title: '',
+		img: img1,
+		list: [
+			'Фотографы',
+			'Видеографы',
+			'Дизайнеры',
+			'Архитекторы',
+			'Таргетологи',
+			'SMM-специалисты',
+		],
+	},
+	{
+		id: '02',
+		title: '',
+		img: img2,
+		list: ['Журналисты', 'Коучи', 'Психологи'],
+	},
+	{
+		id: '03',
+		title: '',
+		img: img3,
+		list: [
+			'ИТ-специалисты',
+			'Копирайтеры',
+			'Project-менеджера',
+			'Онлайн школы / курсы',
+			'Маркетологи',
+			'Агенты по недвижимости',
+		],
+	},
+]
 
-const ForWhom = () => {
-  const { t } = useTranslation();
-  return (
-    <section className="max-w-7xl m-auto px-6">
-      <Heading tag={"h2"}>
-        <span className="text-[var(--text-green)]">{t("about:text_10")} </span>
-        {t("about:text_11")}
-      </Heading>
-
-      <div className="grid w-full lg:grid-cols-3 md:grid-cols-2 gap-10 md:gap-20 justify-items-center">
-        <motion.div
-          whileInView={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.3 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col items-center md:w-full"
-        >
-          <div>
-            <Image src={group1} alt="" height={230} />
-          </div>
-          <div className="w-full my-8 px-6">
-            {group_1.map((title, index) => (
-              <ListItem key={title} title={t(`about:${title}`)} />
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          whileInView={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.3 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col items-center w-[300px] md:w-full"
-        >
-          <div>
-            <Image src={group2} alt="" height={230} />
-          </div>
-          <div className="w-full my-8 px-6">
-            {group_2.map((title, index) => (
-              <ListItem key={title} title={t(`about:${title}`)} />
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          whileInView={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.3 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col items-center w-[300px] md:w-full"
-        >
-          <div>
-            <Image src={group3} alt="" height={205} />
-          </div>
-          <div className="w-full my-8 px-6">
-            {group_3.map((title, index) => (
-              <ListItem key={title} title={t(`about:${title}`)} />
-            ))}
-          </div>
-        </motion.div>
-      </div>
-      <div className="my-12">
-        <Heading tag={"h3"}>{t("about:text_12")}</Heading>
-      </div>
-      <div className="my-12">
-        <Heading tag={"h3"} classNames={"text-[var(--text-green)]"}>
-          {t("about:text_13")}
-        </Heading>
-      </div>
-    </section>
-  );
-};
-
-export default ForWhom;
+export const ForWhom = () => {
+	return (
+		<section className="bg-white p-14 rounded-2xl">
+			<div>
+				<div>
+					<NumSection
+						number={'04'}
+						title={'Для кого подойдет'}
+						variant={'green'}
+					/>
+				</div>
+				<div className="flex items-center justify-end w-full">
+					<div className="space-y-6 max-w-[50%] pb-10">
+						<Heading tag={'h2'}>Для кого подойдет бизнес-инкубатор?</Heading>
+						<p>
+							Если ты не нашёл себя в этом списке - смело пиши нам, мы с
+							радостью поможем и подберём индивидуальный способ
+							сотрудничества.Мы часто слышим, что нам легко удаётся объединять
+							талантливых и интересных людей, а все потому что мы верим в силу
+							синергии.
+						</p>
+					</div>
+				</div>
+				<div className="grid grid-cols-3 gap-10">
+					{items.map(item => (
+						<div
+							key={item.id}
+							className="bg-[var(--light-gray)] rounded-xl p-10 flex flex-col items-center"
+						>
+							<div className="mb-10 h-[200px] flex">
+								<Image src={item.img} width={200} height={200} alt="" />
+							</div>
+							<div className="w-full">
+								<ul className="w-full ml-6">
+									{item.list.map(li => (
+										<li className="mb-6 relative flex items-center" key={li}>
+											<div className="bg-[var(--green)] w-4 h-4 rounded-full mr-6"></div>
+											{li}
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	)
+}

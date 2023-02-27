@@ -1,8 +1,10 @@
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
-
-import { Heading } from '../../components/ui/Heading'
+import { Founders } from '../../components/Founders'
+import { GreenSection } from '../../components/GreenSection'
+import { Hero } from '../../components/Hero'
+import { Personal } from '../../components/Personal'
 
 export async function getStaticProps({ locale }) {
 	return {
@@ -30,55 +32,23 @@ const Team = ({ props }) => {
 				<meta name="twitter:title" content="Freedom Business Area " />
 				<meta name="twitter:description" content="None" />
 			</Head>
-			<div className="pt-22 px-6">
-				<div>
-					<div>
-						<Heading tag={'h1'}>{t('team:title')}</Heading>
-						<Heading tag={'h3'}>{t('team:subtitle')}</Heading>
-					</div>
-
-					<section>
-						<Heading tag={'h2'}>
-							<span className="text-green-700">{t('team:founders')}</span>
-						</Heading>
-						{/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
-							{founders.map(founder => (
-								<Person
-									key={founder.id}
-									img={founder.img}
-									name={t(`team:${founder.name}`)}
-									position={t(`team:${founder.position}`)}
-									mail={t(`team:${founder.mail}`)}
-								/>
-							))}
-						</div> */}
-					</section>
-
-					<section>
-						<Heading tag={'h2'}>
-							{t('team:team_1')}{' '}
-							<span className="text-green-700">{t('team:team_2')}</span>
-						</Heading>
-						{/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
-							{personal.map(person => (
-								<Person
-									key={person.id}
-									img={person.img}
-									name={t(`team:${person.name}`)}
-									position={t(`team:${person.position}`)}
-									mail={t(`team:${person.mail}`)}
-									phone={t(`team:${person.phone}`)}
-								/>
-							))}
-						</div> */}
-					</section>
-
-					<div className="text-center space-y-6 mb-10">
-						<Heading tag={'h3'}>{t('team:text_1')} </Heading>
-						<Heading tag={'h4'}>{t('team:text_2')}</Heading>
-					</div>
+			<main className="pt-22 px-4">
+				<Hero />
+				<div className="space-y-8">
+					<Founders />
+					<Personal />
 				</div>
-			</div>
+				<GreenSection
+					title={'Ты можешь стать частью нашей команды'}
+					textBtn={'Карьера'}
+				>
+					<p className="text-gray-400 max-w-[50%]">
+						Мы рады сообщить, что наш фонд стремительно развивается, как и штат
+						сотрудников. Мы ищем целеустремлённых специалистов, желающих расти
+						вместе с нами. Оставляй свою заявку.{' '}
+					</p>
+				</GreenSection>
+			</main>
 		</>
 	)
 }

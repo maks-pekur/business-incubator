@@ -1,6 +1,6 @@
-import andrii from '../public/assets/images/team/Andrii_Derkach.png'
-import vitaliy from '../public/assets/images/team/Vitaliy_Sukhoy.png'
-import vlad from '../public/assets/images/team/Vladyslav_Buidenko.png'
+import andrii from '../public/assets/images/team/Andrii_Derkach.jpeg'
+import vitaliy from '../public/assets/images/team/Vitaliy_Sukhoy.jpeg'
+import vlad from '../public/assets/images/team/Vladyslav_Buidenko.jpeg'
 
 export const founders = [
 	{
@@ -26,14 +26,15 @@ export const founders = [
 	},
 ]
 
-import elena from '../public/assets/images/team/Elena.png'
-import ilona from '../public/assets/images/team/ilona.png'
-import kateryna from '../public/assets/images/team/kateryna.png'
-import maksym from '../public/assets/images/team/Maksym_Pekur.png'
-import pavel from '../public/assets/images/team/Pavel_Semchuk.png'
-import sofiia from '../public/assets/images/team/Sofiia_Syzonenko.png'
-import yelisaveta from '../public/assets/images/team/Yelizaveta_Danilenka.png'
-import yevgen from '../public/assets/images/team/Yevgen_Teslia.png'
+import elena from '../public/assets/images/team/Elena.jpeg'
+import ilona from '../public/assets/images/team/ilona.jpeg'
+import karyna from '../public/assets/images/team/karyna.jpeg'
+import kateryna from '../public/assets/images/team/kateryna.jpeg'
+import maksym from '../public/assets/images/team/Maksym_Pekur.jpeg'
+import pavel from '../public/assets/images/team/Pavel_Semchuk.jpeg'
+import sofiia from '../public/assets/images/team/Sofiia_Syzonenko.jpeg'
+import yelisaveta from '../public/assets/images/team/Yelizaveta_Danilenka.jpeg'
+import yevgen from '../public/assets/images/team/Yevgen_Teslia.jpeg'
 
 export const personal = [
 	{
@@ -70,6 +71,14 @@ export const personal = [
 	},
 	{
 		id: '06',
+		img: karyna,
+		name: 'karyna_name',
+		position: 'karyna_position',
+		mail: 'karyna_mail',
+		phone: 'karyna_phone',
+	},
+	{
+		id: '07',
 		img: pavel,
 		name: 'pavel_name',
 		position: 'pavel_position',
@@ -77,7 +86,7 @@ export const personal = [
 		mail: 'pavel_mail',
 	},
 	{
-		id: '07',
+		id: '08',
 		img: maksym,
 		name: 'maksym_name',
 		position: 'maksym_position',
@@ -85,7 +94,7 @@ export const personal = [
 		mail: 'maksym_mail',
 	},
 	{
-		id: '08',
+		id: '09',
 		img: yelisaveta,
 		name: 'yelisaveta_name',
 		position: 'yelisaveta_position',
@@ -93,7 +102,7 @@ export const personal = [
 		phone: 'yelisaveta_phone',
 	},
 	{
-		id: '09',
+		id: '10',
 		img: sofiia,
 		name: 'sofiia_name',
 		position: 'sofiia_position',

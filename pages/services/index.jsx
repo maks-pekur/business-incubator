@@ -2,9 +2,17 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import { useQuerySubscription } from 'react-datocms'
+import { Consultation } from '../../components/Consultation'
+import { ExtraServices } from '../../components/ExtraServices'
+import { ForWhom } from '../../components/ForWhom'
+import { GreenSection } from '../../components/GreenSection'
 import { Hero } from '../../components/Hero'
+import { Reviews } from '../../components/Reviews'
+import { ServicePrice } from '../../components/ServicePrice'
+import { ServiceWhatYouGet } from '../../components/ServiceWhatYouGet'
 import { UmbrellaSection } from '../../components/UmbrellaSection'
 import { request } from '../../lib/datocms'
+
 export async function getStaticProps({ locale }) {
 	const formattedLocale = locale.split('-')[0]
 	const graphqlRequest = {
@@ -58,6 +66,16 @@ const index = ({ props, subscription }) => {
 			<main className="relative overflow-x-hidden px-4">
 				<Hero />
 				<UmbrellaSection />
+				<ServicePrice />
+				<ExtraServices />
+				<GreenSection
+					title={'Бесплатная консультация'}
+					textBtn={'Присоединиться'}
+				/>
+				<ForWhom />
+				<ServiceWhatYouGet />
+				<Reviews reviews={allComments} />
+				<Consultation />
 			</main>
 		</>
 	)

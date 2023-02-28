@@ -7,6 +7,14 @@ import { useState } from 'react'
 import { navLinks } from '../translations/header'
 import SocialLinks from './ui/SocialLinks'
 
+const linksNav = [
+	{
+		id: '01',
+		title: 'main',
+		path: '/',
+	},
+]
+
 const flags = {
 	pl: '/assets/images/pl.svg',
 	en: '/assets/images/gb.svg',

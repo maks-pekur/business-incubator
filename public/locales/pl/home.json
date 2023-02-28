@@ -1,18 +1,97 @@
 {
-  "title": "Fundacja",
-  "title_span": "Freedom Business Area",
-  "text_1": "Fundacja Freedom Business Area (FBA) widzi swoją misję jako pomoc: Digital, IT specjalistów i freelancerów z całego świata do prowadzenia wirtualnych firm w Polsce. FBA daje niepowtarzalną okazję do przetestowania swoich pomysłów biznesowych w warunkach rynkowych.",
-  "text_2": "Co otrzymasz",
-  "text_3": "w ramach fundacji?",
-  "button_1": "Czytaj więcej",
-  "text_4": "Jak",
-  "text_5": "ozpocząć rz nami współpracę?",
-  "steps": {
-    "1": "Zgłoszenie telefoniczne bądź na stronie internetowej",
-    "2": "Przetwarzanie danych przez menedżerów",
-    "3": "Bezpłatna konsultacja",
-    "4": "Gromadzenie niezbędnych danych online",
-    "5": "Podpisanie dokumentów online",
-    "6": "Rozpoczęcie działalności"
+  "01": {
+    "section": "О нас",
+    "title": "Фонд Freedom Business Area",
+    "text": {
+      "1": "Видит своей миссией, помощь: Digital, IT специалистам и фрилансерам со всего мира вести виртуальные фирмы в Польше. Фонд FBA даёт уникальную возможность проверить свои бизнес-идеи в рыночных условиях.",
+      "2": "Мы уверены, что сможем удивить тебя оперативностью нашей работы. Все формальности связанные с открытием бизнеса решаются в течении одного рабочего дня. После этого каждый предприниматель может легально вести свой бизнес."
+    },
+    "btn": "Подробнее"
+  },
+  "02": {
+    "section": "Что ты получишь"
+  },
+  "consultation": {
+    "text": "Бесплатная консультация",
+    "btn": "Присоединиться"
+  },
+  "03": {
+    "section": "Как мы работаем",
+    "slide1": {
+      "badge": "шаг 1",
+      "text": "Ваш звонок или заявка на сайте"
+    },
+    "slide2": {
+      "badge": "шаг 2",
+      "text": "Обработка данных менеджерами"
+    },
+    "slide3": {
+      "badge": "шаг 3",
+      "text": "Бесплатная консультация"
+    },
+    "slide4": {
+      "badge": "шаг 4",
+      "text": "Онлайн-сбор необходимых данных"
+    },
+    "slide5": {
+      "badge": "шаг 5",
+      "text": "Подписание документов онлайн"
+    },
+    "slide6": {
+      "badge": "шаг 6",
+      "text": "Старт вашей деятельности"
+    }
+  },
+  "04": {
+    "title": {
+      "text1": "БЕЗ НАС",
+      "text2": "C НАМИ"
+    },
+    "row1": {
+      "left": "Минимум месяц",
+      "center": "Самостоятельная регистрация фирмы",
+      "right": "С нами 30 минут"
+    },
+    "row2": {
+      "left": "12%/32% или 19%",
+      "center": "Подоходный налог",
+      "right": "С нами 6% или 9.6%"
+    },
+    "row3": {
+      "left": "670-1753 PLN",
+      "center": "Взнос на соц. страхование",
+      "right": "С нами = 0 PLN"
+    },
+    "row4": {
+      "left": "400 PLN",
+      "center": "Аренда офиса",
+      "right": "С нами = 0 PLN"
+    },
+    "row5": {
+      "left": "600 PLN",
+      "center": "Бухгалтерское обслуживание",
+      "right": "С нами = 0 PLN"
+    },
+    "row6": {
+      "left": "500 PLN",
+      "center": "Юридические услуги",
+      "right": "С нами = 0 PLN"
+    },
+    "row7": {
+      "left": "400 PLN",
+      "center": "Маркетинговый консалтинг",
+      "right": "С нами = 0 PLN"
+    }
+  },
+  "05": {
+    "section": "Бесплатная консультация",
+    "title": "Оставляй заявку и наш менеджер свяжется с тобой.",
+    "form": {
+      "name": "Ваше имя*",
+      "phone": "Номер телефона*",
+      "mail": "Электронная почта",
+      "nik": "Ник в Telegram",
+      "btn": "Оставить заявку"
+    }
   }
 }

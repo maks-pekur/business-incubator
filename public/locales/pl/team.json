@@ -1,9 +1,10 @@
 {
+  "section": "Zespół",
   "title": "Poznaj nasz zespół!",
   "subtitle": "Za każdym udanym projektem stoją kompetentni specjaliści. Każdy z nas codziennie pracuje nad tym, aby Twoja podróż przedsiębiorcy była łatwa, przejrzysta i bezpieczna.",
+
   "founders": "Współzałożyciele",
-  "team_1": "Nasz",
-  "team_2": "zespół",
+  "personal": "Nasz zespół",
 
   "andrii_name": "Andrii Derkach",
   "andrii_position": "Założyciel",
@@ -36,15 +37,15 @@
   "yevgen_phone": "+4899999999",
   "yevgen_mail": "y.teslia@fba.ink",
 
-  "tetiana_name": "Tetiana Svietkina",
-  "tetiana_position": "Specjalista od legalizacji",
-  "tetiana_phone": "+48010635651",
-  "tetiana_mail": "t.s.legal@fba.ink",
-
   "elena_name": "Helena Zolotar",
   "elena_position": "Prawnik legalizacyjny",
   "elena_phone": "+48799287518",
   "elena_mail": "a.z.legal@fba.ink",
+
+  "karyna_name": "Карина",
+  "karyna_position": "Юрист по легализации",
+  "karyna_phone": "",
+  "karyna_mail": "a.z.legal@fba.ink",
 
   "pavel_name": "Pawel Semchuk",
   "pavel_position": "Menedżer",
@@ -66,7 +67,7 @@
   "sofiia_phone": "",
   "sofiia_mail": "sofiia.socialmedia@gmail.com",
 
-  "text_1": "Możesz stać się częścią naszego zespołu",
-  "text_2": "Tworzymy środowisko, w którym będziesz czuł się komfortowo i swobodnie, aby rozwijać swoje projekty i wprowadzać swoje pomysły w życie.",
-  "btn": "Kariera"
+  "part": "Możesz stać się częścią naszego zespołu",
+  "part_descr": "Tworzymy środowisko, w którym będziesz czuł się komfortowo i swobodnie, aby rozwijać swoje projekty i wprowadzać swoje pomysły w życie.",
+  "part_btn": "Kariera"
 } 

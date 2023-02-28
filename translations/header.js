@@ -60,3 +60,13 @@ export const navLinks = [
 		path: '/contacts',
 	},
 ]
+
+export const navBtn = {
+	title: {
+		pl: 'Dołącz',
+		en: 'Join',
+		uk: 'Приєднатися',
+		ru: 'Присоедениться',
+	},
+	path: '/',
+}

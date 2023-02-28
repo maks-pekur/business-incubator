@@ -1,7 +1,5 @@
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { AboutUs } from '../components/AboutUs'
 import { Consultation } from '../components/Consultation'
 import { GreenSection } from '../components/GreenSection'
@@ -10,17 +8,14 @@ import { HowWeWork } from '../components/HowWeWork'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
 
-export async function getStaticProps({ locale }) {
-	return {
-		props: {
-			...(await serverSideTranslations(locale, ['home'])),
-		},
-	}
-}
+// export async function getStaticProps({ locale }) {
+// 	return {
+// 		props: {
+// 			...(await serverSideTranslations(locale, ['home'])),
+// 		},
+// 	}
+// }
 const Home = () => {
-	const { locale } = useRouter()
-	const { t } = useTranslation()
-
 	return (
 		<>
 			<Head>

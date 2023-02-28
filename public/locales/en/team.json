@@ -1,9 +1,10 @@
 {
+  "section": "Team",
   "title": "Meet our team!",
   "subtitle": "Strong professionals are the backbone of every project's success. Every day, everyone of us puts out effort to make your entrepreneurial journey simple, clear, and secure.",
+
   "founders": "Co-Founders",
-  "team_1": "Our",
-  "team_2": "Team",
+  "personal": "Our Team",
 
   "andrii_name": "Andrii Derkach",
   "andrii_position": "Founder",
@@ -36,15 +37,15 @@
   "yevgen_phone": "+4899999999",
   "yevgen_mail": "y.teslia@fba.ink",
 
-  "tetiana_name": "Tetiana Svietkina",
-  "tetiana_position": "Legalization specialist",
-  "tetiana_phone": "+48010635651",
-  "tetiana_mail": "t.s.legal@fba.ink",
-
   "elena_name": "Elena Zolotar",
   "elena_position": "Legalization lawyer",
   "elena_phone": "+48799287518",
   "elena_mail": "a.z.legal@fba.ink",
+
+  "karyna_name": "Карина",
+  "karyna_position": "Юрист по легализации",
+  "karyna_phone": "",
+  "karyna_mail": "a.z.legal@fba.ink",
 
   "pavel_name": "Pavel Semchuk",
   "pavel_position": "Manager",
@@ -66,7 +67,7 @@
   "sofiia_phone": "",
   "sofiia_mail": "sofiia.socialmedia@gmail.com",
 
-  "text_1": "You can join our team",
-  "text_2": "We establish the conditions necessary for you to develop initiatives and realize ideas in a convenient and straightforward manner.",
-  "btn": "Career"
+  "part": "You can join our team",
+  "part_descr": "We establish the conditions necessary for you to develop initiatives and realize ideas in a convenient and straightforward manner.",
+  "part_btn": "Career"
 } 

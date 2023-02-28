@@ -5,6 +5,8 @@ import { Founders } from '../../components/Founders'
 import { GreenSection } from '../../components/GreenSection'
 import { Hero } from '../../components/Hero'
 import { Personal } from '../../components/Personal'
+import { Heading } from '../../components/ui/Heading'
+import { NumSection } from '../../components/ui/NumSection'
 
 export async function getStaticProps({ locale }) {
 	return {
@@ -14,7 +16,7 @@ export async function getStaticProps({ locale }) {
 	}
 }
 
-const Team = ({ props }) => {
+const Team = () => {
 	const { t } = useTranslation()
 	return (
 		<>
@@ -34,19 +36,25 @@ const Team = ({ props }) => {
 			</Head>
 			<main className="pt-22 px-4">
 				<Hero />
-				<div className="space-y-8">
+				<section className="bg-white p-14 rounded-3xl mb-8">
+					<div>
+						<NumSection
+							number={'01'}
+							title={t('team:section')}
+							variant={'green'}
+						/>
+					</div>
+					<div className="flex justify-end w-full">
+						<div className="max-w-[50%] space-y-6">
+							<Heading tag={'h2'}>{t('team:title')}</Heading>
+							<p>{t('team:subtitle')}</p>
+						</div>
+					</div>
 					<Founders />
-					<Personal />
-				</div>
-				<GreenSection
-					title={'Ты можешь стать частью нашей команды'}
-					textBtn={'Карьера'}
-				>
-					<p className="text-gray-400 max-w-[50%]">
-						Мы рады сообщить, что наш фонд стремительно развивается, как и штат
-						сотрудников. Мы ищем целеустремлённых специалистов, желающих расти
-						вместе с нами. Оставляй свою заявку.{' '}
-					</p>
+				</section>
+				<Personal />
+				<GreenSection title={t('team:part')} textBtn={t('team:part_btn')}>
+					<p className="text-gray-400 max-w-[50%]">{t('team:part_descr')}</p>
 				</GreenSection>
 			</main>
 		</>

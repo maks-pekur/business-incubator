@@ -6,6 +6,7 @@ import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 import { MoreStories } from '../../components/Post/MoreStories'
 import { PostBody } from '../../components/Post/PostBody'
 import { PostHeader } from '../../components/Post/PostHeader'
+import { Heading } from '../../components/ui/Heading'
 
 export async function getStaticPaths({ locales }) {
 	const data = await request({ query: `{ allPosts { slug } }` })
@@ -109,17 +110,26 @@ const Post = ({ subscription }) => {
 	return (
 		<>
 			<Head>{renderMetaTags(metaTags)}</Head>
+			<main className="space-y-20 mx-4">
+				<div className="max-w-6xl mx-auto text-white ">
+					<article>
+						<PostHeader
+							title={post.title}
+							coverImage={post.coverImage}
+							date={post.date}
+							author={post.author}
+						/>
+						<PostBody content={post.content} />
+					</article>
+				</div>
 
-			<article>
-				<PostHeader
-					title={post.title}
-					coverImage={post.coverImage}
-					date={post.date}
-					author={post.author}
-				/>
-				<PostBody content={post.content} />
-			</article>
-			{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+				<div className="bg-white p-14 rounded-3xl">
+					<div className="mb-10">
+						<Heading tag={'h2'}>Больше постов</Heading>
+					</div>
+					{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+				</div>
+			</main>
 		</>
 	)
 }

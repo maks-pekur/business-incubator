@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { Avatar } from '../ui/Avatar'
 import { CoverImage } from '../ui/CoverImage'
-import  Date  from '../ui/Date'
+import Date from '../ui/Date'
+import { Heading } from '../ui/Heading'
+import { LinkComponent } from '../ui/Link'
 
 export const PostPreview = ({
 	title,
@@ -13,21 +14,31 @@ export const PostPreview = ({
 }) => {
 	return (
 		<div>
-			<div className="mb-5">
+			<div className="mb-5 rounded-3xl overflow-hidden">
 				<CoverImage
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
 				/>
 			</div>
-			<h3 className="text-3xl mb-3 leading-snug">
-				<Link href={`/posts/${slug}`}>{title}</Link>
-			</h3>
-			<div className="text-lg mb-4">
-				<Date dateString={date} />
+			<div className="mb-4">
+				<Heading tag={'h3'}>
+					<Link href={`/posts/${slug}`}>{title}</Link>
+				</Heading>
 			</div>
-			<p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-			<Avatar name={author.name} picture={author.picture} />
+
+			<div className="flex items-center justify-between">
+				<div className="text-lg">
+					<Date dateString={date} />
+				</div>
+				<div className="flex items-start">
+					<LinkComponent
+						href={`/posts/${slug}`}
+						variant={'outline'}
+						title={'Подробнее'}
+					/>
+				</div>
+			</div>
 		</div>
 	)
 }

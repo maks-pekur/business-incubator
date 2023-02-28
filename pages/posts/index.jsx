@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import { renderMetaTags, useQuerySubscription } from 'react-datocms'
+import { Hero } from '../../components/Hero'
 import { HeroPost } from '../../components/Post/HeroPost'
-import MoreStories from '../../components/Post/MoreStories'
+import { MoreStories } from '../../components/Post/MoreStories'
+import { NumSection } from '../../components/ui/NumSection'
 import { request } from '../../lib/datocms'
 import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 
@@ -59,17 +61,25 @@ const index = ({ subscription }) => {
 	return (
 		<>
 			<Head>{renderMetaTags(metaTags)}</Head>
-			{heroPost && (
-				<HeroPost
-					title={heroPost.title}
-					coverImage={heroPost.coverImage}
-					date={heroPost.date}
-					author={heroPost.author}
-					slug={heroPost.slug}
-					excerpt={heroPost.excerpt}
-				/>
-			)}
-			{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+			<main className="px-4">
+				<Hero />
+				<div className="bg-white rounded-3xl p-14">
+					<div className="mb-6">
+						<NumSection number={'01'} title={'Блог'} variant={'green'} />
+					</div>
+					{heroPost && (
+						<HeroPost
+							title={heroPost.title}
+							coverImage={heroPost.coverImage}
+							date={heroPost.date}
+							author={heroPost.author}
+							slug={heroPost.slug}
+							excerpt={heroPost.excerpt}
+						/>
+					)}
+					{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+				</div>
+			</main>
 		</>
 	)
 }

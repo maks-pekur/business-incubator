@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
-import { Avatar } from '../ui/Avatar'
 import { CoverImage } from '../ui/CoverImage'
-import  Date  from '../ui/Date'
+import Date from '../ui/Date'
 import { Heading } from '../ui/Heading'
+import { LinkComponent } from '../ui/Link'
 
 export const HeroPost = ({
 	title,
@@ -14,26 +14,29 @@ export const HeroPost = ({
 	slug,
 }) => {
 	return (
-		<section>
-			<div className="mb-8 md:mb-16">
+		<div className="mb-28">
+			<div className="rounded-3xl overflow-hidden mb-4">
 				<CoverImage
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
 					slug={slug}
 				/>
 			</div>
-			<div className="md:grid  md:gap-x-16 lg:gap-x-4 mb-20 md:mb-28">
+			<div className="mb-4">
 				<Heading tag={'h3'} classNames={'text-start'}>
 					<Link href={`/posts/${slug}`}>{title}</Link>
 				</Heading>
-				<div className="mb-4 md:mb-0 text-lg">
+			</div>
+			<div className="flex items-start justify-between">
+				<div className="text-lg">
 					<Date dateString={date} />
 				</div>
-				<div>
-					<p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-					<Avatar name={author.name} picture={author.picture} />
-				</div>
+				<LinkComponent
+					href={`/posts/${slug}`}
+					variant={'outline'}
+					title={'Подробнее'}
+				/>
 			</div>
-		</section>
+		</div>
 	)
 }

@@ -6,16 +6,16 @@ import { NumSection } from './ui/NumSection'
 export const Consultation = () => {
 	return (
 		<section className="p-2 bg-white ">
-			<div className="bg-[var(--green)] p-14 rounded-xl">
-				<div>
+			<div className="bg-[var(--green)] md:p-14 p-6 rounded-xl">
+				<div className="mb-10 md:mb-0">
 					<NumSection
 						number={'05'}
 						title={'Бесплатная консультация'}
 						variant={'black'}
 					/>
 				</div>
-				<div className="w-full flex justify-end mb-20">
-					<div className="w-[40%]">
+				<div className="w-full flex justify-end mb-10 md:mb-20">
+					<div className="md:w-[40%]">
 						<Heading tag={'h2'}>
 							Оставляй заявку и наш менеджер свяжется с тобой.
 						</Heading>

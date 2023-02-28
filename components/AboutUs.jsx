@@ -1,12 +1,20 @@
+import { useTranslation } from 'react-i18next'
 import { Button } from './ui/Button'
 import { Heading } from './ui/Heading'
 import { NumSection } from './ui/NumSection'
 
 export const AboutUs = () => {
+	const { t } = useTranslation()
 	return (
 		<section className="bg-white rounded-3xl p-14">
-			<div className="grid grid-cols-2 h-full">
-				<NumSection number={'01'} title={'О нас'} variant={'green'} />
+			<div className="grid md:grid-cols-2 h-full">
+				<div className="mb-8 md:mb-0">
+					<NumSection
+						number={'01'}
+						title={t('home:section')}
+						variant={'green'}
+					/>
+				</div>
 				<div className="space-y-8">
 					<Heading tag={'h2'}>Фонд Freedom Business Area</Heading>
 					<div className="text-gray-500 space-y-4">

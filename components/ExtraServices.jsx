@@ -1,8 +1,5 @@
 import Image from 'next/image'
-import { Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { NavigateArrow } from './ui/NavigateArrow'
 import { NumSection } from './ui/NumSection'
 
 import 'swiper/css'
@@ -30,56 +27,30 @@ const slides = [
 
 export const ExtraServices = () => {
 	return (
-		<section className="p-14 bg-[var(--light-gray)] rounded-3xl">
-			<div className="grid grid-cols-3 h-full">
-				<div className="flex flex-col justify-between p-14">
-					<div>
-						<NumSection
-							number={'03'}
-							title={'Дополнительные услуги'}
-							variant={'green'}
-						/>
-					</div>
-					<div className="flex items-center space-x-6">
-						<NavigateArrow
-							direction={'left'}
-							variant={'outline'}
-							id={'swiper-prev'}
-						/>
-						<NavigateArrow
-							direction={'right'}
-							variant={'outline'}
-							id={'swiper-next'}
-						/>
-					</div>
+		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl">
+			<div>
+				<div className="mb-10">
+					<NumSection
+						number={'03'}
+						title={'Дополнительные услуги'}
+						variant={'green'}
+					/>
 				</div>
-				<div className="col-span-2 py-14 h-full">
-					<Swiper
-						loop={true}
-						modules={[Navigation]}
-						navigation={{
-							nextEl: '#swiper-next',
-							prevEl: '#swiper-prev',
-						}}
-						spaceBetween={40}
-						slidesPerView={2}
-						className="w-full h-full flex"
-					>
-						{slides.map(slide => (
-							<SwiperSlide key={slide.id}>
-								<div className="border-2 border-black h-full rounded-2xl pt-20 grid grid-rows-2">
-									<div className="flex items-center justify-center w-full h-full">
-										<Image src={slide.image} width={150} height={150} alt="" />
-									</div>
-									<div className="w-full h-full flex items-end justify-center">
-										<div className="text-2xl text-center bg-black text-white w-full rounded-2xl p-10">
-											{slide.title}
-										</div>
-									</div>
-								</div>
-							</SwiperSlide>
-						))}
-					</Swiper>
+				<div className="grid md:grid-cols-3 gap-10">
+					{slides.map(slide => (
+						<div
+							key={slide.id}
+							className="border-2 border-black rounded-2xl flex flex-col"
+						>
+							<div className="flex items-center justify-center w-full h-full p-10">
+								<Image src={slide.image} width={150} height={150} alt="" />
+							</div>
+
+							<div className="text-2xl text-center bg-black text-white w-full rounded-2xl p-10">
+								{slide.title}
+							</div>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>

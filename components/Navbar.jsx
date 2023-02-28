@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-
-import { navLinks } from '../translations/header'
+import { navBtn, navLinks } from '../translations/header'
+import { Languages } from './ui/Languages'
+import { LinkComponent } from './ui/Link'
 import SocialLinks from './ui/SocialLinks'
 
 const linksNav = [
@@ -33,38 +34,19 @@ export const Navbar = () => {
 	}
 
 	return (
-		<nav>
-			<div className="hidden md:block font-thin	">
-				<div>
-					<ul className="flex space-x-6 items-center text-[14px]">
-						{navLinks.map(link => (
-							<li key={link.id} onClick={() => setOpen(false)}>
-								<Link
-									className={`${
-										pathname === link.path && 'text-[#bcef30]'
-									} hover:text-[#bcef30] transition-colors duration-200`}
-									href={link.path}
-								>
-									{link.title[locale]}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</div>
-			</div>
-
-			<div className="md:hidden">
+		<nav className="w-full">
+			<div className="md:hidden text-white">
 				<Hamburger size={22} toggled={isOpen} toggle={setOpen} />
 			</div>
 			{isOpen && (
-				<div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-white">
+				<div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-[var(--green)] p-2">
 					<div
 						className="absolute top-6 right-6 text-xl"
 						onClick={() => setOpen(false)}
 					>
 						X
 					</div>
-					<div className="flex flex-col items-center justify-between h-full py-24">
+					<div className="flex flex-col items-center justify-between h-full py-24 bg-black rounded-3xl">
 						<ul className="flex flex-col space-y-6 w-full items-center text-[26px]">
 							{navLinks.map(link => (
 								<li key={link.id} onClick={() => setOpen(false)}>
@@ -110,6 +92,34 @@ export const Navbar = () => {
 					</div>
 				</div>
 			)}
+			<div className="hidden md:flex lg:items-center space-x-8">
+				<div>
+					<ul className="flex space-x-6 items-center text-[14px]">
+						{navLinks.map(link => (
+							<li key={link.id} onClick={() => setOpen(false)}>
+								<Link
+									className={`${
+										pathname === link.path && 'text-[#bcef30]'
+									} hover:text-[#bcef30] transition-colors duration-200`}
+									href={link.path}
+								>
+									{link.title[locale]}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div>
+					<Languages classNames={'top-7'} />
+				</div>
+				<div className="hidden lg:block">
+					<LinkComponent
+						href={'/'}
+						variant={'green'}
+						title={navBtn.title[locale]}
+					/>
+				</div>
+			</div>
 		</nav>
 	)
 }

@@ -5,12 +5,12 @@ import { NumSection } from './ui/NumSection'
 
 export const ServicePrice = () => {
 	return (
-		<section className="bg-[var(--dark-gray)] rounded-3xl p-14 text-white">
+		<section className="bg-[var(--dark-gray)] rounded-3xl p-6 md:p-14 text-white">
 			<div>
 				<div>
 					<NumSection number={'02'} title={'Услуги'} variant={'green'} />
 				</div>
-				<div className="grid grid-cols-2 gap-10">
+				<div className="grid md:grid-cols-2 gap-10">
 					<div className="space-y-6 pt-6">
 						<Heading tag={'h2'}>
 							Полную ответственность за реализацию бизнеса несёт фонд FBA, а не
@@ -23,7 +23,7 @@ export const ServicePrice = () => {
 					</div>
 					<div>
 						<div className="border-2 border-white h-full rounded-2xl">
-							<div className="p-20">
+							<div className="p-10 md:p-20">
 								<Heading tag={'h2'} classNames={'text-center'}>
 									Стоимость полного пакета услуг
 								</Heading>

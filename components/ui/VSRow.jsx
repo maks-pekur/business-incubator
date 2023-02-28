@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { VSItem } from './VSItem'
 
 function randomNumber() {
-	return Math.floor(Math.random() * (100 - 80 + 1)) + 80 + '%'
+	return Math.floor(Math.random() * (100 - 70 + 1)) + 70 + '%'
 }
 
 export const VSRow = ({ textLeft, textRight, textCenter }) => {

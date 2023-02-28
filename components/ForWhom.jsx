@@ -42,9 +42,9 @@ const items = [
 
 export const ForWhom = () => {
 	return (
-		<section className="bg-white p-14 rounded-2xl">
+		<section className="bg-white md:p-14 p-6 rounded-2xl">
 			<div>
-				<div>
+				<div className="mb-6 md:mb-0">
 					<NumSection
 						number={'04'}
 						title={'Для кого подойдет'}
@@ -52,7 +52,7 @@ export const ForWhom = () => {
 					/>
 				</div>
 				<div className="flex items-center justify-end w-full">
-					<div className="space-y-6 max-w-[50%] pb-10">
+					<div className="space-y-6 md:max-w-[50%] pb-10">
 						<Heading tag={'h2'}>Для кого подойдет бизнес-инкубатор?</Heading>
 						<p>
 							Если ты не нашёл себя в этом списке - смело пиши нам, мы с
@@ -63,17 +63,17 @@ export const ForWhom = () => {
 						</p>
 					</div>
 				</div>
-				<div className="grid grid-cols-3 gap-10">
+				<div className="grid md:grid-cols-3 gap-10">
 					{items.map(item => (
 						<div
 							key={item.id}
-							className="bg-[var(--light-gray)] rounded-xl p-10 flex flex-col items-center"
+							className="bg-[var(--light-gray)] rounded-xl p-4 md:p-10"
 						>
-							<div className="mb-10 h-[200px] flex">
+							<div className="mb-10 h-[200px] flex items-center justify-center">
 								<Image src={item.img} width={200} height={200} alt="" />
 							</div>
-							<div className="w-full">
-								<ul className="w-full ml-6">
+							<div className="w-full flex items-center justify-center md:justify-start">
+								<ul>
 									{item.list.map(li => (
 										<li className="mb-6 relative flex items-center" key={li}>
 											<div className="bg-[var(--green)] w-4 h-4 rounded-full mr-6"></div>

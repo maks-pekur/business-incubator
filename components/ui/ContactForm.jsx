@@ -57,7 +57,7 @@ export const ContactForm = () => {
 
 	return (
 		<form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-			<div className="w-[65%] space-y-10 flex flex-col md:items-center mb-20">
+			<div className="md:w-[65%] space-y-10 flex flex-col md:items-center mb-20">
 				<div className="w-full">
 					<label htmlFor="name" className="sr-only" />
 					<input
@@ -139,7 +139,7 @@ export const ContactForm = () => {
 					/>
 				</div>
 			</div>
-			<div className="w-full flex justify-end">
+			<div className="w-full flex justify-center md:justify-end">
 				<Button
 					isLoading={isLoading}
 					title={'Оставить заявку'}

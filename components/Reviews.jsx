@@ -8,15 +8,14 @@ import { NumSection } from './ui/NumSection'
 import { Rating } from './ui/Rating'
 
 export const Reviews = ({ reviews }) => {
-	console.log(reviews)
 	return (
-		<section className="p-14 bg-[var(--light-gray)] rounded-3xl">
-			<div className="grid grid-cols-3 h-full">
+		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl">
+			<div className="md:grid md:grid-cols-3 h-full">
 				<div className="flex flex-col justify-between h-full">
-					<div>
+					<div className="mb-6 md:mb-0">
 						<NumSection number={'06'} title={'Отзывы'} variant={'green'} />
 					</div>
-					<div className="flex items-center space-x-6">
+					<div className="w-full flex items-center justify-center md:justify-start space-x-6 mb-10 md:mb-0">
 						<NavigateArrow
 							direction={'left'}
 							variant={'outline'}
@@ -29,7 +28,7 @@ export const Reviews = ({ reviews }) => {
 						/>
 					</div>
 				</div>
-				<div className="col-span-2 h-full">
+				<div className="md:col-span-2 md:h-full">
 					<Swiper
 						loop={true}
 						modules={[Navigation]}

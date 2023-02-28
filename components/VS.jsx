@@ -50,11 +50,13 @@ const items = [
 
 export const VS = () => {
 	return (
-		<section className="bg-[var(--dark-gray)] py-14">
+		<section className="bg-[var(--dark-gray)] py-14 rounded-3xl">
 			<div className="px-14">
-				<NumSection number={'04'} title={''} variant={'green'} />
+				<div className="mb-10 md:mb-0">
+					<NumSection number={'04'} title={''} variant={'green'} />
+				</div>
 				<div className="flex flex-col items-center">
-					<div className="flex items-center text-white mb-20">
+					<div className="flex items-center text-white mb-10 md:mb-20">
 						<div>БЕЗ НАС</div>
 						<div>
 							<Image src={'/assets/images/vs.svg'} width={100} height={100} />
@@ -63,14 +65,16 @@ export const VS = () => {
 					</div>
 				</div>
 			</div>
-			{items.map(({ id, textLeft, textCenter, textRight }) => (
-				<VSRow
-					key={id}
-					textLeft={textLeft}
-					textCenter={textCenter}
-					textRight={textRight}
-				/>
-			))}
+			<div className="w-full">
+				{items.map(({ id, textLeft, textCenter, textRight }) => (
+					<VSRow
+						key={id}
+						textLeft={textLeft}
+						textCenter={textCenter}
+						textRight={textRight}
+					/>
+				))}
+			</div>
 		</section>
 	)
 }

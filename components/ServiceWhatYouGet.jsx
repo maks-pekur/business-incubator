@@ -56,8 +56,8 @@ const items = [
 
 export const ServiceWhatYouGet = () => {
 	return (
-		<section className="p-14 bg-[var(--dark-gray)]">
-			<div>
+		<section className="md:p-14 p-6 bg-[var(--dark-gray)] rounded-3xl">
+			<div className="mb-6 md:mb-0">
 				<NumSection
 					number={'05'}
 					title={'Что ты получишь'}
@@ -66,7 +66,7 @@ export const ServiceWhatYouGet = () => {
 				/>
 			</div>
 			<div className="text-white flex justify-end">
-				<div className="w-[70%]">
+				<div className="md:w-[70%]">
 					<div className="mb-10">
 						<Heading tag={'h2'}>
 							А теперь подробнее, что ты получишь присоединившись к фонду:
@@ -78,7 +78,7 @@ export const ServiceWhatYouGet = () => {
 								<Disclosure as="div">
 									{({ open }) => (
 										<>
-											<Disclosure.Button className="w-full py-4 text-2xl flex items-center justify-between">
+											<Disclosure.Button className="w-full text-start py-4 md:text-2xl flex items-center justify-between">
 												{item.question}
 												<ChevronRightIcon
 													className={open && 'rotate-90 transform'}

@@ -55,16 +55,16 @@ const slides = [
 export const HowWeWork = () => {
 	return (
 		<section className="bg-[var(--light-gray)] rounded-3xl">
-			<div className="grid grid-cols-3 h-full">
-				<div className="flex flex-col justify-between p-14">
-					<div>
+			<div className="md:grid md:grid-cols-3 h-full p-6 md:py-14 md:pl-14">
+				<div className="flex flex-col md:justify-between">
+					<div className="mb-10 md:mb-0">
 						<NumSection
 							number={'03'}
 							title={'Как мы работаем'}
 							variant={'green'}
 						/>
 					</div>
-					<div className="flex items-center space-x-6">
+					<div className="flex items-center justify-center md:justify-start space-x-6 mb-6 md:mb-0">
 						<NavigateArrow
 							direction={'left'}
 							variant={'outline'}
@@ -78,7 +78,7 @@ export const HowWeWork = () => {
 					</div>
 				</div>
 
-				<div className="col-span-2 p-14 h-full">
+				<div className="md:col-span-2 h-full">
 					<Swiper
 						loop={true}
 						modules={[Navigation]}
@@ -87,12 +87,12 @@ export const HowWeWork = () => {
 							prevEl: '#swiper-prev',
 						}}
 						spaceBetween={40}
-						slidesPerView={2}
-						className="w-full h-full flex"
+						slidesPerView={1.5}
+						className="flex"
 					>
 						{slides.map(slide => (
 							<SwiperSlide key={slide.id}>
-								<div className="border-2 border-black h-full rounded-2xl p-14 grid grid-rows-2">
+								<div className="border-2 border-black rounded-2xl p-4 md:p-14 grid grid-rows-2">
 									<div className="flex items-center justify-center w-full">
 										<Image src={slide.image} width={150} height={150} alt="" />
 									</div>

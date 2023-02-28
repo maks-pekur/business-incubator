@@ -5,8 +5,8 @@ import { NumSection } from './ui/NumSection'
 
 export const UmbrellaSection = () => {
 	return (
-		<section className="bg-white rounded-3xl px-14 pt-14">
-			<div className="grid grid-cols-2 h-full">
+		<section className="bg-white rounded-3xl p-6 md:px-14 md:pt-14">
+			<div className="grid md:grid-cols-2 h-full">
 				<div className="flex">
 					<NumSection number={'01'} title={''} variant={'green'} />
 					<Image
@@ -17,7 +17,7 @@ export const UmbrellaSection = () => {
 						className="flex-end"
 					/>
 				</div>
-				<div className="space-y-8">
+				<div className="md:space-y-8 space-y-4">
 					<Heading tag={'h2'}>
 						Фонд работает по системе umbrella company.
 					</Heading>

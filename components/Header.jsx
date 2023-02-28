@@ -1,33 +1,28 @@
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import { navBtn } from '../translations/header'
 import { Navbar } from './Navbar'
-import { Languages } from './ui/Languages'
-import { LinkComponent } from './ui/Link'
 import Logo from './ui/Logo'
 
 export const Header = () => {
-	const { locale } = useRouter()
-	const [scroll, setScroll] = useState(false)
-
-	useEffect(() => {
-		const onScroll = () => {
-			setScroll(window.scrollY > 90)
-		}
-		window.addEventListener('scroll', onScroll)
-
-		return () => window.removeEventListener('scroll', onScroll)
-	}, [])
-
 	return (
-		<header className="text-white font-['Roboto-100'] fixed top-0 w-full z-10 pt-8 px-10 pb-4">
-			<div
-				className={`absolute inset-0 ${
-					scroll && 'bg-black opacity-80 z-[-10]'
-				}`}
-			></div>
-			<div className="flex items-center justify-between">
+		<motion.header
+			initial={{
+				y: 300,
+				x: -100,
+				rotate: '5deg',
+				backgroundColor: 'none',
+				opacity: 0,
+			}}
+			animate={{
+				y: 0,
+				x: 0,
+				opacity: 1,
+				rotate: '0deg',
+			}}
+			transition={{ duration: 1, type: 'tween' }}
+			className="text-white fixed top-0 left-0 w-full pt-8 px-10 pb-4 z-50"
+		>
+			<div className="w-full flex items-center justify-between">
 				<div className="flex items-center space-x-6">
 					<Logo width={70} height={70} variant={'white'} />
 					<Link
@@ -37,16 +32,10 @@ export const Header = () => {
 						Freedom Business Area
 					</Link>
 				</div>
-				<div className="hidden md:block lg:flex items-center space-x-10">
+				<div>
 					<Navbar />
-					<Languages classNames={'top-7'} />
-					<LinkComponent
-						href={'/'}
-						variant={'green'}
-						title={navBtn.title[locale]}
-					/>
 				</div>
 			</div>
-		</header>
+		</motion.header>
 	)
 }

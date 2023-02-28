@@ -11,9 +11,11 @@ export const Hero = () => {
 			<div className="absolute inset-0 opacity-90">
 				<Image src={figure} fill />
 			</div>
-			<div className="absolute left-10 top-[60%] space-y-2 text-white w-[45%]">
-				<Heading tag={'h1'}>{hero.title[locale]}</Heading>
-				<Heading tag={'h4'}>{hero.subtitle[locale]}</Heading>
+			<div className="absolute inset-0 flex items-center justify-center md:left-10 md:top-[60%]  text-white md:w-[45%]">
+				<div className="space-y-2">
+					<Heading tag={'h1'}>{hero.title[locale]}</Heading>
+					<Heading tag={'h4'}>{hero.subtitle[locale]}</Heading>
+				</div>
 			</div>
 		</section>
 	)

@@ -5,7 +5,7 @@ import { NumSection } from './ui/NumSection'
 
 export const UmbrellaSection = () => {
 	return (
-		<section className="bg-white rounded-3xl p-6 md:px-14 md:pt-14">
+		<section className="bg-white rounded-3xl p-6 md:px-14 md:pt-14 mb-6">
 			<div className="grid md:grid-cols-2 h-full">
 				<div className="flex">
 					<NumSection number={'01'} title={''} variant={'green'} />

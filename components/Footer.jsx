@@ -12,7 +12,7 @@ import PointIcon from '../components/ui/PointIcon'
 export const Footer = () => {
 	const { locale } = useRouter()
 	return (
-		<footer className="w-full min-h-80 bg-[var(--dark-gray)] text-white">
+		<footer className="w-full min-h-80 bg-transparent text-white relative">
 			<div className="h-full w-full p-6 grid items-center sm:grid-cols-3 space-y-10">
 				<div>
 					<div className="flex items-center justify-center">
@@ -81,6 +81,26 @@ export const Footer = () => {
 								Ogrodowa 58, <br /> Warszawa, 00-876
 							</Link>
 						</div>
+
+						<Link
+							href={'#hero'}
+							className="bg-white absolute right-14 bottom-14 h-12 w-12 rounded-full flex items-center justify-center animate-bounce text-black"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth="1.5"
+								stroke="currentColor"
+								className="w-5 h-5 rotate-180"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+								/>
+							</svg>
+						</Link>
 					</div>
 				</div>
 			</div>

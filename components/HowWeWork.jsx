@@ -54,8 +54,8 @@ const slides = [
 
 export const HowWeWork = () => {
 	return (
-		<section className="bg-[var(--light-gray)] rounded-3xl">
-			<div className="md:grid md:grid-cols-3 h-full p-6 md:py-14 md:pl-14">
+		<section className=" bg-black sticky top-0 rounded-3xl">
+			<div className="bg-[var(--light-gray)] pb-6 rounded-3xl md:grid md:grid-cols-3 h-full p-6 md:py-20 md:pl-20">
 				<div className="flex flex-col md:justify-between">
 					<div className="mb-10 md:mb-0">
 						<NumSection
@@ -87,7 +87,7 @@ export const HowWeWork = () => {
 							prevEl: '#swiper-prev',
 						}}
 						spaceBetween={40}
-						slidesPerView={1.5}
+						slidesPerView={2}
 						className="flex"
 					>
 						{slides.map(slide => (

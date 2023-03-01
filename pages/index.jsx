@@ -1,5 +1,12 @@
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
+import {
+	Animator,
+	batch,
+	Fade,
+	ScrollContainer,
+	ScrollPage,
+} from 'react-scroll-motion'
 import { AboutUs } from '../components/AboutUs'
 import { Consultation } from '../components/Consultation'
 import { GreenSection } from '../components/GreenSection'
@@ -15,6 +22,8 @@ import { WhatYouGet } from '../components/WhatYouGet'
 // 		},
 // 	}
 // }
+
+
 const Home = () => {
 	return (
 		<>
@@ -35,17 +44,23 @@ const Home = () => {
 				<meta property="og:site_name" content="Freedom Business Area" />
 				<meta property="og:title" content="Freedom Business Area" />
 			</Head>
-			<main className="relative overflow-x-hidden px-4">
-				<Hero />
-				<AboutUs />
-				<WhatYouGet />
-				<GreenSection
-					title={'Бесплатная консультация'}
-					textBtn={'Присоединиться'}
-				></GreenSection>
-				<HowWeWork />
-				<VS />
-				<Consultation />
+			<main className="relative px-4">
+				<ScrollContainer>
+					<ScrollPage>
+						<Animator animation={batch(Fade())}>
+							<Hero />
+						</Animator>
+					</ScrollPage>
+					<AboutUs />
+					<WhatYouGet />
+					<GreenSection
+						title={'Бесплатная консультация'}
+						textBtn={'Присоединиться'}
+					></GreenSection>
+					<HowWeWork />
+					<VS />
+					<Consultation />
+				</ScrollContainer>
 			</main>
 		</>
 	)

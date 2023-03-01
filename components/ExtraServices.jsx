@@ -27,7 +27,7 @@ const slides = [
 
 export const ExtraServices = () => {
 	return (
-		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl">
+		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl mb-6">
 			<div>
 				<div className="mb-10">
 					<NumSection

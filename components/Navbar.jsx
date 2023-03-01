@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Hamburger from 'hamburger-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -96,7 +97,19 @@ export const Navbar = () => {
 				<div>
 					<ul className="flex space-x-6 items-center text-[14px]">
 						{navLinks.map(link => (
-							<li key={link.id} onClick={() => setOpen(false)}>
+							<motion.li
+								initial={{
+									y: -100,
+									opacity: 0,
+								}}
+								animate={{
+									y: 0,
+									opacity: 1,
+								}}
+								transition={{ duration: 1.5, type: 'tween' }}
+								key={link.id}
+								onClick={() => setOpen(false)}
+							>
 								<Link
 									className={`${
 										pathname === link.path && 'text-[#bcef30]'
@@ -105,7 +118,7 @@ export const Navbar = () => {
 								>
 									{link.title[locale]}
 								</Link>
-							</li>
+							</motion.li>
 						))}
 					</ul>
 				</div>
@@ -114,7 +127,7 @@ export const Navbar = () => {
 				</div>
 				<div className="hidden lg:block">
 					<LinkComponent
-						href={'/'}
+						href={'#consultation'}
 						variant={'green'}
 						title={navBtn.title[locale]}
 					/>

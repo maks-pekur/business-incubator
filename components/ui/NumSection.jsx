@@ -8,7 +8,7 @@ export const NumSection = ({ number, title, variant, classNames }) => {
 		<div className="h-full w-full">
 			<div className="space-x-4 flex items-center">
 				<div
-					className={`w-20 h-20 rounded-full flex items-center justify-center ${styles[variant]}`}
+					className={`w-16 h-16 rounded-full flex items-center justify-center ${styles[variant]}`}
 				>
 					{number}
 				</div>

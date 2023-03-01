@@ -16,7 +16,7 @@ export const NavigateArrow = ({ onClick, variant, direction, id }) => {
 				viewBox="0 0 8 12"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-				className={`border-[1px] rounded-full w-20 h-20 p-6 transition-colors duration-100 ${styles[direction]} ${styles[variant]}`}
+				className={`border-[1px] rounded-full w-16 h-16 p-6 transition-colors duration-100 ${styles[direction]} ${styles[variant]}`}
 				onClick={onClick}
 			>
 				<path

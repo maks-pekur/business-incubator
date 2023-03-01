@@ -5,7 +5,7 @@ import { NumSection } from './ui/NumSection'
 
 export const ServicePrice = () => {
 	return (
-		<section className="bg-[var(--dark-gray)] rounded-3xl p-6 md:p-14 text-white">
+		<section className="bg-[var(--dark-gray)] rounded-3xl p-6 md:p-14 text-white mb-6">
 			<div>
 				<div>
 					<NumSection number={'02'} title={'Услуги'} variant={'green'} />

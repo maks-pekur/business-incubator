@@ -8,6 +8,12 @@ import { translationContactForm } from '../../translations/contactForm'
 import 'react-phone-input-2/lib/style.css'
 import { Button } from './Button'
 
+const style = {
+	input:
+		'w-full border-b-[1px] border-[var(--dark-gray)] py-3 bg-transparent outline-none placeholder:text-black placeholder:opacity-40 ',
+	label: 'text-[10px]',
+}
+
 export const ContactForm = () => {
 	const { locale } = useRouter()
 	const [isLoading, setLoading] = useState(false)
@@ -57,11 +63,13 @@ export const ContactForm = () => {
 
 	return (
 		<form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-			<div className="md:w-[65%] space-y-10 flex flex-col md:items-center mb-20">
+			<div className="space-y-10 flex flex-col md:items-center mb-20">
 				<div className="w-full">
-					<label htmlFor="name" className="sr-only" />
+					<label htmlFor="name" className={`${style.label}`}>
+						Full name
+					</label>
 					<input
-						className={`w-full border-b-2 border-[var(--dark-gray)] py-3 px-6 bg-transparent outline-none ${
+						className={`${style.input} ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
 						placeholder={translationContactForm.name[locale]}
@@ -78,44 +86,51 @@ export const ContactForm = () => {
 						name="phone"
 						rules={{ required: true }}
 						render={({ field: { ref, ...field } }) => (
-							<PhoneInput
-								{...field}
-								inputExtraProps={{
-									ref,
-									required: true,
-									autoFocus: true,
-								}}
-								country="pl"
-								onlyCountries={['pl', 'ua', 'ru', 'by']}
-								inputStyle={{
-									width: '100%',
-									borderBottom: '2px solid var(--dark-gray)',
-									background: 'transparent',
-									padding: '22px 48px',
-								}}
-								buttonStyle={{
-									borderBottom: '2px solid var(--dark-gray)',
-									background: 'transparent',
-									border: 'none',
-								}}
-								dropdownStyle={{
-									width: '300px',
-									marginTop: '4px',
-									outline: 'none',
-									padding: '10px',
-									borderRadius: '10px',
-									boxShadow:
-										'0px 4px 40px rgba(0, 0, 0, 0.25), 0px 16px 40px rgba(33, 33, 33, 0.16)',
-								}}
-							/>
+							<>
+								<label htmlFor="phone" className={`${style.label}`}>
+									Your phone number
+								</label>
+								<PhoneInput
+									{...field}
+									inputExtraProps={{
+										ref,
+										required: true,
+										autoFocus: true,
+									}}
+									country="pl"
+									onlyCountries={['pl', 'ua', 'ru', 'by']}
+									inputStyle={{
+										width: '100%',
+										borderBottom: '1px solid var(--dark-gray)',
+										background: 'transparent',
+										padding: '22px 48px',
+									}}
+									buttonStyle={{
+										borderBottom: '1px solid var(--dark-gray)',
+										background: 'transparent',
+										border: 'none',
+									}}
+									dropdownStyle={{
+										width: '300px',
+										marginTop: '4px',
+										outline: 'none',
+										padding: '10px',
+										borderRadius: '10px',
+										boxShadow:
+											'0px 4px 40px rgba(0, 0, 0, 0.25), 0px 16px 40px rgba(33, 33, 33, 0.16)',
+									}}
+								/>
+							</>
 						)}
 					/>
 				</div>
 				<div className="w-full">
-					<label htmlFor="email" className="sr-only" />
+					<label htmlFor="email" className={`${style.label}`}>
+						Email address
+					</label>
 					<input
-						className={`w-full border-b-2 border-[var(--dark-gray)] py-3 px-6 bg-transparent outline-none ${
-							errors.name?.type === 'required' && 'border-red-400'
+						className={`${style.input} ${
+							errors.email?.type === 'required' && 'border-red-400'
 						}`}
 						placeholder={translationContactForm.mail[locale]}
 						type="email"
@@ -125,12 +140,31 @@ export const ContactForm = () => {
 					/>
 				</div>
 				<div className="w-full">
-					<label htmlFor="telegram" className="sr-only" />
+					<label htmlFor="telegram" className={`${style.label}`}>
+						Ваш ник
+					</label>
 					<input
-						className={`w-full border-b-2 border-[var(--dark-gray)] py-3 px-6 bg-transparent outline-none ${
+						className={`${style.input} ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
 						placeholder={translationContactForm.telegram[locale]}
+						type="text"
+						name="telegram"
+						{...register('telegram', {
+							required: true,
+						})}
+					/>
+				</div>
+				<div className="w-full">
+					<label htmlFor="message" className={`${style.label}`}>
+						Ваш сообщение
+					</label>
+					<textarea
+						rows="4"
+						className={`${style.input} resize-none ${
+							errors.name?.type === 'required' && 'border-red-400'
+						}`}
+						placeholder={translationContactForm.message[locale]}
 						type="text"
 						name="telegram"
 						{...register('telegram', {

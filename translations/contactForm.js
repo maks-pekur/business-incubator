@@ -30,16 +30,22 @@ export const translationContactForm = {
 		ru: 'Номер телефона*',
 	},
 	mail: {
-		pl: 'E-mail',
-		en: 'E-mail',
-		uk: 'E-mail',
-		ru: 'E-mail',
+		pl: 'Wpisz swój e-mail',
+		en: 'Type your email address',
+		uk: 'Введіть ваш email',
+		ru: 'Введите ваш email',
 	},
 	telegram: {
 		pl: 'Nikname',
 		en: 'Nikname',
 		uk: 'Ваш нік',
 		ru: 'Ваш ник',
+	},
+	message: {
+		pl: 'Введите ваше сообщение',
+		en: 'Type your message',
+		uk: 'Введіть ваше питання',
+		ru: 'Введите ваше сообщение',
 	},
 	btn: {
 		pl: 'Wyślij',

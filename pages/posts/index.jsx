@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { renderMetaTags, useQuerySubscription } from 'react-datocms'
 import { Hero } from '../../components/Hero'
-import { HeroPost } from '../../components/Post/HeroPost'
 import { MoreStories } from '../../components/Post/MoreStories'
 import { NumSection } from '../../components/ui/NumSection'
 import { request } from '../../lib/datocms'
@@ -54,8 +53,7 @@ const index = ({ subscription }) => {
 	const {
 		data: { allPosts, blog },
 	} = useQuerySubscription(subscription)
-	const heroPost = allPosts[0]
-	const morePosts = allPosts.slice(1)
+	const morePosts = allPosts.slice(0)
 	const metaTags = blog.seo
 
 	return (
@@ -67,16 +65,6 @@ const index = ({ subscription }) => {
 					<div className="mb-6">
 						<NumSection number={'01'} title={'Блог'} variant={'green'} />
 					</div>
-					{heroPost && (
-						<HeroPost
-							title={heroPost.title}
-							coverImage={heroPost.coverImage}
-							date={heroPost.date}
-							author={heroPost.author}
-							slug={heroPost.slug}
-							excerpt={heroPost.excerpt}
-						/>
-					)}
 					{morePosts.length > 0 && <MoreStories posts={morePosts} />}
 				</div>
 			</main>

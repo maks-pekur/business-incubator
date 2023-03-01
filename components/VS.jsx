@@ -50,30 +50,32 @@ const items = [
 
 export const VS = () => {
 	return (
-		<section className="bg-[var(--dark-gray)] py-14 rounded-3xl">
-			<div className="px-14">
-				<div className="mb-10 md:mb-0">
-					<NumSection number={'04'} title={''} variant={'green'} />
-				</div>
-				<div className="flex flex-col items-center">
-					<div className="flex items-center text-white mb-10 md:mb-20">
-						<div>БЕЗ НАС</div>
-						<div>
-							<Image src={'/assets/images/vs.svg'} width={100} height={100} />
+		<section className="bg-[var(--dark-gray)] py-20 rounded-3xl mb-6 sticky -top-24">
+			<div className="h-full overflow-y-scroll">
+				<div className="px-20">
+					<div className="mb-10 md:mb-0">
+						<NumSection number={'04'} title={''} variant={'green'} />
+					</div>
+					<div className="flex flex-col items-center">
+						<div className="flex items-center text-white mb-10">
+							<div>БЕЗ НАС</div>
+							<div>
+								<Image src={'/assets/images/vs.svg'} width={100} height={100} />
+							</div>
+							<div>C НАМИ</div>
 						</div>
-						<div>C НАМИ</div>
 					</div>
 				</div>
-			</div>
-			<div className="w-full">
-				{items.map(({ id, textLeft, textCenter, textRight }) => (
-					<VSRow
-						key={id}
-						textLeft={textLeft}
-						textCenter={textCenter}
-						textRight={textRight}
-					/>
-				))}
+				<div className="w-full">
+					{items.map(({ id, textLeft, textCenter, textRight }) => (
+						<VSRow
+							key={id}
+							textLeft={textLeft}
+							textCenter={textCenter}
+							textRight={textRight}
+						/>
+					))}
+				</div>
 			</div>
 		</section>
 	)

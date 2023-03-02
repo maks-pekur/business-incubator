@@ -54,7 +54,7 @@ const slides = [
 
 export const HowWeWork = () => {
 	return (
-		<section className=" bg-black sticky top-0 rounded-3xl">
+		<section className="bg-black sticky min-h-screen top-0 rounded-3xl">
 			<div className="bg-[var(--light-gray)] pb-6 rounded-3xl md:grid md:grid-cols-3 h-full p-6 md:py-20 md:pl-20">
 				<div className="flex flex-col md:justify-between">
 					<div className="mb-10 md:mb-0">

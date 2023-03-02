@@ -1,8 +1,8 @@
 const styles = {
-	h1: 'text-[48px] lg:text-[72px]',
-	h2: 'text-[32px] lg:text-[56px]',
-	h3: 'text-[24px] lg:text-[42px]',
-	h4: 'text-[18px] lg:text-[28px]',
+	h1: 'text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl',
+	h2: 'text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl',
+	h3: 'text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl',
+	h4: 'text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl',
 }
 
 export const Heading = ({ children, tag, classNames = '' }) => {

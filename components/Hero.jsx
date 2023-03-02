@@ -9,9 +9,9 @@ import { Heading } from './ui/Heading'
 export const Hero = () => {
 	const { locale } = useRouter()
 	return (
-		<section id="hero" className="sticky top-0">
+		<section id="hero" className="sticky inset-0">
 			<div className="relative w-full h-screen">
-				<div className="absolute inset-0 opacity-90">
+				<div className="absolute w-full h-full">
 					<Image src={figure} fill />
 				</div>
 				<div className="absolute inset-0 flex items-end md:left-10 text-white md:w-[55%]">
@@ -27,9 +27,7 @@ export const Hero = () => {
 						transition={{ duration: 1, type: 'tween' }}
 						className="space-y-6 mb-24"
 					>
-						<Heading classNames="text-[70px] leading-[70px]">
-							{hero.title[locale]}
-						</Heading>
+						<Heading tag={'h1'}>{hero.title[locale]}</Heading>
 						<Heading tag={'h4'} classNames="text-gray-400">
 							{hero.subtitle[locale]}
 						</Heading>

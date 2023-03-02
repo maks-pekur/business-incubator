@@ -1,4 +1,3 @@
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import { AboutUs } from '../components/AboutUs'
@@ -9,13 +8,6 @@ import { HowWeWork } from '../components/HowWeWork'
 import { Heading } from '../components/ui/Heading'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
-// export async function getStaticProps({ locale }) {
-// 	return {
-// 		props: {
-// 			...(await serverSideTranslations(locale, ['home'])),
-// 		},
-// 	}
-// }
 
 const Home = () => {
 	return (
@@ -37,7 +29,7 @@ const Home = () => {
 				<meta property="og:site_name" content="Freedom Business Area" />
 				<meta property="og:title" content="Freedom Business Area" />
 			</Head>
-			<main className="relative w-full h-full">
+			<main className="relative px-4">
 				<Hero />
 				<AboutUs />
 				<WhatYouGet />
@@ -49,22 +41,23 @@ const Home = () => {
 				<VS />
 				<section className="bg-[var(--dark-gray)] rounded-3xl px-20 py-10 sticky top-0 h-screen pb-10">
 					<div className="text-white">
-						<div className=" text-center mb-6">
+						<div className=" text-center pt-14 pb-20">
 							<Heading tag={'h3'}>
 								Зачем платить больше, если можно платить меньше.
 							</Heading>
 						</div>
 
 						<div className="flex justify-between items-end gap-10 text-4xl mb-10">
-							<div className="w-full h-[450px] border-[1px] border-white rounded-3xl  overflow-hidden">
+							<div className="w-full h-[450px] border-[1px] border-white rounded-3xl relative overflow-hidden">
+								<span className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 text-white font-bold text-5xl">
+									~3653 PLN
+								</span>
 								<motion.div
 									initial={{ y: '100%' }}
 									whileInView={{ y: 0 }}
 									transition={{ duration: 1.5 }}
-									className="w-full h-full bg-gray-300 flex items-center justify-center"
-								>
-									~3653 PLN
-								</motion.div>
+									className="w-full h-full bg-gray-300 opacity-10 flex items-center justify-center"
+								></motion.div>
 							</div>
 							<div className="w-full border-[1px] bg-[var(--green)] text-black border-white rounded-3xl flex items-center justify-center p-20">
 								500 PLN

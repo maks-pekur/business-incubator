@@ -11,20 +11,37 @@ export const Hero = () => {
 	return (
 		<section id="hero" className="sticky inset-0">
 			<div className="relative w-full h-screen">
-				<div className="absolute w-full h-full">
+				<motion.div
+					initial={{
+						scale: 1.5,
+						opacity: 0,
+					}}
+					animate={{
+						scale: 1,
+						opacity: 1,
+					}}
+					transition={{ duration: 1.5 }}
+					className="absolute w-full h-full"
+				>
 					<Image src={figure} fill />
-				</div>
+				</motion.div>
 				<div className="absolute inset-0 flex items-end md:left-10 text-white md:w-[55%]">
 					<motion.div
 						initial={{
-							x: -200,
+							y: '100%',
+							x: '-100%',
+							rotate: '50',
+							scale: 0,
 							opacity: 0,
 						}}
 						animate={{
+							y: 0,
 							x: 0,
-							opacity: 1.5,
+							rotate: 0,
+							scale: 1,
+							opacity: 1,
 						}}
-						transition={{ duration: 1, type: 'tween' }}
+						transition={{ duration: 1.2 }}
 						className="space-y-6 mb-24"
 					>
 						<Heading tag={'h1'}>{hero.title[locale]}</Heading>

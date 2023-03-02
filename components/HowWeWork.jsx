@@ -54,9 +54,9 @@ const slides = [
 
 export const HowWeWork = () => {
 	return (
-		<section className="bg-black sticky min-h-screen top-0 rounded-3xl">
+		<section className="bg-black sticky h-screen top-0 rounded-3xl">
 			<div className="bg-[var(--light-gray)] pb-6 rounded-3xl md:grid md:grid-cols-3 h-full p-6 md:py-20 md:pl-20">
-				<div className="flex flex-col md:justify-between">
+				<div className="flex flex-col md:justify-between mb-20">
 					<div className="mb-10 md:mb-0">
 						<NumSection
 							number={'03'}
@@ -78,7 +78,7 @@ export const HowWeWork = () => {
 					</div>
 				</div>
 
-				<div className="md:col-span-2 h-full">
+				<div className="md:col-span-2 h-full flex items-center">
 					<Swiper
 						loop={true}
 						modules={[Navigation]}

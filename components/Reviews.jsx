@@ -39,7 +39,7 @@ export const Reviews = ({ reviews }) => {
 							prevEl: '#swiper-prev',
 						}}
 						spaceBetween={60}
-						slidesPerView={2}
+						slidesPerView={device === 'mobile' ? 1 : 2}
 						className="w-full h-full flex"
 					>
 						{reviews.map(review => (

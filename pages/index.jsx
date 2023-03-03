@@ -7,8 +7,9 @@ import { HowWeWork } from '../components/HowWeWork'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
 import { WhyPayMore } from '../components/WhyPayMore'
-
+import { useDeviceDetection } from '../hooks/useDeviceDetection'
 const Home = () => {
+	const device = useDeviceDetection()
 	return (
 		<>
 			<Head>
@@ -28,19 +29,18 @@ const Home = () => {
 				<meta property="og:site_name" content="Freedom Business Area" />
 				<meta property="og:title" content="Freedom Business Area" />
 			</Head>
-			<main className="relative px-4">
-				<Hero />
-				<AboutUs />
-				<WhatYouGet />
-				<GreenSection
-					title={'Бесплатная консультация'}
-					textBtn={'Присоединиться'}
-				></GreenSection>
-				<HowWeWork />
-				<VS />
-				<WhyPayMore />
-				<Consultation />
-			</main>
+
+			<Hero />
+			<AboutUs />
+			<WhatYouGet />
+			<GreenSection
+				title={'Бесплатная консультация'}
+				textBtn={'Присоединиться'}
+			></GreenSection>
+			<HowWeWork />
+			<VS />
+			<WhyPayMore />
+			<Consultation />
 		</>
 	)
 }

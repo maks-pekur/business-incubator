@@ -6,6 +6,7 @@ import { NavigateArrow } from './ui/NavigateArrow'
 import { NumSection } from './ui/NumSection'
 
 import { Navigation } from 'swiper'
+import { useDeviceDetection } from '../hooks/useDeviceDetection'
 import slide1 from '../public/assets/images/slide1.svg'
 import slide2 from '../public/assets/images/slide2.svg'
 import slide3 from '../public/assets/images/slide3.svg'
@@ -53,9 +54,11 @@ const slides = [
 ]
 
 export const HowWeWork = () => {
+	const device = useDeviceDetection()
+
 	return (
-		<section className="bg-black sticky h-screen top-0 rounded-3xl">
-			<div className="bg-[var(--light-gray)] pb-6 rounded-3xl md:grid md:grid-cols-3 h-full p-6 md:py-20 md:pl-20">
+		<section className="bg-black sticky md:h-screen top-0 pb-10">
+			<div className="bg-[var(--light-gray)] rounded-3xl md:grid md:grid-cols-3 h-full p-6 md:py-20 md:pl-20">
 				<div className="flex flex-col md:justify-between mb-20">
 					<div className="mb-10 md:mb-0">
 						<NumSection
@@ -64,7 +67,7 @@ export const HowWeWork = () => {
 							variant={'green'}
 						/>
 					</div>
-					<div className="flex items-center justify-center md:justify-start space-x-6 mb-6 md:mb-0">
+					<div className="flex items-center justify-center md:justify-start space-x-6 md:mb-0">
 						<NavigateArrow
 							direction={'left'}
 							variant={'outline'}
@@ -87,7 +90,7 @@ export const HowWeWork = () => {
 							prevEl: '#swiper-prev',
 						}}
 						spaceBetween={40}
-						slidesPerView={2}
+						slidesPerView={device === 'mobile' ? 1 : 2}
 						className="flex"
 					>
 						{slides.map(slide => (

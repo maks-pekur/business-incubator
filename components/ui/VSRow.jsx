@@ -13,9 +13,9 @@ export const VSRow = ({ textLeft, textRight, textCenter }) => {
 	}, [])
 
 	return (
-		<div className="w-full flex items-center relative py-2">
+		<div className="w-full flex items-center relative py-2 text-[9px] sm:text-lg md:text-xl">
 			<VSItem variant={'left'} text={textLeft} width={width} />
-			<div className="max-w-[200px] text-white mx-6 text-center">
+			<div className="max-w-[200px] text-white mx-3 sm:mx-6 text-center">
 				{textCenter}
 			</div>
 			<VSItem variant={'right'} text={textRight} width={'full'} />

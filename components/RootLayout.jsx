@@ -5,7 +5,7 @@ export const RootLayout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			{children}
+			<div className="scroll-smooth relative bg-black">{children}</div>
 			<Footer />
 		</>
 	)

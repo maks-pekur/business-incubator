@@ -1,12 +1,14 @@
 import { Heading } from './ui/Heading'
-import { LinkComponent } from './ui/Link'
+import { LinkComponent } from './ui/LinkComponent'
 
 export const GreenSection = ({ children, title, textBtn }) => {
 	return (
-		<section className="pb-6 sticky bg-black rounded-3xl">
-			<div className="bg-[var(--green)] p-10 md:p-20 rounded-3xl ">
+		<section className="pb-6 sticky bg-black">
+			<div className="bg-[var(--green)] p-10 md:p-20 rounded-3xl">
 				<div className="flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-10 rounded-xl">
-					<Heading tag={'h2'}>{title}</Heading>
+					<Heading classNames="text-center md:text-start" tag={'h2'}>
+						{title}
+					</Heading>
 					<div className="text-center flex items-center justify-center">
 						{children}
 					</div>

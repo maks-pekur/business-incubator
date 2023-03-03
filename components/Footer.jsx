@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { animateScroll, Link } from 'react-scroll'
 
 import { i18n } from '../constants'
 import Logo from './ui/Logo'
@@ -11,6 +11,11 @@ import PointIcon from '../components/ui/PointIcon'
 
 export const Footer = () => {
 	const { locale } = useRouter()
+
+	const scrollToTop = () => {
+		animateScroll.scrollToTop()
+	}
+
 	return (
 		<footer className="w-full min-h-80 bg-transparent text-white relative">
 			<div className="h-full w-full p-6 grid items-center sm:grid-cols-3 space-y-10">
@@ -82,8 +87,8 @@ export const Footer = () => {
 							</Link>
 						</div>
 
-						<Link
-							href={'#hero'}
+						<div
+							onClick={() => scrollToTop()}
 							className="bg-white absolute right-14 bottom-14 h-12 w-12 rounded-full flex items-center justify-center animate-bounce text-black"
 						>
 							<svg
@@ -100,7 +105,7 @@ export const Footer = () => {
 									d="M19.5 8.25l-7.5 7.5-7.5-7.5"
 								/>
 							</svg>
-						</Link>
+						</div>
 					</div>
 				</div>
 			</div>

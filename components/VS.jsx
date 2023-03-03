@@ -50,7 +50,7 @@ const items = [
 
 export const VS = () => {
 	return (
-		<section className="bg-black rounded-t-3xl pb-6 sticky -top-[32%] overflow-x-hidden">
+		<section className="bg-black rounded-t-3xl pb-10 sticky -top-[10%]  md:-top-[32%] overflow-x-hidden">
 			<div className="bg-[var(--dark-gray)] py-20 rounded-3xl">
 				<div className="mb-10 md:mb-0 px-20">
 					<NumSection number={'04'} title={''} variant={'green'} />

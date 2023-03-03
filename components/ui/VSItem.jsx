@@ -11,7 +11,7 @@ export const VSItem = ({ variant, text, width }) => {
 					className={`bg-[var(--light-gray)] rounded-r-full flex items-center justify-end h-14`}
 					style={{ width: width }}
 				>
-					<div className="mx-6 whitespace-nowrap">{text}</div>
+					<div className="mx-3 sm:mx-6 whitespace-nowrap">{text}</div>
 					<div className={`bg-[var(--green)] rounded-full h-14 w-14`}></div>
 				</motion.div>
 			) : (
@@ -21,7 +21,7 @@ export const VSItem = ({ variant, text, width }) => {
 					transition={{ duration: 1.2, ease: 'easeOut' }}
 					className={`bg-white rounded-l-full w-full flex-row-reverse flex items-center justify-end h-14`}
 				>
-					<div className="mx-6 whitespace-nowrap">{text}</div>
+					<div className="mx-3 sm:mx-6 whitespace-nowrap">{text}</div>
 					<div className={`bg-[var(--green)] rounded-full h-14 w-14`}></div>
 				</motion.div>
 			)}

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { navBtn, navLinks } from '../translations/header'
 import { Languages } from './ui/Languages'
-import { LinkComponent } from './ui/Link'
+import { LinkComponent } from './ui/LinkComponent'
 import SocialLinks from './ui/SocialLinks'
 
 const linksNav = [
@@ -40,7 +40,7 @@ export const Navbar = () => {
 				<Hamburger size={22} toggled={isOpen} toggle={setOpen} />
 			</div>
 			{isOpen && (
-				<div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-[var(--green)] p-2">
+				<div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-[var(--green)] p-1">
 					<div
 						className="absolute top-6 right-6 text-xl"
 						onClick={() => setOpen(false)}
@@ -127,7 +127,7 @@ export const Navbar = () => {
 				</div>
 				<div className="hidden lg:block">
 					<LinkComponent
-						href={'#consultation'}
+						href={'consultation'}
 						variant={'green'}
 						title={navBtn.title[locale]}
 					/>

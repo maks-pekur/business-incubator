@@ -18,7 +18,7 @@ export const Header = () => {
 
 	return (
 		<header
-			className={`text-white fixed top-0 left-0 w-full  z-50 ${
+			className={`text-white fixed top-0 left-0 right-0 z-50 ${
 				header && 'text-black'
 			}`}
 		>

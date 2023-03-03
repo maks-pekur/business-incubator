@@ -42,8 +42,8 @@ const items = [
 
 export const ForWhom = () => {
 	return (
-		<section className="bg-white md:p-14 p-6 rounded-3xl mb-6 sticky-0">
-			<div>
+		<section className="bg-black pb-6 sticky">
+			<div className="bg-white md:p-20 p-6 rounded-3xl">
 				<div className="mb-6 md:mb-0">
 					<NumSection
 						number={'04'}

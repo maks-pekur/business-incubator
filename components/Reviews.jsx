@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useDevice } from '../hooks/useDevice'
 import google from '../public/assets/images/google.svg'
 import Date from './ui/Date'
 import { NavigateArrow } from './ui/NavigateArrow'
@@ -8,9 +9,10 @@ import { NumSection } from './ui/NumSection'
 import { Rating } from './ui/Rating'
 
 export const Reviews = ({ reviews }) => {
+	const device = useDevice()
 	return (
-		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl mb-6 sticky top-0">
-			<div className="md:grid md:grid-cols-3 h-full">
+		<section className="pb-6 sticky bg-black rounded-t-3xl">
+			<div className="md:grid md:grid-cols-3 md:p-20 p-6 bg-[var(--light-gray)] rounded-3xl ">
 				<div className="flex flex-col justify-between h-full">
 					<div className="mb-6 md:mb-0">
 						<NumSection number={'06'} title={'Отзывы'} variant={'green'} />

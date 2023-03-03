@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 const DeviceContext = createContext()
 
-export const useDeviceDetection = () => {
+export const useDevice = () => {
 	return useContext(DeviceContext)
 }
 

@@ -5,7 +5,7 @@ const styles = {
 
 export const NumSection = ({ number, title, variant, classNames }) => {
 	return (
-		<div className="h-full w-full">
+		<div>
 			<div className="space-x-4 flex items-center">
 				<div
 					className={`w-16 h-16 rounded-full flex items-center justify-center ${styles[variant]}`}

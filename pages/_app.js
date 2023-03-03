@@ -1,7 +1,7 @@
 import { appWithTranslation } from 'next-i18next'
 import { Modal } from '../components/Modal'
 import { RootLayout } from '../components/RootLayout'
-import { DeviceProvider } from '../hooks/useDeviceDetection'
+import { DeviceProvider } from '../hooks/useDevice'
 import { ModalProvider } from '../hooks/useModal'
 
 import '../styles/globals.css'

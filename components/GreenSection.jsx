@@ -3,7 +3,7 @@ import { LinkComponent } from './ui/LinkComponent'
 
 export const GreenSection = ({ children, title, textBtn }) => {
 	return (
-		<section className="pb-6 sticky bg-black">
+		<section className={`pb-6 sticky bg-black`}>
 			<div className="bg-[var(--green)] p-10 md:p-20 rounded-3xl">
 				<div className="flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-10 rounded-xl">
 					<Heading classNames="text-center md:text-start" tag={'h2'}>

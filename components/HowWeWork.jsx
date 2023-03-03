@@ -6,7 +6,7 @@ import { NavigateArrow } from './ui/NavigateArrow'
 import { NumSection } from './ui/NumSection'
 
 import { Navigation } from 'swiper'
-import { useDeviceDetection } from '../hooks/useDeviceDetection'
+import { useDevice } from '../hooks/useDevice'
 import slide1 from '../public/assets/images/slide1.svg'
 import slide2 from '../public/assets/images/slide2.svg'
 import slide3 from '../public/assets/images/slide3.svg'
@@ -54,7 +54,7 @@ const slides = [
 ]
 
 export const HowWeWork = () => {
-	const device = useDeviceDetection()
+	const device = useDevice()
 
 	return (
 		<section className="bg-black sticky md:h-screen top-0 pb-10">

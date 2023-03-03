@@ -27,9 +27,9 @@ const slides = [
 
 export const ExtraServices = () => {
 	return (
-		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl mb-6 sticky-0">
-			<div>
-				<div className="mb-10">
+		<section className="pb-6 sticky bg-black rounded-t-3xl">
+			<div className="bg-[var(--light-gray)] rounded-3xl md:p-20 p-6 ">
+				<div className="mb-20">
 					<NumSection
 						number={'03'}
 						title={'Дополнительные услуги'}

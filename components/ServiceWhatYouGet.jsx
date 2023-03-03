@@ -56,44 +56,46 @@ const items = [
 
 export const ServiceWhatYouGet = () => {
 	return (
-		<section className="md:p-14 p-6 bg-[var(--dark-gray)] rounded-3xl mb-6 sticky-0">
-			<div className="mb-6 md:mb-0">
-				<NumSection
-					number={'05'}
-					title={'Что ты получишь'}
-					variant={'green'}
-					classNames={'text-white'}
-				/>
-			</div>
-			<div className="text-white flex justify-end">
-				<div className="md:w-[70%]">
-					<div className="mb-10">
-						<Heading tag={'h2'}>
-							А теперь подробнее, что ты получишь присоединившись к фонду:
-						</Heading>
-					</div>
-					<div className="flex flex-col items-start space-y-4">
-						{items.map(item => (
-							<div className="border-b-[1px] w-full">
-								<Disclosure as="div">
-									{({ open }) => (
-										<>
-											<Disclosure.Button className="w-full text-start py-4 md:text-2xl flex items-center justify-between">
-												{item.question}
-												<ChevronRightIcon
-													className={open && 'rotate-90 transform'}
-													width={24}
-													height={24}
-												/>
-											</Disclosure.Button>
-											<Disclosure.Panel className="text-gray-400 py-8">
-												{item.answer}
-											</Disclosure.Panel>
-										</>
-									)}
-								</Disclosure>
-							</div>
-						))}
+		<section className="pb-28 sticky -top-28 bg-black">
+			<div className="bg-[var(--dark-gray)] rounded-3xl md:p-14 p-6  ">
+				<div className="mb-6 md:mb-0">
+					<NumSection
+						number={'05'}
+						title={'Что ты получишь'}
+						variant={'green'}
+						classNames={'text-white'}
+					/>
+				</div>
+				<div className="text-white flex justify-end">
+					<div className="md:w-[70%]">
+						<div className="mb-10">
+							<Heading tag={'h2'}>
+								А теперь подробнее, что ты получишь присоединившись к фонду:
+							</Heading>
+						</div>
+						<div className="flex flex-col items-start space-y-3">
+							{items.map(item => (
+								<div className="border-b-[1px] w-full">
+									<Disclosure as="div">
+										{({ open }) => (
+											<>
+												<Disclosure.Button className="w-full text-start py-3 md:text-2xl flex items-center justify-between">
+													{item.question}
+													<ChevronRightIcon
+														className={open && 'rotate-90 transform'}
+														width={24}
+														height={24}
+													/>
+												</Disclosure.Button>
+												<Disclosure.Panel className="text-gray-400 py-8">
+													{item.answer}
+												</Disclosure.Panel>
+											</>
+										)}
+									</Disclosure>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

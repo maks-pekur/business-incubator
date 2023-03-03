@@ -7,9 +7,9 @@ import { HowWeWork } from '../components/HowWeWork'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
 import { WhyPayMore } from '../components/WhyPayMore'
-import { useDeviceDetection } from '../hooks/useDeviceDetection'
+import { useDevice } from '../hooks/useDevice'
 const Home = () => {
-	const device = useDeviceDetection()
+	const device = useDevice()
 	return (
 		<>
 			<Head>

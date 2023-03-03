@@ -50,9 +50,9 @@ const items = [
 
 export const VS = () => {
 	return (
-		<section className="bg-black rounded-t-3xl pb-10 sticky -top-[10%]  md:-top-[32%] overflow-x-hidden">
-			<div className="bg-[var(--dark-gray)] py-20 rounded-3xl">
-				<div className="mb-10 md:mb-0 px-20">
+		<section className="bg-black rounded-t-3xl pb-10 sticky -top-52  md:-top-[32%] overflow-x-hidden">
+			<div className="bg-[var(--dark-gray)] py-10 rounded-3xl">
+				<div className="mb-10 md:mb-0 md:px-20 p-10">
 					<NumSection number={'04'} title={''} variant={'green'} />
 				</div>
 				<div>

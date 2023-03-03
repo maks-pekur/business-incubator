@@ -24,7 +24,7 @@ const flags = {
 	ru: '/assets/images/ru.svg',
 }
 
-export const Navbar = () => {
+export const Navbar = ({ header }) => {
 	const { pathname, locale, locales, asPath } = useRouter()
 	const [lang, setLang] = useState(locale)
 	const [isOpen, setOpen] = useState(false)
@@ -36,7 +36,12 @@ export const Navbar = () => {
 
 	return (
 		<nav className="w-full">
-			<div className="md:hidden text-white">
+			<div
+				className={`md:hidden text-white p-1 ${
+					header &&
+					'bg-[var(--green)] rounded-full flex items-center justify-center p-1 transition-colors duration-300'
+				}`}
+			>
 				<Hamburger size={22} toggled={isOpen} toggle={setOpen} />
 			</div>
 			{isOpen && (

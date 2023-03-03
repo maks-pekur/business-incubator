@@ -22,13 +22,13 @@ export const Header = () => {
 				header && 'text-black'
 			}`}
 		>
-			<div className="w-full flex items-center justify-between relative pt-8 px-10 pb-4">
+			<div className="w-full flex justify-end lg:items-center lg:justify-between relative p-4 md:pt-8 md:px-10 pb-4">
 				<div
-					className={`absolute -z-10 inset-0 rounded-b-3xl transition-all duration-300 ${
+					className={`hidden lg:block absolute -z-10 inset-0 rounded-b-3xl transition-all duration-300 ${
 						header && 'bg-[var(--green)] opacity-80'
 					}`}
 				></div>
-				<div className="flex items-center space-x-6">
+				<div className="items-center space-x-6 hidden lg:flex">
 					<Logo width={70} height={70} variant={'white'} />
 					<Link
 						href="/"
@@ -38,7 +38,7 @@ export const Header = () => {
 					</Link>
 				</div>
 				<div className={`${header && 'text-black'}`}>
-					<Navbar />
+					<Navbar header={header} />
 				</div>
 			</div>
 		</header>

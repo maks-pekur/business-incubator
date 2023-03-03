@@ -63,20 +63,19 @@ const index = ({ props, subscription }) => {
 				<meta name="twitter:title" content="Freedom Business Area " />
 				<meta name="twitter:description" content="None" />
 			</Head>
-			<main className="relative overflow-x-hidden px-4">
-				<Hero />
-				<UmbrellaSection />
-				<ServicePrice />
-				<ExtraServices />
-				<GreenSection
-					title={'Бесплатная консультация'}
-					textBtn={'Присоединиться'}
-				/>
-				<ForWhom />
-				<ServiceWhatYouGet />
-				<Reviews reviews={allComments} />
-				<Consultation />
-			</main>
+
+			<Hero />
+			<UmbrellaSection />
+			<ServicePrice />
+			<ExtraServices />
+			<GreenSection
+				title={'Бесплатная консультация'}
+				textBtn={'Присоединиться'}
+			/>
+			<ForWhom />
+			<ServiceWhatYouGet />
+			<Reviews reviews={allComments} />
+			<Consultation />
 		</>
 	)
 }

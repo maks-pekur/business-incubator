@@ -42,7 +42,7 @@ const items = [
 
 export const ForWhom = () => {
 	return (
-		<section className="bg-white md:p-14 p-6 rounded-3xl mb-6">
+		<section className="bg-white md:p-14 p-6 rounded-3xl mb-6 sticky-0">
 			<div>
 				<div className="mb-6 md:mb-0">
 					<NumSection

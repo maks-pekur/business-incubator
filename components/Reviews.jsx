@@ -9,7 +9,7 @@ import { Rating } from './ui/Rating'
 
 export const Reviews = ({ reviews }) => {
 	return (
-		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl mb-6">
+		<section className="md:p-14 p-6 bg-[var(--light-gray)] rounded-3xl mb-6 sticky top-0">
 			<div className="md:grid md:grid-cols-3 h-full">
 				<div className="flex flex-col justify-between h-full">
 					<div className="mb-6 md:mb-0">

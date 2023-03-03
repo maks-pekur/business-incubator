@@ -56,7 +56,7 @@ const items = [
 
 export const ServiceWhatYouGet = () => {
 	return (
-		<section className="md:p-14 p-6 bg-[var(--dark-gray)] rounded-3xl mb-6">
+		<section className="md:p-14 p-6 bg-[var(--dark-gray)] rounded-3xl mb-6 sticky-0">
 			<div className="mb-6 md:mb-0">
 				<NumSection
 					number={'05'}

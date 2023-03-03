@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { CoverImage } from '../ui/CoverImage'
 import Date from '../ui/Date'
 import { Heading } from '../ui/Heading'
-import { LinkComponent } from '../ui/Link'
+import { LinkComponent } from '../ui/LinkComponent'
 
 export const HeroPost = ({
 	title,

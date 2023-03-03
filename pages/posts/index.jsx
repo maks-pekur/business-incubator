@@ -59,15 +59,14 @@ const index = ({ subscription }) => {
 	return (
 		<>
 			<Head>{renderMetaTags(metaTags)}</Head>
-			<main className="px-4">
-				<Hero />
-				<div className="bg-white rounded-3xl p-14">
-					<div className="mb-6">
-						<NumSection number={'01'} title={'Блог'} variant={'green'} />
-					</div>
-					{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+
+			<Hero />
+			<div className="bg-white rounded-3xl p-14 sticky top-0 px-4">
+				<div className="mb-6">
+					<NumSection number={'01'} title={'Блог'} variant={'green'} />
 				</div>
-			</main>
+				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+			</div>
 		</>
 	)
 }

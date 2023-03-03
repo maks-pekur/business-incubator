@@ -6,7 +6,7 @@ import { Heading } from './ui/Heading'
 export const Personal = () => {
 	const { t } = useTranslation()
 	return (
-		<section className="bg-[var(--light-gray)] p-14 rounded-3xl mb-6">
+		<section className="bg-[var(--light-gray)] p-14 rounded-3xl mb-6 sticky top-0">
 			<div>
 				<Heading tag={'h2'} classNames={'text-center py-14'}>
 					{t('team:personal')}

@@ -15,7 +15,7 @@ export const GreenSection = ({ children, title }) => {
 				}}
 			></div>
 			<div className="bg-[var(--green)] md:p-28 p-6 rounded-3xl">
-				<div className="flex flex-col items-center justify-center w-full h-full space-y-2 md:space-y-10 rounded-xl">
+				<div className="flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-10 rounded-xl">
 					<Heading classNames="text-center md:text-start" tag={'h2'}>
 						{title}
 					</Heading>

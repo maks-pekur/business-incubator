@@ -6,6 +6,7 @@ import { GreenSection } from '../../components/GreenSection'
 import { Hero } from '../../components/Hero'
 import { Personal } from '../../components/Personal'
 import { Heading } from '../../components/ui/Heading'
+import { LinkComponent } from '../../components/ui/LinkComponent'
 import { NumSection } from '../../components/ui/NumSection'
 
 export async function getStaticProps({ locale }) {
@@ -36,7 +37,7 @@ const Team = () => {
 			</Head>
 
 			<Hero />
-			<section className="bg-white p-20 rounded-3xl mb-20 sticky -top-64">
+			<section className="bg-white p-20 rounded-3xl mb-20 sticky -top-52">
 				<div>
 					<NumSection
 						number={'01'}
@@ -45,7 +46,7 @@ const Team = () => {
 					/>
 				</div>
 				<div className="flex justify-end w-full">
-					<div className="max-w-[50%] space-y-4">
+					<div className="max-w-[50%] space-y-6">
 						<Heading tag={'h2'}>{t('team:title')}</Heading>
 						<p>{t('team:subtitle')}</p>
 					</div>
@@ -54,7 +55,10 @@ const Team = () => {
 			</section>
 			<Personal />
 			<GreenSection title={t('team:part')} textBtn={t('team:part_btn')}>
-				<Heading tag={'h4'}>{t('team:part_descr')}</Heading>
+				<div className="flex flex-col items-center space-y-6">
+					<Heading tag={'h4'}>{t('team:part_descr')}</Heading>
+					<LinkComponent href={'/career'} title={'Карьера'} variant={'black'} />
+				</div>
 			</GreenSection>
 		</>
 	)

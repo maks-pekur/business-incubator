@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
+import { useDevice } from '../../hooks/useDevice'
 import { VSItem } from './VSItem'
-
 function randomNumber() {
 	return Math.floor(Math.random() * (100 - 70 + 1)) + 70 + '%'
 }
 
 export const VSRow = ({ textLeft, textRight, textCenter }) => {
 	const [width, setWidth] = useState('')
+	const device = useDevice()
 
 	useEffect(() => {
 		setWidth(randomNumber())
@@ -14,11 +15,21 @@ export const VSRow = ({ textLeft, textRight, textCenter }) => {
 
 	return (
 		<div className="w-full flex items-center relative py-2 text-[9px] sm:text-lg md:text-xl">
-			<VSItem variant={'left'} text={textLeft} width={width} />
+			<VSItem
+				variant={'left'}
+				text={textLeft}
+				width={width}
+				el={device === 'mobile' ? 'div' : ''}
+			/>
 			<div className="max-w-[200px] text-white mx-3 sm:mx-6 text-center">
 				{textCenter}
 			</div>
-			<VSItem variant={'right'} text={textRight} width={'full'} />
+			<VSItem
+				variant={'right'}
+				text={textRight}
+				width={'full'}
+				el={device === 'mobile' ? 'div' : ''}
+			/>
 		</div>
 	)
 }

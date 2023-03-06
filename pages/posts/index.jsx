@@ -53,7 +53,6 @@ const index = ({ subscription }) => {
 	const {
 		data: { allPosts, blog },
 	} = useQuerySubscription(subscription)
-	const morePosts = allPosts.slice(0)
 	const metaTags = blog.seo
 
 	return (
@@ -61,12 +60,14 @@ const index = ({ subscription }) => {
 			<Head>{renderMetaTags(metaTags)}</Head>
 
 			<Hero />
-			<div className="bg-white rounded-3xl p-14 sticky top-0 px-4">
-				<div className="mb-6">
+			<section className="bg-white rounded-3xl p-20 sticky top-0">
+				<div className="mb-10">
 					<NumSection number={'01'} title={'Блог'} variant={'green'} />
 				</div>
-				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
-			</div>
+				<div>
+					<MoreStories posts={allPosts} />
+				</div>
+			</section>
 		</>
 	)
 }

@@ -1,10 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
 
-export const VSItem = ({ variant, text, width }) => {
+export const VSItem = ({ variant, text, width, el }) => {
+	const Elem = el || motion.div
 	return (
 		<AnimatePresence>
 			{variant === 'left' ? (
-				<motion.div
+				<Elem
 					initial={{ x: '-100%' }}
 					whileInView={{ x: 0 }}
 					transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -13,9 +14,9 @@ export const VSItem = ({ variant, text, width }) => {
 				>
 					<div className="mx-3 sm:mx-6 whitespace-nowrap">{text}</div>
 					<div className={`bg-[var(--green)] rounded-full h-14 w-14`}></div>
-				</motion.div>
+				</Elem>
 			) : (
-				<motion.div
+				<Elem
 					initial={{ x: '100%' }}
 					whileInView={{ x: 0 }}
 					transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -23,7 +24,7 @@ export const VSItem = ({ variant, text, width }) => {
 				>
 					<div className="mx-3 sm:mx-6 whitespace-nowrap">{text}</div>
 					<div className={`bg-[var(--green)] rounded-full h-14 w-14`}></div>
-				</motion.div>
+				</Elem>
 			)}
 		</AnimatePresence>
 	)

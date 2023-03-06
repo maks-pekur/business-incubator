@@ -10,6 +10,7 @@ import { Hero } from '../../components/Hero'
 import { Reviews } from '../../components/Reviews'
 import { ServicePrice } from '../../components/ServicePrice'
 import { ServiceWhatYouGet } from '../../components/ServiceWhatYouGet'
+import { LinkScroll } from '../../components/ui/LinkScroll'
 import { UmbrellaSection } from '../../components/UmbrellaSection'
 import { request } from '../../lib/datocms'
 
@@ -69,7 +70,11 @@ const index = ({ props, subscription }) => {
 			<ServicePrice />
 			<ExtraServices />
 			<GreenSection title={'Бесплатная консультация'}>
-				<LinkScroll />
+				<LinkScroll
+					href={'consultation'}
+					title={'Присоединиться'}
+					variant={'black'}
+				/>
 			</GreenSection>
 			<ForWhom />
 			<ServiceWhatYouGet />

@@ -6,9 +6,9 @@ import { Heading } from './ui/Heading'
 export const Founders = () => {
 	const { t } = useTranslation()
 	return (
-		<section className="bg-white px-14">
+		<section className="bg-white">
 			<div>
-				<Heading tag={'h2'} classNames={'text-center py-10'}>
+				<Heading tag={'h2'} classNames={'text-center py-8'}>
 					{t('team:founders')}
 				</Heading>
 				<div className="grid grid-cols-3 gap-20">

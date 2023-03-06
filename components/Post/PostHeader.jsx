@@ -4,11 +4,9 @@ import { Heading } from '../ui/Heading'
 
 export const PostHeader = ({ title, coverImage, date, author }) => {
 	return (
-		<div className="pt-28">
+		<div>
 			<div className="mb-8">
-				<Heading tag={'h2'} classNames={'text-white'}>
-					{title}
-				</Heading>
+				<Heading tag={'h2'}>{title}</Heading>
 			</div>
 			<div className="mb-10">
 				<div className="rounded-3xl overflow-hidden">
@@ -18,7 +16,7 @@ export const PostHeader = ({ title, coverImage, date, author }) => {
 					/>
 				</div>
 				<div className="pt-6">
-					<Heading tag={'h4'} classNames={'text-white'}>
+					<Heading tag={'h4'}>
 						<Date dateString={date} />
 					</Heading>
 				</div>

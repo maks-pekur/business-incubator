@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { navBtn, navLinks } from '../translations/header'
 import { Languages } from './ui/Languages'
-import { LinkComponent } from './ui/LinkComponent'
+import { LinkScroll } from './ui/LinkScroll'
 import SocialLinks from './ui/SocialLinks'
 
 const linksNav = [
@@ -35,7 +35,7 @@ export const Navbar = ({ header }) => {
 	}
 
 	return (
-		<nav className="w-full">
+		<nav className={`w-full`}>
 			<div
 				className={`md:hidden text-white p-1 ${
 					header &&
@@ -116,9 +116,9 @@ export const Navbar = ({ header }) => {
 								onClick={() => setOpen(false)}
 							>
 								<Link
-									className={`${
-										pathname === link.path && 'text-[#bcef30]'
-									} hover:text-[#bcef30] transition-colors duration-200`}
+									className={`p-2 ${
+										pathname === link.path && 'border-b-2 '
+									} hover:border-b-2 border-[var(--green)] transition-colors duration-300`}
 									href={link.path}
 								>
 									{link.title[locale]}
@@ -131,7 +131,7 @@ export const Navbar = ({ header }) => {
 					<Languages classNames={'top-7'} />
 				</div>
 				<div className="hidden lg:block">
-					<LinkComponent
+					<LinkScroll
 						href={'consultation'}
 						variant={'green'}
 						title={navBtn.title[locale]}

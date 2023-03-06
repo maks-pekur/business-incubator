@@ -68,10 +68,9 @@ const index = ({ props, subscription }) => {
 			<UmbrellaSection />
 			<ServicePrice />
 			<ExtraServices />
-			<GreenSection
-				title={'Бесплатная консультация'}
-				textBtn={'Присоединиться'}
-			/>
+			<GreenSection title={'Бесплатная консультация'}>
+				<LinkScroll />
+			</GreenSection>
 			<ForWhom />
 			<ServiceWhatYouGet />
 			<Reviews reviews={allComments} />

@@ -9,6 +9,9 @@ import post4 from '../../public/assets/images/4.png'
 import post5 from '../../public/assets/images/5.png'
 import post6 from '../../public/assets/images/6.png'
 
+import { Consultation } from '../../components/Consultation'
+import { NumSection } from '../../components/ui/NumSection'
+
 const insta = [
 	{
 		id: '01',
@@ -69,9 +72,17 @@ const index = ({ props }) => {
 				<meta name="twitter:title" content="Freedom Business Area " />
 				<meta name="twitter:description" content="None" />
 			</Head>
-			<div>
-				<Hero />
-			</div>
+
+			<Hero />
+			<section className="sticky">
+				<div className="bg-[var(--light-gray)] p-20 rounded-3xl">
+					<div>
+						<NumSection number={'01'} title={'Контакты'} variant={'green'} />
+					</div>
+				</div>
+			</section>
+
+			<Consultation />
 		</>
 	)
 }

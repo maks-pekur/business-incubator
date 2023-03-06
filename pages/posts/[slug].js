@@ -110,26 +110,25 @@ const Post = ({ subscription }) => {
 	return (
 		<>
 			<Head>{renderMetaTags(metaTags)}</Head>
-			<main className="space-y-20 mx-4">
-				<div className="max-w-6xl mx-auto text-white ">
-					<article>
-						<PostHeader
-							title={post.title}
-							coverImage={post.coverImage}
-							date={post.date}
-							author={post.author}
-						/>
-						<PostBody content={post.content} />
-					</article>
-				</div>
 
-				<div className="bg-white p-14 rounded-3xl">
-					<div className="mb-10">
-						<Heading tag={'h2'}>Больше постов</Heading>
-					</div>
-					{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+			<div className="max-w-6xl mx-auto bg-white rounded-3xl p-10 my-36">
+				<article>
+					<PostHeader
+						title={post.title}
+						coverImage={post.coverImage}
+						date={post.date}
+						author={post.author}
+					/>
+					<PostBody content={post.content} />
+				</article>
+			</div>
+
+			<div className="bg-white p-14 rounded-3xl">
+				<div className="mb-10">
+					<Heading tag={'h2'}>Больше постов</Heading>
 				</div>
-			</main>
+				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+			</div>
 		</>
 	)
 }

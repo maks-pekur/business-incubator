@@ -8,10 +8,10 @@ const styles = {
 	green: 'bg-[var(--green)] hover:bg-black hover:text-white text-black',
 }
 
-export const LinkComponent = ({ href, title, variant }) => {
+export const LinkScroll = ({ href, title, variant }) => {
 	return (
 		<Link
-			href={href}
+			to={href}
 			spy={true}
 			smooth={true}
 			duration={2500}

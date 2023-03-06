@@ -6,12 +6,12 @@ import { Heading } from './ui/Heading'
 export const Founders = () => {
 	const { t } = useTranslation()
 	return (
-		<section className="bg-white p-14 rounded-3xl sticky top-0">
+		<section className="bg-white px-14">
 			<div>
-				<Heading tag={'h2'} classNames={'text-center py-20'}>
+				<Heading tag={'h2'} classNames={'text-center py-10'}>
 					{t('team:founders')}
 				</Heading>
-				<div className="grid grid-cols-3 gap-10">
+				<div className="grid grid-cols-3 gap-20">
 					{founders.map(founder => (
 						<Person person={founder} />
 					))}

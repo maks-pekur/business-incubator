@@ -8,6 +8,8 @@ import { NavigateArrow } from './ui/NavigateArrow'
 import { NumSection } from './ui/NumSection'
 import { Rating } from './ui/Rating'
 
+import 'swiper/css'
+
 export const Reviews = ({ reviews }) => {
 	const device = useDevice()
 	return (
@@ -30,7 +32,7 @@ export const Reviews = ({ reviews }) => {
 						/>
 					</div>
 				</div>
-				<div className="md:col-span-2 md:h-full">
+				<div className="md:col-span-2 md:h-full w-full">
 					<Swiper
 						loop={true}
 						modules={[Navigation]}
@@ -40,7 +42,7 @@ export const Reviews = ({ reviews }) => {
 						}}
 						spaceBetween={60}
 						slidesPerView={device === 'mobile' ? 1 : 2}
-						className="w-full h-full flex"
+						className="grid"
 					>
 						{reviews.map(review => (
 							<SwiperSlide>

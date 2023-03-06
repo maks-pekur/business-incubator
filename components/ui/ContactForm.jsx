@@ -177,7 +177,7 @@ export const ContactForm = () => {
 				<Button
 					isLoading={isLoading}
 					title={'Оставить заявку'}
-					variant={'outline'}
+					variant={'black'}
 				/>
 			</div>
 		</form>

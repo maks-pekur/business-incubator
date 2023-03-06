@@ -8,7 +8,7 @@ import { Heading } from './ui/Heading'
 export const Hero = () => {
 	const { locale } = useRouter()
 	return (
-		<section id="hero" className="sticky inset-0">
+		<section id="hero" className="sticky top-0">
 			<div className="relative w-full h-screen">
 				<motion.div
 					initial={{

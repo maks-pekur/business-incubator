@@ -23,8 +23,8 @@ export const ServicePrice = () => {
 					</div>
 					<div>
 						<div className="border-2 border-white h-full rounded-2xl">
-							<div className="p-10 md:p-20">
-								<Heading tag={'h2'} classNames={'text-center'}>
+							<div className="p-10 md:p-20 space-y-6">
+								<Heading tag={'h3'} classNames={'text-center'}>
 									Стоимость полного пакета услуг
 								</Heading>
 								<div className="flex items-center justify-center w-full">

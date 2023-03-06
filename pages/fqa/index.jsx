@@ -1,7 +1,13 @@
-import React from 'react'
+import Head from 'next/head'
+import { Hero } from '../../components/Hero'
 
 const index = () => {
-	return <div>FQA</div>
+	return (
+		<>
+			<Head></Head>
+			<Hero />
+		</>
+	)
 }
 
 export default index

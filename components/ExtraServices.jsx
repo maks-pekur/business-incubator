@@ -2,25 +2,24 @@ import Image from 'next/image'
 
 import { NumSection } from './ui/NumSection'
 
-import 'swiper/css'
-import slide1 from '../public/assets/images/service-slide1.svg'
-import slide2 from '../public/assets/images/service-slide2.svg'
-import slide3 from '../public/assets/images/service-slide3.svg'
+import img1 from '../public/assets/images/service-card1.svg'
+import img2 from '../public/assets/images/service-card2.svg'
+import img3 from '../public/assets/images/service-card3.svg'
 
-const slides = [
+const cards = [
 	{
 		id: '01',
-		image: slide1,
+		image: img1,
 		title: 'Присяжный переводчик',
 	},
 	{
 		id: '02',
-		image: slide2,
+		image: img2,
 		title: 'Налоговый консультант',
 	},
 	{
 		id: '03',
-		image: slide3,
+		image: img3,
 		title: 'Кредитный брокер',
 	},
 ]
@@ -37,7 +36,7 @@ export const ExtraServices = () => {
 					/>
 				</div>
 				<div className="grid md:grid-cols-3 gap-10">
-					{slides.map(slide => (
+					{cards.map(slide => (
 						<div
 							key={slide.id}
 							className="border-2 border-black rounded-2xl flex flex-col"

@@ -5,7 +5,7 @@ import { NumSection } from './ui/NumSection'
 
 export const UmbrellaSection = () => {
 	return (
-		<section className="pb-10 sticky -top-20  bg-black">
+		<section className="pb-10 sticky -top-20 md:top-0  bg-black">
 			<div className="grid md:grid-cols-2 h-full p-6 md:p-20 bg-white rounded-3xl overflow-hidden">
 				<div className="relative">
 					<div className="mb-6 md:mb-0">

@@ -4,6 +4,7 @@ import { Consultation } from '../components/Consultation'
 import { GreenSection } from '../components/GreenSection'
 import { Hero } from '../components/Hero'
 import { HowWeWork } from '../components/HowWeWork'
+import { LinkScroll } from '../components/ui/LinkScroll'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
 import { WhyPayMore } from '../components/WhyPayMore'
@@ -36,7 +37,14 @@ const Home = () => {
 			<GreenSection
 				title={'Бесплатная консультация'}
 				textBtn={'Присоединиться'}
-			></GreenSection>
+				href={'consultation'}
+			>
+				<LinkScroll
+					href={'consultation'}
+					title={'Присоединиться'}
+					variant={'black'}
+				/>
+			</GreenSection>
 			<HowWeWork />
 			<VS />
 			<WhyPayMore />

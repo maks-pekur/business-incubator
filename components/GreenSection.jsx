@@ -1,10 +1,10 @@
 import { Heading } from './ui/Heading'
-import { LinkComponent } from './ui/LinkComponent'
-export const GreenSection = ({ children, title, textBtn }) => {
+
+export const GreenSection = ({ children, title }) => {
 	return (
 		<section className={`pb-6 sticky bg-black overflow-hidden`}>
 			<div
-				className="absolute inset-0"
+				className="absolute inset-0 -z-10"
 				style={{
 					backgroundImage: `url("../public/assets/images/sot.svg")`,
 					backgroundPosition: 'center',
@@ -22,7 +22,6 @@ export const GreenSection = ({ children, title, textBtn }) => {
 					<div className="text-center flex items-center justify-center">
 						{children}
 					</div>
-					<LinkComponent href={'/career'} variant={'black'} title={textBtn} />
 				</div>
 			</div>
 		</section>

@@ -14,7 +14,7 @@ export const Hero = () => {
 			<div className="relative w-full min-h-screen">
 				<motion.div
 					initial={{
-						scale: 1.2,
+						scale: 1.3,
 						opacity: 0,
 					}}
 					animate={{

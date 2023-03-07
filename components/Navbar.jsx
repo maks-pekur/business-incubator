@@ -9,14 +9,6 @@ import { Languages } from './ui/Languages'
 import { LinkScroll } from './ui/LinkScroll'
 import SocialLinks from './ui/SocialLinks'
 
-const linksNav = [
-	{
-		id: '01',
-		title: 'main',
-		path: '/',
-	},
-]
-
 const flags = {
 	pl: '/assets/images/pl.svg',
 	en: '/assets/images/gb.svg',
@@ -29,9 +21,19 @@ export const Navbar = ({ header }) => {
 	const [lang, setLang] = useState(locale)
 	const [isOpen, setOpen] = useState(false)
 
-	const handleClick = locale => {
+	const handleLang = locale => {
 		setLang(locale)
 		setOpen(false)
+	}
+
+	const handleOpen = () => {
+		setOpen(true)
+		document.body.classList.add('overflow-hidden')
+	}
+
+	const handleClose = () => {
+		setOpen(false)
+		document.body.classList.remove('overflow-hidden')
 	}
 
 	return (
@@ -42,20 +44,20 @@ export const Navbar = ({ header }) => {
 					'bg-[var(--green)] rounded-full flex items-center justify-center p-1 transition-colors duration-300'
 				}`}
 			>
-				<Hamburger size={22} toggled={isOpen} toggle={setOpen} />
+				<Hamburger size={22} toggled={isOpen} toggle={handleOpen} />
 			</div>
 			{isOpen && (
-				<div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-[var(--green)] p-1">
+				<div className="fixed inset-0 z-50 bg-[var(--green)] p-1">
 					<div
 						className="absolute top-6 right-6 text-xl"
-						onClick={() => setOpen(false)}
+						onClick={() => handleClose()}
 					>
 						X
 					</div>
 					<div className="flex flex-col items-center justify-between h-full py-24 bg-black rounded-3xl">
 						<ul className="flex flex-col space-y-6 w-full items-center text-[26px]">
 							{navLinks.map(link => (
-								<li key={link.id} onClick={() => setOpen(false)}>
+								<li key={link.id} onClick={() => handleClose()}>
 									<Link
 										className={pathname === link.path ? 'activeLink' : ''}
 										href={link.path}
@@ -73,7 +75,7 @@ export const Navbar = ({ header }) => {
 											key={l}
 											href={asPath}
 											locale={l}
-											onClick={() => handleClick(l)}
+											onClick={() => handleLang(l)}
 											className={`${
 												lang === l ? 'opacity-40' : ''
 											} border-[1px] border-black`}
@@ -113,7 +115,7 @@ export const Navbar = ({ header }) => {
 								}}
 								transition={{ duration: 1.5, type: 'tween' }}
 								key={link.id}
-								onClick={() => setOpen(false)}
+								onClick={() => handleClose()}
 							>
 								<Link
 									className={`p-2 ${

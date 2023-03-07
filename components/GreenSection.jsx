@@ -6,7 +6,7 @@ export const GreenSection = ({ children, title }) => {
 	return (
 		<section className={`pb-6 sticky bg-black overflow-hidden`}>
 			<div className="absolute inset-0">
-				<Image src={sot} fill alt="" />
+				<Image src={sot} fill alt="" className="2xl:scale-110" />
 			</div>
 			<div className="bg-[var(--green)] md:p-28 p-6 rounded-3xl">
 				<div className="flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-10 rounded-xl">

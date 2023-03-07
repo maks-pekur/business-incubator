@@ -37,8 +37,8 @@ const Team = () => {
 			</Head>
 
 			<Hero />
-			<section className="bg-white p-20 rounded-3xl mb-20 sticky -top-52">
-				<div>
+			<section className="bg-white p-6 md:p-20 rounded-3xl mb-20 sticky -top-[150%]">
+				<div className="mb-6 md:mb-0">
 					<NumSection
 						number={'01'}
 						title={t('team:section')}
@@ -46,7 +46,7 @@ const Team = () => {
 					/>
 				</div>
 				<div className="flex justify-end w-full">
-					<div className="max-w-[50%] space-y-6">
+					<div className="md:max-w-[50%] space-y-6">
 						<Heading tag={'h2'}>{t('team:title')}</Heading>
 						<p>{t('team:subtitle')}</p>
 					</div>
@@ -55,7 +55,7 @@ const Team = () => {
 			</section>
 			<Personal />
 			<GreenSection title={t('team:part')}>
-				<div className="flex flex-col items-center space-y-14">
+				<div className="flex flex-col items-center space-y-6 md:space-y-14">
 					<Heading classNames="max-w-[70%]" tag={'h4'}>
 						{t('team:part_descr')}
 					</Heading>

@@ -40,7 +40,7 @@ export const Header = () => {
 						Freedom Business Area
 					</Link>
 				</div>
-				<div className={`${header && 'text-black'}`}>
+				<div>
 					<Navbar header={header} />
 				</div>
 			</div>

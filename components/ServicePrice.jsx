@@ -5,7 +5,7 @@ import { NumSection } from './ui/NumSection'
 
 export const ServicePrice = () => {
 	return (
-		<section className="text-white sticky top-0 bg-black rounded-t-3xl pb-20">
+		<section className="text-white sticky -top-0 bg-black rounded-t-3xl pb-20">
 			<div className="bg-[var(--dark-gray)] rounded-3xl p-6 md:p-20 pb-28 md:pb-10">
 				<div>
 					<NumSection number={'02'} title={'Услуги'} variant={'green'} />
@@ -22,16 +22,16 @@ export const ServicePrice = () => {
 						</p>
 					</div>
 					<div>
-						<div className="border-2 border-white h-full rounded-2xl">
-							<div className="p-10 md:p-20 space-y-6">
-								<Heading tag={'h3'} classNames={'text-center'}>
+						<div className="border-2 border-white h-full rounded-3xl">
+							<div className="p-6 md:p-20 space-y-6">
+								<Heading tag={'h4'} classNames={'text-center'}>
 									Стоимость полного пакета услуг
 								</Heading>
 								<div className="flex items-center justify-center w-full">
 									<Image src={cub} width={150} height={150} alt="" />
 								</div>
 							</div>
-							<div className="bg-[var(--green)] w-full text-black text-2xl rounded-2xl text-center p-10">
+							<div className="bg-[var(--green)] w-full text-black text-2xl rounded-2xl text-center p-6 md:p-10">
 								500 зл/месяц
 							</div>
 						</div>

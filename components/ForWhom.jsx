@@ -42,7 +42,7 @@ const items = [
 
 export const ForWhom = () => {
 	return (
-		<section className="bg-black pb-6 sticky">
+		<section className="bg-black pb-6 sticky -top-[160%]">
 			<div className="bg-white md:p-20 p-6 rounded-3xl">
 				<div className="mb-6 md:mb-0">
 					<NumSection
@@ -67,15 +67,18 @@ export const ForWhom = () => {
 					{items.map(item => (
 						<div
 							key={item.id}
-							className="bg-[var(--light-gray)] rounded-xl p-4 md:p-10"
+							className="bg-[var(--light-gray)] rounded-3xl p-4 md:p-10"
 						>
-							<div className="mb-10 h-[200px] flex items-center justify-center">
+							<div className="mb-6 md:mb-10 h-[200px] flex items-center justify-center">
 								<Image src={item.img} width={200} height={200} alt="" />
 							</div>
 							<div className="w-full flex items-center justify-center md:justify-start">
 								<ul>
 									{item.list.map(li => (
-										<li className="mb-6 relative flex items-center" key={li}>
+										<li
+											className="mb-4 md:mb-6 relative flex items-center"
+											key={li}
+										>
 											<div className="bg-[var(--green)] w-4 h-4 rounded-full mr-6"></div>
 											{li}
 										</li>

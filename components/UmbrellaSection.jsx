@@ -5,13 +5,13 @@ import { NumSection } from './ui/NumSection'
 
 export const UmbrellaSection = () => {
 	return (
-		<section className="pb-10 sticky -top-20 md:top-0  bg-black">
+		<section className="md:pb-10 sticky -top-24 md:top-0  bg-black pb-20 h-screen md:h-full">
 			<div className="grid md:grid-cols-2 h-full p-6 md:p-20 bg-white rounded-3xl overflow-hidden">
 				<div className="relative">
 					<div className="mb-6 md:mb-0">
 						<NumSection number={'01'} title={''} variant={'green'} />
 					</div>
-					<div className="w-full h-full absolute -top-10 -right-20 bottom-0 hidden md:block">
+					<div className="w-full h-full absolute -top-10 -right-20 bottom-0 hidden lg:block">
 						<Image
 							src={umbrella}
 							width={450}
@@ -26,7 +26,7 @@ export const UmbrellaSection = () => {
 					<Heading tag={'h2'}>
 						Фонд работает по системе umbrella company.
 					</Heading>
-					<div className="text-gray-400 text-lg leading-8 space-y-4">
+					<div className="text-gray-400 text-sm lg:text-lg leading-8 space-y-4">
 						<p>
 							Мы являемся сильной защитой и поддержкой для специалистов
 							совершенно разных сфер и действующих предпринимателей. Наш фонд с

@@ -5,8 +5,8 @@ import { Heading } from './ui/Heading'
 export const GreenSection = ({ children, title }) => {
 	return (
 		<section className={`pb-6 sticky bg-black overflow-hidden`}>
-			<div className="absolute inset-0 w-full h-full">
-				<Image className="scale-110" src={sot} fill alt="" />
+			<div className="absolute inset-0">
+				<Image src={sot} fill alt="" />
 			</div>
 			<div className="bg-[var(--green)] md:p-28 p-6 rounded-3xl">
 				<div className="flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-10 rounded-xl">

@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import { AboutUs } from '../components/AboutUs'
 import { Consultation } from '../components/Consultation'
@@ -7,8 +8,18 @@ import { HowWeWork } from '../components/HowWeWork'
 import { LinkScroll } from '../components/ui/LinkScroll'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
+import { WhatYouGetMobile } from '../components/WhatYouGetMobile'
 import { WhyPayMore } from '../components/WhyPayMore'
 import { useDevice } from '../hooks/useDevice'
+
+export async function getStaticProps({ locale }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['home'])),
+		},
+	}
+}
+
 const Home = () => {
 	const device = useDevice()
 	return (
@@ -33,7 +44,7 @@ const Home = () => {
 
 			<Hero />
 			<AboutUs />
-			<WhatYouGet />
+			{device === 'mobile' ? <WhatYouGetMobile /> : <WhatYouGet />}
 			<GreenSection
 				title={'Бесплатная консультация'}
 				textBtn={'Присоединиться'}

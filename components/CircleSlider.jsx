@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import circl from '../public/assets/images/circle-group.svg'
-import { NavigateArrow } from './ui/NavigateArrow'
-
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/effect-flip'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import circl from '../public/assets/images/circle-group.svg'
+import { Heading } from './ui/Heading'
+import { NavigateArrow } from './ui/NavigateArrow'
 
 const carousel = [
 	{
@@ -91,7 +91,7 @@ export const CircleSlider = () => {
 										className="text-white w-full h-full"
 										key={item.id}
 									>
-										{item.title}
+										<Heading tag={'h4'}>{item.title}</Heading>
 									</SwiperSlide>
 								))}
 							</div>

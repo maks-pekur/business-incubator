@@ -54,10 +54,16 @@ const Team = () => {
 				<Founders />
 			</section>
 			<Personal />
-			<GreenSection title={t('team:part')} textBtn={t('team:part_btn')}>
-				<div className="flex flex-col items-center space-y-6">
-					<Heading tag={'h4'}>{t('team:part_descr')}</Heading>
-					<LinkComponent href={'/career'} title={'Карьера'} variant={'black'} />
+			<GreenSection title={t('team:part')}>
+				<div className="flex flex-col items-center space-y-14">
+					<Heading classNames="max-w-[70%]" tag={'h4'}>
+						{t('team:part_descr')}
+					</Heading>
+					<LinkComponent
+						href={'/career'}
+						title={t('team:part_btn')}
+						variant={'black'}
+					/>
 				</div>
 			</GreenSection>
 		</>

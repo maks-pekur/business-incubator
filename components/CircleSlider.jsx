@@ -1,63 +1,110 @@
-import { NavigateArrow } from './ui/NavigateArrow'
-
 import Image from 'next/image'
 import { useState } from 'react'
-import bank from '../public/assets/images/bank-account.svg'
-import crm from '../public/assets/images/crm.svg'
-import legalAdvice from '../public/assets/images/legal-advice.svg'
-import legalPerson from '../public/assets/images/legal-person.svg'
-import menedger from '../public/assets/images/menedger.svg'
-import relocate from '../public/assets/images/relocate.svg'
-import taxConsultant from '../public/assets/images/tax-consulting.svg'
-import tax from '../public/assets/images/tax.svg'
-
+import { Navigation } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import circl from '../public/assets/images/circle-group.svg'
+import { NavigateArrow } from './ui/NavigateArrow'
+
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+import 'swiper/css/effect-flip'
 
 const carousel = [
-	{ title: 'Релокейт в Польшу', id: 0, position: 1, icon: relocate },
-	{ title: 'Бухгалтерское сопровождение', id: 1, position: 2, icon: tax },
-	{ title: 'Юридическое лицо', id: 2, position: 3, icon: legalPerson },
-	{ title: 'Юридическая помощь', id: 3, position: 4, icon: legalAdvice },
-	{ title: 'Налоговый консалтинг', id: 4, position: 5, icon: taxConsultant },
-	{ title: 'Банковский счет', id: 5, position: 6, icon: bank },
-	{ title: 'Доступ к системе CRM', id: 6, position: 7, icon: crm },
-	{ title: 'Менторство меннеджера', id: 7, position: 8, icon: menedger },
+	{
+		id: '01',
+		title: 'Релокейт в Польшу',
+	},
+	{
+		id: '02',
+		title: 'Бухгалтерское сопровождение',
+	},
+	{
+		id: '03',
+		title: 'Юридическое лицо',
+	},
+	{
+		id: '04',
+		title: 'Юридическая помощь',
+	},
+	{
+		id: '05',
+		title: 'Налоговый консалтинг',
+	},
+	{
+		id: '06',
+		title: 'Банковский счет',
+	},
+	{
+		id: '07',
+		title: 'Доступ к системе CRM',
+	},
+	{
+		id: '08',
+		title: 'Менторство меннеджера',
+	},
 ]
 
 export const CircleSlider = () => {
 	const [corner, setCorner] = useState(0)
+
+	const nextSlide = () => {
+		setCorner(prev => prev + 45)
+	}
+
+	const prevSlide = () => {
+		setCorner(prev => prev - 45)
+	}
+
 	return (
-		<div className="flex items-center justify-between h-full">
+		<div className="flex items-center justify-between h-full w-full relative">
 			<NavigateArrow
 				direction={'left'}
 				variant={'white'}
-				onClick={() => {
-					setCorner(prev => prev - 45)
-				}}
+				id={'swiper-prev-circle'}
+				onClick={() => prevSlide()}
 			/>
 
-			<div className="rounded-full bg-[#3C3B3B] p-20 w-[700px] h-[700px] flex items-center justify-center">
-				<div className="flex items-center justify-center relative">
-					<Image
-						src={circl}
-						width={1000}
-						height={1000}
-						className="bg-[var(--green)] rounded-full p-4"
-						style={{
-							transform: `rotate(${corner}deg)`,
-							transition: 'all 1s linear',
-						}}
-					/>
-					<div className="w-[50%] h-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[#3C3B3B] rounded-full"></div>
+			<div className="overflow-hidden w-full h-full relative">
+				<Image
+					src={circl}
+					fill
+					alt="circl"
+					style={{
+						transform: `rotate(${corner}deg)`,
+						transition: 'all 0.5s linear',
+					}}
+				/>
+				<div className="absolute inset-0 flex items-center justify-center text-center">
+					<div className="max-w-[200px]">
+						<Swiper
+							modules={[Navigation]}
+							loop={true}
+							spaceBetween={40}
+							navigation={{
+								nextEl: '#swiper-next-circle',
+								prevEl: '#swiper-prev-circle',
+							}}
+						>
+							<div>
+								{carousel.map(item => (
+									<SwiperSlide
+										className="text-white w-full h-full"
+										key={item.id}
+									>
+										{item.title}
+									</SwiperSlide>
+								))}
+							</div>
+						</Swiper>
+					</div>
 				</div>
 			</div>
 
 			<NavigateArrow
 				direction={'right'}
+				id={'swiper-next-circle'}
 				variant={'white'}
-				onClick={() => {
-					setCorner(prev => prev + 45)
-				}}
+				onClick={() => nextSlide()}
 			/>
 		</div>
 	)

@@ -9,7 +9,7 @@ const styles = {
 
 export const NavigateArrow = ({ onClick, variant, direction, id }) => {
 	return (
-		<div id={id}>
+		<div id={id} onClick={onClick} className="z-10">
 			<svg
 				width="8"
 				height="12"
@@ -17,7 +17,6 @@ export const NavigateArrow = ({ onClick, variant, direction, id }) => {
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 				className={`border-[1px] rounded-full w-16 h-16 p-6 transition-colors duration-100 ${styles[direction]} ${styles[variant]}`}
-				onClick={onClick}
 			>
 				<path
 					d="M7.42188 1.40625L2.82812 6L7.42188 10.5938L6.01562 12L0.015625 6L6.01562 0L7.42188 1.40625Z"

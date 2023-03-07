@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { NavigateArrow } from './ui/NavigateArrow'
 import { NumSection } from './ui/NumSection'
 
-import { Navigation } from 'swiper'
+import { Autoplay, Navigation } from 'swiper'
 import { useDevice } from '../hooks/useDevice'
 import slide1 from '../public/assets/images/slide1.svg'
 import slide2 from '../public/assets/images/slide2.svg'
@@ -71,27 +71,25 @@ export const HowWeWork = () => {
 						<NavigateArrow
 							direction={'left'}
 							variant={'outline'}
-							id={'swiper-prev'}
+							id={'swiper-prev-work'}
 						/>
 						<NavigateArrow
 							direction={'right'}
 							variant={'outline'}
-							id={'swiper-next'}
+							id={'swiper-next-work'}
 						/>
 					</div>
 				</div>
 
 				<div className="md:col-span-2 h-full flex items-center">
 					<Swiper
-						loop={true}
-						modules={[Navigation]}
+						modules={[Navigation, Autoplay]}
 						navigation={{
-							nextEl: '#swiper-next',
-							prevEl: '#swiper-prev',
+							nextEl: '#swiper-next-work',
+							prevEl: '#swiper-prev-work',
 						}}
 						spaceBetween={40}
 						slidesPerView={device === 'mobile' ? 1 : 2}
-						className="flex"
 					>
 						{slides.map(slide => (
 							<SwiperSlide key={slide.id}>

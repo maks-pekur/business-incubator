@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
@@ -9,43 +10,11 @@ import circl from '../public/assets/images/circle-group.svg'
 import { Heading } from './ui/Heading'
 import { NavigateArrow } from './ui/NavigateArrow'
 
-const carousel = [
-	{
-		id: '01',
-		title: 'Релокейт в Польшу',
-	},
-	{
-		id: '02',
-		title: 'Бухгалтерское сопровождение',
-	},
-	{
-		id: '03',
-		title: 'Юридическое лицо',
-	},
-	{
-		id: '04',
-		title: 'Юридическая помощь',
-	},
-	{
-		id: '05',
-		title: 'Налоговый консалтинг',
-	},
-	{
-		id: '06',
-		title: 'Банковский счет',
-	},
-	{
-		id: '07',
-		title: 'Доступ к системе CRM',
-	},
-	{
-		id: '08',
-		title: 'Менторство меннеджера',
-	},
-]
+import { circlList } from '../constants'
 
 export const CircleSlider = () => {
 	const [corner, setCorner] = useState(0)
+	const { t } = useTranslation()
 
 	const nextSlide = () => {
 		setCorner(prev => prev + 45)
@@ -86,12 +55,14 @@ export const CircleSlider = () => {
 							}}
 						>
 							<div>
-								{carousel.map(item => (
+								{circlList.map(item => (
 									<SwiperSlide
 										className="text-white w-full h-full"
 										key={item.id}
 									>
-										<Heading tag={'h4'}>{item.title}</Heading>
+										<Heading tag={'h4'}>
+											{t(`home:02.circl.${item.title}`)}
+										</Heading>
 									</SwiperSlide>
 								))}
 							</div>

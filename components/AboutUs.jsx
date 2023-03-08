@@ -11,27 +11,17 @@ export const AboutUs = () => {
 				<div>
 					<NumSection
 						number={'01'}
-						title={t('home:section')}
+						title={t('home:01.section')}
 						variant={'green'}
 					/>
 				</div>
 				<div className="w-full space-y-10 py-10 md:py-20 xl:pr-20 lg:pr-14">
-					<Heading tag={'h2'}>Фонд Freedom Business Area</Heading>
+					<Heading tag={'h2'}>{t('home:01.title')}</Heading>
 					<div className="text-gray-400 text-lg leading-8 space-y-4">
-						<p>
-							Видит своей миссией, помощь: Digital, IT специалистам и
-							фрилансерам со всего мира вести виртуальные фирмы в Польше. Фонд
-							FBA даёт уникальную возможность проверить свои бизнес-идеи в
-							рыночных условиях.
-						</p>
-						<p>
-							Мы уверены, что сможем удивить тебя оперативностью нашей работы.
-							Все формальности связанные с открытием бизнеса решаются в течении
-							одного рабочего дня. После этого каждый предприниматель может
-							легально вести свой бизнес.
-						</p>
+						<p>{t('home:01.text.1')}</p>
+						<p>{t('home:01.text.2')}</p>
 					</div>
-					<Button title={'Подробнее'} variant={'outline'} />
+					<Button title={t('home:01.btn')} variant={'outline'} />
 				</div>
 			</div>
 		</section>

@@ -79,7 +79,7 @@ const index = ({ props, subscription }) => {
 			<ForWhom />
 			<ServiceWhatYouGet />
 			<Reviews reviews={allComments} />
-			<Consultation />
+			<Consultation numSection={'07'} />
 		</>
 	)
 }

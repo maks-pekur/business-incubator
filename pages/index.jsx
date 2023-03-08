@@ -1,5 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
+import { useTranslation } from 'react-i18next'
 import { AboutUs } from '../components/AboutUs'
 import { Consultation } from '../components/Consultation'
 import { GreenSection } from '../components/GreenSection'
@@ -22,6 +23,7 @@ export async function getStaticProps({ locale }) {
 
 const Home = () => {
 	const device = useDevice()
+	const { t } = useTranslation()
 	return (
 		<>
 			<Head>
@@ -45,22 +47,17 @@ const Home = () => {
 			<Hero />
 			<AboutUs />
 			{device === 'mobile' ? <WhatYouGetMobile /> : <WhatYouGet />}
-			<GreenSection
-				title={'Бесплатная консультация'}
-				textBtn={'Присоединиться'}
-				href={'consultation'}
-			>
+			<GreenSection title={t('home:consultation.title')}>
 				<LinkScroll
 					href={'consultation'}
-					title={'Присоединиться'}
+					title={t('home:consultation.btn')}
 					variant={'black'}
 				/>
-				//{' '}
 			</GreenSection>
 			<HowWeWork />
 			<VS />
 			<WhyPayMore />
-			<Consultation />
+			<Consultation numSection={'05'} />
 		</>
 	)
 }

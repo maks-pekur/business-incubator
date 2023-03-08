@@ -20,16 +20,16 @@ export const Header = () => {
 
 	return (
 		<header
-			className={`text-white fixed top-0 left-0 right-0 z-10 ${
-				header && 'text-black'
+			className={`text-white fixed top-0 left-0 right-0 z-10 transition-all duration-1000 ${
+				header && 'opacity-0'
 			}`}
 		>
 			<div className="relative w-full flex justify-end lg:items-center lg:justify-between  p-4 md:pt-8 md:px-10 pb-4 z-50">
-				<div
+				{/* <div
 					className={`hidden lg:block absolute -z-10 inset-0 rounded-b-3xl transition-all duration-300 ${
 						header && 'bg-[var(--green)] opacity-80'
 					}`}
-				></div>
+				></div> */}
 
 				<div className="items-center space-x-6 hidden lg:flex">
 					<Logo width={70} height={70} variant={'white'} />

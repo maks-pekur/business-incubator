@@ -164,3 +164,129 @@ export const i18n = {
 		ru: 'Контакты',
 	},
 }
+
+export const circlList = [
+	{
+		id: '01',
+		title: 'item-1',
+	},
+	{
+		id: '02',
+		title: 'item-2',
+	},
+	{
+		id: '03',
+		title: 'item-3',
+	},
+	{
+		id: '04',
+		title: 'item-4',
+	},
+	{
+		id: '05',
+		title: 'item-5',
+	},
+	{
+		id: '06',
+		title: 'item-6',
+	},
+	{
+		id: '07',
+		title: 'item-7',
+	},
+	{
+		id: '08',
+		title: 'item-8',
+	},
+]
+
+import slide1 from '../public/assets/images/slide1.svg'
+import slide2 from '../public/assets/images/slide2.svg'
+import slide3 from '../public/assets/images/slide3.svg'
+import slide4 from '../public/assets/images/slide4.svg'
+import slide5 from '../public/assets/images/slide5.svg'
+import slide6 from '../public/assets/images/slide6.svg'
+
+export const howWeWorkList = [
+	{
+		id: '01',
+		image: slide1,
+		step: 'step',
+		title: 'title',
+	},
+	{
+		id: '02',
+		image: slide2,
+		step: 'step',
+		title: 'title',
+	},
+	{
+		id: '03',
+		image: slide3,
+		step: 'step',
+		title: 'title',
+	},
+	{
+		id: '04',
+		image: slide4,
+		step: 'step',
+		title: 'title',
+	},
+	{
+		id: '05',
+		image: slide5,
+		step: 'step',
+		title: 'title',
+	},
+	{
+		id: '06',
+		image: slide6,
+		step: 'step',
+		title: 'title',
+	},
+]
+
+export const vsItems = [
+	{
+		id: '01',
+		textLeft: 'left',
+		textCenter: 'center',
+		textRight: 'right',
+	},
+	{
+		id: '02',
+		textLeft: 'left',
+		textCenter: 'center',
+		textRight: 'right',
+	},
+	{
+		id: '03',
+		textLeft: 'left',
+		textCenter: 'center',
+		textRight: 'right',
+	},
+	{
+		id: '04',
+		textLeft: 'left',
+		textCenter: 'center',
+		textRight: 'right',
+	},
+	{
+		id: '05',
+		textLeft: 'left',
+		textCenter: 'center',
+		textRight: 'right',
+	},
+	{
+		id: '06',
+		textLeft: 'left',
+		textCenter: 'center',
+		textRight: 'right',
+	},
+	{
+		id: '07',
+		textLeft: 'left',
+		textCenter: 'center',
+		textRight: 'right',
+	},
+]

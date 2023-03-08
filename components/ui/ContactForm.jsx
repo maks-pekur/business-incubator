@@ -2,8 +2,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
-
-import { translationContactForm } from '../../translations/contactForm'
+import { consultation } from '../../translations/consultation'
 
 import 'react-phone-input-2/lib/style.css'
 import { Button } from './Button'
@@ -72,7 +71,7 @@ export const ContactForm = () => {
 						className={`${style.input} ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
-						placeholder={translationContactForm.name[locale]}
+						placeholder={consultation.name[locale]}
 						type="text"
 						{...register('name', {
 							required: true,
@@ -132,7 +131,7 @@ export const ContactForm = () => {
 						className={`${style.input} ${
 							errors.email?.type === 'required' && 'border-red-400'
 						}`}
-						placeholder={translationContactForm.mail[locale]}
+						placeholder={consultation.email[locale]}
 						type="email"
 						{...register('email', {
 							required: true,
@@ -147,7 +146,7 @@ export const ContactForm = () => {
 						className={`${style.input} ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
-						placeholder={translationContactForm.telegram[locale]}
+						placeholder={consultation.nik[locale]}
 						type="text"
 						name="telegram"
 						{...register('telegram', {
@@ -164,7 +163,7 @@ export const ContactForm = () => {
 						className={`${style.input} resize-none ${
 							errors.name?.type === 'required' && 'border-red-400'
 						}`}
-						placeholder={translationContactForm.message[locale]}
+						placeholder={consultation.message[locale]}
 						type="text"
 						name="telegram"
 						{...register('telegram', {
@@ -176,7 +175,7 @@ export const ContactForm = () => {
 			<div className="w-full flex justify-center md:justify-end">
 				<Button
 					isLoading={isLoading}
-					title={'Оставить заявку'}
+					title={consultation.btn[locale]}
 					variant={'black'}
 				/>
 			</div>

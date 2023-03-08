@@ -1,5 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import { useTranslation } from 'react-i18next'
 import { Heading } from './ui/Heading'
 import { NumSection } from './ui/NumSection'
 
@@ -55,8 +56,9 @@ const items = [
 ]
 
 export const ServiceWhatYouGet = () => {
+	const { t } = useTranslation()
 	return (
-		<section className="pb-28 sticky -top-28 bg-black">
+		<section className="pb-28 sticky bg-black">
 			<div className="bg-[var(--dark-gray)] rounded-3xl md:p-14 p-6  ">
 				<div className="mb-6 md:mb-0">
 					<NumSection

@@ -55,6 +55,7 @@ const Home = () => {
 					title={'Присоединиться'}
 					variant={'black'}
 				/>
+				//{' '}
 			</GreenSection>
 			<HowWeWork />
 			<VS />

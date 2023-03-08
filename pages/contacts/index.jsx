@@ -42,7 +42,7 @@ const index = () => {
 			</Head>
 
 			<Hero />
-			<section className="sticky bg-black pb-20 -top-24">
+			<section className="sticky bg-black mb-20 -top-24">
 				<div className="bg-white p-6 md:p-20 rounded-3xl">
 					<div className="mb-8 md:mb-0">
 						<NumSection number={'01'} title={'Контакты'} variant={'green'} />
@@ -80,7 +80,6 @@ const index = () => {
 					<Partners />
 				</div>
 			</section>
-
 			<Consultation />
 		</>
 	)

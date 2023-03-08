@@ -4,7 +4,7 @@ import { NumSection } from './ui/NumSection'
 
 export const Consultation = () => {
 	return (
-		<section id="consultation" className="bg-black sticky top-0">
+		<section id="consultation" className="bg-black sticky rounded-t-3xl">
 			<div className="bg-[var(--green)] md:p-20 p-6 rounded-3xl">
 				<div className="mb-10 md:mb-0">
 					<NumSection

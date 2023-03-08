@@ -60,7 +60,7 @@ const index = ({ subscription }) => {
 			<Head>{renderMetaTags(metaTags)}</Head>
 
 			<Hero />
-			<section className="bg-white rounded-3xl p-20 sticky top-0">
+			<section className="bg-white rounded-3xl p-6 md:p-20 sticky top-0">
 				<div className="mb-10">
 					<NumSection number={'01'} title={'Блог'} variant={'green'} />
 				</div>

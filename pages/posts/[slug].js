@@ -111,7 +111,7 @@ const Post = ({ subscription }) => {
 		<>
 			<Head>{renderMetaTags(metaTags)}</Head>
 
-			<div className="max-w-6xl mx-auto bg-white rounded-3xl p-10 my-36">
+			<div className="max-w-6xl mx-auto bg-white rounded-3xl p-6 md:p-10 my-20 md:my-36">
 				<article>
 					<PostHeader
 						title={post.title}
@@ -123,7 +123,7 @@ const Post = ({ subscription }) => {
 				</article>
 			</div>
 
-			<div className="bg-white p-14 rounded-3xl">
+			<div className="bg-white p-6 md:p-20 rounded-3xl">
 				<div className="mb-10">
 					<Heading tag={'h2'}>Больше постов</Heading>
 				</div>

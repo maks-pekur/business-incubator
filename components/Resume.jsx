@@ -47,9 +47,9 @@ export const Resume = () => {
 	}
 
 	return (
-		<form className="grid p-8" onSubmit={handleSubmit(onSubmit)}>
-			<div className="grid grid-cols-2 gap-20 mb-10">
-				<div className="space-y-14">
+		<form className="grid md:p-8 w-full" onSubmit={handleSubmit(onSubmit)}>
+			<div className="grid md:grid-cols-2 gap-6 md:gap-20 mb-10">
+				<div className="space-y-8 md:space-y-14">
 					<div className="w-full">
 						<input
 							placeholder={
@@ -82,7 +82,7 @@ export const Resume = () => {
 						/>
 					</div>
 				</div>
-				<div className="space-y-14">
+				<div className="space-y-10 md:space-y-14">
 					<div className="w-full">
 						<Controller
 							control={control}
@@ -197,7 +197,7 @@ export const Resume = () => {
 					)}
 				/>
 			</div>
-			<div className="flex justify-end w-full">
+			<div className="flex justify-center md:justify-end w-full">
 				<Button
 					variant={'outline'}
 					title={t('career:resume.btn')}

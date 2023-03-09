@@ -9,7 +9,7 @@ export const ServicePrice = () => {
 	return (
 		<section className=" h-screen sticky top-0 bg-black rounded-t-3xl">
 			<div className="h-full bg-[var(--dark-gray)] rounded-3xl p-6 md:p-20">
-				<div className="md:mb-10">
+				<div className="mb-10">
 					<NumSection
 						number={'02'}
 						title={t('services:02.section')}
@@ -18,13 +18,13 @@ export const ServicePrice = () => {
 					/>
 				</div>
 				<div className="grid md:grid-cols-2 gap-10 md:gap-20 text-white">
-					<div className="lg:space-y-14">
+					<div className="space-y-10 lg:space-y-14">
 						<Heading tag={'h2'}>{t('services:02.title')}</Heading>
 						<p className="md:text-xl lg:text-2xl">
 							{t('services:02.subtitle')}
 						</p>
 					</div>
-					<div className="md:px-48 md:pb-48">
+					<div className="xl:px-32 xl:pb-32 2xl:px-48 2xl:pb-48">
 						<div className="border-2 border-white h-full rounded-3xl flex flex-col justify-between">
 							<div className="p-6 md:p-10 space-y-6">
 								<Heading tag={'h4'} classNames={'text-center'}>

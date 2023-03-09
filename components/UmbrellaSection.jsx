@@ -12,8 +12,8 @@ export const UmbrellaSection = () => {
 				<div className="mb-6 md:mb-0">
 					<NumSection number={'01'} title={''} variant={'green'} />
 				</div>
-				<div className="w-full h-full grid grid-cols-2 gap-10">
-					<div className="flex items-end justify-center">
+				<div className="w-full h-full grid md:grid-cols-2 gap-10">
+					<div className="hidden md:flex items-end justify-center">
 						<Image
 							src={umbrella}
 							width={500}

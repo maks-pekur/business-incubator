@@ -33,26 +33,24 @@ const index = () => {
 				<meta name="twitter:description" content="None" />
 			</Head>
 
-			<main className="relative overflow-x-hidden px-4">
-				<Hero />
-				<section className="bg-white p-6 lg:p-20 rounded-3xl">
-					<div>
-						<div>
-							<NumSection
-								number={'01'}
-								title={t('career:section')}
-								variant={'green'}
-							/>
-						</div>
-						<div className="flex justify-end w-full mb-10 pr-10">
-							<Heading tag={'h2'}>{t('career:resume.title')}</Heading>
-						</div>
-						<div>
-							<Resume />
-						</div>
+			<Hero />
+			<section className="bg-white p-6 lg:p-20 sticky rounded-3xl">
+				<div>
+					<div className="mb-10 md:mb-0">
+						<NumSection
+							number={'01'}
+							title={t('career:section')}
+							variant={'green'}
+						/>
 					</div>
-				</section>
-			</main>
+					<div className="flex justify-center md:justify-end w-full mb-10 md:pr-10">
+						<Heading tag={'h2'}>{t('career:resume.title')}</Heading>
+					</div>
+					<div>
+						<Resume />
+					</div>
+				</div>
+			</section>
 		</>
 	)
 }

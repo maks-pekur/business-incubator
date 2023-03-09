@@ -48,7 +48,7 @@ const Team = () => {
 							/>
 						</div>
 						<div className="flex justify-end w-full">
-							<div className="md:max-w-[50%] space-y-10">
+							<div className="md:max-w-[50%] space-y-4 md:space-y-10">
 								<Heading tag={'h2'}>{t('team:title')}</Heading>
 								<p className="text-gray-700 text-sm lg:text-xl leading-10">
 									{t('team:subtitle')}

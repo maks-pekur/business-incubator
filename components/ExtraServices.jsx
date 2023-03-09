@@ -29,7 +29,7 @@ const cards = [
 export const ExtraServices = () => {
 	const { t } = useTranslation()
 	return (
-		<section className="pb-6 sticky top-0 bg-black rounded-t-3xl">
+		<section className="pb-6 sticky md:top-0 bg-black rounded-t-3xl">
 			<div className="bg-[var(--light-gray)] rounded-3xl md:p-20 p-6 ">
 				<div className="mb-10 md:mb-20">
 					<NumSection

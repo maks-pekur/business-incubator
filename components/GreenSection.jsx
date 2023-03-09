@@ -6,7 +6,7 @@ import { Heading } from './ui/Heading'
 export const GreenSection = ({ children, title }) => {
 	return (
 		<section className="pb-6 sticky bg-black overflow-hidden">
-			<div className="relative bg-[var(--green)] h-[250px] lg:h-[400px] p-6 rounded-3xl ">
+			<div className="relative bg-[var(--green)] h-[400px] rounded-3xl ">
 				<div className="hidden absolute inset-0 md:flex justify-between">
 					<Image src={sotLeft} alt="" />
 					<Image src={sotRight} alt="" />

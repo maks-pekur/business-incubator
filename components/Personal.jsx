@@ -8,7 +8,7 @@ export const Personal = () => {
 	return (
 		<section className="rounded-t-3xl bg-black pb-20 sticky">
 			<div className="bg-[var(--light-gray)] p-6 md:p-20 rounded-3xl">
-				<Heading tag={'h3'} classNames={'text-center py-28'}>
+				<Heading tag={'h3'} classNames={'text-center py-14'}>
 					{t('team:personal')}
 				</Heading>
 				<div className="grid md:grid-cols-3 gap-10 md:gap-20">

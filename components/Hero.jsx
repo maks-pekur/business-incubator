@@ -24,14 +24,7 @@ export const Hero = () => {
 					transition={{ duration: 1.7 }}
 					className="absolute inset-0"
 				>
-					<Image
-						src={figure}
-						fill
-						style={{
-							objectFit: 'cover',
-							objectPosition: 'center',
-						}}
-					/>
+					<Image src={figure} fill />
 				</motion.div>
 
 				<div className="absolute inset-6 text-white flex items-center md:items-end md:left-10 md:w-[55%] mb-24">
@@ -53,7 +46,7 @@ export const Hero = () => {
 						<Heading tag={'h1'} classNames={'mb-8'}>
 							{hero.title[locale]}
 						</Heading>
-						<Heading tag={'h4'} classNames="text-gray-400">
+						<Heading tag={'h4'} classNames="text-white">
 							{hero.subtitle[locale]}
 						</Heading>
 					</motion.div>

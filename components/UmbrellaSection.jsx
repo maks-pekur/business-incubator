@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
-import umbrella from '../public/assets/images/umbrella.png'
+import umbrella from '../public/assets/images/umbrella.jpeg'
 import { Heading } from './ui/Heading'
 import { NumSection } from './ui/NumSection'
 
@@ -13,11 +13,11 @@ export const UmbrellaSection = () => {
 					<NumSection number={'01'} title={''} variant={'green'} />
 				</div>
 				<div className="w-full h-full grid grid-cols-2 gap-10">
-					<div className="flex items-end justify-end">
+					<div className="flex items-end justify-center">
 						<Image
 							src={umbrella}
-							width={420}
-							height={420}
+							width={500}
+							height={500}
 							alt=""
 							className="flex-end"
 						/>

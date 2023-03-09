@@ -17,7 +17,7 @@ export const HowWeWork = () => {
 	return (
 		<section className="bg-black sticky md:h-screen top-0 pb-10">
 			<div className="bg-[var(--light-gray)] rounded-3xl md:grid md:grid-cols-3 h-full p-6 md:py-20 md:pl-20">
-				<div className="flex flex-col md:justify-between mb-20">
+				<div className="flex flex-col md:justify-between mb-10 lg:mb-20">
 					<div className="mb-10 md:mb-0">
 						<NumSection
 							number={'03'}
@@ -25,7 +25,7 @@ export const HowWeWork = () => {
 							variant={'green'}
 						/>
 					</div>
-					<div className="flex items-center justify-center md:justify-start space-x-6 md:mb-0">
+					<div className="flex items-center justify-center md:justify-start space-x-8 md:mb-0">
 						<NavigateArrow
 							direction={'left'}
 							variant={'outline'}
@@ -39,7 +39,7 @@ export const HowWeWork = () => {
 					</div>
 				</div>
 
-				<div className="md:col-span-2 h-full flex items-center">
+				<div className="md:col-span-2 h-full flex items-center mb-14 md:mb-0">
 					<div className="flex w-full">
 						<Swiper
 							modules={[Navigation, Autoplay]}

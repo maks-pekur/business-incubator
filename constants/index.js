@@ -10,19 +10,20 @@ export const founders = [
 		position: 'andrii_position',
 		mail: 'andrii_mail',
 	},
+
 	{
 		id: '02',
-		img: vitaliy,
-		name: 'vitaliy_name',
-		position: 'vitaliy_position',
-		mail: 'vitaliy_mail',
-	},
-	{
-		id: '03',
 		img: vlad,
 		name: 'vlad_name',
 		position: 'vlad_position',
 		mail: 'vlad_mail',
+	},
+	{
+		id: '03',
+		img: vitaliy,
+		name: 'vitaliy_name',
+		position: 'vitaliy_position',
+		mail: 'vitaliy_mail',
 	},
 ]
 

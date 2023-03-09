@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { NumSection } from './ui/NumSection'
 
 const carousel = [
@@ -36,13 +37,14 @@ const carousel = [
 ]
 
 export const WhatYouGetMobile = () => {
+	const { t } = useTranslation()
 	return (
 		<section className="sticky top-0 bg-black rounded-t-3xl pb-20">
 			<div className="bg-[var(--dark-gray)] rounded-3xl p-6">
-				<div>
+				<div className="mb-10">
 					<NumSection
 						number={'02'}
-						title={'Что ты получишь'}
+						title={t('home:02.section')}
 						variant={'green'}
 						classNames={'text-white'}
 					/>
@@ -50,10 +52,10 @@ export const WhatYouGetMobile = () => {
 				<div>
 					{carousel.map((item, idx) => (
 						<div
-							className="text-white text-[10px] border-b-2 border-white p-2.5 space-x-6 flex items-center"
+							className="text-white text-md border-b-2 border-white p-3 space-x-6 flex items-center"
 							key={item.id}
 						>
-							<div className="border-[1px] border-white rounded-full w-6 h-6 text-[8px] flex items-center justify-center">
+							<div className="border-[1px] border-white rounded-full w-8 h-8 flex items-center justify-center">
 								{idx + 1}
 							</div>
 							<div>{item.title}</div>

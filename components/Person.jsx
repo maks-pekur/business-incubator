@@ -10,22 +10,15 @@ export const Person = ({ person }) => {
 	const { t } = useTranslation()
 	return (
 		<article className="flex flex-col justify-center items-center overflow-hidden rounded-2xl">
-			<div className="relative">
+			<div className="relative overflow-hidden">
 				<div>
-					<Image
-						src={person.img}
-						width={500}
-						height={500}
-						alt=""
-						style={{ objectFit: 'cover', backgroundPosition: 'center' }}
-					/>
+					<Image src={person.img} width={1000} height={1000} alt="" />
 				</div>
 				<div className="bg-[var(--green)] w-full rounded-2xl px-8 py-2 flex flex-col absolute bottom-0 top-[90%] hover:top-[50%] transition-all duration-300">
-					<div className="p-3">
-						<div className="text-2xl lg:text-4xl text-center">
-							{t(`team:${person.name}`)}
-						</div>
+					<div className="text-lg lg:text-xl xl:text-2xl text-center">
+						{t(`team:${person.name}`)}
 					</div>
+
 					<div className="text-center text-2xl mb-8 text-gray-500">
 						{t(`team:${person.position}`)}
 					</div>

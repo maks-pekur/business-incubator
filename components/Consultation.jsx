@@ -4,13 +4,10 @@ import { ContactForm } from './ui/ContactForm'
 import { Heading } from './ui/Heading'
 import { NumSection } from './ui/NumSection'
 
-export const Consultation = ({ numSection, top }) => {
+export const Consultation = ({ numSection }) => {
 	const { locale } = useRouter()
 	return (
-		<section
-			id="consultation"
-			className={`bg-black sticky rounded-t-3xl ${top}`}
-		>
+		<section id="consultation" className={`bg-black sticky rounded-t-3xl`}>
 			<div className="bg-[var(--green)] md:p-20 p-6 rounded-3xl">
 				<div className="mb-10 md:mb-0">
 					<NumSection
@@ -20,11 +17,11 @@ export const Consultation = ({ numSection, top }) => {
 					/>
 				</div>
 				<div>
-					<div className="w-full flex flex-col items-end mb-10 md:mb-20">
+					<div className="w-full flex flex-col items-center md:items-end mb-10 md:mb-20">
 						<div className="md:w-[50%] mb-10">
 							<Heading tag={'h2'}>{consultation.title[locale]}</Heading>
 						</div>
-						<div className="lg:w-[50%]">
+						<div className="w-full md:w-[50%]">
 							<ContactForm />
 						</div>
 					</div>

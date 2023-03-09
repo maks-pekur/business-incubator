@@ -45,14 +45,17 @@ const index = () => {
 			<section className="sticky bg-black pb-20">
 				<div className="bg-white p-6 md:p-20 rounded-3xl">
 					<div className="mb-8 md:mb-0">
-						<NumSection number={'01'} title={'Контакты'} variant={'green'} />
+						<NumSection
+							number={'01'}
+							title={t('contact:section')}
+							variant={'green'}
+						/>
 					</div>
 					<div className="w-full flex flex-col items-end">
 						<div className="md:max-w-[50%] space-y-10 mb-10">
-							<Heading tag={'h2'}>Свяжись с нами</Heading>
+							<Heading tag={'h2'}>{t('contact:title')}</Heading>
 							<Heading tag={'h4'} classNames={'text-gray-500'}>
-								Мы с радостью ответим на все волнующие тебя вопросы! Отравляй
-								свою заявку и наш менеджер свяжется с тобой.
+								{t('contact:text_1')}
 							</Heading>
 							<SocialLinks fill={'#929292'} />
 						</div>
@@ -71,7 +74,7 @@ const index = () => {
 									href="https://goo.gl/maps/pv7HM48oZC6Hby247"
 									target="_blank"
 								>
-									Ogrodowa 58 <br /> Warszawa, 00-876
+									{t('contact:street')} <br /> {t('contact:warsaw')}
 								</Link>
 							</div>
 							<div className="md:w-[50%] flex items-center space-x-6 border-t-[1px] border-black py-6"></div>

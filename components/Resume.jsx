@@ -101,9 +101,8 @@ export const Resume = () => {
 									onlyCountries={['pl', 'ua', 'ru']}
 									inputStyle={{
 										width: '100%',
-
 										borderBottom: '1px solid #000',
-										padding: '22px 48px',
+										padding: '31px 48px',
 										backgroundColor: 'transparent',
 									}}
 									buttonStyle={{
@@ -199,7 +198,11 @@ export const Resume = () => {
 				/>
 			</div>
 			<div className="flex justify-end w-full">
-				<Button variant={'outline'} title={'Отправить'} isLoading={isLoading} />
+				<Button
+					variant={'outline'}
+					title={t('career:resume.btn')}
+					isLoading={isLoading}
+				/>
 			</div>
 		</form>
 	)

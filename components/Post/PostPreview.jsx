@@ -13,18 +13,20 @@ export const PostPreview = ({
 	slug,
 }) => {
 	return (
-		<div>
-			<div className="mb-5 rounded-3xl overflow-hidden">
-				<CoverImage
-					slug={slug}
-					title={title}
-					responsiveImage={coverImage.responsiveImage}
-				/>
-			</div>
-			<div className="mb-4">
-				<Heading tag={'h3'}>
-					<Link href={`/posts/${slug}`}>{title}</Link>
-				</Heading>
+		<div className="flex flex-col justify-between">
+			<div>
+				<div className="mb-5 rounded-3xl overflow-hidden">
+					<CoverImage
+						slug={slug}
+						title={title}
+						responsiveImage={coverImage.responsiveImage}
+					/>
+				</div>
+				<div className="mb-4 min-h-[100px]">
+					<Heading tag={'h3'}>
+						<Link href={`/posts/${slug}`}>{title}</Link>
+					</Heading>
+				</div>
 			</div>
 
 			<div className="flex items-center justify-between">

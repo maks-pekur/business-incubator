@@ -14,8 +14,8 @@ export const Person = ({ person }) => {
 				<div>
 					<Image src={person.img} width={1000} height={1000} alt="" />
 				</div>
-				<div className="bg-[var(--green)] w-full rounded-2xl px-8 py-2 flex flex-col absolute bottom-0 top-[90%] hover:top-[50%] transition-all duration-300">
-					<div className="text-lg lg:text-xl xl:text-2xl text-center">
+				<div className="bg-[var(--green)] w-full rounded-2xl p-4 flex flex-col absolute bottom-0 top-[90%] hover:top-[50%] transition-all duration-300">
+					<div className="text-lg lg:text-xl xl:text-2xl text-center mb-10">
 						{t(`team:${person.name}`)}
 					</div>
 

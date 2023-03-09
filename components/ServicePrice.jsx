@@ -24,9 +24,9 @@ export const ServicePrice = () => {
 							{t('services:02.subtitle')}
 						</p>
 					</div>
-					<div>
+					<div className="md:px-48 md:pb-48">
 						<div className="border-2 border-white h-full rounded-3xl flex flex-col justify-between">
-							<div className="p-6 md:p-20 space-y-6">
+							<div className="p-6 md:p-10 space-y-6">
 								<Heading tag={'h4'} classNames={'text-center'}>
 									{t('services:02.card.title')}
 								</Heading>
@@ -34,7 +34,7 @@ export const ServicePrice = () => {
 									<Image src={cub} width={150} height={150} alt="" />
 								</div>
 							</div>
-							<div className="bg-[var(--green)] w-full text-black text-2xl rounded-2xl text-center p-6 lg:p-10 md:text-5xl xl:text-6xl">
+							<div className="bg-[var(--green)] w-full text-black text-2xl rounded-2xl text-center p-6 lg:p-10 md:text-4xl">
 								{t('services:02.card.btn')}
 							</div>
 						</div>

@@ -8,7 +8,7 @@ export const Founders = () => {
 	return (
 		<section>
 			<div>
-				<Heading tag={'h2'} classNames={'text-center py-8'}>
+				<Heading tag={'h3'} classNames={'text-center py-28'}>
 					{t('team:founders')}
 				</Heading>
 				<div className="grid md:grid-cols-3 gap-10 md:gap-20">

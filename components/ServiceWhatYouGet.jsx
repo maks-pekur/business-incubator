@@ -63,7 +63,7 @@ export const ServiceWhatYouGet = () => {
 				<div className="mb-6 md:mb-0">
 					<NumSection
 						number={'05'}
-						title={'Что ты получишь'}
+						title={t('services:05.section')}
 						variant={'green'}
 						classNames={'text-white'}
 					/>
@@ -71,9 +71,7 @@ export const ServiceWhatYouGet = () => {
 				<div className="text-white flex justify-end">
 					<div className="md:w-[70%]">
 						<div className="mb-10">
-							<Heading tag={'h2'}>
-								А теперь подробнее, что ты получишь присоединившись к фонду:
-							</Heading>
+							<Heading tag={'h2'}>{t('services:05.title')}</Heading>
 						</div>
 						<div className="flex flex-col items-start space-y-3">
 							{items.map(item => (
@@ -82,7 +80,7 @@ export const ServiceWhatYouGet = () => {
 										{({ open }) => (
 											<>
 												<Disclosure.Button className="w-full text-start py-3 md:text-2xl flex items-center justify-between">
-													{item.question}
+													{t(`services:05.questions.${item.id}.q`)}
 													<ChevronRightIcon
 														className={open && 'rotate-90 transform'}
 														width={24}
@@ -90,7 +88,7 @@ export const ServiceWhatYouGet = () => {
 													/>
 												</Disclosure.Button>
 												<Disclosure.Panel className="py-8">
-													{item.answer}
+													{t(`services:05.questions.${item.id}.a`)}
 												</Disclosure.Panel>
 											</>
 										)}

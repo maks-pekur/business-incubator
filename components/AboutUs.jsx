@@ -17,7 +17,7 @@ export const AboutUs = () => {
 				</div>
 				<div className="w-full h-full 2xl:space-y-20 space-y-10 py-10 md:py-20 xl:pr-20 lg:pr-14">
 					<Heading tag={'h2'}>{t('home:01.title')}</Heading>
-					<div className="text-gray-400 text-sm md:text-lg 2xl:text-xl leading-10 space-y-4 lg:space-y-10">
+					<div className="text-gray-700 text-sm md:text-lg 2xl:text-xl leading-10 space-y-4 lg:space-y-10">
 						<p>{t('home:01.text.1')}</p>
 						<p>{t('home:01.text.2')}</p>
 					</div>

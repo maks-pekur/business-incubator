@@ -23,7 +23,9 @@ export const ForWhom = () => {
 				<div className="flex items-center justify-end w-full">
 					<div className="space-y-6 lg:space-y-10 md:max-w-[50%] mb-10 lg:mb-20">
 						<Heading tag={'h2'}>{t('services:04.title')}</Heading>
-						<p>{t('services:04.text')}</p>
+						<p className="text-gray-700 text-sm lg:text-xl leading-10">
+							{t('services:04.text')}
+						</p>
 					</div>
 				</div>
 				<div className="grid md:grid-cols-3 gap-10">

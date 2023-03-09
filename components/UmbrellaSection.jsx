@@ -24,7 +24,7 @@ export const UmbrellaSection = () => {
 					</div>
 					<div className="md:space-y-10 space-y-4">
 						<Heading tag={'h2'}>{t('services:01.title')}</Heading>
-						<div className="text-sm lg:text-xl leading-10 space-y-4 md:space-y-10">
+						<div className="text-gray-700 text-sm lg:text-xl leading-10 space-y-4 md:space-y-10">
 							<p>{t('services:01.text1')}</p>
 							<p>{t('services:01.text2')}</p>
 						</div>

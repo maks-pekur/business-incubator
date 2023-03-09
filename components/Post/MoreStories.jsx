@@ -7,7 +7,7 @@ export const MoreStories = ({ posts }) => {
 		posts = posts.map(post => post.localeVersion).filter(post => post)
 	}
 	return (
-		<div className="grid md:grid-cols-2 gap-10 md:gap-20 mb-10 md:mb-32">
+		<div className="grid md:grid-cols-2 gap-10 md:gap-28 mb-10 md:mb-32">
 			{posts.map(post => {
 				return (
 					<PostPreview

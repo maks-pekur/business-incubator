@@ -5,8 +5,15 @@ export default class MyDocument extends Document {
 		const { language } = this.props.__NEXT_DATA__.query
 		return (
 			<Html lang={language}>
-				<Head></Head>
-				<body className="bg-black">
+				<Head>
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+					<link
+						href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
+						rel="stylesheet"
+					/>
+				</Head>
+				<body className="bg-black font-extralight">
 					<Main />
 					<NextScript />
 				</body>

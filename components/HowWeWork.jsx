@@ -53,15 +53,15 @@ export const HowWeWork = () => {
 						>
 							{howWeWorkList.map((card, idx) => (
 								<SwiperSlide key={card.id}>
-									<div className="border-2 border-black rounded-2xl p-4 md:p-20 h-full flex flex-col justify-between">
+									<div className="border-2 border-black rounded-2xl p-4 md:p-10 h-full flex flex-col justify-between">
 										<div className="flex items-center justify-center w-full">
-											<Image src={card.image} width={150} height={150} alt="" />
+											<Image src={card.image} width={200} height={200} alt="" />
 										</div>
 										<div className="flex flex-col items-start">
 											<div className="bg-black text-white py-1 px-4 rounded-xl my-8 text-xl lg:text-2xl">
 												{t(`home:03.card${idx + 1}.${card.step}`)}
 											</div>
-											<div className="text-2xl xl:text-2xl">
+											<div className="text-2xl xl:text-2xl min-h-[100px]">
 												{t(`home:03.card${idx + 1}.${card.title}`)}
 											</div>
 										</div>

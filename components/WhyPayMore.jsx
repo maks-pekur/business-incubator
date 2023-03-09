@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-scroll'
 import { Heading } from './ui/Heading'
 
 export const WhyPayMore = () => {
@@ -23,9 +24,13 @@ export const WhyPayMore = () => {
 							className="w-full h-full bg-red-400 opacity-30 flex items-center justify-center"
 						></motion.div>
 					</div>
-					<div className="w-full border-[1px] bg-[var(--green)] text-black border-white rounded-3xl md:text-5xl flex items-center justify-center p-8 md:p-20 whitespace-nowrap">
+					<Link
+						to="consultation"
+						smooth="true"
+						className="cursor-pointer w-full border-[1px] bg-[var(--green)] text-black border-white rounded-3xl md:text-5xl flex items-center justify-center p-8 md:p-20 whitespace-nowrap"
+					>
 						{t('home:05.count2')}
-					</div>
+					</Link>
 				</div>
 			</div>
 		</section>

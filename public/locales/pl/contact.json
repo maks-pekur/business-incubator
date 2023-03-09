@@ -1,16 +1,8 @@
 {
+  "section": "Kontakty",
   "title": "Skontaktuj się z nami",
   "text_1": "Chętnie odpowiemy na wszystkie pytania! Prześlij zapytanie, a nasz menadżer skontaktuje się z Tobą.",
   "street": "Ogrodowa 58",
   "warsaw": "Warszawa",
-  "form": {
-    "name": "Twoje imię*",
-    "phone": "Numer telefonu*",
-    "email": "Adres e-mail",
-    "telegram": "Nickname w Telegramie",
-    "btn": "Prześlij swoją aplikację"
-  },
-  "text_2": "Jesteśmy w sieciach społecznościowych",
   "partners": "Nasi przyjaciele i partnerzy:"
-
 }

@@ -46,7 +46,7 @@ export const Hero = () => {
 						<Heading tag={'h1'} classNames={'mb-8'}>
 							{hero.title[locale]}
 						</Heading>
-						<Heading tag={'span'} classNames="text-white text-lg lg:text-3xl">
+						<Heading tag={'span'} classNames="text-white text-lg lg:text-2xl">
 							{hero.subtitle[locale]}
 						</Heading>
 					</motion.div>

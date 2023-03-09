@@ -1,97 +1,102 @@
+
 {
   "01": {
     "section": "O nas",
     "title": "Fundacja Freedom Business Area",
     "text": {
       "1": "Widzi swoją misję jako pomoc: Digital, IT specjalistów i freelancerów z całego świata do prowadzenia wirtualnych firm w Polsce. FBA daje niepowtarzalną okazję do przetestowania swoich pomysłów biznesowych w warunkach rynkowych.",
-      "2": "Мы уверены, что сможем удивить тебя оперативностью нашей работы. Все формальности связанные с открытием бизнеса решаются в течении одного рабочего дня. После этого каждый предприниматель может легально вести свой бизнес."
+      "2": "Jesteśmy pewni, że uda nam się zaskoczyć Państwa skutecznością naszej pracy. Wszystkie formalności związane z rozpoczęciem działalności gospodarczej załatwiane są w ciągu jednego dnia roboczego. Po tym każdy przedsiębiorca może legalnie prowadzić swoją działalność."
     },
-    "btn": "Подробнее"
+    "btn": "Więcej"
   },
   "02": {
-    "section": "Что ты получишь"
+    "section": "Co otrzymasz?",
+    "circl": {
+      "item-1": "Relokacja do Polski",
+      "item-2": "Wsparcie księgowe",
+      "item-3": "Podmiot prawny",
+      "item-4": "Pomoc prawna",
+      "item-5": "Doradztwo podatkowe",
+      "item-6": "Konto bankowe",
+      "item-7": "Dostęp do systemu CRM",
+      "item-8": "Mentoring Menedżera"
+    }
   },
   "consultation": {
-    "text": "Бесплатная консультация",
-    "btn": "Присоединиться"
+    "title": "Bezpłatna konsultacja",
+    "btn": "Dołącz do Nas"
   },
   "03": {
-    "section": "Как мы работаем",
-    "slide1": {
-      "badge": "шаг 1",
-      "text": "Ваш звонок или заявка на сайте"
+    "section": "Jak rozpocząć z nami współpracę?",
+    "card1": {
+      "step": "krok 1",
+      "title": "Zgłoszenie telefoniczne bądź na stronie internetowej"
     },
-    "slide2": {
-      "badge": "шаг 2",
-      "text": "Обработка данных менеджерами"
+    "card2": {
+      "step": "krok 2",
+      "title": "Przetwarzanie danych przez menedżerów"
     },
-    "slide3": {
-      "badge": "шаг 3",
-      "text": "Бесплатная консультация"
+    "card3": {
+      "step": "krok 3",
+      "title": "Bezpłatna konsultacja"
     },
-    "slide4": {
-      "badge": "шаг 4",
-      "text": "Онлайн-сбор необходимых данных"
+    "card4": {
+      "step": "krok 4",
+      "title": "Gromadzenie niezbędnych danych online"
     },
-    "slide5": {
-      "badge": "шаг 5",
-      "text": "Подписание документов онлайн"
+    "card5": {
+      "step": "krok 5",
+      "title": "Podpisanie dokumentów online"
     },
-    "slide6": {
-      "badge": "шаг 6",
-      "text": "Старт вашей деятельности"
+    "card6": {
+      "step": "krok 6",
+      "title": "Rozpoczęcie działalności"
     }
   },
   "04": {
     "title": {
-      "text1": "БЕЗ НАС",
-      "text2": "C НАМИ"
+      "text1": "BEZ NAS",
+      "text2": "Z NAMI"
     },
     "row1": {
-      "left": "Минимум месяц",
-      "center": "Самостоятельная регистрация фирмы",
-      "right": "С нами 30 минут"
+      "left": "Minimum jeden miesiąc",
+      "center": "Samodzielna rejestracja firmy",
+      "right": "Z nami 30 minut"
     },
     "row2": {
-      "left": "12%/32% или 19%",
-      "center": "Подоходный налог",
-      "right": "С нами 6% или 9.6%"
+      "left": "12%/32% lub 19%",
+      "center": "Podatek dochodowy",
+      "right": "Z nami 6% lub 9.6%"
     },
     "row3": {
       "left": "670-1753 PLN",
-      "center": "Взнос на соц. страхование",
-      "right": "С нами = 0 PLN"
+      "center": "Składka na ubezpieczenie społeczne",
+      "right": "Z nami = 0 PLN"
     },
     "row4": {
       "left": "400 PLN",
-      "center": "Аренда офиса",
-      "right": "С нами = 0 PLN"
+      "center": "Wynajem biura",
+      "right": "Z nami = 0 PLN"
     },
     "row5": {
       "left": "600 PLN",
-      "center": "Бухгалтерское обслуживание",
-      "right": "С нами = 0 PLN"
+      "center": "Usługa księgowa",
+      "right": "Z nami = 0 PLN"
     },
     "row6": {
       "left": "500 PLN",
-      "center": "Юридические услуги",
-      "right": "С нами = 0 PLN"
+      "center": "Usługi prawne",
+      "right": "Z nami = 0 PLN"
     },
     "row7": {
       "left": "400 PLN",
-      "center": "Маркетинговый консалтинг",
-      "right": "С нами = 0 PLN"
+      "center": "Doradztwo marketingowe",
+      "right": "Z nami = 0 PLN"
     }
   },
   "05": {
-    "section": "Бесплатная консультация",
-    "title": "Оставляй заявку и наш менеджер свяжется с тобой.",
-    "form": {
-      "name": "Ваше имя*",
-      "phone": "Номер телефона*",
-      "mail": "Электронная почта",
-      "nik": "Ник в Telegram",
-      "btn": "Оставить заявку"
-    }
+    "title": "Po co płacić więcej, skoro można płacić mniej.",
+    "count1": "~3653 PLN",
+    "count2": "500 PLN"
   }
 }

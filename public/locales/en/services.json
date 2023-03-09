@@ -1,88 +1,93 @@
 {
-  "title": "The cost of a full package of services in the Freedom Business Area fund is only",
-  "price": "PLN 500/MONTH",
-  "text_1": "Which, in comparison to founding and operating your own firm, is a more lucrative choice.",
-  "text_2": "You are not in charge",
-  "text_3": "of running the business",
-  "text_4": "the FBA foundation is.",
-  "text_5": "There is only one thing this can mean: you don't need to be terrified of audits by the tax office, the immigration police, or other government agencies.",
-  "text_6": "Additional specialist",
-  "text_7": "services",
-  "dop": {
-    "1": "Credit Broker",
-    "2": "Tax consultant",
-    "3": "Sworn translator"
+  "01": {
+    "title": "Фонд работает по системе umbrella company.",
+    "text1": "Мы являемся сильной защитой и поддержкой для специалистов совершенно разных сфер и действующих предпринимателей. Наш фонд с радостью делится своими знаниями и всеми необходимыми инструментами, которые помогают реализовать бизнес-идею, делая это легко, безопасно и в правовом поле.",
+    "text2": "Это фонд созданный с целью оптимизировать бизнес действующих предпринимателей, а также помочь тем, кто только начинает путь и желает открыть своё дело. Наша задача, сделать все необходимое, чтобы ты мог сосредоточиться на реализации своей идеи, не тратя время, энергию и деньги на бюрократию, связанную с открытием и ведением твоей компании."
   },
-  "title_2": "Business incubator",
-  "title_3": "in numbers",
-  "vs_text_1": "WITHOUT US",
-  "vs_text_2": "WITH US",
-  "vs_text_3": "Why pay more when",
-  "vs_text_4": "you can pay less with us.",
-  "vs_text_5": "The choice is always yours.",
-  "vsList_1": {
-    "1": "At least one month",
-    "2": "12%/32% or 19%",
-    "3": "670-1753 PLN",
-    "4": "400 PLN",
-    "5": "600 PLN",
-    "6": "500 PLN",
-    "7": "400 PLN"
-  },
-  "vsList_2": {
-    "1": "Self-registration of a company",
-    "2": "Income tax",
-    "3": "Contribution to social insurance",
-    "4": "Office rent",
-    "5": "Accounting service",
-    "6": "Legal services",
-    "7": "Marketing consulting"
-  },
-  "vsList_3": {
-    "1": "With us 30 minutes",
-    "2": "With us 6% or 9.6%",
-    "3": "With us = 0 PLN",
-    "4": "With us = 0 PLN",
-    "5": "With us = 0 PLN",
-    "6": "With us = 0 PLN",
-    "7": "With us = 0 PLN"
-  },
-  "text_9": "Now let's talk",
-  "text_10": "more about the benefits",
-  "text_11": "of joining the foundation:",
-  "service_cards": {
-    "card_1": {
-      "title": "Relocation to Poland for DIGITAL, IT specialists and freelancers",
-      "text": "We also deal with legalization in Poland, and we'll be pleased to assist you with any problem relating to your ability to remain in the country legally.",
-      "description": "We make it feasible for your family to migrate to Poland by offering all the paperwork required to apply for a PBH visa. You will be able to conduct business directly or B2B with domestic and foreign clients through the virtual business we establish. Additionally, our fund offers the option to produce a single general invoice for the company rather than individual invoices for payment from each client."
-    },
-    "card_2": {
-      "title": "Use of the Foundation legal entity:",
-      "description": "Without having to legally register your firm with the administrative authorities and pay into the Social Insurance Fund, you have the option to do so (ZUS)."
-    },
-    "card_3": {
-      "title": "Legal advice:",
-      "description": "Creation and validation of contracts and other agreements reached between you and clients, among other legal advice regarding the operation of your business."
-    },
-    "card_4": {
-      "title": "Accounting and tax services:",
-      "description": "Our foundation will take care of the complete accounting and financial documentation."
-    },
-    "card_5": {
-      "title": "Bank account:",
-      "description": "Additionally, you will have access to a bank sub-account in PLN and another currency for your company's financial dealings."
-    },
-    "card_6": {
-      "title": "Access to the CPM system:",
-      "description": "The CRM system provides each recipient with access to a personal account. You will be able to generate invoices using this system, as well as all the paperwork required for subaccount withdrawals."
-    },
-    "card_7": {
-      "title": "Document archiving:",
-      "description": "You are fully free of pointless red tape thanks to the Fund. You do not need to physically deliver printed documents or reports to our office, or send them via mail or courier. You can use an electronic signature to complete all the paperwork required for the payment of funds and send it to your coordinator's email address."
-    },
-    "card_8": {
-      "title": "Mentoring manager:",
-      "description": "You can talk to your manager online about any current difficulties. We operate fast and in a format that is comfortable for you, so you won't need to write emails and wait for responses for 24 hours."
+  "02": {
+    "section": "Услуги",
+    "title": "Полную ответственность за реализацию бизнеса несёт фонд FBA, а не Ты.",
+    "subtitle": "Это означает лишь одно: Тебе не нужно бояться проверок со стороны налоговой инспекции, миграционной полиции и других гос. органов.",
+    "card": {
+      "title": "Стоимость полного пакета услуг",
+      "btn": "500 зл/месяц"
     }
+  },
+  "03": {
+    "section": "Дополнительные услуги",
+    "card1": "Присяжный переводчик",
+    "card2": "Налоговый консультант",
+    "card3": "Кредитный брокер"
+  },
+  "consultation": {
+    "title": "Бесплатная консультация",
+    "btn": "Присоединиться"
+  },
+  "04": {
+    "section": "Для кого подойдет",
+    "title": "Для кого подойдет бизнес-инкубатор?",
+    "text": "Если ты не нашёл себя в этом списке - смело пиши нам, мы с радостью поможем и подберём индивидуальный способ сотрудничества.Мы часто слышим, что нам легко удаётся объединять талантливых и интересных людей, а все потому что мы верим в силу синергии.",
+    "group_1": {
+      "1": "Фотографы",
+      "2": "Видеографы",
+      "3": "Дизайнеры",
+      "4": "Архитекторы",
+      "5": "Таргетологи",
+      "6": "SMM-специалисты"
+    },
+    "group_2": {
+      "1": "Журналисты",
+      "2": "Коучи",
+      "3": "Психологи"
+    },
+    "group_3": {
+      "1": "ИТ-специалисты",
+      "2": "Копирайтеры",
+      "3": "Project-менеджера",
+      "4": "Онлайн школы / курсы",
+      "5": "Маркетологи",
+      "6": "Агенты по недвижимости"
+    }
+  },
+  "05": {
+    "section": "Что ты получишь",
+    "title": "А теперь подробнее, что ты получишь присоединившись к фонду:",
+    "questions": {
+      "01": {
+        "q": "Релокейт в Польшу для DIGITAL, IT специалистов и фрилансеров",
+        "a": "Мы предоставляем все необходимые документы для получения визы PBH и даём возможность переехать в Польшу со своей семьей. Через созданную нами виртуальную фирму ты сможешь работать с местными и заграничными клиентами напрямую, через платформы или B2B. Также наш фонд предоставляет возможность выставления одного общего инвойса на фирму вместо отдельных фактур для оплаты от каждого клиента. Мы также занимаемся легализацией в Польше и с радостью поможем Тебе решить любой вопрос касающийся легального пребывания в РП."
+      },
+      "02": {
+        "q": "Пользование юридическим лицом Фонда",
+        "a": "У тебя появляется возможность официального ведения бизнеса без необходимости регистрации его в административных органах и внесения оплат в Фонд Социального Страхования (ZUS)."
+      },
+      "03": {
+        "q": "Юридические консультации",
+        "a": "Касающиеся ведения твоей деятельности: Создание и верификация договоров и других документов, заключаемых между Тобой и клиентами."
+      },
+      "04": {
+        "q": "Бухгалтерское и налоговое обслуживание",
+        "a": "Наш фонд займется полным ведением бухгалтерской и финансовой документации."
+      },
+      "05": {
+        "q": "Банковский счет",
+        "a": "Ты также получишь доступ к банковскому суб-счету в злотых и в валюте для финансовых операций твоего бизнеса."
+      },
+      "06": {
+        "q": "Доступ к системе CRM",
+        "a": "Каждый бенефициар получает доступ к личному кабинету в системе СRМ. Данная система даст Тебе возможность выставлять инвойсы и создавать всю необходимую документацию для вывода денежных средств из суб-счета."
+      },
+      "07": {
+        "q": "Архивизация документов",
+        "a": "Фонд полностью избавляет Тебя от лишней бюрократии. Тебе не нужно печатать документы, отчеты и физически доносить их в наш офис либо высылать почтой или курьером. Все необходимые документы для реализации выплаты денежных средств Ты сможешь подписать электронной подписью и выслать на электорнный адрес своего координатора."
+      },
+      "08": {
+        "q": "Менторство менеджера",
+        "a": "Все текущие вопросы ты сможешь консультировать в онлайн режиме со своим менеджером. Тебе не нужно будет писать мейлы и ждать на них ответы 24 часа, мы работаем оперативно и в удобном для тебя формате."
+      }
+    }
+  },
+  "06": {
+    "section": "Отзывы"
   }
 }

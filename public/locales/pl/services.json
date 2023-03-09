@@ -1,88 +1,93 @@
 {
-  "title": "Koszt pełnego pakietu usług w fundacji Freedom Business Area to tylko",
-  "price": "500 PLN/MIESIĄC",
-  "text_1": "Co w porównaniu z założeniem i prowadzeniem własnej firmy jest rozwiązaniem bardziej opłacalnym.",
-  "text_2": "Pełną odpowiedzialność",
-  "text_3": "za realizację biznesu",
-  "text_4": "ponosi Fundacja FBA, a nie Ty.",
-  "text_5": "Dzięki temu nie musisz się obawiać kontroli ze strony inspekcji podatkowej, policji migracyjnej i innych organów państwowych.",
-  "text_6": "Dodatkowe usługi",
-  "text_7": "specjalistyczne",
-  "dop": {
-    "1": "Pośrednik kredytowy",
-    "2": "Doradca podatkowy",
-    "3": "Tłumacz przysięgły"
+  "01": {
+    "title": "Fundacja działa w systemie umbrella company.",
+    "text1": "Oferujemy wsparcie dla specjalistów chcących założyć swoją działalność oraz już istniejących przedsiębiorców. Nasza Fundacja chętnie dzieli się swoją wiedzą i wszelkimi niezbędnymi narzędziami, które pomagają w realizacji pomysłu na biznes, czyniąc to w sposób łatwy, bezpieczny i zgodny z prawem.",
+    "text2": "Była stworzona w celu optymalizacji działalności istniejących przedsiębiorców, a także pomocy tym, którzy dopiero zaczynają i chcą założyć własną firmę. Naszym zadaniem jest zrobienie wszystkiego, co niezbędne, abyś mógł skupić się na realizacji swojego pomysłu, nie tracąc czasu, energii i pieniędzy na biurokrację związaną z otwarciem i prowadzeniem firmy."
   },
-  "title_2": "Business inkubator",
-  "title_3": "w liczbach",
-  "vs_text_1": "BEZ NAS",
-  "vs_text_2": "Z NAMI",
-  "vs_text_3": "Po co płacić więcej,",
-  "vs_text_4": "skoro można płacić mniej.",
-  "vs_text_5": "Wybór zawsze należy do Ciebie.",
-  "vsList_1": {
-    "1": "Minimum jeden miesiąc",
-    "2": "12%/32% или 19%",
-    "3": "670-1763 PLN",
-    "4": "400 PLN",
-    "5": "600 PLN",
-    "6": "500 PLN",
-    "7": "400 PLN"
+  "02": {
+    "section": "Usługi",
+    "title": "Pełną odpowiedzialność za realizację biznesu ponosi Fundacja FBA, a nie Ty.",
+    "subtitle": "Dzięki temu nie musisz się obawiać kontroli ze strony inspekcji podatkowej, policji migracyjnej i innych organów państwowych.",
+    "card": {
+      "title": "Koszt pełnego pakietu usług",
+      "btn": "500 PLN/miesiąc"
+     }
   },
-  "vsList_2": {
-    "1": "Samodzielna rejestracja firmy",
-    "2": "Podatek dochodowy",
-    "3": "Składka na ubezpieczenie społeczne",
-    "4": "Wynajem biura",
-    "5": "Usługa księgowa",
-    "6": "Usługi prawne",
-    "7": "Doradztwo marketingowe"
+  "03": {
+    "section": "Dodatkowe usługi specjalistyczne",
+    "card1": "Tłumacz przysięgły",
+    "card2": "Doradca podatkowy",
+    "card3": "Pośrednik kredytowy"
   },
-  "vsList_3": {
-    "1": "Z nami 30 minut",
-    "2": "Z nami 6% lub 9,6%",
-    "3": "Z nami = 0 PLN",
-    "4": "Z nami = 0 PLN",
-    "5": "Z nami = 0 PLN",
-    "6": "Z nami = 0 PLN",
-    "7": "Z nami = 0 PLN"
+  "consultation": {
+    "title": "Bezpłatna konsultacja",
+    "btn": "Dołącz do nas"
   },
-  "text_9": "A teraz więcej szczegółów na temat tego,",
-  "text_10": "co otrzymasz, dołączając",
-  "text_11": "do fundacji:",
-  "service_cards": {
-    "card_1": {
-      "title": "Relocacja do Polski dla specjalistów DIGITAL, IT i freelancerów",
-      "text": "Zajmujemy się również legalizacją w Polsce i chętnie pomożemy rozwiązać każdą kwestię związaną z legalnym pobytem w Polsce.",
-      "description": "Zapewniamy wszystkie niezbędne dokumenty do uzyskania wizy PBH i dajemy możliwość przeniesienia się do Polski wraz z rodziną. Poprzez naszą wirtualną firmę będziesz mógł współpracować z klientami lokalnymi i zagranicznymi bezpośrednio lub B2B. Ponadto nasza Fundacja pozwala na wystawienie jednej wspólnej faktury dla firmy, zamiast oddzielnych faktur do zapłaty od każdego klienta."
+  "04": {
+    "section": "Kto nadaje się",
+    "title": "Kto nadaje się do business inkubatora?",
+    "text": "Jeśli nie znalazłeś się na tej liście - napisz do nas, chętnie pomożemy i znajdziemy indywidualny sposób współpracy. Często słyszymy, że z łatwością udaje nam się łączyć utalentowanych i ciekawych ludzi, a wszystko dlatego, że wierzymy w siłę synergii.",
+    "group_1": {
+      "1": "Fotografowie",
+      "2": "Wideografowie",
+      "3": "Projektanci",
+      "4": "Architekci",
+      "5": "Targetolodzy",
+      "6": "Specjaliści od SMM"
     },
-    "card_2": {
-      "title": "Korzystanie z osobowości prawnej Fundacji:",
-      "description": "Masz możliwość oficjalnego prowadzenia działalności gospodarczej bez konieczności jej rejestrowania w organach administracyjnych i dokonywania wpłat na Fundusz Ubezpieczeń Społecznych (ZUS)."
+    "group_2": {
+      "1": "Dziennikarze",
+      "2": "Trenerzy",
+      "3": "Psychologowie"
     },
-    "card_3": {
-      "title": "Konsultacje prawne:",
-      "description": "W zakresie prowadzenia działalności gospodarczej: Sporządzanie i weryfikacja umów i innych dokumentów zawieranych pomiędzy Tobą a Twoimi klientami."
-    },
-    "card_4": {
-      "title": "Usługi księgowe i podatkowe:",
-      "description": "Nasz fundusz zadba o pełną księgowość i dokumentację finansową."
-    },
-    "card_5": {
-      "title": "Konto bankowe:",
-      "description": "Będziesz miał również dostęp do subkonta bankowego w PLN i w walucie obcej dla transakcji finansowych Twojej firmy."
-    },
-    "card_6": {
-      "title": "Dostęp do systemu CRM:",
-      "description": "Każdy beneficjent otrzymuje dostęp do osobistego konta w systemie CRM. System ten pozwoli na wystawianie faktur oraz tworzenie wszelkiej dokumentacji niezbędnej do wypłaty środków z subkonta."
-    },
-    "card_7": {
-      "title": "Archiwizacja dokumentów:",
-      "description": "Fundacja unika zbędnej biurokracji. Nie musisz drukować dokumentów, sprawozdań i fizycznie dostarczać ich do naszego biura lub wysyłać pocztą czy kurierem. Wszystkie niezbędne dokumenty do wypłaty środków możesz podpisać podpisem elektronicznym i wysłać na adres e-mail koordynatora."
-    },
-    "card_8": {
-      "title": "Mentoring ze strony menedżera",
-      "description": "Wszystkie bieżące sprawy będziesz mógł konsultować online ze swoim menedżerem. Nie będziesz musiał pisać maili i czekać 24 godziny na odpowiedź, pracujemy szybko i w dogodnym dla Ciebie formacie."
+    "group_3": {
+      "1": "Specjaliści IT",
+      "2": "Copywriterzy ",
+      "3": "Kierownicy projektów",
+      "4": "Szkoły / kursy online",
+      "5": "Marketerzy",
+      "6": "Pośrednicy nieruchomości"
     }
+  },
+  "05": {
+    "section": "Co otrzymasz",
+    "title": "A teraz więcej szczegółów na temat tego, co otrzymasz, dołączając do fundacji:",
+    "questions": {
+      "01": {
+        "q": "Relokacja do Polski dla specjalistów DIGITAL, IT i freelancerów",
+        "a": "Zapewniamy wszystkie niezbędne dokumenty do uzyskania wizy PBH i dajemy możliwość przeniesienia się do Polski wraz z rodziną. Poprzez naszą wirtualną firmę będziesz mógł współpracować z klientami lokalnymi i zagranicznymi bezpośrednio lub B2B. Ponadto nasza Fundacja pozwala na wystawienie jednej wspólnej faktury dla firmy, zamiast oddzielnych faktur do zapłaty od każdego klienta. Zajmujemy się również legalizacją w Polsce i chętnie pomożemy rozwiązać każdą kwestię związaną z legalnym pobytem w Polsce."
+      },
+      "02": {
+        "q": "Korzystanie z osobowości prawnej Fundacji:",
+        "a": "Masz możliwość oficjalnego prowadzenia działalności gospodarczej bez konieczności jej rejestrowania w organach administracyjnych i dokonywania wpłat na Fundusz Ubezpieczeń Społecznych (ZUS)."
+      },
+      "03": {
+        "q": "Konsultacje prawne",
+        "a": "W zakresie prowadzenia działalności gospodarczej: Sporządzanie i weryfikacja umów i innych dokumentów zawieranych pomiędzy Tobą a Twoimi klientami."
+      },
+      "04": {
+        "q": "Usługi księgowe i podatkowe:",
+        "a": "Nasza Fundacja zadba o pełną księgowość i dokumentację finansową."
+      },
+      "05": {
+        "q": "Konto bankowe",
+        "a": "Będziesz miał również dostęp do subkonta bankowego w PLN i w walucie obcej dla transakcji finansowych Twojej firmy."
+      },
+      "06": {
+        "q": "Dostęp do systemu CRM",
+        "a": "Każdy beneficjent otrzymuje dostęp do osobistego konta w systemie CRM. System ten pozwoli na wystawianie faktur oraz tworzenie wszelkiej dokumentacji niezbędnej do wypłaty środków z subkonta."
+      },
+      "07": {
+        "q": "Archiwizacja dokumentów",
+        "a": "Fundacja unika zbędnej biurokracji.  Nie musisz drukować dokumentów, sprawozdań i fizycznie dostarczać ich do naszego biura lub wysyłać pocztą czy kurierem. Wszystkie niezbędne dokumenty do wypłaty środków możesz podpisać podpisem elektronicznym i wysłać na adres e-mail koordynatora."
+      },
+      "08": {
+        "q": "Mentoring ze strony menedżera",
+        "a": "Wszystkie bieżące sprawy będziesz mógł konsultować online ze swoim menedżerem. Nie będziesz musiał pisać maili i czekać 24 godziny na odpowiedź, pracujemy szybko i w dogodnym dla Ciebie formacie."
+      }
+    }
+  },
+  "06": {
+    "section": "Opinie"
   }
 }

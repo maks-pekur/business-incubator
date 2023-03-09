@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Navigation } from 'swiper'
+import { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useDevice } from '../hooks/useDevice'
 import google from '../public/assets/images/google.svg'
@@ -13,7 +13,7 @@ import 'swiper/css'
 export const Reviews = ({ reviews }) => {
 	const device = useDevice()
 	return (
-		<section className="pb-6 sticky top-0 bg-black">
+		<section className="pb-6 sticky top-0 bg-black ">
 			<div className="md:grid md:grid-cols-3 md:p-20 p-6 bg-[var(--light-gray)] rounded-3xl ">
 				<div className="flex flex-col justify-between h-full">
 					<div className="mb-6 md:mb-0">
@@ -32,10 +32,11 @@ export const Reviews = ({ reviews }) => {
 						/>
 					</div>
 				</div>
-				<div className="md:col-span-2 md:h-full w-full">
+				<div className="md:col-span-2 md:h-full w-full leading-6">
 					<Swiper
 						loop={true}
-						modules={[Navigation]}
+						autoplay={true}
+						modules={[Navigation, Autoplay]}
 						navigation={{
 							nextEl: '#swiper-next',
 							prevEl: '#swiper-prev',

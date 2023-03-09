@@ -1,86 +1,49 @@
 import Image from 'next/image'
-import img1 from '../public/assets/images/forWhom-1.svg'
-import img2 from '../public/assets/images/forWhom-2.svg'
-import img3 from '../public/assets/images/forWhom-3.svg'
+import { useTranslation } from 'react-i18next'
+
 import { Heading } from './ui/Heading'
 import { NumSection } from './ui/NumSection'
 
-const items = [
-	{
-		id: '01',
-		title: '',
-		img: img1,
-		list: [
-			'Фотографы',
-			'Видеографы',
-			'Дизайнеры',
-			'Архитекторы',
-			'Таргетологи',
-			'SMM-специалисты',
-		],
-	},
-	{
-		id: '02',
-		title: '',
-		img: img2,
-		list: ['Журналисты', 'Коучи', 'Психологи'],
-	},
-	{
-		id: '03',
-		title: '',
-		img: img3,
-		list: [
-			'ИТ-специалисты',
-			'Копирайтеры',
-			'Project-менеджера',
-			'Онлайн школы / курсы',
-			'Маркетологи',
-			'Агенты по недвижимости',
-		],
-	},
-]
+import { useRouter } from 'next/router'
+import { serviceForWhoItems } from '../constants/index'
 
 export const ForWhom = () => {
+	const { t } = useTranslation()
+	const { locale } = useRouter()
 	return (
 		<section className="bg-black pb-6 sticky -top-[160%]">
 			<div className="bg-white md:p-20 p-6 rounded-3xl">
 				<div className="mb-6 md:mb-0">
 					<NumSection
 						number={'04'}
-						title={'Для кого подойдет'}
+						title={t('services:04.section')}
 						variant={'green'}
 					/>
 				</div>
 				<div className="flex items-center justify-end w-full">
-					<div className="space-y-6 md:max-w-[50%] pb-10">
-						<Heading tag={'h2'}>Для кого подойдет бизнес-инкубатор?</Heading>
-						<p>
-							Если ты не нашёл себя в этом списке - смело пиши нам, мы с
-							радостью поможем и подберём индивидуальный способ
-							сотрудничества.Мы часто слышим, что нам легко удаётся объединять
-							талантливых и интересных людей, а все потому что мы верим в силу
-							синергии.
-						</p>
+					<div className="space-y-6 lg:space-y-10 md:max-w-[50%] mb-10 lg:mb-20">
+						<Heading tag={'h2'}>{t('services:04.title')}</Heading>
+						<p>{t('services:04.text')}</p>
 					</div>
 				</div>
 				<div className="grid md:grid-cols-3 gap-10">
-					{items.map(item => (
+					{serviceForWhoItems.map(card => (
 						<div
-							key={item.id}
+							key={card.id}
 							className="bg-[var(--light-gray)] rounded-3xl p-4 md:p-10"
 						>
 							<div className="mb-6 md:mb-10 h-[200px] flex items-center justify-center">
-								<Image src={item.img} width={200} height={200} alt="" />
+								<Image src={card.img} width={200} height={200} alt="" />
 							</div>
 							<div className="w-full flex items-center justify-center md:justify-start">
 								<ul>
-									{item.list.map(li => (
+									{card.list.map(item => (
 										<li
 											className="mb-4 md:mb-6 relative flex items-center"
-											key={li}
+											key={item}
 										>
 											<div className="bg-[var(--green)] w-4 h-4 rounded-full mr-6"></div>
-											{li}
+											{t(`services:04.${item}`)}
 										</li>
 									))}
 								</ul>

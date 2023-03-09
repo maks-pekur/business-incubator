@@ -40,33 +40,36 @@ export const HowWeWork = () => {
 				</div>
 
 				<div className="md:col-span-2 h-full flex items-center">
-					<Swiper
-						modules={[Navigation, Autoplay]}
-						navigation={{
-							nextEl: '#swiper-next-work',
-							prevEl: '#swiper-prev-work',
-						}}
-						spaceBetween={40}
-						slidesPerView={device === 'mobile' ? 1 : 2}
-					>
-						{howWeWorkList.map((card, idx) => (
-							<SwiperSlide key={card.id}>
-								<div className="border-2 border-black rounded-2xl p-4 md:p-14 grid grid-rows-2">
-									<div className="flex items-center justify-center w-full">
-										<Image src={card.image} width={150} height={150} alt="" />
-									</div>
-									<div className="flex flex-col items-start">
-										<div className="bg-black text-white py-1 px-4 rounded-xl my-8">
-											{t(`home:03.card${idx + 1}.${card.step}`)}
+					<div className="flex w-full">
+						<Swiper
+							modules={[Navigation, Autoplay]}
+							loop={true}
+							navigation={{
+								nextEl: '#swiper-next-work',
+								prevEl: '#swiper-prev-work',
+							}}
+							spaceBetween={40}
+							slidesPerView={device === 'mobile' ? 1 : 2}
+						>
+							{howWeWorkList.map((card, idx) => (
+								<SwiperSlide key={card.id}>
+									<div className="border-2 border-black rounded-2xl p-4 md:p-20 h-full flex flex-col justify-between">
+										<div className="flex items-center justify-center w-full">
+											<Image src={card.image} width={150} height={150} alt="" />
 										</div>
-										<div className="text-2xl">
-											{t(`home:03.card${idx + 1}.title`)}
+										<div className="flex flex-col items-start">
+											<div className="bg-black text-white py-1 px-4 rounded-xl my-8 text-xl lg:text-2xl">
+												{t(`home:03.card${idx + 1}.${card.step}`)}
+											</div>
+											<div className="text-2xl xl:text-2xl">
+												{t(`home:03.card${idx + 1}.${card.title}`)}
+											</div>
 										</div>
 									</div>
-								</div>
-							</SwiperSlide>
-						))}
-					</Swiper>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -9,8 +9,8 @@ import { Button } from './Button'
 
 const style = {
 	input:
-		'w-full border-b-[1px] border-[var(--dark-gray)] py-3 bg-transparent outline-none placeholder:text-black placeholder:opacity-40 ',
-	label: 'text-[10px]',
+		'w-full border-b-[1px] border-black py-3 bg-transparent outline-none placeholder:text-black',
+	label: 'text-[10px] lg:text-lg',
 }
 
 export const ContactForm = () => {
@@ -64,7 +64,7 @@ export const ContactForm = () => {
 		<form className="w-full" onSubmit={handleSubmit(onSubmit)}>
 			<div className="space-y-10 flex flex-col md:items-center mb-20">
 				<div className="w-full">
-					<label htmlFor="name" className={`${style.label}`}>
+					<label htmlFor="name" className={`${style.label} sr-only`}>
 						Full name
 					</label>
 					<input
@@ -86,7 +86,7 @@ export const ContactForm = () => {
 						rules={{ required: true }}
 						render={({ field: { ref, ...field } }) => (
 							<>
-								<label htmlFor="phone" className={`${style.label}`}>
+								<label htmlFor="phone" className={`${style.label} sr-only`}>
 									Your phone number
 								</label>
 								<PhoneInput
@@ -124,7 +124,7 @@ export const ContactForm = () => {
 					/>
 				</div>
 				<div className="w-full">
-					<label htmlFor="email" className={`${style.label}`}>
+					<label htmlFor="email" className={`${style.label} sr-only`}>
 						Email address
 					</label>
 					<input
@@ -139,7 +139,7 @@ export const ContactForm = () => {
 					/>
 				</div>
 				<div className="w-full">
-					<label htmlFor="telegram" className={`${style.label}`}>
+					<label htmlFor="telegram" className={`${style.label} sr-only`}>
 						Ваш ник
 					</label>
 					<input
@@ -155,7 +155,7 @@ export const ContactForm = () => {
 					/>
 				</div>
 				<div className="w-full">
-					<label htmlFor="message" className={`${style.label}`}>
+					<label htmlFor="message" className={`${style.label} sr-only`}>
 						Ваш сообщение
 					</label>
 					<textarea

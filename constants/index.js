@@ -111,25 +111,6 @@ export const personal = [
 	},
 ]
 
-export const group_1 = [
-	'group_1.1',
-	'group_1.2',
-	'group_1.3',
-	'group_1.4',
-	'group_1.5',
-]
-
-export const group_2 = ['group_2.1', 'group_2.2', 'group_2.3']
-
-export const group_3 = [
-	'group_3.1',
-	'group_3.2',
-	'group_3.3',
-	'group_3.4',
-	'group_3.5',
-	'group_3.6',
-]
-
 export const i18n = {
 	more: {
 		pl: 'Więcej postów',
@@ -288,5 +269,41 @@ export const vsItems = [
 		textLeft: 'left',
 		textCenter: 'center',
 		textRight: 'right',
+	},
+]
+
+import img1 from '../public/assets/images/forWhom-1.svg'
+import img2 from '../public/assets/images/forWhom-2.svg'
+import img3 from '../public/assets/images/forWhom-3.svg'
+
+export const serviceForWhoItems = [
+	{
+		id: '01',
+		img: img1,
+		list: [
+			'group_1.1',
+			'group_1.2',
+			'group_1.3',
+			'group_1.4',
+			'group_1.5',
+			'group_1.6',
+		],
+	},
+	{
+		id: '02',
+		img: img2,
+		list: ['group_2.1', 'group_2.2', 'group_2.3'],
+	},
+	{
+		id: '03',
+		img: img3,
+		list: [
+			'group_3.1',
+			'group_3.2',
+			'group_3.3',
+			'group_3.4',
+			'group_3.5',
+			'group_3.6',
+		],
 	},
 ]

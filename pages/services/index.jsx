@@ -69,10 +69,10 @@ const index = ({ props, subscription }) => {
 			<UmbrellaSection />
 			<ServicePrice />
 			<ExtraServices />
-			<GreenSection title={'Бесплатная консультация'}>
+			<GreenSection title={t('services:consultation.title')}>
 				<LinkScroll
 					href={'consultation'}
-					title={'Присоединиться'}
+					title={t('services:consultation.btn')}
 					variant={'black'}
 				/>
 			</GreenSection>

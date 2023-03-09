@@ -13,7 +13,7 @@ import 'swiper/css'
 export const Reviews = ({ reviews }) => {
 	const device = useDevice()
 	return (
-		<section className="pb-6 sticky bg-black rounded-t-3xl">
+		<section className="pb-6 sticky top-0 bg-black">
 			<div className="md:grid md:grid-cols-3 md:p-20 p-6 bg-[var(--light-gray)] rounded-3xl ">
 				<div className="flex flex-col justify-between h-full">
 					<div className="mb-6 md:mb-0">

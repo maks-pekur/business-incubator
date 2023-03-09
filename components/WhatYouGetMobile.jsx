@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import React from 'react'
-import circl from '../public/assets/images/circl-mobile.svg'
 import { NumSection } from './ui/NumSection'
 
 const carousel = [
@@ -48,15 +45,6 @@ export const WhatYouGetMobile = () => {
 						title={'Что ты получишь'}
 						variant={'green'}
 						classNames={'text-white'}
-					/>
-				</div>
-				<div className="mb-4">
-					<Image
-						src={circl}
-						width={500}
-						height={500}
-						alt="circl"
-						className=""
 					/>
 				</div>
 				<div>

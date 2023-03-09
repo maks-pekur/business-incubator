@@ -8,7 +8,7 @@ import { VSRow } from './ui/VSRow'
 export const VS = () => {
 	const { t } = useTranslation()
 	return (
-		<section className="bg-black rounded-t-3xl pb-10 sticky -top-52  md:-top-44 overflow-x-hidden">
+		<section className="bg-black rounded-t-3xl pb-10 sticky -top-52 lg:top-0  md:-top-44 overflow-x-hidden">
 			<div className="bg-[var(--dark-gray)] py-10 rounded-3xl">
 				<div className="mb-10 md:mb-0 md:px-20 p-10">
 					<NumSection number={'04'} title={''} variant={'green'} />

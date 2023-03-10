@@ -1,8 +1,8 @@
 export const footerTranslation = {
 	contact: {
-		uk: 'Контакти',
-		pl: 'Kontakty',
-		en: 'Contacts',
+		uk: 'Контакти:',
+		pl: 'Kontakty:',
+		en: 'Contacts:',
 		ru: 'Контакты:',
 	},
 	social: {

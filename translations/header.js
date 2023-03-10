@@ -19,16 +19,16 @@ export const navLinks = [
 		},
 		path: '/services',
 	},
-	// {
-	// 	id: '03',
-	// 	title: {
-	// 		pl: 'FAQ',
-	// 		en: 'FAQ',
-	// 		uk: 'FAQ',
-	// 		ru: 'FAQ',
-	// 	},
-	// 	path: '/fqa',
-	// },
+	{
+		id: '03',
+		title: {
+			pl: 'FAQ',
+			en: 'FAQ',
+			uk: 'FAQ',
+			ru: 'FAQ',
+		},
+		path: '/faq',
+	},
 	{
 		id: '04',
 		title: {

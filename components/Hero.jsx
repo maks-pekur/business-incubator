@@ -43,7 +43,7 @@ export const Hero = () => {
 						}}
 						transition={{ duration: 1 }}
 					>
-						<Heading tag={'h1'} classNames={'mb-8'}>
+						<Heading tag={'h1'} classNames={'mb-8 font-bold'}>
 							{hero.title[locale]}
 						</Heading>
 						<Heading tag={'span'} classNames="text-white text-lg lg:text-2xl">

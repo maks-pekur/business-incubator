@@ -41,7 +41,7 @@ export const ForWhom = () => {
 								<ul>
 									{card.list.map(item => (
 										<li
-											className="mb-4 md:mb-6 relative flex items-center"
+											className="mb-4 md:mb-4 relative flex items-center"
 											key={item}
 										>
 											<div className="bg-[var(--green)] w-4 h-4 rounded-full mr-6"></div>

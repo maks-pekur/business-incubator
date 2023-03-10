@@ -1,14 +1,14 @@
 {
-  "section": "Contacts",
-  "resume": {
+  "section": "Career",
+  "resume": { 
     "title": "Send CV",
-    "name": "Name*",
-    "phone": "Phone*",
-    "message": "Message",
+    "name": "Your name*",
+    "phone": "Phone number*",
+    "message": "Additional information",
     "email": "Email",
-    "position": "Position",
-    "upload": "Upload",
-    "policy": "I agree to the processing of personal data",
+    "position": "Desired position",
+    "upload": "submit file",
+    "policy": "The processing of my personal data is acceptable to me.",
     "btn": "Send"
   }
 }

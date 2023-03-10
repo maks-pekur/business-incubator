@@ -25,6 +25,7 @@ export async function getStaticProps({ locale }) {
           user
           date
           rating
+					path
           picture {
             url(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100})
           }

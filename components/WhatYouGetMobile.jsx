@@ -1,40 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { NumSection } from './ui/NumSection'
 
-const carousel = [
-	{
-		id: '01',
-		title: 'Релокейт в Польшу',
-	},
-	{
-		id: '02',
-		title: 'Бухгалтерское сопровождение',
-	},
-	{
-		id: '03',
-		title: 'Юридическое лицо',
-	},
-	{
-		id: '04',
-		title: 'Юридическая помощь',
-	},
-	{
-		id: '05',
-		title: 'Налоговый консалтинг',
-	},
-	{
-		id: '06',
-		title: 'Банковский счет',
-	},
-	{
-		id: '07',
-		title: 'Доступ к системе CRM',
-	},
-	{
-		id: '08',
-		title: 'Менторство меннеджера',
-	},
-]
+import { circlList } from '../constants'
 
 export const WhatYouGetMobile = () => {
 	const { t } = useTranslation()
@@ -50,7 +17,7 @@ export const WhatYouGetMobile = () => {
 					/>
 				</div>
 				<div>
-					{carousel.map((item, idx) => (
+					{circlList.map((item, idx) => (
 						<div
 							className="text-white text-md border-b-2 border-white p-3 space-x-6 flex items-center"
 							key={item.id}
@@ -58,7 +25,7 @@ export const WhatYouGetMobile = () => {
 							<div className="border-[1px] border-white rounded-full w-8 h-8 flex items-center justify-center">
 								{idx + 1}
 							</div>
-							<div>{item.title}</div>
+							<div>{t(`home:02.circl.${item.title}`)}</div>
 						</div>
 					))}
 				</div>

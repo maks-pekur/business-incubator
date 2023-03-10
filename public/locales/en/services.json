@@ -1,93 +1,97 @@
+
+
+
 {
   "01": {
-    "title": "Фонд работает по системе umbrella company.",
-    "text1": "Мы являемся сильной защитой и поддержкой для специалистов совершенно разных сфер и действующих предпринимателей. Наш фонд с радостью делится своими знаниями и всеми необходимыми инструментами, которые помогают реализовать бизнес-идею, делая это легко, безопасно и в правовом поле.",
-    "text2": "Это фонд созданный с целью оптимизировать бизнес действующих предпринимателей, а также помочь тем, кто только начинает путь и желает открыть своё дело. Наша задача, сделать все необходимое, чтобы ты мог сосредоточиться на реализации своей идеи, не тратя время, энергию и деньги на бюрократию, связанную с открытием и ведением твоей компании."
+    "title": "The Foundation operates under the an umbrella company system.",
+    "text1": "We are actively support and protect professionals   and entrepreneurs in a wide variety of fields. The expertise and resources available at our foundation are delighted to be shared in order to make it simple, secure, and legal to implement company initiatives.",
+    "text2": "fund established to support aspiring business owners as well as current entrepreneurs by helping them grow their operations. Our job is to take care of everything required for you to concentrate on putting your idea into practice without wasting time, effort, or money dealing with the red tape involved in starting and maintaining your business."
   },
   "02": {
-    "section": "Услуги",
-    "title": "Полную ответственность за реализацию бизнеса несёт фонд FBA, а не Ты.",
-    "subtitle": "Это означает лишь одно: Тебе не нужно бояться проверок со стороны налоговой инспекции, миграционной полиции и других гос. органов.",
+    "section": "Services",
+    "title": "The FBA Foundation is fully responsible for the implementation of the business, Not You.",
+    "subtitle": "There is only one thing this can mean: you don't need to be terrified of audits by the tax office, the immigration police, or other government agencies.",
     "card": {
-      "title": "Стоимость полного пакета услуг",
-      "btn": "500 зл/месяц"
-    }
+      "title": "The cost of a full package of services",
+      "btn": "500 PLN/Month"
+     }
   },
   "03": {
-    "section": "Дополнительные услуги",
-    "card1": "Присяжный переводчик",
-    "card2": "Налоговый консультант",
-    "card3": "Кредитный брокер"
+    "section": "Additional services",
+    "card1": "Sworn translator",
+    "card2": "Tax Consultant",
+    "card3": "Credit broker"
   },
   "consultation": {
-    "title": "Бесплатная консультация",
-    "btn": "Присоединиться"
+    "title": "Free consultation",
+    "btn": "Join"
   },
   "04": {
-    "section": "Для кого подойдет",
-    "title": "Для кого подойдет бизнес-инкубатор?",
-    "text": "Если ты не нашёл себя в этом списке - смело пиши нам, мы с радостью поможем и подберём индивидуальный способ сотрудничества.Мы часто слышим, что нам легко удаётся объединять талантливых и интересных людей, а все потому что мы верим в силу синергии.",
+    "section": "Who its for",
+    "title": "Who is the business incubator for?",
+    "text": "Please contact us if you did not locate yourself on this list; we will be eager to help and determine a unique course of action for cooperation. As we believe in the potential of synergy, we frequently hear that we have no trouble bringing together talented and fascinating individuals.",
     "group_1": {
-      "1": "Фотографы",
-      "2": "Видеографы",
-      "3": "Дизайнеры",
-      "4": "Архитекторы",
-      "5": "Таргетологи",
-      "6": "SMM-специалисты"
+      "1": "Photographers",
+      "2": "Videographers",
+      "3": "Designers",
+      "4": "Architects",
+      "5": "Targetologists",
+      "6": "SMM-specialists"
     },
     "group_2": {
-      "1": "Журналисты",
-      "2": "Коучи",
-      "3": "Психологи"
+      "1": "Journalists",
+      "2": "Coaches",
+      "3": "Psychologists"
     },
     "group_3": {
-      "1": "ИТ-специалисты",
-      "2": "Копирайтеры",
-      "3": "Project-менеджера",
-      "4": "Онлайн школы / курсы",
-      "5": "Маркетологи",
-      "6": "Агенты по недвижимости"
+      "1": "IT professionals",
+      "2": "Copywriters",
+      "3": "Project managers",
+      "4": "Online schools / courses",
+      "5": "Marketers",
+      "6": "Estate agents"
     }
   },
   "05": {
-    "section": "Что ты получишь",
-    "title": "А теперь подробнее, что ты получишь присоединившись к фонду:",
-    "questions": {
+    "section": "What you will get",
+    "title": "Now let's talk more about the benefits of joining the foundation",
+    "questions" : {
       "01": {
-        "q": "Релокейт в Польшу для DIGITAL, IT специалистов и фрилансеров",
-        "a": "Мы предоставляем все необходимые документы для получения визы PBH и даём возможность переехать в Польшу со своей семьей. Через созданную нами виртуальную фирму ты сможешь работать с местными и заграничными клиентами напрямую, через платформы или B2B. Также наш фонд предоставляет возможность выставления одного общего инвойса на фирму вместо отдельных фактур для оплаты от каждого клиента. Мы также занимаемся легализацией в Польше и с радостью поможем Тебе решить любой вопрос касающийся легального пребывания в РП."
+        "q": "Relocation to Poland for DIGITAL, IT specialists and freelancers",
+        "a": "We make it feasible for your family to migrate to Poland by offering all the paperwork required to apply for a PBH visa. You will be able to conduct business directly or B2B with domestic and foreign clients through the virtual business we establish. Additionally, our fund offers the option to produce a single general invoice for the company rather than individual invoices for payment from each client. We also deal with legalization in Poland, and we'll be pleased to assist you with any problem relating to your ability to remain in the country legally. "
       },
       "02": {
-        "q": "Пользование юридическим лицом Фонда",
-        "a": "У тебя появляется возможность официального ведения бизнеса без необходимости регистрации его в административных органах и внесения оплат в Фонд Социального Страхования (ZUS)."
+        "q": "Use of the Foundation legal entity",
+        "a": "Without having to legally register your firm with the administrative authorities and pay into the Social Insurance Fund, you have the option to do so (ZUS)."
       },
       "03": {
-        "q": "Юридические консультации",
-        "a": "Касающиеся ведения твоей деятельности: Создание и верификация договоров и других документов, заключаемых между Тобой и клиентами."
+        "q": "Legal advice",
+        "a": "Creation and validation of contracts and other agreements reached between you and clients, among other legal advice regarding the operation of your business."
       },
       "04": {
-        "q": "Бухгалтерское и налоговое обслуживание",
-        "a": "Наш фонд займется полным ведением бухгалтерской и финансовой документации."
+        "q": "Accounting and tax services",
+        "a": "Our foundation will take care of the complete accounting and financial documentation."
       },
       "05": {
-        "q": "Банковский счет",
-        "a": "Ты также получишь доступ к банковскому суб-счету в злотых и в валюте для финансовых операций твоего бизнеса."
+        "q": "Bank account",
+        "a": "Additionally, you will have access to a bank sub-account in PLN and another currency for your company's financial dealings."
       },
       "06": {
-        "q": "Доступ к системе CRM",
-        "a": "Каждый бенефициар получает доступ к личному кабинету в системе СRМ. Данная система даст Тебе возможность выставлять инвойсы и создавать всю необходимую документацию для вывода денежных средств из суб-счета."
+        "q": "Access to the CPM system",
+        "a": "The CRM system provides each recipient with access to a personal account. You will be able to generate invoices using this system, as well as all the paperwork required for subaccount withdrawals."
       },
       "07": {
-        "q": "Архивизация документов",
-        "a": "Фонд полностью избавляет Тебя от лишней бюрократии. Тебе не нужно печатать документы, отчеты и физически доносить их в наш офис либо высылать почтой или курьером. Все необходимые документы для реализации выплаты денежных средств Ты сможешь подписать электронной подписью и выслать на электорнный адрес своего координатора."
+        "q": "Document archiving",
+        "a": "You are fully free of pointless red tape thanks to the Fund. You do not need to physically deliver printed documents or reports to our office, or send them via mail or courier. You can use an electronic signature to complete all the paperwork required for the payment of funds and send it to your coordinator's email address."
       },
       "08": {
-        "q": "Менторство менеджера",
-        "a": "Все текущие вопросы ты сможешь консультировать в онлайн режиме со своим менеджером. Тебе не нужно будет писать мейлы и ждать на них ответы 24 часа, мы работаем оперативно и в удобном для тебя формате."
+        "q": "Manager’s Mentoring",
+        "a": "You can talk to your manager online about any current difficulties. We operate fast and in a format that is comfortable for you, so you won't need to write emails and wait for responses for 24 hours."
       }
     }
   },
   "06": {
-    "section": "Отзывы"
+    "section": "Reviews"
   }
 }
+

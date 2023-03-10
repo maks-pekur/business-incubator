@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-scroll'
 import cub from '../public/assets/images/cub.svg'
 import { Heading } from './ui/Heading'
 import { NumSection } from './ui/NumSection'
@@ -34,9 +35,12 @@ export const ServicePrice = () => {
 									<Image src={cub} width={150} height={150} alt="" />
 								</div>
 							</div>
-							<div className="bg-[var(--green)] w-full text-black text-2xl rounded-2xl text-center p-6 lg:p-10 md:text-4xl">
+							<Link
+								to="consultation"
+								className="cursor-pointer bg-[var(--green)] w-full text-black text-2xl rounded-2xl text-center p-6 md:p-6 md:text-4xl"
+							>
 								{t('services:02.card.btn')}
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>

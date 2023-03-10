@@ -1,101 +1,104 @@
+
+
 {
   "01": {
-    "section": "О нас",
-    "title": "Фонд Freedom Business Area",
+    "section": "About us",
+    "title": "Fund Freedom Business Area",
     "text": {
-      "1": "Видит своей миссией, помощь: Digital, IT специалистам и фрилансерам со всего мира вести виртуальные фирмы в Польше. Фонд FBA даёт уникальную возможность проверить свои бизнес-идеи в рыночных условиях.",
-      "2": "Мы уверены, что сможем удивить тебя оперативностью нашей работы. Все формальности связанные с открытием бизнеса решаются в течении одного рабочего дня. После этого каждый предприниматель может легально вести свой бизнес."
+      "1": "The objective of the Freedom Business Area Foundation is to support operation of virtual companies in Poland, Digital, IT, and freelancers from all of the world. FBA Foundation offers a unique opportunity to test your business idea in a market context.",
+      "2": "With our efficiency, we're sure to pleasantly impress you. Within one working day, all formality involved in starting a business will get completed. Then every entrepreneur can legally do business."
     },
-    "btn": "Подробнее"
+    "btn": "Read more"
   },
   "02": {
-    "section": "Что ты получишь",
+    "section": "What will you receive as part of the fund?",
     "circl": {
-      "item-1": "Релокейт в Польшу",
-      "item-2": "Бухгалтерское сопровождение",
-      "item-3": "Юридическое лицо",
-      "item-4": "Юридическая помощь",
-      "item-5": "Налоговый консалтинг",
-      "item-6": "Банковский счет",
-      "item-7": "Доступ к системе CRM",
-      "item-8": "Менторство меннеджера"
+      "item-1": "Relocating to Poland",
+      "item-2": "Accounting accompaniment",
+      "item-3": "Legal entity",
+      "item-4": "Legal assistance",
+      "item-5": "Tax consulting",
+      "item-6": "Bank account",
+      "item-7": "Access to the CRM system",
+      "item-8": "Manager’s mentoring"
     }
   },
   "consultation": {
-    "title": "Бесплатная консультация",
-    "btn": "Присоединиться"
+    "title": "Free consultation",
+    "btn": "Join " 
   },
   "03": {
-    "section": "Как мы работаем",
+    "section": "How do we operate?",
     "card1": {
-      "step": "шаг 1",
-      "title": "Ваш звонок или заявка на сайте"
+      "step": "step 1",
+      "title": "Your call or application on the website"
     },
     "card2": {
-      "step": "шаг 2",
-      "title": "Обработка данных менеджерами"
+      "step": "step 2",
+      "title": "Managers processing data"
     },
     "card3": {
-      "step": "шаг 3",
-      "title": "Бесплатная консультация"
+      "step": "step 3",
+      "title": "Free consultation"
     },
     "card4": {
-      "step": "шаг 4",
-      "title": "Онлайн-сбор необходимых данных"
+      "step": "step 4",
+      "title": "Online data collecting"
     },
     "card5": {
-      "step": "шаг 5",
-      "title": "Подписание документов онлайн"
+      "step": "step 5",
+      "title": "Signing documents online"
     },
     "card6": {
-      "step": "шаг 6",
-      "title": "Старт вашей деятельности"
+      "step": "step 6",
+      "title": "Beginning your activities"
     }
   },
   "04": {
     "title": {
-      "text1": "БЕЗ НАС",
-      "text2": "C НАМИ"
+      "text1": "WITHOUT US",
+      "text2": "WITH US"
     },
     "row1": {
-      "left": "Минимум месяц",
-      "center": "Самостоятельная регистрация фирмы",
-      "right": "С нами 30 минут"
+      "left": "At least one month",
+      "center": "Self-registration of a company",
+      "right": "With us 30 minutes"
     },
     "row2": {
-      "left": "12%/32% или 19%",
-      "center": "Подоходный налог",
-      "right": "С нами 6% или 9.6%"
+      "left": "12%/32% or 19%",
+      "center": "Income tax",
+      "right": "With us 6% or 9.6%"
     },
     "row3": {
       "left": "670-1753 PLN",
-      "center": "Взнос на соц. страхование",
-      "right": "С нами = 0 PLN"
+      "center": "Contribution to social insurance",
+      "right": "With us = 0 PLN"
     },
     "row4": {
       "left": "400 PLN",
-      "center": "Аренда офиса",
-      "right": "С нами = 0 PLN"
+      "center": "Office rent",
+      "right": "With us = 0 PLN"
     },
     "row5": {
       "left": "600 PLN",
-      "center": "Бухгалтерское обслуживание",
-      "right": "С нами = 0 PLN"
+      "center": "Accounting service",
+      "right": "With us = 0 PLN"
     },
     "row6": {
       "left": "500 PLN",
-      "center": "Юридические услуги",
-      "right": "С нами = 0 PLN"
+      "center": "Legal services",
+      "right": "With us = 0 PLN"
     },
     "row7": {
       "left": "400 PLN",
-      "center": "Маркетинговый консалтинг",
-      "right": "С нами = 0 PLN"
+      "center": "Marketing consulting",
+      "right": "With us = 0 PLN"
     }
   },
   "05": {
-    "title": "Зачем платить больше, если можно платить меньше",
+    "title": "Why pay more when you can pay less with us.",
     "count1": "~3653 PLN",
     "count2": "500 PLN"
   }
 }
+

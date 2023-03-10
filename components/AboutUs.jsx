@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import { Button } from './ui/Button'
 import { Heading } from './ui/Heading'
 import { NumSection } from './ui/NumSection'
 
@@ -21,7 +20,6 @@ export const AboutUs = () => {
 						<p>{t('home:01.text.1')}</p>
 						<p>{t('home:01.text.2')}</p>
 					</div>
-					<Button title={t('home:01.btn')} variant={'outline'} />
 				</div>
 			</div>
 		</section>

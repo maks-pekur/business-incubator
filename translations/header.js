@@ -19,16 +19,16 @@ export const navLinks = [
 		},
 		path: '/services',
 	},
-	{
-		id: '03',
-		title: {
-			pl: 'FQA',
-			en: 'FQA',
-			uk: 'FQA',
-			ru: 'FQA',
-		},
-		path: '/fqa',
-	},
+	// {
+	// 	id: '03',
+	// 	title: {
+	// 		pl: 'FAQ',
+	// 		en: 'FAQ',
+	// 		uk: 'FAQ',
+	// 		ru: 'FAQ',
+	// 	},
+	// 	path: '/fqa',
+	// },
 	{
 		id: '04',
 		title: {
@@ -66,7 +66,7 @@ export const navBtn = {
 		pl: 'Dołącz',
 		en: 'Join',
 		uk: 'Приєднатися',
-		ru: 'Присоедениться',
+		ru: 'Присоединиться',
 	},
 	path: '/',
 }

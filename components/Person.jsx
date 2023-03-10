@@ -9,12 +9,12 @@ export const Person = ({ person }) => {
 	const [isOpen, setIsOpen] = useState(false)
 	const { t } = useTranslation()
 	return (
-		<article className="flex flex-col justify-center items-center overflow-hidden rounded-2xl">
-			<div className="relative overflow-hidden">
+		<article className="flex flex-col justify-center items-center">
+			<div className="relative overflow-hidden rounded-3xl">
 				<div>
 					<Image src={person.img} width={1000} height={1000} alt="" />
 				</div>
-				<div className="bg-[var(--green)] w-full rounded-2xl p-4 flex flex-col absolute bottom-0 top-[90%] hover:top-[50%] transition-all duration-300">
+				<div className="bg-[var(--green)] w-full rounded-2xl p-3 flex flex-col absolute bottom-0 top-[90%] hover:top-[40%] transition-all duration-300">
 					<div className="text-lg lg:text-xl xl:text-2xl text-center mb-10">
 						{t(`team:${person.name}`)}
 					</div>

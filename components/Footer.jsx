@@ -41,7 +41,7 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div className="hidden h-full md:flex justify-center">
+				<div className="hidden h-full md:flex justify-end">
 					<div>
 						<div className="mb-6 text-white">
 							{footerTranslation.contact[locale]}
@@ -91,7 +91,7 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div className="hidden md:flex justify-center">
+				<div className="hidden md:flex justify-end">
 					<div>
 						<div className="mb-6 text-white">
 							{footerTranslation.social[locale]}
@@ -129,31 +129,33 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div
-					onClick={() => scrollToTop()}
-					className="bg-white absolute right-14 lg:bottom-40 bottom-14 h-12 w-12 rounded-full flex items-center justify-center animate-bounce text-black"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth="1.5"
-						stroke="currentColor"
-						className="w-5 h-5 rotate-180"
+				<div className="flex items-center justify-center">
+					<div
+						onClick={() => scrollToTop()}
+						className="bg-white h-12 w-12 rounded-full flex items-center justify-center animate-bounce text-black"
 					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-						/>
-					</svg>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth="1.5"
+							stroke="currentColor"
+							className="w-5 h-5 rotate-180"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+							/>
+						</svg>
+					</div>
 				</div>
 			</div>
 			<div className="hidden md:grid grid-cols-5 text-gray-400">
 				<div className="col-span-2">
 					{`© ${year} Freedom Business Area. All rights reserved.`}
 				</div>
-				<div className="flex justify-center">
+				<div className="flex justify-end">
 					<Link
 						href={'/terms'}
 						className="hover:text-white transition duration-300"
@@ -161,7 +163,7 @@ export const Footer = () => {
 						Terms & Conditions
 					</Link>
 				</div>
-				<div className="flex justify-center">
+				<div className="flex justify-end">
 					<Link
 						href={'/cookies'}
 						className="hover:text-white transition duration-300"
@@ -169,7 +171,7 @@ export const Footer = () => {
 						Cookies policy
 					</Link>
 				</div>
-				<div>
+				<div className="flex justify-center">
 					<Link
 						href={'/privacy'}
 						className="hover:text-white transition duration-300"

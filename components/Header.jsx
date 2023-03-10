@@ -20,9 +20,9 @@ export const Header = () => {
 
 	return (
 		<header
-			className={`text-white fixed top-0 left-0 right-0 z-10 transition-all duration-1000 ${
+			className={`text-white fixed top-0 left-0 right-0 z-10 transition-all duration-1000  ${
 				header && 'opacity-0'
-			}`}
+			} ${device === 'mobile' && 'opacity-100'}`}
 		>
 			<div className="relative w-full flex justify-end lg:items-center lg:justify-between  p-4 md:pt-8 md:px-10 pb-4 z-50">
 				{/* <div

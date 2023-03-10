@@ -3,6 +3,7 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import { useTranslation } from 'react-i18next'
+import { Consultation } from '../../components/Consultation'
 import { Hero } from '../../components/Hero'
 import { Heading } from '../../components/ui/Heading'
 
@@ -21,19 +22,20 @@ const index = () => {
 		<>
 			<Head></Head>
 			<Hero />
-			<section className="p-20">
-				<div className="bg-white">
+
+			<section className="sticky -top-[50vh] bg-black pb-10">
+				<div className="bg-white p-20 rounded-3xl">
 					<div className="mb-10">
-						<Heading tag={'h2'}>{t('services:05.title')}</Heading>
+						<Heading tag={'h2'}>{t('faq:section')}</Heading>
 					</div>
 					<div>
 						{[...Array(10)].map((item, idx) => (
-							<div className="border-b-[1px] w-full">
+							<div className="border-b-[1px] border-black w-full p-3">
 								<Disclosure as="div">
 									{({ open }) => (
 										<>
 											<Disclosure.Button className="w-full text-start py-3 md:text-2xl flex items-center justify-between">
-												{t(`services:05.questions.${idx + 1}.q`)}
+												{t(`faq:${idx + 1}.q`)}
 												<ChevronRightIcon
 													className={open && 'rotate-90 transform'}
 													width={24}
@@ -41,7 +43,7 @@ const index = () => {
 												/>
 											</Disclosure.Button>
 											<Disclosure.Panel className="py-8">
-												{t(`services:05.questions.${idx + 1}.a`)}
+												{t(`faq:${idx + 1}.a`)}
 											</Disclosure.Panel>
 										</>
 									)}
@@ -51,6 +53,7 @@ const index = () => {
 					</div>
 				</div>
 			</section>
+			<Consultation />
 		</>
 	)
 }

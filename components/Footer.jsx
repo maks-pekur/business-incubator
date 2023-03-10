@@ -28,10 +28,10 @@ export const Footer = () => {
 	}
 
 	return (
-		<footer className="bg-transparent text-gray-400 relative py-10">
-			<div className="grid md:grid-cols-4">
-				<div className="md:col-span-2 text-white flex flex-col items-center justify-between">
-					<div className="flex items-center h-full lg:ml-10 text-gray-400">
+		<footer className="bg-transparent text-gray-400 relative p-10">
+			<div className="grid md:grid-cols-5">
+				<div className="md:col-span-2 text-white flex items-center justify-between">
+					<div className="flex items-center h-full text-gray-400">
 						<div>
 							<Logo width={120} variant={'white'} />
 						</div>
@@ -39,103 +39,90 @@ export const Footer = () => {
 							Freedom Business Area
 						</div>
 					</div>
-					<div className="text-gray-400">
-						{`© ${year} Freedom Business Area. All rights reserved.`}
-					</div>
 				</div>
 
-				<div className="hidden md:flex w-full items-center justify-center text-gray-400">
-					<div className="h-full flex flex-col justify-between">
-						<div>
-							<div className="mb-6 text-white">Контакты:</div>
-							<div className="flex items-center space-x-3">
-								<PhoneIcon
-									width={15}
-									height={15}
-									fill={'#929292'}
-									stroke={'#929292'}
-								/>
-								<Link
-									href="tel:+48737308669"
-									className="hover:text-white transition duration-300"
-								>
-									+48 737 308 669
-								</Link>
-							</div>
-							<div className="flex items-center space-x-3">
-								<MailIcon
-									width={15}
-									height={15}
-									fill={'#929292'}
-									stroke={'#929292'}
-								/>
-								<Link
-									href="mailto:manager@mtk-logistics.ru"
-									className="hover:text-white transition duration-300"
-								>
-									office@fba.ink
-								</Link>
-							</div>
-							<div className="flex items-center space-x-3">
-								<PointIcon
-									width={15}
-									height={15}
-									fill={'#929292'}
-									stroke={'#929292'}
-								/>
-								<Link
-									href="https://goo.gl/maps/sUhsAFsmjaRGcGPAA"
-									className="hover:text-white transition duration-300 leading-normal"
-								>
-									Ogrodowa 58, <br /> Warszawa, 00-876
-								</Link>
-							</div>
+				<div className="h-full flex justify-center">
+					<div>
+						<div className="mb-6 text-white">Контакты:</div>
+						<div className="flex items-center space-x-3">
+							<PhoneIcon
+								width={15}
+								height={15}
+								fill={'#929292'}
+								stroke={'#929292'}
+							/>
+							<Link
+								href="tel:+48737308669"
+								className="hover:text-white transition duration-300"
+							>
+								+48 737 308 669
+							</Link>
 						</div>
-
-						<Link
-							href={''}
-							className="hover:text-white transition duration-300"
-						>
-							Правила и Условия
-						</Link>
+						<div className="flex items-center space-x-3">
+							<MailIcon
+								width={15}
+								height={15}
+								fill={'#929292'}
+								stroke={'#929292'}
+							/>
+							<Link
+								href="mailto:manager@mtk-logistics.ru"
+								className="hover:text-white transition duration-300"
+							>
+								office@fba.ink
+							</Link>
+						</div>
+						<div className="flex items-center space-x-3">
+							<PointIcon
+								width={15}
+								height={15}
+								fill={'#929292'}
+								stroke={'#929292'}
+							/>
+							<Link
+								href="https://goo.gl/maps/sUhsAFsmjaRGcGPAA"
+								className="hover:text-white transition duration-300 leading-normal"
+							>
+								Ogrodowa 58, <br /> Warszawa, 00-876
+							</Link>
+						</div>
 					</div>
 				</div>
 
-				<div className="h-full hidden md:block">
-					<div className="mb-6 text-white">Социальные сети:</div>
-					<div className="flex flex-col">
-						<Link
-							href={''}
-							className="hover:text-white transition duration-300 flex space-x-3"
-						>
-							<Image src={insta} width={20} height={20} alt="" />
-							<span>Instagram</span>
-						</Link>
-						<Link
-							href={''}
-							className="hover:text-white transition duration-300 flex space-x-3"
-						>
-							<Image src={linkedin} width={20} height={20} alt="" />
-							<span>Linkedln</span>
-						</Link>
-						<Link
-							href={''}
-							className="hover:text-white transition duration-300 flex space-x-3"
-						>
-							<Image src={tiktok} width={20} height={20} alt="" />
-							<span>TikTok</span>
-						</Link>
-						<Link
-							href={''}
-							className="hover:text-white transition duration-300 flex space-x-3"
-						>
-							<Image src={facebook} width={20} height={20} alt="" />
-							<span>Facebook</span>
-						</Link>
+				<div className="hidden md:flex justify-center">
+					<div>
+						<div className="mb-6 text-white">Социальные сети:</div>
+						<div className="flex flex-col">
+							<Link
+								href={''}
+								className="hover:text-white transition duration-300 flex space-x-3"
+							>
+								<Image src={insta} width={20} height={20} alt="" />
+								<span>Instagram</span>
+							</Link>
+							<Link
+								href={''}
+								className="hover:text-white transition duration-300 flex space-x-3"
+							>
+								<Image src={linkedin} width={20} height={20} alt="" />
+								<span>Linkedln</span>
+							</Link>
+							<Link
+								href={''}
+								className="hover:text-white transition duration-300 flex space-x-3"
+							>
+								<Image src={tiktok} width={20} height={20} alt="" />
+								<span>TikTok</span>
+							</Link>
+							<Link
+								href={''}
+								className="hover:text-white transition duration-300 flex space-x-3"
+							>
+								<Image src={facebook} width={20} height={20} alt="" />
+								<span>Facebook</span>
+							</Link>
+						</div>
 					</div>
-					<Link href={''} className="hover:text-white transition duration-300">
-						Политика конфиденциальности
-					</Link>
 				</div>
 
 				<div
@@ -156,6 +143,35 @@ export const Footer = () => {
 							d="M19.5 8.25l-7.5 7.5-7.5-7.5"
 						/>
 					</svg>
+				</div>
+			</div>
+			<div className="grid grid-cols-5 text-gray-400">
+				<div className="col-span-2">
+					{`© ${year} Freedom Business Area. All rights reserved.`}
+				</div>
+				<div className="flex justify-center">
+					<Link
+						href={'/terms'}
+						className="hover:text-white transition duration-300"
+					>
+						Terms & Conditions
+					</Link>
+				</div>
+				<div className="flex justify-center">
+					<Link
+						href={'/cookies'}
+						className="hover:text-white transition duration-300"
+					>
+						Cookies policy
+					</Link>
+				</div>
+				<div>
+					<Link
+						href={'/privacy'}
+						className="hover:text-white transition duration-300"
+					>
+						Privacy policy
+					</Link>
 				</div>
 			</div>
 		</footer>

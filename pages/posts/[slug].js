@@ -3,11 +3,12 @@ import { renderMetaTags, useQuerySubscription } from 'react-datocms'
 import { request } from '../../lib/datocms'
 import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 
+import { useRouter } from 'next/router'
 import { MoreStories } from '../../components/Post/MoreStories'
 import { PostBody } from '../../components/Post/PostBody'
 import { PostHeader } from '../../components/Post/PostHeader'
 import { Heading } from '../../components/ui/Heading'
-
+import { blogTranslation } from '../../translations/blog'
 export async function getStaticPaths({ locales }) {
 	const data = await request({ query: `{ allPosts { slug } }` })
 	const pathsArray = []
@@ -101,6 +102,7 @@ export async function getStaticProps({ params, locale }) {
 }
 
 const Post = ({ subscription }) => {
+	const { locale } = useRouter()
 	const {
 		data: { post, morePosts },
 	} = useQuerySubscription(subscription)
@@ -125,7 +127,7 @@ const Post = ({ subscription }) => {
 
 			<div className="bg-white p-6 md:p-20 rounded-3xl">
 				<div className="mb-10">
-					<Heading tag={'h2'}>Больше постов</Heading>
+					<Heading tag={'h2'}>{blogTranslation.more[locale]}</Heading>
 				</div>
 				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
 			</div>

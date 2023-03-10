@@ -199,7 +199,7 @@ export const Resume = () => {
 			</div>
 			<div className="flex justify-center md:justify-end w-full">
 				<Button
-					variant={'outline'}
+					variant={'green'}
 					title={t('career:resume.btn')}
 					isLoading={isLoading}
 				/>

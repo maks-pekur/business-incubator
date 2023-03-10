@@ -97,7 +97,7 @@ export const ContactForm = () => {
 										autoFocus: true,
 									}}
 									country="pl"
-									onlyCountries={['pl', 'ua', 'ru', 'by']}
+									onlyCountries={['pl', 'ua', 'by']}
 									inputStyle={{
 										width: '100%',
 										borderBottom: '1px solid var(--dark-gray)',

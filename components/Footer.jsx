@@ -8,6 +8,7 @@ import MailIcon from '../components/ui/MailIcon'
 import PhoneIcon from '../components/ui/PhoneIcon'
 import PointIcon from '../components/ui/PointIcon'
 
+import { useEffect, useState } from 'react'
 import facebook from '../public/assets/images/facebook.svg'
 import insta from '../public/assets/images/insta.svg'
 import linkedin from '../public/assets/images/linkedin.svg'
@@ -15,6 +16,12 @@ import tiktok from '../public/assets/images/tiktok.svg'
 
 export const Footer = () => {
 	const { locale } = useRouter()
+	const [year, setYear] = useState()
+
+	useEffect(() => {
+		const date = new Date()
+		setYear(date.getFullYear())
+	}, [])
 
 	const scrollToTop = () => {
 		animateScroll.scrollToTop()
@@ -23,14 +30,17 @@ export const Footer = () => {
 	return (
 		<footer className="bg-transparent text-gray-400 relative py-10">
 			<div className="grid md:grid-cols-4">
-				<div className="md:col-span-2 text-white">
-					<div className="flex items-center justify-center">
+				<div className="md:col-span-2 text-white flex flex-col items-center justify-between">
+					<div className="flex items-center h-full lg:ml-10 text-gray-400">
 						<div>
 							<Logo width={120} variant={'white'} />
 						</div>
-						<div className="text-[24px] border-l-2 border-white h-[50%] items-center pl-4 ml-4 hidden lg:flex">
+						<div className="text-[24px] border-l-2 border-white h-10 items-center pl-4 ml-4 hidden lg:flex">
 							Freedom Business Area
 						</div>
+					</div>
+					<div className="text-gray-400">
+						{`© ${year} Freedom Business Area. All rights reserved.`}
 					</div>
 				</div>
 
@@ -130,7 +140,7 @@ export const Footer = () => {
 
 				<div
 					onClick={() => scrollToTop()}
-					className="bg-white absolute right-14 bottom-14 h-12 w-12 rounded-full flex items-center justify-center animate-bounce text-black"
+					className="bg-white absolute right-14 lg:bottom-40 bottom-14 h-12 w-12 rounded-full flex items-center justify-center animate-bounce text-black"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

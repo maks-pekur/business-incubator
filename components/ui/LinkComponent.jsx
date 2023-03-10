@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-
 const styles = {
 	outline:
 		'bg-transparent fill-black text-black hover:bg-black hover:text-white hover:fill-white',

@@ -7,7 +7,7 @@ const flags = {
 	pl: '/assets/images/pl.svg',
 	en: '/assets/images/gb.svg',
 	uk: '/assets/images/ua.svg',
-	ru: '/assets/images/ru.svg',
+	ru: '/assets/images/xx.svg',
 }
 
 import '/node_modules/flag-icons/css/flag-icons.min.css'
@@ -23,31 +23,37 @@ export const Languages = ({ classNames }) => {
 	}
 
 	return (
-		<div>
+		<div className="relative h-full flex items-center">
 			<div
 				onClick={() => setOpen(!isOpen)}
-				className="relative rounded-full overflow-hidden w-6 h-6 flex items-center justify-center"
+				className="absolute rounded-full overflow-hidden w-6 h-6"
 			>
 				{!isOpen && (
-					<Image src={flags[locale]} width={30} height={30} alt="language" />
+					<Image
+						src={flags[locale]}
+						fill
+						alt="language"
+						style={{ objectFit: 'cover' }}
+					/>
 				)}
 			</div>
 
 			{isOpen && (
 				<div
-					className={`absolute space-y-2 flex flex-col items-center  ${classNames}`}
+					className={`absolute -top-3 space-y-2 flex flex-col items-center  ${classNames}`}
 				>
 					{locales.map(l => {
 						return (
-							<Link
-								key={l}
-								href={asPath}
-								locale={l}
-								onClick={() => handleClick(l)}
-								className="rounded-full overflow-hidden w-6 h-6 flex items-center justify-center"
-							>
-								<Image src={flags[l]} width={30} height={30} alt="language" />
-							</Link>
+							<div className="relative rounded-full overflow-hidden w-6 h-6">
+								<Link
+									key={l}
+									href={asPath}
+									locale={l}
+									onClick={() => handleClick(l)}
+								>
+									<Image src={flags[l]} fill alt="language" />
+								</Link>
+							</div>
 						)
 					})}
 				</div>

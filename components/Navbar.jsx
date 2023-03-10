@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { navBtn, navLinks } from '../translations/header'
 import { Languages } from './ui/Languages'
+import { LinkComponent } from './ui/LinkComponent'
 import { LinkScroll } from './ui/LinkScroll'
 import SocialLinks from './ui/SocialLinks'
 
@@ -13,7 +14,7 @@ const flags = {
 	pl: '/assets/images/pl.svg',
 	en: '/assets/images/gb.svg',
 	uk: '/assets/images/ua.svg',
-	ru: '/assets/images/ru.svg',
+	ru: '/assets/images/xx.svg',
 }
 
 export const Navbar = ({ header }) => {
@@ -37,7 +38,7 @@ export const Navbar = ({ header }) => {
 	}
 
 	return (
-		<nav className={`w-full`}>
+		<nav>
 			<div
 				className={`md:hidden text-white p-1 ${
 					header &&
@@ -101,7 +102,7 @@ export const Navbar = ({ header }) => {
 				</div>
 			)}
 			<div className="hidden md:flex lg:items-center space-x-8">
-				<div>
+				<div className="flex items-center space-x-6 mr-6">
 					<ul className="flex space-x-6 items-center text-[14px]">
 						{navLinks.map(link => (
 							<motion.li
@@ -128,16 +129,23 @@ export const Navbar = ({ header }) => {
 							</motion.li>
 						))}
 					</ul>
+					<Languages />
 				</div>
-				<div>
-					<Languages classNames={'top-7'} />
-				</div>
+
 				<div className="hidden lg:block">
-					<LinkScroll
-						href={'consultation'}
-						variant={'green'}
-						title={navBtn.title[locale]}
-					/>
+					{pathname === '/team' ? (
+						<LinkComponent
+							href={'/career'}
+							variant={'green'}
+							title={navBtn.title[locale]}
+						/>
+					) : (
+						<LinkScroll
+							href={'consultation'}
+							variant={'green'}
+							title={navBtn.title[locale]}
+						/>
+					)}
 				</div>
 			</div>
 		</nav>

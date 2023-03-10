@@ -13,7 +13,7 @@ import facebook from '../public/assets/images/facebook.svg'
 import insta from '../public/assets/images/insta.svg'
 import linkedin from '../public/assets/images/linkedin.svg'
 import tiktok from '../public/assets/images/tiktok.svg'
-
+import { footerTranslation } from '../translations/Footer'
 export const Footer = () => {
 	const { locale } = useRouter()
 	const [year, setYear] = useState()
@@ -30,7 +30,7 @@ export const Footer = () => {
 	return (
 		<footer className="bg-transparent text-gray-400 relative p-10">
 			<div className="grid md:grid-cols-5">
-				<div className="md:col-span-2 text-white flex items-center justify-between">
+				<div className="md:col-span-2 text-white flex items-center justify-center md:justify-between">
 					<div className="flex items-center h-full text-gray-400">
 						<div>
 							<Logo width={120} variant={'white'} />
@@ -41,9 +41,11 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div className="h-full flex justify-center">
+				<div className="hidden h-full md:flex justify-center">
 					<div>
-						<div className="mb-6 text-white">Контакты:</div>
+						<div className="mb-6 text-white">
+							{footerTranslation.contact[locale]}
+						</div>
 						<div className="flex items-center space-x-3">
 							<PhoneIcon
 								width={15}
@@ -91,7 +93,9 @@ export const Footer = () => {
 
 				<div className="hidden md:flex justify-center">
 					<div>
-						<div className="mb-6 text-white">Социальные сети:</div>
+						<div className="mb-6 text-white">
+							{footerTranslation.social[locale]}
+						</div>
 						<div className="flex flex-col">
 							<Link
 								href={''}
@@ -145,7 +149,7 @@ export const Footer = () => {
 					</svg>
 				</div>
 			</div>
-			<div className="grid grid-cols-5 text-gray-400">
+			<div className="hidden md:grid grid-cols-5 text-gray-400">
 				<div className="col-span-2">
 					{`© ${year} Freedom Business Area. All rights reserved.`}
 				</div>

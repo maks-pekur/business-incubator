@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { useTranslation } from 'react-i18next'
 import { Consultation } from '../../components/Consultation'
 import { Hero } from '../../components/Hero'
-import { Heading } from '../../components/ui/Heading'
+import { NumSection } from '../../components/ui/NumSection'
 
 export async function getStaticProps({ locale }) {
 	return {
@@ -24,9 +24,13 @@ const index = () => {
 			<Hero />
 
 			<section className="sticky -top-[50vh] bg-black pb-10">
-				<div className="bg-white p-20 rounded-3xl">
+				<div className="bg-white p-6 lg:p-20 rounded-3xl">
 					<div className="mb-10">
-						<Heading tag={'h2'}>{t('faq:section')}</Heading>
+						<NumSection
+							number={'01'}
+							variant={'green'}
+							title={t('faq:section')}
+						/>
 					</div>
 					<div>
 						{[...Array(10)].map((item, idx) => (
@@ -53,7 +57,7 @@ const index = () => {
 					</div>
 				</div>
 			</section>
-			<Consultation />
+			<Consultation numSection={'02'} />
 		</>
 	)
 }

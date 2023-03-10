@@ -32,7 +32,6 @@ import ilona from '../public/assets/images/team/ilona.jpeg'
 import karyna from '../public/assets/images/team/karyna.jpeg'
 import kateryna from '../public/assets/images/team/kateryna.jpeg'
 import maksym from '../public/assets/images/team/Maksym_Pekur.jpeg'
-import pavel from '../public/assets/images/team/Pavel_Semchuk.jpeg'
 import sofiia from '../public/assets/images/team/Sofiia_Syzonenko.jpeg'
 import yelisaveta from '../public/assets/images/team/Yelizaveta_Danilenka.jpeg'
 import yevgen from '../public/assets/images/team/Yevgen_Teslia.jpeg'
@@ -63,7 +62,7 @@ export const personal = [
 		phone: 'yevgen_phone',
 	},
 	{
-		id: '05',
+		id: '04',
 		img: elena,
 		name: 'elena_name',
 		position: 'elena_position',
@@ -71,7 +70,7 @@ export const personal = [
 		phone: 'elena_phone',
 	},
 	{
-		id: '06',
+		id: '05',
 		img: karyna,
 		name: 'karyna_name',
 		position: 'karyna_position',
@@ -79,15 +78,7 @@ export const personal = [
 		phone: 'karyna_phone',
 	},
 	{
-		id: '07',
-		img: pavel,
-		name: 'pavel_name',
-		position: 'pavel_position',
-		phone: 'pavel_phone',
-		mail: 'pavel_mail',
-	},
-	{
-		id: '08',
+		id: '06',
 		img: maksym,
 		name: 'maksym_name',
 		position: 'maksym_position',
@@ -95,7 +86,7 @@ export const personal = [
 		mail: 'maksym_mail',
 	},
 	{
-		id: '09',
+		id: '07',
 		img: yelisaveta,
 		name: 'yelisaveta_name',
 		position: 'yelisaveta_position',
@@ -103,7 +94,7 @@ export const personal = [
 		phone: 'yelisaveta_phone',
 	},
 	{
-		id: '10',
+		id: '08',
 		img: sofiia,
 		name: 'sofiia_name',
 		position: 'sofiia_position',

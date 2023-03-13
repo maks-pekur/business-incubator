@@ -1,31 +1,31 @@
-import { mailOptions, transporter } from "../../config/nodemailer";
+import { mailOptions, transporter } from '../../config/nodemailer'
 
 const CONTACT_MESSAGE_FIELDS = {
-  name: "Name",
-  email: "Email",
-  phone: "Phone",
-  position: "Position",
-  checkbox: "Policy",
-  message: "Message",
-  cv: "CV",
-};
+	name: 'Name',
+	email: 'Email',
+	phone: 'Phone',
+	position: 'Position',
+	checkbox: 'Policy',
+	message: 'Message',
+	cv: 'CV',
+}
 
-const generateEmailContent = (data) => {
-  const stringData = Object.entries(data).reduce(
-    (str, [key, value]) =>
-      (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${value} \n \n`),
-    ""
-  );
+const generateEmailContent = data => {
+	const stringData = Object.entries(data).reduce(
+		(str, [key, value]) =>
+			(str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${value} \n \n`),
+		''
+	)
 
-  const htmlData = Object.entries(data).reduce(
-    (str, [key, value]) =>
-      (str += `<h1 className="">${CONTACT_MESSAGE_FIELDS[key]}</h1><span>${value}</span>`),
-    ""
-  );
+	const htmlData = Object.entries(data).reduce(
+		(str, [key, value]) =>
+			(str += `<h1 className="">${CONTACT_MESSAGE_FIELDS[key]}</h1><span>${value}</span>`),
+		''
+	)
 
-  return {
-    text: stringData,
-    html: `<!DOCTYPE html><html> <head> <title></title> <meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	return {
+		text: stringData,
+		html: `<!DOCTYPE html><html> <head> <title></title> <meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <style type="text/css">
     body, table, td, a{
       -webkit-text-size-adjust: 100%;
@@ -95,28 +95,28 @@ const generateEmailContent = (data) => {
     <td> <table width="100%" border="0" cellspacing="0" cellpadding="0"> <tr> <td> <table width="100%" border="0" cellspacing="0" cellpadding="0" > <tr> <td style=" padding: 0 0 0 0; font-size: 16px; line-height: 25px; color: #232323; " class="padding message-content" > <h2>New Contact Message</h2>
     <div class="form-container">${htmlData}</div>
     </td></tr></table> </td></tr></table> </td></tr></table> </td></tr></table> </body></html>`,
-  };
-};
+	}
+}
 
 const handler = async (req, res) => {
-  const data = req.body;
-  try {
-    await transporter.sendMail({
-      ...mailOptions,
-      ...generateEmailContent(data),
-      subject: data.subject,
-      attachments: [
-        {
-          filename: data.cv,
-        },
-      ],
-    });
-    console.log(data);
-    return res.status(200).json({ success: true });
-  } catch (error) {
-    console.log(error);
-    res.status(400).json({ message: error.message });
-  }
-};
+	const data = req.body
+	try {
+		await transporter.sendMail({
+			...mailOptions,
+			...generateEmailContent(data),
+			subject: data.subject,
+			attachments: [
+				{
+					filename: data.cv,
+				},
+			],
+		})
+		console.log(data)
+		return res.status(200).json({ success: true })
+	} catch (error) {
+		console.log(error)
+		res.status(400).json({ message: error.message })
+	}
+}
 
-export default handler;
+export default handler

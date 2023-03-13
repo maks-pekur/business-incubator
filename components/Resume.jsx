@@ -19,7 +19,6 @@ export const Resume = () => {
 		formState: { errors },
 		handleSubmit,
 		control,
-		getValues,
 	} = useForm({
 		mode: 'onSubmit',
 		defaultValues: {
@@ -59,7 +58,7 @@ export const Resume = () => {
 							{...register('name', {
 								required: true,
 							})}
-							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 ${
+							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
 								errors.name && 'border-[#e7795d]'
 							}`}
 						/>
@@ -76,7 +75,7 @@ export const Resume = () => {
 									message: 'Email is not valid.',
 								},
 							})}
-							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 ${
+							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
 								errors.name && 'border-[#e7795d]'
 							}`}
 						/>
@@ -129,7 +128,7 @@ export const Resume = () => {
 							{...register('position', {
 								required: true,
 							})}
-							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 ${
+							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
 								errors.name && 'border-[#e7795d]'
 							}`}
 						/>
@@ -143,7 +142,7 @@ export const Resume = () => {
 					type="text"
 					name="message"
 					{...register('message')}
-					className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 ${
+					className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none  ${
 						errors.name && 'border-[#e7795d]'
 					}`}
 				/>
@@ -173,6 +172,7 @@ export const Resume = () => {
 							name={name}
 							ref={fileInput}
 							value={value}
+							multiple="true"
 						/>
 					)}
 				/>

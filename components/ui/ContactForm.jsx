@@ -21,6 +21,7 @@ export const ContactForm = () => {
 		formState: { errors },
 		handleSubmit,
 		control,
+		reset,
 	} = useForm({
 		mode: 'onBlur',
 		defaultValues: {
@@ -28,10 +29,11 @@ export const ContactForm = () => {
 			email: '',
 			phone: '',
 			telegram: '',
+			comments: '',
 		},
 	})
 
-	const onSubmit = async ({ name, email, phone, telegram }) => {
+	const onSubmit = async ({ name, email, phone, telegram, comments }) => {
 		try {
 			setLoading(true)
 			const queryUrl = `${process.env.NEXT_PUBLIC_BITRIX_URL}/crm.lead.add.json`
@@ -40,8 +42,10 @@ export const ContactForm = () => {
 				fields: {
 					TITLE: 'Заявка с сайта Business Incubator',
 					NAME: name,
+					STATUS_ID: 'NEW',
 					EMAIL: [{ VALUE: email, VALUE_TYPE: 'WORK' }],
 					PHONE: [{ VALUE: phone, VALUE_TYPE: 'WORK' }],
+					COMMENTS: comments,
 					IM: [{ VALUE: telegram, VALUE_TYPE: 'TELEGRAM' }],
 				},
 				params: { REGISTER_SONET_EVENT: 'Y' },
@@ -54,6 +58,7 @@ export const ContactForm = () => {
 				},
 			})
 			setLoading(false)
+			reset()
 		} catch (error) {
 			setLoading(false)
 			console.log(error)
@@ -161,12 +166,12 @@ export const ContactForm = () => {
 					<textarea
 						rows="4"
 						className={`${style.input} resize-none ${
-							errors.name?.type === 'required' && 'border-red-400'
+							errors.comments?.type === 'required' && 'border-red-400'
 						}`}
 						placeholder={consultation.message[locale]}
 						type="text"
-						name="telegram"
-						{...register('telegram', {
+						name="comments"
+						{...register('comments', {
 							required: true,
 						})}
 					/>

@@ -103,7 +103,7 @@ export const Navbar = ({ header }) => {
 			)}
 			<div className="hidden md:flex lg:items-center space-x-8">
 				<div className="flex items-center space-x-6 mr-6">
-					<ul className="flex space-x-6 items-center text-[14px]">
+					<ul className="flex space-x-6 items-center text-[18px]">
 						{navLinks.map(link => (
 							<motion.li
 								initial={{

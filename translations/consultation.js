@@ -31,7 +31,7 @@ export const consultation = {
 	},
 	message: {
 		pl: 'Twoje pytanie',
-		en: 'Ваше сообщение',
+		en: 'Your message',
 		uk: 'Ваше питання',
 		ru: 'Ваш вопрос',
 	},

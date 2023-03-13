@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { animateScroll, Link } from 'react-scroll'
+import { animateScroll } from 'react-scroll'
 
 import Logo from './ui/Logo'
 
@@ -8,6 +8,7 @@ import MailIcon from '../components/ui/MailIcon'
 import PhoneIcon from '../components/ui/PhoneIcon'
 import PointIcon from '../components/ui/PointIcon'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import facebook from '../public/assets/images/facebook.svg'
 import insta from '../public/assets/images/insta.svg'
@@ -156,10 +157,7 @@ export const Footer = () => {
 					{`© ${year} Freedom Business Area. All rights reserved.`}
 				</div>
 				<div className="flex justify-end">
-					<Link
-						href={'/terms'}
-						className="hover:text-white transition duration-300"
-					>
+					<Link href={'/'} className="hover:text-white transition duration-300">
 						Terms & Conditions
 					</Link>
 				</div>

@@ -3,14 +3,14 @@
 
 {
   "01": {
-    "title": "The Foundation operates under the an umbrella company system.",
-    "text1": "we are actively support and protect professionals   and entrepreneurs in a wide variety of fields. The expertise and resources available at our foundation are delighted to be shared in order to make it simple, secure, and legal to implement company initiatives.",
-    "text2": "fund established to support aspiring business owners as well as current entrepreneurs by helping them grow their operations. Our job is to take care of everything required for you to concentrate on putting your idea into practice without wasting time, effort, or money dealing with the red tape involved in starting and maintaining your business."
+    "title": "The Foundation operates according to the system of an umbrella company.",
+    "text1": "we actively support and protect professionals and entrepreneurs in a variety of fields. The expertise and resources available in our foundation are readily shared to make the implementation of business initiatives simple, safe and legal.",
+    "text2": "the fund was established to support budding and existing entrepreneurs by helping them grow their business. Our job is to take care of everything so you can focus on making your idea a reality without wasting time, effort and money on the bureaucracy involved in starting and maintaining your business."
   },
   "02": {
     "section": "Services",
     "title": "The FBA Foundation is fully responsible for the implementation of the business, Not You.",
-    "subtitle": "There is only one thing this can mean: you don't need to be terrified of audits by the tax office, the immigration police, or other government agencies.",
+    "subtitle": "This can only mean one thing: you do not need to be afraid of audits by the tax office, the immigration police or other government agencies.",
     "card": {
       "title": "The cost of a full package of services",
       "btn": "500 PLN/Month"
@@ -29,7 +29,7 @@
   "04": {
     "section": "Who its for",
     "title": "Who is the business incubator for?",
-    "text": "Please contact us if you did not locate yourself on this list; we will be eager to help and determine a unique course of action for cooperation. As we believe in the potential of synergy, we frequently hear that we have no trouble bringing together talented and fascinating individuals.",
+    "text": "If you do not find yourself on this list, please contact us; we will be happy to help you and determine an individual approach to cooperation. Because we believe in the potential of synergies, we often hear that we have no difficulty in bringing together talented and fascinating people.",
     "group_1": {
       "1": "Photographers",
       "2": "Videographers",
@@ -49,7 +49,7 @@
       "3": "Project managers",
       "4": "Online schools / courses",
       "5": "Marketers",
-      "6": "Estate agents"
+      "6": "Real estate agents"
     }
   },
   "05": {
@@ -58,7 +58,7 @@
     "questions" : {
       "1": {
         "q": "Relocation to Poland for DIGITAL, IT specialists and freelancers",
-        "a": "We make it feasible for your family to migrate to Poland by offering all the paperwork required to apply for a PBH visa. You will be able to conduct business directly or B2B with domestic and foreign clients through the virtual business we establish. Additionally, our fund offers the option to produce a single general invoice for the company rather than individual invoices for payment from each client. We also deal with legalization in Poland, and we'll be pleased to assist you with any problem relating to your ability to remain in the country legally. "
+        "a": "We make it possible for your family to emigrate to Poland by taking care of all the formalities required for applying for a PBH visa. You will be able to do business directly or B2B with domestic and foreign clients through the virtual company we set up. In addition, our fund provides the ability to create a single total invoice for the company, rather than individual invoices for payment from each customer. We also take care of legalization in Poland and will be happy to help you with any problems related to your legal stay in Poland."
       },
       "2": {
         "q": "Use of the Foundation legal entity",
@@ -66,7 +66,7 @@
       },
       "3": {
         "q": "Legal advice",
-        "a": "Creation and validation of contracts and other agreements reached between you and clients, among other legal advice regarding the operation of your business."
+        "a": "Creation and validation of contracts and other agreements reached between you and clients, among other legal advice regarding the operation of your business"        
       },
       "4": {
         "q": "Accounting and tax services",

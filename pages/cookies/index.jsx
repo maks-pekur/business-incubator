@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Hero } from '../../components/Hero'
+import { Heading } from '../../components/ui/Heading'
 
 const index = () => {
 	return (
@@ -8,23 +9,25 @@ const index = () => {
 			<Hero />
 			<section className="sticky -top-[50vh] bg-black pb-10">
 				<div className="bg-white p-20 rounded-3xl">
+					<Heading tag={'h3'}>Polityka Cookies</Heading>
+					<p>POLITYKA COOKIES FUNDACJI FREEDOM BUSINESS AREA</p>
 					<p>
-						Polityka Cookies POLITYKA COOKIES FUNDACJI FREEDOM BUSINESS AREA
-						ADMINISTRATOR DANYCH Podmiotem zamieszczającym na urządzeniu
+						ADMINISTRATOR DANYCH <br /> Podmiotem zamieszczającym na urządzeniu
 						końcowym Użytkownika Serwisu pliki cookies(tzw. „ciasteczka”) oraz
 						uzyskującym do nich dostęp jest operator Fundacja Freedom Business
 						Area z siedzibą w Radomiu przy ul. Henryka Sienkiewicza nr 36 lok.
 						5, 26-600 Radom. Ze Administratorem możesz kontaktować się za
 						pośrednictwem poczty tradycyjnej, telefonicznie +48 881 488 280 lub
-						za pośrednictwem poczty elektronicznej: rodo@fba.ink. PLIKI COOKIES
-						WYKORZYSTYWANE SĄ W CELU: a) Dostosowania zawartości stron
-						internetowych Serwisu do preferencji Użytkownika oraz optymalizacji
-						korzystania ze stron internetowych; w szczególności pliki te
-						pozwalają rozpoznać urządzenie Użytkownika Serwisu i odpowiednio
-						wyświetlić stronę internetową, dostosowaną do jego indywidualnych
-						potrzeb; b) Tworzenia statystyk, które pomagają zrozumieć, w jaki
-						sposób Użytkownicy Serwisu korzystają ze stron internetowych, co
-						umożliwia ulepszanie ich struktury i zawartości; c) Utrzymanie sesji
+						za pośrednictwem poczty elektronicznej: rodo@fba.ink.
+						<br /> PLIKI COOKIES WYKORZYSTYWANE SĄ W CELU: <br />
+						a) Dostosowania zawartości stron internetowych Serwisu do
+						preferencji Użytkownika oraz optymalizacji korzystania ze stron
+						internetowych; w szczególności pliki te pozwalają rozpoznać
+						urządzenie Użytkownika Serwisu i odpowiednio wyświetlić stronę
+						internetową, dostosowaną do jego indywidualnych potrzeb; b)
+						Tworzenia statystyk, które pomagają zrozumieć, w jaki sposób
+						Użytkownicy Serwisu korzystają ze stron internetowych, co umożliwia
+						ulepszanie ich struktury i zawartości; c) Utrzymanie sesji
 						Użytkownika Serwisu (po zalogowaniu), dzięki której Użytkownik nie
 						musi na każdej podstronie Serwisu ponownie wpisywać loginu i hasła;
 						W wielu przypadkach oprogramowanie służące do przeglądania stron

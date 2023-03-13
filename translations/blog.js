@@ -11,4 +11,10 @@ export const blogTranslation = {
 		pl: 'Więcej postów',
 		ru: 'Больше постов',
 	},
+	btn: {
+		uk: 'Читати',
+		en: 'Read more',
+		pl: 'Czytaj',
+		ru: 'Читать',
+	},
 }

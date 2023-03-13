@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { blogTranslation } from '../../translations/blog'
 import { CoverImage } from '../ui/CoverImage'
 import Date from '../ui/Date'
 import { Heading } from '../ui/Heading'
 import { LinkComponent } from '../ui/LinkComponent'
-
 export const PostPreview = ({
 	title,
 	coverImage,
@@ -12,6 +13,7 @@ export const PostPreview = ({
 	author,
 	slug,
 }) => {
+	const { locale } = useRouter()
 	return (
 		<div className="flex flex-col justify-between">
 			<div>
@@ -37,7 +39,7 @@ export const PostPreview = ({
 					<LinkComponent
 						href={`/posts/${slug}`}
 						variant={'outline'}
-						title={'Подробнее'}
+						title={blogTranslation.btn[locale]}
 					/>
 				</div>
 			</div>

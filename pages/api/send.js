@@ -105,13 +105,11 @@ const handler = async (req, res) => {
 			...mailOptions,
 			...generateEmailContent(data),
 			subject: data.subject,
-			attachments: [
-				{
-					filename: data.cv,
-				},
-			],
+			attachments: {
+				filename: data.filename,
+			},
 		})
-		console.log(data)
+
 		return res.status(200).json({ success: true })
 	} catch (error) {
 		console.log(error)

@@ -19,6 +19,7 @@ export const Resume = () => {
 		formState: { errors },
 		handleSubmit,
 		control,
+		reset,
 	} = useForm({
 		mode: 'onSubmit',
 		defaultValues: {
@@ -28,17 +29,16 @@ export const Resume = () => {
 			message: '',
 			position: '',
 			checkbox: false,
-			cv: '',
+			cv: null,
 		},
 	})
 
 	const onSubmit = async values => {
 		try {
 			setLoading(true)
-			const formData = new FormData()
-			console.log(formData)
 			await sendContactForm(values)
 			setLoading(false)
+			reset()
 		} catch (error) {
 			setLoading(false)
 			console.log(error)

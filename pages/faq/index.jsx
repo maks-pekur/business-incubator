@@ -8,10 +8,10 @@ import { NumSection } from '../../components/ui/NumSection'
 import { request } from '../../lib/datocms'
 
 const section = {
-	pl: "",
-	uk: "",
-	en: "",
-	ru: "",
+	pl: '',
+	uk: '',
+	en: '',
+	ru: '',
 }
 
 export async function getStaticProps({ locale }) {
@@ -46,7 +46,7 @@ const index = ({ subscription }) => {
 		<>
 			<Head></Head>
 			<Hero />
-			<section className="sticky -top-[50vh] bg-black pb-10">
+			<section className="sticky bg-black pb-10">
 				<div className="bg-white p-6 lg:p-20 rounded-3xl">
 					<div className="mb-10">
 						<NumSection number={'01'} variant={'green'} title={'F.A.Q.'} />

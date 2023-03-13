@@ -3,7 +3,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Consultation } from '../../components/Consultation'
 import { Hero } from '../../components/Hero'
 import { Partners } from '../../components/Partners'
 import { Heading } from '../../components/ui/Heading'
@@ -83,7 +82,6 @@ const index = () => {
 					<Partners />
 				</div>
 			</section>
-			<Consultation numSection={'02'} />
 		</>
 	)
 }

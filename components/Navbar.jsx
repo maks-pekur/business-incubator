@@ -132,21 +132,23 @@ export const Navbar = ({ header }) => {
 					<Languages />
 				</div>
 
-				<div className="hidden lg:block">
-					{pathname === '/team' ? (
-						<LinkComponent
-							href={'/career'}
-							variant={'green'}
-							title={navBtn.title[locale]}
-						/>
-					) : (
-						<LinkScroll
-							href={'consultation'}
-							variant={'green'}
-							title={navBtn.title[locale]}
-						/>
-					)}
-				</div>
+				{pathname !== '/contacts' && (
+					<div className="hidden lg:block">
+						{pathname === '/team' ? (
+							<LinkComponent
+								href={'/career'}
+								variant={'green'}
+								title={navBtn.title[locale]}
+							/>
+						) : (
+							<LinkScroll
+								href={'consultation'}
+								variant={'green'}
+								title={navBtn.title[locale]}
+							/>
+						)}
+					</div>
+				)}
 			</div>
 		</nav>
 	)

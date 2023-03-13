@@ -99,28 +99,34 @@ export const Footer = () => {
 						</div>
 						<div className="flex flex-col">
 							<Link
-								href={''}
+								target="_blank"
+								href={
+									'https://instagram.com/fba.ink.official?igshid=YmMyMTA2M2Y='
+								}
 								className="hover:text-white transition duration-300 flex space-x-3"
 							>
 								<Image src={insta} width={20} height={20} alt="" />
 								<span>Instagram</span>
 							</Link>
 							<Link
-								href={''}
+								target="_blank"
+								href={'https://www.linkedin.com/company/fba-ink/'}
 								className="hover:text-white transition duration-300 flex space-x-3"
 							>
 								<Image src={linkedin} width={20} height={20} alt="" />
 								<span>Linkedln</span>
 							</Link>
 							<Link
-								href={''}
+								target="_blank"
+								href={'https://www.tiktok.com/@fba.ink?_t=8ac9gQpJAtq&_r=1'}
 								className="hover:text-white transition duration-300 flex space-x-3"
 							>
 								<Image src={tiktok} width={20} height={20} alt="" />
 								<span>TikTok</span>
 							</Link>
 							<Link
-								href={''}
+								target="_blank"
+								href={'https://www.facebook.com/profile.php?id=100088003327265'}
 								className="hover:text-white transition duration-300 flex space-x-3"
 							>
 								<Image src={facebook} width={20} height={20} alt="" />

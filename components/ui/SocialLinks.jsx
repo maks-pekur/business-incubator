@@ -8,7 +8,7 @@ const SocialLinks = ({
 }) => {
 	return (
 		<div className={`flex items-end space-x-2 ${className}`}>
-			<Link href="/">
+			<Link href="https://www.facebook.com/profile.php?id=100088003327265">
 				<svg
 					width={width}
 					height={height}
@@ -30,7 +30,7 @@ const SocialLinks = ({
 					/>
 				</svg>
 			</Link>
-			<Link href="http://instagram.com">
+			<Link href="https://instagram.com/fba.ink.official?igshid=YmMyMTA2M2Y=">
 				<svg
 					width={width}
 					height={height}
@@ -59,7 +59,7 @@ const SocialLinks = ({
 					/>
 				</svg>
 			</Link>
-			<Link href="http://linkedin.com">
+			<Link href="https://www.linkedin.com/company/fba-ink/">
 				<svg
 					width={width}
 					height={height}
@@ -77,7 +77,7 @@ const SocialLinks = ({
 					/>
 				</svg>
 			</Link>
-			<Link href="https://www.tiktok.com/">
+			<Link href="https://www.tiktok.com/@fba.ink?_t=8ac9gQpJAtq&_r=1">
 				<svg
 					width={width}
 					height={height}

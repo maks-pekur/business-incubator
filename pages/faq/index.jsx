@@ -1,45 +1,61 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
-import { useTranslation } from 'react-i18next'
+import { useQuerySubscription } from 'react-datocms/use-query-subscription'
 import { Consultation } from '../../components/Consultation'
 import { Hero } from '../../components/Hero'
 import { NumSection } from '../../components/ui/NumSection'
+import { request } from '../../lib/datocms'
 
 export async function getStaticProps({ locale }) {
+	const formattedLocale = locale.split('-')[0]
+	const graphqlRequest = {
+		query: `
+      {
+        allFaqs(locale: ${formattedLocale}) {
+					id
+          question
+					answer
+        }
+      }
+    `,
+	}
+
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['faq'])),
+			subscription: {
+				enabled: false,
+				initialData: await request(graphqlRequest),
+			},
 		},
 	}
 }
 
-const index = () => {
-	const { t } = useTranslation()
-
+const index = ({ subscription }) => {
+	const {
+		data: { allFaqs },
+	} = useQuerySubscription(subscription)
+	console.log(allFaqs)
 	return (
 		<>
 			<Head></Head>
 			<Hero />
-
 			<section className="sticky -top-[50vh] bg-black pb-10">
 				<div className="bg-white p-6 lg:p-20 rounded-3xl">
 					<div className="mb-10">
-						<NumSection
-							number={'01'}
-							variant={'green'}
-							title={t('faq:section')}
-						/>
+						<NumSection number={'01'} variant={'green'} title={'faq'} />
 					</div>
 					<div>
-						{[...Array(10)].map((item, idx) => (
-							<div className="border-b-[1px] border-black w-full p-3">
+						{allFaqs.map(item => (
+							<div
+								key={item.id}
+								className="border-b-[1px] border-black w-full p-3"
+							>
 								<Disclosure as="div">
 									{({ open }) => (
 										<>
 											<Disclosure.Button className="w-full text-start py-3 md:text-2xl flex items-center justify-between">
-												{t(`faq:${idx + 1}.q`)}
+												{item.question}
 												<ChevronRightIcon
 													className={open && 'rotate-90 transform'}
 													width={24}
@@ -47,7 +63,7 @@ const index = () => {
 												/>
 											</Disclosure.Button>
 											<Disclosure.Panel className="py-8">
-												{t(`faq:${idx + 1}.a`)}
+												{item.answer}
 											</Disclosure.Panel>
 										</>
 									)}

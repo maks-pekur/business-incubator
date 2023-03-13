@@ -9,6 +9,7 @@ import { PostBody } from '../../components/Post/PostBody'
 import { PostHeader } from '../../components/Post/PostHeader'
 import { Heading } from '../../components/ui/Heading'
 import { blogTranslation } from '../../translations/blog'
+
 export async function getStaticPaths({ locales }) {
 	const data = await request({ query: `{ allPosts { slug } }` })
 	const pathsArray = []

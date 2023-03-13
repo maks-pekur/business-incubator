@@ -11,7 +11,7 @@ export const Personal = () => {
 				<Heading tag={'h3'} classNames={'text-center py-14'}>
 					{t('team:personal')}
 				</Heading>
-				<div className="grid md:grid-cols-3 gap-10 md:gap-20">
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20">
 					{personal.map(person => (
 						<Person person={person} />
 					))}

@@ -28,7 +28,7 @@ export const ForWhom = () => {
 						</p>
 					</div>
 				</div>
-				<div className="grid md:grid-cols-3 gap-10">
+				<div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-10">
 					{serviceForWhoItems.map(card => (
 						<div
 							key={card.id}

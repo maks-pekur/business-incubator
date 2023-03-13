@@ -38,7 +38,7 @@ export const ExtraServices = () => {
 						variant={'green'}
 					/>
 				</div>
-				<div className="grid md:grid-cols-3 gap-10">
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 					{cards.map(card => (
 						<div
 							key={card.id}

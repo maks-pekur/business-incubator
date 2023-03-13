@@ -18,7 +18,7 @@ export const ServicePrice = () => {
 						classNames={'text-white'}
 					/>
 				</div>
-				<div className="grid md:grid-cols-2 gap-10 md:gap-20 text-white">
+				<div className="grid lg:grid-cols-2 gap-10 md:gap-20 text-white">
 					<div className="space-y-10 lg:space-y-14">
 						<Heading tag={'h2'}>{t('services:02.title')}</Heading>
 						<p className="md:text-xl lg:text-2xl">

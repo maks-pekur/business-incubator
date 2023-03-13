@@ -17,16 +17,16 @@ export const Reviews = ({ reviews }) => {
 	const { t } = useTranslation()
 	return (
 		<section className="pb-6 sticky top-0 bg-black ">
-			<div className="md:grid md:grid-cols-3 md:p-20 p-6 bg-[var(--light-gray)] rounded-3xl ">
+			<div className="lg:grid lg:grid-cols-3 md:p-20 p-6 bg-[var(--light-gray)] rounded-3xl ">
 				<div className="flex flex-col justify-between h-full">
-					<div className="mb-6 md:mb-0">
+					<div className="mb-6 lg:mb-0">
 						<NumSection
 							number={'06'}
 							title={t('services:06.section')}
 							variant={'green'}
 						/>
 					</div>
-					<div className="w-full flex items-center justify-center md:justify-start space-x-6 mb-10 md:mb-0">
+					<div className="w-full flex items-center justify-center lg:justify-start space-x-6 mb-10 lg:mb-0">
 						<NavigateArrow
 							direction={'left'}
 							variant={'outline'}
@@ -39,7 +39,7 @@ export const Reviews = ({ reviews }) => {
 						/>
 					</div>
 				</div>
-				<div className="md:col-span-2 md:h-full w-full leading-6">
+				<div className="lg:col-span-2 md:h-full w-full leading-6">
 					<Swiper
 						loop={true}
 						autoplay={true}

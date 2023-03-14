@@ -25,12 +25,6 @@ export const Header = () => {
 			} ${device === 'mobile' && 'opacity-100'}`}
 		>
 			<div className="relative w-full flex justify-end lg:items-center lg:justify-between  p-4 md:pt-8 md:px-10 pb-4 z-50">
-				{/* <div
-					className={`hidden lg:block absolute -z-10 inset-0 rounded-b-3xl transition-all duration-300 ${
-						header && 'bg-[var(--green)] opacity-80'
-					}`}
-				></div> */}
-
 				<div className="items-center space-x-6 hidden lg:flex">
 					<Logo width={70} height={70} variant={'white'} />
 					<Link

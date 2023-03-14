@@ -2,10 +2,12 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
+import { toast, ToastContainer } from 'react-toastify'
 import { consultation } from '../../translations/consultation'
+import { Button } from './Button'
 
 import 'react-phone-input-2/lib/style.css'
-import { Button } from './Button'
+import 'react-toastify/dist/ReactToastify.css'
 
 const style = {
 	input:
@@ -16,6 +18,27 @@ const style = {
 export const ContactForm = () => {
 	const { locale } = useRouter()
 	const [isLoading, setLoading] = useState(false)
+
+	const toastText = {
+		ua: 'Ваша заявка відправлена',
+		pl: 'Twój wniosek został wysłany',
+		en: 'Your request has been sent',
+		ru: 'Ваша заявка отправлена',
+	}
+
+	const notify = () => {
+		toast.success(toastText[locale], {
+			position: 'top-center',
+			autoClose: 2000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: 'dark',
+		})
+	}
+
 	const {
 		register,
 		formState: { errors },
@@ -59,6 +82,7 @@ export const ContactForm = () => {
 			})
 			setLoading(false)
 			reset()
+			notify()
 		} catch (error) {
 			setLoading(false)
 			console.log(error)
@@ -184,6 +208,7 @@ export const ContactForm = () => {
 					variant={'black'}
 				/>
 			</div>
+			<ToastContainer />
 		</form>
 	)
 }

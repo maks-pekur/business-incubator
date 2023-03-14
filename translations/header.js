@@ -22,10 +22,10 @@ export const navLinks = [
 	{
 		id: '03',
 		title: {
-			pl: 'FAQ',
-			en: 'FAQ',
-			uk: 'FAQ',
-			ru: 'FAQ',
+			pl: 'F.A.Q.',
+			en: 'F.A.Q.',
+			uk: 'F.A.Q.',
+			ru: 'F.A.Q.',
 		},
 		path: '/faq',
 	},

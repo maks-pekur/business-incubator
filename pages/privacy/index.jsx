@@ -40,7 +40,7 @@ const index = () => {
 						z siedzibą w Świdniku, VI Wydział Gospodarczy Krajowego Rejestru
 						Sądowego pod numerem KRS: 0000962284, NIP: 9482632966, REGON:
 						521560632. Ze Administratorem możesz kontaktować się za
-						pośrednictwem poczty tradycyjnej, telefonicznie +48 881 488 280 lub
+						pośrednictwem poczty tradycyjnej, telefonicznie +48 737 308 669 lub
 						za pośrednictwem poczty elektronicznej: rodo@fba.ink.{' '}
 					</p>
 					<p className="text-center my-6">
@@ -270,50 +270,70 @@ const index = () => {
 							niekompletne; <br /> d) <strong>do usunięcia danych</strong> – na
 							tej podstawie możesz żądać usunięcia danych, których przetwarzanie
 							nie jest już niezbędne do realizowania żadnego z celów, dla
-							których zostały zebrane; <br /> e) do ograniczenia przetwarzania –
-							w razie zgłoszenia takiego żądania Administrator zaprzestaje
-							wykonywania operacji na Danych osobowych – z wyjątkiem operacji,
-							na które wyraziła zgodę osoba, której dane dotyczą – oraz ich
+							których zostały zebrane; <br /> e)
+							<strong>do ograniczenia przetwarzania</strong> – w razie
+							zgłoszenia takiego żądania Administrator zaprzestaje wykonywania
+							operacji na Danych osobowych – z wyjątkiem operacji, na które
+							wyraziła zgodę osoba, której dane dotyczą – oraz ich
 							przechowywania, zgodnie z przyjętymi zasadami retencji lub dopóki
 							nie ustaną przyczyny ograniczenia przetwarzania danych (np.
 							zostanie wydana decyzja organu nadzorczego zezwalająca na dalsze
-							przetwarzanie danych); <br /> f) do przenoszenia danych – na tej
-							podstawie – w zakresie, w jakim dane są przetwarzane w sposób
-							zautomatyzowany w związku z zawartą umową lub wyrażoną zgodą –
-							Administrator wydaje dane dostarczone przez osobę, której one
-							dotyczą, w formacie pozwalającym na odczyt danych przez komputer.
-							Możliwe jest także zażądanie przesłania tych danych innemu
-							podmiotowi, jednakże pod warunkiem, że istnieją w tym zakresie
-							techniczne możliwości zarówno po stronie Administratora, jak
-							również wskazanego podmiotu; <br /> g) sprzeciwu wobec
-							przetwarzania danych w celach marketingowych – możesz w każdym
-							momencie sprzeciwić się przetwarzaniu Danych osobowych w celach
-							marketingowych, bez konieczności uzasadnienia takiego sprzeciwu;
-							<br /> h) sprzeciwu wobec innych celów przetwarzania danych –
-							możesz w każdym momencie sprzeciwić się, z przyczyn związanych z
+							przetwarzanie danych); <br /> f)
+							<strong>do przenoszenia danych</strong> – na tej podstawie – w
+							zakresie, w jakim dane są przetwarzane w sposób zautomatyzowany w
+							związku z zawartą umową lub wyrażoną zgodą – Administrator wydaje
+							dane dostarczone przez osobę, której one dotyczą, w formacie
+							pozwalającym na odczyt danych przez komputer. Możliwe jest także
+							zażądanie przesłania tych danych innemu podmiotowi, jednakże pod
+							warunkiem, że istnieją w tym zakresie techniczne możliwości
+							zarówno po stronie Administratora, jak również wskazanego
+							podmiotu; <br /> g)
+							<strong>
+								sprzeciwu wobec przetwarzania danych w celach marketingowych
+							</strong>{' '}
+							– możesz w każdym momencie sprzeciwić się przetwarzaniu Danych
+							osobowych w celach marketingowych, bez konieczności uzasadnienia
+							takiego sprzeciwu;
+							<br /> h){' '}
+							<strong>
+								sprzeciwu wobec innych celów przetwarzania danych
+							</strong>{' '}
+							– możesz w każdym momencie sprzeciwić się, z przyczyn związanych z
 							Twoją szczególną sytuacją, przetwarzaniu Danych osobowych, które
 							odbywa się na podstawie prawnie uzasadnionego interesu
 							Administratora, sprzeciw w tym zakresie powinien zawierać
-							uzasadnienie; <br /> i) wycofania zgody – jeśli Twoje dane
-							przetwarzane są na podstawie wyrażonej zgody, Podmiot danych ma
-							prawo wycofać ją w dowolnym momencie, co jednak nie wpływa na
-							zgodność z prawem przetwarzania dokonanego przed jej wycofaniem;
-							2. Administrator informuje, że nie podejmują decyzji opierających
-							się wyłącznie na zautomatyzowanym przetwarzaniu, w tym
-							profilowaniu.
+							uzasadnienie; <br /> i)<strong>wycofania zgody</strong> – jeśli
+							Twoje dane przetwarzane są na podstawie wyrażonej zgody, Podmiot
+							danych ma prawo wycofać ją w dowolnym momencie, co jednak nie
+							wpływa na zgodność z prawem przetwarzania dokonanego przed jej
+							wycofaniem; 2. Administrator informuje, że nie podejmują decyzji
+							opierających się wyłącznie na zautomatyzowanym przetwarzaniu, w
+							tym profilowaniu.
 						</p>
 					</div>
-					§6 [Prawo złożenia skargi do organu nadzorczego] 1. Przysługuje Ci
-					prawo złożenia skargi do organu nadzorczego, jeżeli w Twojej ocenie
-					przetwarzanie Twoich danych następuje z naruszeniem przepisów prawa.
-					2. Organem właściwym do zgłaszania naruszeń ochrony danych osobowych
-					jest Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193
-					Warszawa, www.udo.gov.pl. §7 [Kontakt z Administratorem] Administrator
-					udziela odpowiedzi na pytania i wątpliwości dotyczące przetwarzania
-					Twoich danych osobowych, a także przyjmuje wszelkie uwagi i
-					zastrzeżenia w tym zakresie. Z Administratorem możesz się skontaktować
-					telefonicznie +48 881 488 280, za pośrednictwem poczty elektronicznej
-					rodo@fba.ink lub za pośrednictwem poczty tradycyjnej.
+					<p className="text-center my-6">
+						<strong>§6 [Prawo złożenia skargi do organu nadzorczego]</strong>
+					</p>
+					<div className="space-y-4 mb-6">
+						<p>
+							1. Przysługuje Ci prawo złożenia skargi do organu nadzorczego,
+							jeżeli w Twojej ocenie przetwarzanie Twoich danych następuje z
+							naruszeniem przepisów prawa.
+						</p>
+						<p>
+							2. Organem właściwym do zgłaszania naruszeń ochrony danych
+							osobowych jest Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki
+							2, 00-193 Warszawa, www.udo.gov.pl.
+						</p>
+					</div>
+					<p className="text-center my-6">
+						<strong>§7 [Kontakt z Administratorem]</strong>
+					</p>
+					Administrator udziela odpowiedzi na pytania i wątpliwości dotyczące
+					przetwarzania Twoich danych osobowych, a także przyjmuje wszelkie
+					uwagi i zastrzeżenia w tym zakresie. Z Administratorem możesz się
+					skontaktować telefonicznie +48 737 308 669, za pośrednictwem poczty
+					elektronicznej rodo@fba.ink lub za pośrednictwem poczty tradycyjnej.
 				</div>
 			</section>
 		</>

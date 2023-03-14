@@ -14,14 +14,14 @@ export const VSRow = ({ textLeft, textRight, textCenter }) => {
 	}, [])
 
 	return (
-		<div className="w-full flex items-center relative py-2 text-[9px] sm:text-lg md:text-xl">
+		<div className="w-full flex items-center relative py-2 text-[8px] sm:text-md md:text-lg overflow-hidden">
 			<VSItem
 				variant={'left'}
 				text={textLeft}
 				width={width}
 				el={device === 'mobile' ? 'div' : ''}
 			/>
-			<div className="max-w-[200px] text-white mx-3 sm:mx-6 text-center">
+			<div className="w-[250px] text-white mx-1 md:mx-6 text-center leading-[10px] md:leading-5	">
 				{textCenter}
 			</div>
 			<VSItem

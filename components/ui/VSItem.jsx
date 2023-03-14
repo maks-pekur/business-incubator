@@ -9,10 +9,10 @@ export const VSItem = ({ variant, text, width, el }) => {
 					initial={{ x: '-100%' }}
 					whileInView={{ x: 0 }}
 					transition={{ duration: 1.2, ease: 'easeOut' }}
-					className={`bg-[var(--light-gray)] rounded-r-full flex items-center justify-end h-14`}
+					className={`bg-[var(--light-gray)] leading-1 rounded-r-full flex items-center justify-end h-14`}
 					style={{ width: width }}
 				>
-					<div className="mx-1 md:mx-3 sm:mx-6 whitespace-nowrap text-center leading-3">
+					<div className="mx-1 md:mx-3 sm:mx-6 whitespace-nowrap text-center">
 						{text}
 					</div>
 					<div className={`bg-[var(--green)] rounded-full h-14 w-14`}></div>
@@ -22,9 +22,9 @@ export const VSItem = ({ variant, text, width, el }) => {
 					initial={{ x: '100%' }}
 					whileInView={{ x: 0 }}
 					transition={{ duration: 1.2, ease: 'easeOut' }}
-					className={`bg-white rounded-l-full w-full flex-row-reverse flex items-center justify-end h-14`}
+					className={`bg-white leading-1 rounded-l-full w-full flex-row-reverse flex items-center justify-end h-14`}
 				>
-					<div className="mx-3 sm:mx-6 md:whitespace-nowrap text-center">
+					<div className="mx-1 sm:mx-6 md:whitespace-nowrap text-center">
 						{text}
 					</div>
 					<div className={`bg-[var(--green)] rounded-full h-14 w-14`}></div>

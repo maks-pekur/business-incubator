@@ -25,6 +25,7 @@ export const Navbar = ({ header }) => {
 	const handleLang = locale => {
 		setLang(locale)
 		setOpen(false)
+		document.body.classList.remove('overflow-hidden')
 	}
 
 	const handleOpen = () => {

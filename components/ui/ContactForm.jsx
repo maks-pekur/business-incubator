@@ -17,13 +17,13 @@ const style = {
 
 const chcekboxText = {
 	ru: 'Даю согласие на обработку персональных данных',
-	ua: 'Даю згоду на обробку персональних даних',
-	pl: '',
-	en: '',
+	uk: 'Даю згоду на обробку персональних даних',
+	pl: 'Wyrażam zgodę na przetwarzanie danych osobowych',
+	en: 'I agree to the processing of my personal data.',
 }
 
 const toastText = {
-	ua: 'Ваша заявка відправлена',
+	uk: 'Ваша заявка відправлена',
 	pl: 'Twój wniosek został wysłany',
 	en: 'Your request has been sent',
 	ru: 'Ваша заявка отправлена',
@@ -188,9 +188,7 @@ export const ContactForm = () => {
 						placeholder={consultation.nik[locale]}
 						type="text"
 						name="telegram"
-						{...register('telegram', {
-							required: true,
-						})}
+						{...register('telegram')}
 					/>
 				</div>
 				<div className="w-full">
@@ -205,9 +203,7 @@ export const ContactForm = () => {
 						placeholder={consultation.message[locale]}
 						type="text"
 						name="comments"
-						{...register('comments', {
-							required: true,
-						})}
+						{...register('comments')}
 					/>
 				</div>
 			</div>
@@ -223,7 +219,12 @@ export const ContactForm = () => {
 								type="checkbox"
 								className="border-[1px] border-black placeholder:text-gray-500"
 							/>
-							<label htmlFor="checkbox" className="text-gray-500">
+							<label
+								htmlFor="checkbox"
+								className={`text-gray-500 ${
+									errors.checkbox?.type === 'required' && 'text-red-500'
+								}`}
+							>
 								{chcekboxText[locale]}
 							</label>
 						</div>

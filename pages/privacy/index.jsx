@@ -9,7 +9,9 @@ const index = () => {
 			<Hero />
 			<section className="sticky -top-[50vh] bg-black pb-10">
 				<div className="bg-white p-20 rounded-3xl">
-					<Heading tag={'h2'}>Polityka Prywatności</Heading>
+					<Heading tag={'h2'} classNames={'text-center'}>
+						Polityka Prywatności
+					</Heading>
 					<div className="text-center font-bold py-6">
 						POLITYKA PRYWATNOŚCI FUNDACJI FREEDOM BUSINESS AREA
 					</div>
@@ -201,7 +203,7 @@ const index = () => {
 					<p className="text-center my-6">
 						<strong>§4 [Powierzenie przetwarzania danych osobowych]</strong>
 					</p>
-					<div>
+					<div className="space-y-4 mb-6">
 						<p>
 							1. Twoje dane osobowe mogą być powierzone do przetwarzania
 							podmiotom współpracującym ze Administratorem na podstawie umów
@@ -211,69 +213,98 @@ const index = () => {
 							tworzenia kopii zapasowych, bezpieczeństwa, obsługi klientów oraz
 							przechowywania danych.
 						</p>
-						<p>2. Twoje dane osobowe są przetwarzane przez osoby upoważnione przez
-					Administratorem do przetwarzania danych w trybie art. 29
-					Rozporządzenia, w tym w szczególności przez osoby zatrudniane przez
-					Administratora.</p>
+						<p>
+							2. Twoje dane osobowe są przetwarzane przez osoby upoważnione
+							przez Administratorem do przetwarzania danych w trybie art. 29
+							Rozporządzenia, w tym w szczególności przez osoby zatrudniane
+							przez Administratora.
+						</p>
+						<p>
+							3. Twoje dane mogą być udostępniane zewnętrznym Administratorom
+							danych, w tym radcom prawnym i adwokatom i podmiotom prowadzącym
+							działalność pocztową.
+						</p>
+						<p>
+							4. Administrator zastrzega sobie prawo ujawnienia wybranych
+							informacji dotyczących Ciebie właściwym organom bądź osobom
+							trzecim, które zgłoszą żądanie udzielenia takich informacji,
+							opierając się na odpowiedniej podstawie prawnej oraz zgodnie z
+							przepisami obowiązującego prawa.
+						</p>
+						<p>
+							5. Twoje dane osobowe nie będą przekazywane do państwa trzeciego,
+							czyli poza Europejski Obszar Gospodarczy, ani do organizacji
+							międzynarodowej.
+						</p>
+						<p>
+							6. Twoje dane nie będą podlegać profilowaniu, czyli
+							zautomatyzowanej analizie i opracowaniu przewidywań na temat
+							preferencji lub przyszłych zachowań (np. w przypadku profilowania
+							marketingowego oznacza to określanie, którą ofertą możesz być
+							najbardziej zainteresowana w oparciu o Twoje wcześniejsze wybory).
+						</p>
 					</div>
-					 3. Twoje dane mogą być udostępniane zewnętrznym
-					Administratorom danych, w tym radcom prawnym i adwokatom i podmiotom
-					prowadzącym działalność pocztową. 4. Administrator zastrzega sobie
-					prawo ujawnienia wybranych informacji dotyczących Ciebie właściwym
-					organom bądź osobom trzecim, które zgłoszą żądanie udzielenia takich
-					informacji, opierając się na odpowiedniej podstawie prawnej oraz
-					zgodnie z przepisami obowiązującego prawa. 5. Twoje dane osobowe nie
-					będą przekazywane do państwa trzeciego, czyli poza Europejski Obszar
-					Gospodarczy, ani do organizacji międzynarodowej. 6. Twoje dane nie
-					będą podlegać profilowaniu, czyli zautomatyzowanej analizie i
-					opracowaniu przewidywań na temat preferencji lub przyszłych zachowań
-					(np. w przypadku profilowania marketingowego oznacza to określanie,
-					którą ofertą możesz być najbardziej zainteresowana w oparciu o Twoje
-					wcześniejsze wybory). §5 [Prawa osób, których dane dotyczą] 1. Z
-					uprawnień omówionych poniżej możesz skorzystać poprzez skontaktowanie
-					się z Administratorem, według własnego wyboru, za pośrednictwem poczty
-					tradycyjnej, poczty elektronicznej lub telefonicznie. 2. Przysługuje
-					Ci prawo: a) do informacji o przetwarzaniu danych osobowych – na tej
-					podstawie Administrator przekazuje Ci informację o przetwarzaniu
-					danych, w tym o celach i podstawach prawnych przetwarzania, zakresie
-					posiadanych danych, podmiotach, którym są ujawniane, i planowanym
-					terminie usunięcia danych; b) uzyskania kopii danych – na tej
-					podstawie Administrator przekazuje Ci kopię przetwarzanych danych
-					dotyczących osoby fizycznej zgłaszającej żądanie; c) do sprostowania
-					danych – Administrator usuwa ewentualne niezgodności lub błędy
-					przetwarzanych Danych osobowych oraz uzupełnia je, jeśli są
-					niekompletne; d) do usunięcia danych – na tej podstawie możesz żądać
-					usunięcia danych, których przetwarzanie nie jest już niezbędne do
-					realizowania żadnego z celów, dla których zostały zebrane; e) do
-					ograniczenia przetwarzania – w razie zgłoszenia takiego żądania
-					Administrator zaprzestaje wykonywania operacji na Danych osobowych – z
-					wyjątkiem operacji, na które wyraziła zgodę osoba, której dane dotyczą
-					– oraz ich przechowywania, zgodnie z przyjętymi zasadami retencji lub
-					dopóki nie ustaną przyczyny ograniczenia przetwarzania danych (np.
-					zostanie wydana decyzja organu nadzorczego zezwalająca na dalsze
-					przetwarzanie danych); f) do przenoszenia danych – na tej podstawie –
-					w zakresie, w jakim dane są przetwarzane w sposób zautomatyzowany w
-					związku z zawartą umową lub wyrażoną zgodą – Administrator wydaje dane
-					dostarczone przez osobę, której one dotyczą, w formacie pozwalającym
-					na odczyt danych przez komputer. Możliwe jest także zażądanie
-					przesłania tych danych innemu podmiotowi, jednakże pod warunkiem, że
-					istnieją w tym zakresie techniczne możliwości zarówno po stronie
-					Administratora, jak również wskazanego podmiotu; g) sprzeciwu wobec
-					przetwarzania danych w celach marketingowych – możesz w każdym
-					momencie sprzeciwić się przetwarzaniu Danych osobowych w celach
-					marketingowych, bez konieczności uzasadnienia takiego sprzeciwu; h)
-					sprzeciwu wobec innych celów przetwarzania danych – możesz w każdym
-					momencie sprzeciwić się, z przyczyn związanych z Twoją szczególną
-					sytuacją, przetwarzaniu Danych osobowych, które odbywa się na
-					podstawie prawnie uzasadnionego interesu Administratora, sprzeciw w
-					tym zakresie powinien zawierać uzasadnienie; i) wycofania zgody –
-					jeśli Twoje dane przetwarzane są na podstawie wyrażonej zgody, Podmiot
-					danych ma prawo wycofać ją w dowolnym momencie, co jednak nie wpływa
-					na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem; 2.
-					Administrator informuje, że nie podejmują decyzji opierających się
-					wyłącznie na zautomatyzowanym przetwarzaniu, w tym profilowaniu. §6
-					[Prawo złożenia skargi do organu nadzorczego] 1. Przysługuje Ci prawo
-					złożenia skargi do organu nadzorczego, jeżeli w Twojej ocenie
+					<p className="text-center my-6">
+						<strong>§5 [Prawa osób, których dane dotyczą]</strong>
+					</p>
+					<div className="space-y-4 mb-6">
+						<p>
+							1. Z uprawnień omówionych poniżej możesz skorzystać poprzez
+							skontaktowanie się z Administratorem, według własnego wyboru, za
+							pośrednictwem poczty tradycyjnej, poczty elektronicznej lub
+							telefonicznie.
+						</p>
+						<p>
+							2. Przysługuje Ci prawo: <br /> a){' '}
+							<strong>do informacji o przetwarzaniu danych osobowych</strong> –
+							na tej podstawie Administrator przekazuje Ci informację o
+							przetwarzaniu danych, w tym o celach i podstawach prawnych
+							przetwarzania, zakresie posiadanych danych, podmiotach, którym są
+							ujawniane, i planowanym terminie usunięcia danych; <br /> b){' '}
+							<strong>uzyskania kopii danych</strong>
+							– na tej podstawie Administrator przekazuje Ci kopię
+							przetwarzanych danych dotyczących osoby fizycznej zgłaszającej
+							żądanie; <br /> c) <strong>do sprostowania danych</strong> –
+							Administrator usuwa ewentualne niezgodności lub błędy
+							przetwarzanych Danych osobowych oraz uzupełnia je, jeśli są
+							niekompletne; <br /> d) <strong>do usunięcia danych</strong> – na
+							tej podstawie możesz żądać usunięcia danych, których przetwarzanie
+							nie jest już niezbędne do realizowania żadnego z celów, dla
+							których zostały zebrane; <br /> e) do ograniczenia przetwarzania –
+							w razie zgłoszenia takiego żądania Administrator zaprzestaje
+							wykonywania operacji na Danych osobowych – z wyjątkiem operacji,
+							na które wyraziła zgodę osoba, której dane dotyczą – oraz ich
+							przechowywania, zgodnie z przyjętymi zasadami retencji lub dopóki
+							nie ustaną przyczyny ograniczenia przetwarzania danych (np.
+							zostanie wydana decyzja organu nadzorczego zezwalająca na dalsze
+							przetwarzanie danych); <br /> f) do przenoszenia danych – na tej
+							podstawie – w zakresie, w jakim dane są przetwarzane w sposób
+							zautomatyzowany w związku z zawartą umową lub wyrażoną zgodą –
+							Administrator wydaje dane dostarczone przez osobę, której one
+							dotyczą, w formacie pozwalającym na odczyt danych przez komputer.
+							Możliwe jest także zażądanie przesłania tych danych innemu
+							podmiotowi, jednakże pod warunkiem, że istnieją w tym zakresie
+							techniczne możliwości zarówno po stronie Administratora, jak
+							również wskazanego podmiotu; <br /> g) sprzeciwu wobec
+							przetwarzania danych w celach marketingowych – możesz w każdym
+							momencie sprzeciwić się przetwarzaniu Danych osobowych w celach
+							marketingowych, bez konieczności uzasadnienia takiego sprzeciwu;
+							<br /> h) sprzeciwu wobec innych celów przetwarzania danych –
+							możesz w każdym momencie sprzeciwić się, z przyczyn związanych z
+							Twoją szczególną sytuacją, przetwarzaniu Danych osobowych, które
+							odbywa się na podstawie prawnie uzasadnionego interesu
+							Administratora, sprzeciw w tym zakresie powinien zawierać
+							uzasadnienie; <br /> i) wycofania zgody – jeśli Twoje dane
+							przetwarzane są na podstawie wyrażonej zgody, Podmiot danych ma
+							prawo wycofać ją w dowolnym momencie, co jednak nie wpływa na
+							zgodność z prawem przetwarzania dokonanego przed jej wycofaniem;
+							2. Administrator informuje, że nie podejmują decyzji opierających
+							się wyłącznie na zautomatyzowanym przetwarzaniu, w tym
+							profilowaniu.
+						</p>
+					</div>
+					§6 [Prawo złożenia skargi do organu nadzorczego] 1. Przysługuje Ci
+					prawo złożenia skargi do organu nadzorczego, jeżeli w Twojej ocenie
 					przetwarzanie Twoich danych następuje z naruszeniem przepisów prawa.
 					2. Organem właściwym do zgłaszania naruszeń ochrony danych osobowych
 					jest Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193

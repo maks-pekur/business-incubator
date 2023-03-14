@@ -15,16 +15,23 @@ const style = {
 	label: 'text-[10px] lg:text-lg',
 }
 
+const chcekboxText = {
+	ru: 'Даю согласие на обработку персональных данных',
+	ua: 'Даю згоду на обробку персональних даних',
+	pl: '',
+	en: '',
+}
+
+const toastText = {
+	ua: 'Ваша заявка відправлена',
+	pl: 'Twój wniosek został wysłany',
+	en: 'Your request has been sent',
+	ru: 'Ваша заявка отправлена',
+}
+
 export const ContactForm = () => {
 	const { locale } = useRouter()
 	const [isLoading, setLoading] = useState(false)
-
-	const toastText = {
-		ua: 'Ваша заявка відправлена',
-		pl: 'Twój wniosek został wysłany',
-		en: 'Your request has been sent',
-		ru: 'Ваша заявка отправлена',
-	}
 
 	const notify = () => {
 		toast.success(toastText[locale], {
@@ -53,6 +60,7 @@ export const ContactForm = () => {
 			phone: '',
 			telegram: '',
 			comments: '',
+			checkbox: false,
 		},
 	})
 
@@ -65,6 +73,8 @@ export const ContactForm = () => {
 				fields: {
 					TITLE: 'Заявка с сайта Business Incubator',
 					NAME: name,
+					OPENED: 'Y',
+					ASSIGNED_BY_ID: '1',
 					STATUS_ID: 'NEW',
 					EMAIL: [{ VALUE: email, VALUE_TYPE: 'WORK' }],
 					PHONE: [{ VALUE: phone, VALUE_TYPE: 'WORK' }],
@@ -201,6 +211,25 @@ export const ContactForm = () => {
 					/>
 				</div>
 			</div>
+			<div className="w-full mb-10">
+				<Controller
+					name="checkbox"
+					control={control}
+					rules={{ required: true }}
+					render={({ field }) => (
+						<div className="w-full flex space-x-6">
+							<input
+								{...field}
+								type="checkbox"
+								className="border-[1px] border-black placeholder:text-gray-500"
+							/>
+							<label htmlFor="checkbox" className="text-gray-500">
+								{chcekboxText[locale]}
+							</label>
+						</div>
+					)}
+				/>
+			</div>
 			<div className="w-full flex justify-center md:justify-end">
 				<Button
 					isLoading={isLoading}
@@ -208,6 +237,7 @@ export const ContactForm = () => {
 					variant={'black'}
 				/>
 			</div>
+
 			<ToastContainer />
 		</form>
 	)

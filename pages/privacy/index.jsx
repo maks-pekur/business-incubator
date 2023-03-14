@@ -270,7 +270,7 @@ const index = () => {
 							niekompletne; <br /> d) <strong>do usunięcia danych</strong> – na
 							tej podstawie możesz żądać usunięcia danych, których przetwarzanie
 							nie jest już niezbędne do realizowania żadnego z celów, dla
-							których zostały zebrane; <br /> e)
+							których zostały zebrane; <br /> e){' '}
 							<strong>do ograniczenia przetwarzania</strong> – w razie
 							zgłoszenia takiego żądania Administrator zaprzestaje wykonywania
 							operacji na Danych osobowych – z wyjątkiem operacji, na które
@@ -278,7 +278,7 @@ const index = () => {
 							przechowywania, zgodnie z przyjętymi zasadami retencji lub dopóki
 							nie ustaną przyczyny ograniczenia przetwarzania danych (np.
 							zostanie wydana decyzja organu nadzorczego zezwalająca na dalsze
-							przetwarzanie danych); <br /> f)
+							przetwarzanie danych); <br /> f){' '}
 							<strong>do przenoszenia danych</strong> – na tej podstawie – w
 							zakresie, w jakim dane są przetwarzane w sposób zautomatyzowany w
 							związku z zawartą umową lub wyrażoną zgodą – Administrator wydaje
@@ -287,7 +287,7 @@ const index = () => {
 							zażądanie przesłania tych danych innemu podmiotowi, jednakże pod
 							warunkiem, że istnieją w tym zakresie techniczne możliwości
 							zarówno po stronie Administratora, jak również wskazanego
-							podmiotu; <br /> g)
+							podmiotu; <br /> g){' '}
 							<strong>
 								sprzeciwu wobec przetwarzania danych w celach marketingowych
 							</strong>{' '}
@@ -302,7 +302,7 @@ const index = () => {
 							Twoją szczególną sytuacją, przetwarzaniu Danych osobowych, które
 							odbywa się na podstawie prawnie uzasadnionego interesu
 							Administratora, sprzeciw w tym zakresie powinien zawierać
-							uzasadnienie; <br /> i)<strong>wycofania zgody</strong> – jeśli
+							uzasadnienie; <br /> i) <strong>wycofania zgody</strong> – jeśli
 							Twoje dane przetwarzane są na podstawie wyrażonej zgody, Podmiot
 							danych ma prawo wycofać ją w dowolnym momencie, co jednak nie
 							wpływa na zgodność z prawem przetwarzania dokonanego przed jej

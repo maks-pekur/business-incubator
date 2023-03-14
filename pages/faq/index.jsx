@@ -42,6 +42,9 @@ const index = ({ subscription }) => {
 	const {
 		data: { allFaqs },
 	} = useQuerySubscription(subscription)
+	const getFormatedText = text => {
+		return text.split('\n').map((str, i) => <p key={`p_${i}`}>{str}</p>)
+	}
 	return (
 		<>
 			<Head></Head>
@@ -68,8 +71,8 @@ const index = ({ subscription }) => {
 													height={24}
 												/>
 											</Disclosure.Button>
-											<Disclosure.Panel className="py-8">
-												{item.answer}
+											<Disclosure.Panel className="py-4">
+												{getFormatedText(item.answer)}
 											</Disclosure.Panel>
 										</>
 									)}

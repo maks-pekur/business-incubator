@@ -27,7 +27,7 @@ const App = ({ Component, pageProps }) => {
 			<CookieConsent
 				location="top"
 				buttonText="Ok"
-				cookieName="fbacoockie"
+				cookieName="fba_coockie"
 				style={{
 					background: '#2B373B',
 					display: 'flex',

@@ -17,4 +17,25 @@
 }
 
 
+html {
+  touch-action: manipulation;
+}
 
+svg {
+  text-rendering: optimizeLegibility;
+  shape-rendering: crispEdges;
+}
+
+.fade-in {
+  display: flex !important;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

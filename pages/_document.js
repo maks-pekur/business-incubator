@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
 	render() {
 		const { language } = this.props.__NEXT_DATA__.query
 		return (
-			<Html lang={language}>
+			<Html lang={language} className="scrollbar-hide">
 				<Head>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
 						rel="stylesheet"
 					/>
 				</Head>
-				<body className="bg-black font-extralight">
+				<body className="bg-black font-extralight scroll-smooth">
 					<Main />
 					<NextScript />
 				</body>

@@ -1,6 +1,15 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import { useTranslation } from 'react-i18next'
+import {
+	batch,
+	Fade,
+	FadeIn,
+	Move,
+	Sticky,
+	StickyIn,
+	ZoomIn,
+} from 'react-scroll-motion'
 import { AboutUs } from '../components/AboutUs'
 import { Consultation } from '../components/Consultation'
 import { GreenSection } from '../components/GreenSection'
@@ -13,6 +22,8 @@ import { WhatYouGetMobile } from '../components/WhatYouGetMobile'
 import { WhyPayMore } from '../components/WhyPayMore'
 import { useDevice } from '../hooks/useDevice'
 
+import dynamic from 'next/dynamic'
+
 export async function getStaticProps({ locale }) {
 	return {
 		props: {
@@ -24,6 +35,12 @@ export async function getStaticProps({ locale }) {
 const Home = () => {
 	const device = useDevice()
 	const { t } = useTranslation()
+	const Animator = dynamic(
+		import('react-scroll-motion').then(it => it.Animator),
+		{ ssr: false }
+	)
+	const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn())
+	const FadeUp = batch(Fade(), Move(), Sticky())
 	return (
 		<>
 			<Head>

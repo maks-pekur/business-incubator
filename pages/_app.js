@@ -9,9 +9,9 @@ import { ModalProvider } from '../hooks/useModal'
 import '../styles/globals.css'
 
 const coockieText = {
-	uk: 'Этот сайт использует coockie-файлы и другие технологии для предоставления лучшего пользовательского опыта и анализа использования наших продуктов и услуг.',
-	en: 'Этот сайт использует coockie-файлы и другие технологии для предоставления лучшего пользовательского опыта и анализа использования наших продуктов и услуг.',
-	pl: 'Этот сайт использует coockie-файлы и другие технологии для предоставления лучшего пользовательского опыта и анализа использования наших продуктов и услуг.',
+	uk: 'Цей сайт використовує coockie-файли та інші технології для надання кращого користувацького досвіду та аналізу використання наших продуктів і послуг.',
+	en: 'This site uses coockie files and other technologies to provide a better user experience and analysis of the use of our products and services.',
+	pl: 'Ta strona internetowa wykorzystuje pliki coockie i inne technologie w celu zapewnienia lepszego doświadczenia użytkownika i analizy korzystania z naszych produktów i usług.',
 	ru: 'Этот сайт использует coockie-файлы и другие технологии для предоставления лучшего пользовательского опыта и анализа использования наших продуктов и услуг.',
 }
 const App = ({ Component, pageProps }) => {

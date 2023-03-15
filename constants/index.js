@@ -59,7 +59,6 @@ export const personal = [
 		name: 'yevgen_name',
 		position: 'yevgen_position',
 		mail: 'yevgen_mail',
-		phone: 'yevgen_phone',
 	},
 	{
 		id: '04',
@@ -75,14 +74,12 @@ export const personal = [
 		name: 'karyna_name',
 		position: 'karyna_position',
 		mail: 'karyna_mail',
-		phone: 'karyna_phone',
 	},
 	{
 		id: '06',
 		img: maksym,
 		name: 'maksym_name',
 		position: 'maksym_position',
-		phone: 'maksym_phone',
 		mail: 'maksym_mail',
 	},
 	{
@@ -91,7 +88,6 @@ export const personal = [
 		name: 'yelisaveta_name',
 		position: 'yelisaveta_position',
 		mail: 'yelisaveta_mail',
-		phone: 'yelisaveta_phone',
 	},
 	{
 		id: '08',
@@ -99,7 +95,6 @@ export const personal = [
 		name: 'sofiia_name',
 		position: 'sofiia_position',
 		mail: 'sofiia_mail',
-		phone: 'sofiia_phone',
 	},
 ]
 

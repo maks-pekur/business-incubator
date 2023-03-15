@@ -7,7 +7,7 @@ import { NumSection } from './ui/NumSection'
 export const ServiceWhatYouGet = () => {
 	const { t } = useTranslation()
 	return (
-		<section className="pb-6 sticky bg-black text-white">
+		<section className="pb-6 sticky bg-black">
 			<div className="bg-[var(--dark-gray)] rounded-3xl md:p-14 p-6  ">
 				<div className="mb-6 md:mb-0">
 					<NumSection

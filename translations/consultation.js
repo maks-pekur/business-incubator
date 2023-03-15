@@ -14,8 +14,8 @@ export const consultation = {
 	name: {
 		pl: 'Twoje imię*',
 		en: 'Name*',
-		uk: 'Ваше имя*',
-		ru: 'Ваше имя*',
+		uk: "Твоє ім'я*",
+		ru: 'Твое имя*',
 	},
 	email: {
 		pl: 'E-mail',
@@ -32,8 +32,8 @@ export const consultation = {
 	message: {
 		pl: 'Twoje pytanie',
 		en: 'Your message',
-		uk: 'Ваше питання',
-		ru: 'Ваш вопрос',
+		uk: 'Твоє питання',
+		ru: 'Твой вопрос',
 	},
 	btn: {
 		pl: 'Wysłać',

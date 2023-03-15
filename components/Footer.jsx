@@ -163,7 +163,10 @@ export const Footer = () => {
 					{`© ${year} Freedom Business Area. All rights reserved.`}
 				</div>
 				<div className="flex justify-end">
-					<Link href={'/'} className="hover:text-white transition duration-300">
+					<Link
+						href={'/terms'}
+						className="hover:text-white transition duration-300"
+					>
 						Terms & Conditions
 					</Link>
 				</div>

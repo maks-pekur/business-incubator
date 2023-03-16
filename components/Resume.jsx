@@ -1,44 +1,71 @@
-import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
-import { Controller, useForm } from 'react-hook-form'
+
+import { Form, Formik } from 'formik'
+import { useTranslation } from 'next-i18next'
 import PhoneInput from 'react-phone-input-2'
+import { toast, ToastContainer } from 'react-toastify'
+import * as Yup from 'yup'
 import { sendContactForm } from '../lib/api'
-import uploadImg from '../public/assets/images/upload.svg'
 import { Button } from './ui/Button'
 
+import uploadImg from '../public/assets/images/upload.svg'
+
+import { useRouter } from 'next/router'
 import 'react-phone-input-2/lib/style.css'
+
+const resumeSchema = Yup.object().shape({
+	name: Yup.string().min(2).max(50).required('Required'),
+	email: Yup.string().email().required('Required'),
+	checkbox: Yup.bool().oneOf([true]),
+})
+
+const toastText = {
+	uk: '👋 Ваша заявка відправлена',
+	pl: '👋 Twój wniosek został wysłany',
+	en: '👋 Your request has been sent',
+	ru: '👋 Ваша заявка отправлена',
+}
 
 export const Resume = () => {
 	const { t } = useTranslation()
-	const [isLoading, setLoading] = useState(false)
+	const { locale } = useRouter()
 	const fileInput = useRef()
+	const formRef = useRef()
 
-	const {
-		register,
-		formState: { errors },
-		handleSubmit,
-		control,
-		reset,
-	} = useForm({
-		mode: 'onSubmit',
-		defaultValues: {
-			name: '',
-			email: '',
-			phone: '',
-			message: '',
-			position: '',
-			checkbox: false,
-			cv: null,
-		},
-	})
+	const [isLoading, setLoading] = useState(false)
 
-	const onSubmit = async values => {
+	const initialData = {
+		name: '',
+		email: '',
+		phone: '',
+		message: '',
+		position: '',
+		checkbox: false,
+		file: {},
+	}
+
+	const notify = () => {
+		toast.success(toastText[locale], {
+			position: 'top-center',
+			autoClose: 2000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: 'dark',
+		})
+	}
+
+	const handleSubmit = async (values, { resetForm }) => {
 		try {
+			const formData = new FormData()
 			setLoading(true)
 			await sendContactForm(values)
 			setLoading(false)
-			reset()
+			notify()
+			resetForm()
 		} catch (error) {
 			setLoading(false)
 			console.log(error)
@@ -46,164 +73,181 @@ export const Resume = () => {
 	}
 
 	return (
-		<form className="grid md:p-8 w-full" onSubmit={handleSubmit(onSubmit)}>
-			<div className="grid md:grid-cols-2 gap-6 md:gap-20 mb-10">
-				<div className="space-y-8 md:space-y-14">
-					<div className="w-full">
-						<input
-							placeholder={
-								errors.name ? 'Please enter your name' : t('career:resume.name')
-							}
-							type="text"
-							{...register('name', {
-								required: true,
-							})}
-							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
-								errors.name && 'border-[#e7795d]'
-							}`}
-						/>
-					</div>
+		<>
+			<Formik
+				initialValues={initialData}
+				onSubmit={handleSubmit}
+				validationSchema={resumeSchema}
+			>
+				{({
+					values,
+					errors,
+					touched,
+					handleChange,
+					handleSubmit,
+					handleBlur,
+					setFieldValue,
+				}) => (
+					<Form
+						onSubmit={handleSubmit}
+						ref={formRef}
+						className="grid md:p-8 w-full"
+					>
+						<div className="grid md:grid-cols-2 gap-6 md:gap-20 mb-10">
+							<div className="space-y-8 md:space-y-14">
+								<div className="w-full">
+									<input
+										placeholder={t('career:resume.name')}
+										type="text"
+										name="name"
+										value={values.name}
+										onChange={handleChange}
+										onBlur={handleBlur}
+										className={`w-full border-b-[1px] py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
+											errors.name && touched.name
+												? 'border-[#e7795d]'
+												: 'border-black'
+										}`}
+									/>
+								</div>
 
-					<div className="w-full">
-						<input
-							placeholder={t('career:resume.email')}
-							type="email"
-							{...register('email', {
-								required: 'Email is required.',
-								pattern: {
-									value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-									message: 'Email is not valid.',
-								},
-							})}
-							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
-								errors.name && 'border-[#e7795d]'
-							}`}
-						/>
-					</div>
-				</div>
-				<div className="space-y-10 md:space-y-14">
-					<div className="w-full">
-						<Controller
-							control={control}
-							name="phone"
-							rules={{ required: true }}
-							render={({ field: { ref, ...field } }) => (
-								<PhoneInput
-									{...field}
-									name="phone"
-									inputExtraProps={{
-										ref,
-										required: true,
-										autoFocus: true,
-									}}
-									country="pl"
-									onlyCountries={['pl', 'ua', 'ru']}
-									inputStyle={{
-										width: '100%',
-										borderBottom: '1px solid #000',
-										padding: '31px 48px',
-										backgroundColor: 'transparent',
-									}}
-									buttonStyle={{
-										backgroundColor: 'transparent',
-										outline: 'none',
-										border: 'none',
-									}}
-									dropdownStyle={{
-										width: '300px',
-										marginTop: '4px',
-										outline: 'none',
-										padding: '10px',
-										boxShadow:
-											'0px 4px 40px rgba(0, 0, 0, 0.25), 0px 16px 40px rgba(33, 33, 33, 0.16)',
-									}}
-								/>
-							)}
-						/>
-					</div>
-					<div className="w-full">
-						<input
-							type="text"
-							placeholder={t('career:resume.position')}
-							{...register('position', {
-								required: true,
-							})}
-							className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
-								errors.name && 'border-[#e7795d]'
-							}`}
-						/>
-					</div>
-				</div>
-			</div>
-
-			<div className="w-full mb-10">
-				<textarea
-					placeholder={t('career:resume.message')}
-					type="text"
-					name="message"
-					{...register('message')}
-					className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none  ${
-						errors.name && 'border-[#e7795d]'
-					}`}
-				/>
-			</div>
-
-			<div className="w-full flex items-center mb-10">
-				<label
-					htmlFor="cv"
-					onClick={() => fileInput.current.click()}
-					className="cursor-pointer flex items-center space-x-4"
-				>
-					<Image src={uploadImg} width={40} height={40} alt="upload" />
-					<span className="text-gray-500">{t('career:resume.upload')}</span>
-				</label>
-				<Controller
-					control={control}
-					name="cv"
-					render={({
-						field: { onChange, onBlur, value, name, ref },
-						formState,
-					}) => (
-						<input
-							className="hidden"
-							type="file"
-							onChange={onChange}
-							onBlur={onBlur}
-							name={name}
-							ref={fileInput}
-							value={value}
-							multiple="true"
-						/>
-					)}
-				/>
-			</div>
-
-			<div className="w-full mb-10">
-				<Controller
-					name="checkbox"
-					control={control}
-					rules={{ required: true }}
-					render={({ field }) => (
-						<div className="w-full flex space-x-6">
-							<input
-								{...field}
-								type="checkbox"
-								className="border-[1px] border-black placeholder:text-gray-500"
-							/>
-							<label htmlFor="checkbox" className="text-gray-500">
-								{t('career:resume.policy')}
-							</label>
+								<div className="w-full">
+									<input
+										placeholder={t('career:resume.email')}
+										type="email"
+										name="email"
+										value={values.email}
+										onChange={handleChange}
+										onBlur={handleBlur}
+										className={`w-full border-b-[1px] py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
+											errors.email && touched.email
+												? 'border-[#e7795d]'
+												: 'border-black '
+										}`}
+									/>
+								</div>
+							</div>
+							<div className="space-y-10 md:space-y-14">
+								<div className="w-full">
+									<PhoneInput
+										value={values.phone}
+										inputProps={{
+											name: 'phone',
+											required: true,
+											autoFocus: true,
+										}}
+										onChange={value => {
+											values.phone = value
+										}}
+										country="pl"
+										onlyCountries={['pl', 'ua', 'ru']}
+										inputStyle={{
+											width: '100%',
+											borderBottom: '1px solid #000',
+											padding: '31px 48px',
+											backgroundColor: 'transparent',
+										}}
+										buttonStyle={{
+											backgroundColor: 'transparent',
+											outline: 'none',
+											border: 'none',
+										}}
+										dropdownStyle={{
+											width: '300px',
+											marginTop: '4px',
+											outline: 'none',
+											padding: '10px',
+											boxShadow:
+												'0px 4px 40px rgba(0, 0, 0, 0.25), 0px 16px 40px rgba(33, 33, 33, 0.16)',
+										}}
+									/>
+								</div>
+								<div className="w-full">
+									<input
+										type="text"
+										name="position"
+										value={values.position}
+										onChange={handleChange}
+										placeholder={t('career:resume.position')}
+										className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none ${
+											errors.position && touched.position
+												? 'border-[#e7795d]'
+												: 'border-black '
+										}`}
+									/>
+								</div>
+							</div>
 						</div>
-					)}
-				/>
-			</div>
-			<div className="flex justify-center md:justify-end w-full">
-				<Button
-					variant={'green'}
-					title={t('career:resume.btn')}
-					isLoading={isLoading}
-				/>
-			</div>
-		</form>
+
+						<div className="w-full mb-10">
+							<textarea
+								placeholder={t('career:resume.message')}
+								type="text"
+								name="message"
+								value={values.message}
+								onChange={handleChange}
+								onBlur={handleBlur}
+								className={`w-full border-b-[1px] border-black py-3 px-6 bg-transparent placeholder:text-gray-500 outline-none  ${
+									errors.message && touched.message
+										? 'border-[#e7795d]'
+										: 'border-black '
+								}`}
+							/>
+						</div>
+
+						<div className="w-full flex items-center mb-10">
+							<label
+								htmlFor="cv"
+								onClick={() => fileInput.current.click()}
+								className="cursor-pointer flex items-center space-x-4"
+							>
+								<Image src={uploadImg} width={40} height={40} alt="upload" />
+								<span className="text-gray-500">
+									{t('career:resume.upload')}
+								</span>
+							</label>
+							<input
+								className="hidden"
+								type="file"
+								name="cv"
+								ref={fileInput}
+								multiple
+								onChange={event => {
+									setFieldValue('file', event.target.files[0])
+								}}
+							/>
+						</div>
+
+						<div className="w-full mb-10">
+							<div className="w-full flex space-x-6">
+								<input
+									name="checkbox"
+									type="checkbox"
+									value={values.checkbox}
+									onChange={handleChange}
+									className="border-[1px] border-black placeholder:text-gray-500"
+								/>
+								<label
+									htmlFor="checkbox"
+									className={`${
+										errors.checkbox ? 'text-red-500' : 'text-gray-500'
+									}`}
+								>
+									{t('career:resume.policy')}
+								</label>
+							</div>
+						</div>
+						<div className="flex justify-center md:justify-end w-full">
+							<Button
+								variant={'green'}
+								title={t('career:resume.btn')}
+								isLoading={isLoading}
+							/>
+						</div>
+					</Form>
+				)}
+			</Formik>
+			<ToastContainer />
+		</>
 	)
 }

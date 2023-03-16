@@ -5,9 +5,7 @@ const CONTACT_MESSAGE_FIELDS = {
 	email: 'Email',
 	phone: 'Phone',
 	position: 'Position',
-	checkbox: 'Policy',
 	message: 'Message',
-	cv: 'CV',
 }
 
 const generateEmailContent = data => {
@@ -104,10 +102,11 @@ const handler = async (req, res) => {
 		await transporter.sendMail({
 			...mailOptions,
 			...generateEmailContent(data),
-			subject: data.subject,
-			attachments: {
-				filename: data.filename,
-			},
+			attachments: [
+				{
+					filename: data.filename,
+				},
+			],
 		})
 
 		return res.status(200).json({ success: true })

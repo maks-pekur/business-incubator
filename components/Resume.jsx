@@ -18,6 +18,7 @@ const resumeSchema = Yup.object().shape({
 	name: Yup.string().min(2).max(50).required('Required'),
 	email: Yup.string().email().required('Required'),
 	checkbox: Yup.bool().oneOf([true]),
+	file: Yup.mixed().required(),
 })
 
 const toastText = {
@@ -31,7 +32,6 @@ export const Resume = () => {
 	const { t } = useTranslation()
 	const { locale } = useRouter()
 	const fileInput = useRef()
-	const formRef = useRef()
 
 	const [isLoading, setLoading] = useState(false)
 
@@ -42,7 +42,7 @@ export const Resume = () => {
 		message: '',
 		position: '',
 		checkbox: false,
-		file: {},
+		file: null,
 	}
 
 	const notify = () => {
@@ -60,7 +60,6 @@ export const Resume = () => {
 
 	const handleSubmit = async (values, { resetForm }) => {
 		try {
-			const formData = new FormData()
 			setLoading(true)
 			await sendContactForm(values)
 			setLoading(false)
@@ -88,11 +87,7 @@ export const Resume = () => {
 					handleBlur,
 					setFieldValue,
 				}) => (
-					<Form
-						onSubmit={handleSubmit}
-						ref={formRef}
-						className="grid md:p-8 w-full"
-					>
+					<Form onSubmit={handleSubmit} className="grid md:p-8 w-full">
 						<div className="grid md:grid-cols-2 gap-6 md:gap-20 mb-10">
 							<div className="space-y-8 md:space-y-14">
 								<div className="w-full">

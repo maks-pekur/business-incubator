@@ -18,16 +18,76 @@ const index = () => {
 			<Head></Head>
 			<Hero />
 			<section className="bg-white rounded-3xl lg:p-20 sticky top-0">
-				<Image src={img1} alt="terms" width={1200} height={1000} />
-				<Image src={img2} alt="terms" width={1200} height={1000} />
-				<Image src={img3} alt="terms" width={1200} height={1000} />
-				<Image src={img4} alt="terms" width={1200} height={1000} />
-				<Image src={img5} alt="terms" width={1200} height={1000} />
-				<Image src={img6} alt="terms" width={1200} height={1000} />
-				<Image src={img7} alt="terms" width={1200} height={1000} />
-				<Image src={img8} alt="terms" width={1200} height={1000} />
-				<Image src={img9} alt="terms" width={1200} height={1000} />
-				<Image src={img10} alt="terms" width={1200} height={1000} />
+				<Image
+					src={img1}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img2}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img3}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img4}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img5}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img6}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img7}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img8}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img9}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
+				<Image
+					src={img10}
+					alt="terms"
+					width={1200}
+					height={1000}
+					className="-rotate-1"
+				/>
 			</section>
 		</>
 	)

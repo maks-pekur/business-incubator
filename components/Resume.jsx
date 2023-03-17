@@ -1,3 +1,4 @@
+import axios from 'axios'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
@@ -7,7 +8,6 @@ import { useTranslation } from 'next-i18next'
 import PhoneInput from 'react-phone-input-2'
 import { toast, ToastContainer } from 'react-toastify'
 import * as Yup from 'yup'
-import { sendContactForm } from '../lib/api'
 import { Button } from './ui/Button'
 
 import uploadImg from '../public/assets/images/upload.svg'
@@ -27,6 +27,13 @@ const toastText = {
 	ru: '👋 Ваша заявка отправлена',
 }
 
+const toastErrorText = {
+	uk: '👋 Упс! Дані не відправлено',
+	pl: '👋 Error',
+	en: '👋 Error',
+	ru: '👋 Упс! Данные не отправлены',
+}
+
 export const Resume = () => {
 	const { t } = useTranslation()
 	const { locale } = useRouter()
@@ -34,14 +41,6 @@ export const Resume = () => {
 
 	const [isLoading, setLoading] = useState(false)
 	const [file, setFile] = useState(null)
-
-	const initialData = {
-		name: '',
-		email: '',
-		phone: '',
-		message: '',
-		position: '',
-	}
 
 	const notify = () => {
 		toast.success(toastText[locale], {
@@ -56,27 +55,52 @@ export const Resume = () => {
 		})
 	}
 
+	const notifyError = () => {
+		toast.error(toastErrorText[locale], {
+			position: 'top-center',
+			autoClose: 2000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: 'dark',
+		})
+	}
+
+	const initialData = {
+		name: '',
+		email: '',
+		phone: '',
+		message: '',
+		position: '',
+	}
+
 	const handleSubmit = async (values, { resetForm }) => {
+		setLoading(true)
+		let formData = new FormData()
+
+		formData.append('name', values.name)
+		formData.append('email', values.email)
+		formData.append('phone', values.phone)
+		formData.append('position', values.position)
+		formData.append('message', values.message)
+		formData.append('file', file)
+
 		try {
-			setLoading(true)
-			let formData = new FormData()
-
-			formData.append('name', values.name)
-			formData.append('email', values.email)
-			formData.append('phone', values.phone)
-			formData.append('position', values.position)
-			formData.append('message', values.message)
-			formData.append('file', file)
-
-			await sendContactForm(formData)
-
+			await axios.post('/api/send', formData, {
+				headers: {
+					'Content-Type': `multipart/form-data`,
+				},
+			})
 			setLoading(false)
 			notify()
 			setFile(null)
 			resetForm()
 		} catch (error) {
+			console.error(error)
+			notifyError()
 			setLoading(false)
-			console.log(error)
 		}
 	}
 

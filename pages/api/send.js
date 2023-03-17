@@ -116,7 +116,8 @@ const generateEmailContent = data => {
                     <td> 
                       <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
                         <tr> 
-                          <tr style=" padding: 0 0 0 0; font-size: 16px; line-height: 25px; color: #232323; " class="padding message-content" > <h2>New Contact Message</h2>
+                          <tr style=" padding: 0 0 0 0; font-size: 16px; line-height: 25px; color: #232323; " class="padding message-content"> 
+                          <h2>New Contact Message</h2>
                           <div class="form-container">${data}</div>
                         </tr>
                       </table> 

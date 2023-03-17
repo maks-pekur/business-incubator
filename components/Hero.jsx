@@ -24,7 +24,11 @@ export const Hero = () => {
 					transition={{ duration: 1.7 }}
 					className="absolute inset-0"
 				>
-					<Image src={figure} fill style={{ objectFit: 'cover' }} />
+					<Image
+						src={figure}
+						fill
+						style={{ objectFit: 'cover', pointerEvents: 'none' }}
+					/>
 				</motion.div>
 
 				<div className="absolute inset-6 text-white flex items-center md:items-end md:left-10 md:w-[55%] mb-24">

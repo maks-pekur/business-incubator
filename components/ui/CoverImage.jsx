@@ -9,7 +9,7 @@ export const CoverImage = ({ title, responsiveImage, slug }) => {
 				...responsiveImage,
 				alt: `Cover Image for ${title}`,
 			}}
-			className={cn('shadow-small', {
+			className={cn('shadow-small pointer-events-none', {
 				'hover:shadow-md transition-all duration-200': slug,
 			})}
 		/>

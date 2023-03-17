@@ -8,8 +8,8 @@ export const GreenSection = ({ children, title }) => {
 		<section className="pb-6 sticky bg-black overflow-hidden">
 			<div className="relative bg-[var(--green)] h-[400px] rounded-3xl ">
 				<div className="hidden absolute inset-0 md:flex justify-between">
-					<Image src={sotLeft} alt="" />
-					<Image src={sotRight} alt="" />
+					<Image src={sotLeft} alt="" style={{ pointerEvents: 'none' }} />
+					<Image src={sotRight} alt="" style={{ pointerEvents: 'none' }} />
 				</div>
 
 				<div className="absolute inset-0 flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-10 rounded-xl">

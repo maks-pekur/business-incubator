@@ -45,7 +45,13 @@ export const ExtraServices = () => {
 							className="border-2 border-black rounded-3xl flex flex-col overflow-hidden"
 						>
 							<div className="flex items-center justify-center w-full h-full p-10">
-								<Image src={card.image} width={150} height={150} alt="" />
+								<Image
+									src={card.image}
+									width={150}
+									height={150}
+									alt=""
+									style={{ pointerEvents: 'none' }}
+								/>
 							</div>
 
 							<div className="bg-black text-white w-full rounded-2xl p-6 md:p-10">

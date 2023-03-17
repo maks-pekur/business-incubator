@@ -19,7 +19,12 @@ export const VS = () => {
 							<div className="flex items-center text-white mb-6">
 								<div>{t('home:04.title.text1')}</div>
 								<div className="p-2">
-									<Image src={'/assets/images/vs.svg'} width={80} height={80} />
+									<Image
+										src={'/assets/images/vs.svg'}
+										width={80}
+										height={80}
+										style={{ pointerEvents: 'none' }}
+									/>
 								</div>
 								<div>{t('home:04.title.text2')}</div>
 							</div>

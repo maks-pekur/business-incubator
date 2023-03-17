@@ -32,7 +32,7 @@ export const ServicePrice = () => {
 									{t('services:02.card.title')}
 								</Heading>
 								<div className="flex items-center justify-center w-full">
-									<Image src={cub} width={150} height={150} alt="" />
+									<Image src={cub} width={150} height={150} alt="" style={{pointerEvents: "none"}} />
 								</div>
 							</div>
 							<Link

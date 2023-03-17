@@ -13,13 +13,14 @@ export const UmbrellaSection = () => {
 					<NumSection number={'01'} title={''} variant={'green'} />
 				</div>
 				<div className="w-full h-full grid md:grid-cols-2 gap-10">
-					<div className="hidden md:flex items-end justify-center">
+					<div className="hidden md:flex items-end justify-center pointer-events-none">
 						<Image
 							src={umbrella}
 							width={500}
 							height={500}
 							alt=""
 							className="flex-end"
+							style={{pointerEvents: "none"}}
 						/>
 					</div>
 					<div className="md:space-y-10 space-y-4">

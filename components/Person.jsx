@@ -12,7 +12,13 @@ export const Person = ({ person }) => {
 		<article className="flex flex-col justify-center items-center">
 			<div className="relative overflow-hidden rounded-3xl">
 				<div>
-					<Image src={person.img} width={1000} height={1000} alt="" />
+					<Image
+						src={person.img}
+						width={1000}
+						height={1000}
+						alt=""
+						style={{ pointerEvents: 'none' }}
+					/>
 				</div>
 				<div className="bg-[var(--green)] w-full rounded-2xl p-3 flex flex-col absolute bottom-0 top-[90%] hover:top-[40%] transition-all duration-300">
 					<div className="text-lg lg:text-xl xl:text-2xl text-center mb-10">
@@ -35,6 +41,7 @@ export const Person = ({ person }) => {
 										height={30}
 										alt="mail"
 										className="fill-black"
+										style={{ pointerEvents: 'none' }}
 									/>
 								</div>
 								<div>{t(`team:${person.mail}`)}</div>

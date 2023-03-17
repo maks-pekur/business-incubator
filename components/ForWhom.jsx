@@ -35,7 +35,13 @@ export const ForWhom = () => {
 							className="bg-[var(--light-gray)] rounded-3xl p-4 md:p-10"
 						>
 							<div className="mb-6 md:mb-10 h-[200px] flex items-center justify-center">
-								<Image src={card.img} width={200} height={200} alt="" />
+								<Image
+									src={card.img}
+									width={200}
+									height={200}
+									alt=""
+									style={{ pointerEvents: 'none' }}
+								/>
 							</div>
 							<div className="w-full flex items-center justify-center md:justify-start">
 								<ul>

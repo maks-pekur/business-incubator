@@ -68,7 +68,13 @@ export const Reviews = ({ reviews }) => {
 										<div className="text-[12px] mb-6">{review.text}</div>
 									</div>
 									<div className="flex items-center space-x-4 text-[12px]">
-										<Image src={google} width={30} height={30} alt="google" />
+										<Image
+											src={google}
+											width={30}
+											height={30}
+											alt="google"
+											style={{ pointerEvents: 'none' }}
+										/>
 										<Date dateString={review.date} />
 									</div>
 								</Link>

@@ -46,6 +46,7 @@ export const Partners = () => {
 							width={150}
 							height={150}
 							alt="partner"
+							style={{ pointerEvents: 'none' }}
 						/>
 					</div>
 				))}

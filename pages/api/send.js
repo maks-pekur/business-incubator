@@ -9,6 +9,8 @@ const CONTACT_MESSAGE_FIELDS = {
 }
 
 const generateEmailContent = data => {
+	const { name, email, phone, position, message } = data
+
 	const stringData = Object.entries(data).reduce(
 		(str, [key, value]) =>
 			(str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${value} \n \n`),
@@ -21,19 +23,6 @@ const generateEmailContent = data => {
 	// 	''
 	// )
 
-	const htmlData = data => {
-		const { name, email, message } = data
-
-		return (
-			<div style={{ fontFamily: 'Arial, sans-serif', fontSize: '16px' }}>
-				<p>
-					From: {name} &lt;{email}&gt;
-				</p>
-				<p>Message:</p>
-				<p>{message}</p>
-			</div>
-		)
-	}
 	return {
 		text: stringData,
 		html: `

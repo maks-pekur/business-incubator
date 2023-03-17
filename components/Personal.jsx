@@ -13,7 +13,7 @@ export const Personal = () => {
 				</Heading>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20">
 					{personal.map(person => (
-						<Person person={person} />
+						<Person key={person.id} person={person} />
 					))}
 				</div>
 			</div>

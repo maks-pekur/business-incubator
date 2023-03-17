@@ -17,7 +17,7 @@ const index = () => {
 		<>
 			<Head></Head>
 			<Hero />
-			<section className="bg-white rounded-3xl lg:p-20 p-4 sticky top-0">
+			<section className="bg-white rounded-3xl lg:p-20 p-2 sticky top-0">
 				<Image
 					src={img1}
 					alt="terms"

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
 
 import { Form, Formik } from 'formik'
@@ -11,14 +12,12 @@ import { Button } from './ui/Button'
 
 import uploadImg from '../public/assets/images/upload.svg'
 
-import { useRouter } from 'next/router'
 import 'react-phone-input-2/lib/style.css'
 
 const resumeSchema = Yup.object().shape({
 	name: Yup.string().min(2).max(50).required('Required'),
 	email: Yup.string().email().required('Required'),
 	checkbox: Yup.bool().oneOf([true]),
-	file: Yup.mixed().required(),
 })
 
 const toastText = {
@@ -34,6 +33,7 @@ export const Resume = () => {
 	const fileInput = useRef()
 
 	const [isLoading, setLoading] = useState(false)
+	const [file, setFile] = useState(null)
 
 	const initialData = {
 		name: '',
@@ -41,8 +41,6 @@ export const Resume = () => {
 		phone: '',
 		message: '',
 		position: '',
-		checkbox: false,
-		file: null,
 	}
 
 	const notify = () => {
@@ -61,9 +59,20 @@ export const Resume = () => {
 	const handleSubmit = async (values, { resetForm }) => {
 		try {
 			setLoading(true)
-			await sendContactForm(values)
+			let formData = new FormData()
+
+			formData.append('name', values.name)
+			formData.append('email', values.email)
+			formData.append('phone', values.phone)
+			formData.append('position', values.position)
+			formData.append('message', values.message)
+			formData.append('file', file)
+
+			await sendContactForm(formData)
+
 			setLoading(false)
 			notify()
+			setFile(null)
 			resetForm()
 		} catch (error) {
 			setLoading(false)
@@ -197,20 +206,18 @@ export const Resume = () => {
 								className="cursor-pointer flex items-center space-x-4"
 							>
 								<Image src={uploadImg} width={40} height={40} alt="upload" />
-								<span className="text-gray-500">
-									{t('career:resume.upload')}
+								<input
+									className="hidden"
+									type="file"
+									name="cv"
+									ref={fileInput}
+									multiple
+									onChange={event => setFile(event.target.files[0])}
+								/>
+								<span className="ml-6">
+									{file ? file.name : t('career:resume.upload')}
 								</span>
 							</label>
-							<input
-								className="hidden"
-								type="file"
-								name="cv"
-								ref={fileInput}
-								multiple
-								onChange={event => {
-									setFieldValue('file', event.target.files[0])
-								}}
-							/>
 						</div>
 
 						<div className="w-full mb-10">

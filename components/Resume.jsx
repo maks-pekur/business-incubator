@@ -40,7 +40,6 @@ export const Resume = () => {
 	const fileInput = useRef()
 
 	const [isLoading, setLoading] = useState(false)
-	const [file, setFile] = useState(null)
 
 	const notify = () => {
 		toast.success(toastText[locale], {
@@ -74,28 +73,26 @@ export const Resume = () => {
 		phone: '',
 		message: '',
 		position: '',
+		careerCV: null,
 	}
 
 	const handleSubmit = async (values, { resetForm }) => {
 		setLoading(true)
-		let formData = new FormData()
 
-		formData.append('name', values.name)
-		formData.append('email', values.email)
-		formData.append('phone', values.phone)
-		formData.append('position', values.position)
-		formData.append('message', values.message)
-		formData.append('file', file)
+		const formdata = new FormData()
+
+		Object.entries(values).forEach(([key, value]) => {
+			formdata.set(key, value)
+		})
 
 		try {
-			await axios.post('/api/send', formData, {
-				headers: {
-					'Content-Type': `multipart/form-data`,
-				},
+			await axios({
+				method: 'POST',
+				url: '/api/send',
+				data: formdata,
 			})
 			setLoading(false)
 			notify()
-			setFile(null)
 			resetForm()
 		} catch (error) {
 			console.error(error)
@@ -233,14 +230,13 @@ export const Resume = () => {
 								<input
 									className="hidden"
 									type="file"
-									name="cv"
+									name="careerCV"
 									ref={fileInput}
-									multiple
-									onChange={event => setFile(event.target.files[0])}
+									onChange={e =>
+										setFieldValue('careerCV', e.currentTarget.files[0])
+									}
 								/>
-								<span className="ml-6">
-									{file ? file.name : t('career:resume.upload')}
-								</span>
+								<span className="ml-6">{t('career:resume.upload')}</span>
 							</label>
 						</div>
 

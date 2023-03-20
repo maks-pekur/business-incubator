@@ -74,6 +74,7 @@ export const Resume = () => {
 		message: '',
 		position: '',
 		careerCV: null,
+		checkbox: false,
 	}
 
 	const handleSubmit = async (values, { resetForm }) => {
@@ -104,6 +105,7 @@ export const Resume = () => {
 	return (
 		<>
 			<Formik
+				enableReinitialize
 				initialValues={initialData}
 				onSubmit={handleSubmit}
 				validationSchema={resumeSchema}
@@ -222,7 +224,7 @@ export const Resume = () => {
 
 						<div className="w-full flex items-center mb-10">
 							<label
-								htmlFor="cv"
+								htmlFor="careerCV"
 								onClick={() => fileInput.current.click()}
 								className="cursor-pointer flex items-center space-x-4"
 							>
@@ -247,6 +249,7 @@ export const Resume = () => {
 									type="checkbox"
 									value={values.checkbox}
 									onChange={handleChange}
+									onBlur={handleBlur}
 									className="border-[1px] border-black placeholder:text-gray-500"
 								/>
 								<label

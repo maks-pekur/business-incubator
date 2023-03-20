@@ -49,17 +49,15 @@ export default async (req, res) => {
 
 		const { fields, files } = await formidablePromise(req, {
 			...formidableConfig,
-			// consume this, otherwise formidable tries to save the file to disk
 			fileWriteStreamHandler: () => fileConsumer(chunks),
 		})
-		// or the actual field name you used in the front end
 		const { careerCV } = files
 
 		const fileData = Buffer.concat(chunks)
 		const filename = careerCV?.originalFilename
-		const attachment = [{ content: fileData, filename }]
+		const attachments = [{ content: fileData, filename }]
 
-		sendEmail(fields, attachment)
+		sendEmail(fields, attachments)
 
 		return res.status(204).end()
 	} catch (err) {

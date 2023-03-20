@@ -57,7 +57,7 @@ export default async (req, res) => {
 		const filename = careerCV?.originalFilename
 		const attachments = [{ content: fileData, filename }]
 
-		sendEmail(fields, attachments)
+		await sendEmail(fields, attachments)
 
 		return res.status(204).end()
 	} catch (err) {

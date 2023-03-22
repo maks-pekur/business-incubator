@@ -25,7 +25,7 @@ export const PostPreview = ({
 					/>
 				</div>
 				<div className="mb-4 min-h-[100px]">
-					<Heading tag={'h3'}>
+					<Heading classNames="font-bold" tag={'h3'}>
 						<Link href={`/posts/${slug}`}>{title}</Link>
 					</Heading>
 				</div>

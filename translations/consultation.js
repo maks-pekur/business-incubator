@@ -24,9 +24,9 @@ export const consultation = {
 		ru: 'E-mail',
 	},
 	nik: {
-		pl: 'Nik в Telegram',
-		en: 'Nickname',
-		uk: 'Nickname',
+		pl: 'Nickname w Telegram',
+		en: 'Nickname on Telegram',
+		uk: 'Нік в Телеграм',
 		ru: 'Ник в Telegram',
 	},
 	message: {

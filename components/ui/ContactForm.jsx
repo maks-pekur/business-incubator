@@ -23,10 +23,17 @@ const chcekboxText = {
 }
 
 const toastText = {
-	uk: 'Ваша заявка відправлена',
-	pl: 'Twój wniosek został wysłany',
-	en: 'Your request has been sent',
-	ru: 'Ваша заявка отправлена',
+	uk: '👋 Ваша заявка відправлена',
+	pl: '👋 Twój wniosek został wysłany',
+	en: '👋 Your request has been sent',
+	ru: '👋 Ваша заявка отправлена',
+}
+
+const toastErrorText = {
+	uk: '👋 Упс! Дані не відправлено',
+	pl: '👋 Error',
+	en: '👋 Error',
+	ru: '👋 Упс! Данные не отправлены',
 }
 
 export const ContactForm = () => {
@@ -35,6 +42,19 @@ export const ContactForm = () => {
 
 	const notify = () => {
 		toast.success(toastText[locale], {
+			position: 'top-center',
+			autoClose: 2000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: 'dark',
+		})
+	}
+
+	const notifyError = () => {
+		toast.error(toastErrorText[locale], {
 			position: 'top-center',
 			autoClose: 2000,
 			hideProgressBar: false,
@@ -96,6 +116,7 @@ export const ContactForm = () => {
 		} catch (error) {
 			setLoading(false)
 			console.log(error)
+			notifyError()
 		}
 	}
 

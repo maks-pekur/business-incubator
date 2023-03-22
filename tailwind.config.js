@@ -6,5 +6,7 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {},
-	plugins: [require('tailwind-scrollbar-hide', 'flowbite/plugin')],
+	plugins: [
+		require('tailwind-scrollbar-hide', 'flowbite/plugin', '@tailwindcss/typography'),
+	],
 }

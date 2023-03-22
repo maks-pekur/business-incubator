@@ -12,10 +12,10 @@ export const LinkComponent = ({ href, title, variant }) => {
 	return (
 		<Link
 			href={href}
-			spy={true}
-			smooth={true}
-			duration={2500}
-			delay={200}
+			spy="true"
+			smooth="true"
+			duration="2500"
+			delay="200"
 			className={`cursor-pointer px-6 py-3 rounded-full border-black border-[1px] space-x-6 flex items-center justify-center transition-colors duration-200 ${styles[variant]}`}
 		>
 			<span>{title}</span>

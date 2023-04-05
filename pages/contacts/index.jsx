@@ -27,17 +27,10 @@ const index = () => {
 		<>
 			<Head>
 				<title>Freedom Business Area - Contacts</title>
-				<meta property="og:title" content="Freedom Business Area" />
 				<meta
-					name="description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+					name="keywords"
+					content="contacts business incubator"
 				/>
-				<meta
-					property="og:description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
-				/>
-				<meta name="twitter:title" content="Freedom Business Area " />
-				<meta name="twitter:description" content="None" />
 			</Head>
 
 			<Hero />

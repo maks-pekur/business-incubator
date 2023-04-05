@@ -23,17 +23,10 @@ const Team = () => {
 		<>
 			<Head>
 				<title>Freedom Business Area - Team</title>
-				<meta property="og:title" content="Freedom Business Area" />
 				<meta
-					name="description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+					name="keywords"
+					content="incubator, business incubator team, it incubator, dream team"
 				/>
-				<meta
-					property="og:description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
-				/>
-				<meta name="twitter:title" content="Freedom Business Area " />
-				<meta name="twitter:description" content="None" />
 			</Head>
 
 			<Hero />

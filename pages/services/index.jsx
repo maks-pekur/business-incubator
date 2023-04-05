@@ -10,8 +10,8 @@ import { Hero } from '../../components/Hero'
 import { Reviews } from '../../components/Reviews'
 import { ServicePrice } from '../../components/ServicePrice'
 import { ServiceWhatYouGet } from '../../components/ServiceWhatYouGet'
-import { LinkScroll } from '../../components/ui/LinkScroll'
 import { UmbrellaSection } from '../../components/UmbrellaSection'
+import { LinkScroll } from '../../components/ui/LinkScroll'
 import { request } from '../../lib/datocms'
 
 export async function getStaticProps({ locale }) {
@@ -53,17 +53,10 @@ const index = ({ props, subscription }) => {
 		<>
 			<Head>
 				<title>Freedom Business Area - Service</title>
-				<meta property="og:title" content="Freedom Business Area" />
 				<meta
-					name="description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+					name="keywords"
+					content="incubator, business incubator, it incubator, services business incubator"
 				/>
-				<meta
-					property="og:description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
-				/>
-				<meta name="twitter:title" content="Freedom Business Area " />
-				<meta name="twitter:description" content="None" />
 			</Head>
 
 			<Hero />

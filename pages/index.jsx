@@ -6,11 +6,11 @@ import { Consultation } from '../components/Consultation'
 import { GreenSection } from '../components/GreenSection'
 import { Hero } from '../components/Hero'
 import { HowWeWork } from '../components/HowWeWork'
-import { LinkScroll } from '../components/ui/LinkScroll'
 import { VS } from '../components/VS'
 import { WhatYouGet } from '../components/WhatYouGet'
 import { WhatYouGetMobile } from '../components/WhatYouGetMobile'
 import { WhyPayMore } from '../components/WhyPayMore'
+import { LinkScroll } from '../components/ui/LinkScroll'
 import { useDevice } from '../hooks/useDevice'
 
 export async function getStaticProps({ locale }) {
@@ -28,20 +28,10 @@ const Home = () => {
 		<>
 			<Head>
 				<title>Freedom Business Area - Home</title>
-				<meta property="og:title" content="Freedom Business Area" />
 				<meta
-					name="description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+					name="keywords"
+					content="incubator, business incubator, it incubator"
 				/>
-				<meta
-					property="og:description"
-					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
-				/>
-				<meta name="twitter:title" content="Freedom Business Area - Home" />
-				<meta name="twitter:description" content="None" />
-				<meta property="og:type" content="website" />
-				<meta property="og:site_name" content="Freedom Business Area" />
-				<meta property="og:title" content="Freedom Business Area" />
 			</Head>
 
 			<Hero />

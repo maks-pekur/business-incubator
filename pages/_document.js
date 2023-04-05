@@ -56,7 +56,13 @@ export default class MyDocument extends Document {
 					<meta name="twitter:site" content="@codeofrelevancy" />
 
 					{/* App Favicon */}
-					<link rel="icon" href="/favicon.ico" />
+					<link rel="shortcut icon" href="/favicon.ico" />
+					<link
+						rel="shortcut icon"
+						sizes="32x32"
+						type="image/ico"
+						href="/favicon.ico"
+					/>
 				</Head>
 				<body className="bg-black font-extralight scroll-smooth">
 					<Main />

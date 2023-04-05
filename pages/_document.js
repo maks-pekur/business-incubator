@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
 	render() {
 		const { language } = this.props.__NEXT_DATA__.query
 		return (
-			<Html lang={language} className="scrollbar-hide">
+			<Html lang={language} className="scrollbar-hide scroll-smooth">
 				<Head>
 					<meta
 						http-equiv="Content-Type"
@@ -56,15 +56,9 @@ export default class MyDocument extends Document {
 					<meta name="twitter:site" content="@codeofrelevancy" />
 
 					{/* App Favicon */}
-					<link rel="shortcut icon" href="/favicon.ico" />
-					<link
-						rel="shortcut icon"
-						sizes="32x32"
-						type="image/ico"
-						href="/favicon.ico"
-					/>
+					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<body className="bg-black font-extralight scroll-smooth">
+				<body className="bg-black font-extralight">
 					<Main />
 					<NextScript />
 				</body>

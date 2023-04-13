@@ -37,7 +37,7 @@ export async function getStaticProps({ locale }) {
 	return {
 		props: {
 			subscription: {
-				enabled: false,
+				...graphqlRequest,
 				initialData: await request(graphqlRequest),
 			},
 			...(await serverSideTranslations(locale, ['services'])),

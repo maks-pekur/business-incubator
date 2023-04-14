@@ -10,7 +10,6 @@ export const founders = [
 		position: 'andrii_position',
 		mail: 'andrii_mail',
 	},
-
 	{
 		id: '02',
 		img: vlad,

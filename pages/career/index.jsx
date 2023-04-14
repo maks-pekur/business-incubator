@@ -20,7 +20,37 @@ const index = () => {
 		<>
 			<Head>
 				<title>Freedom Business Area - Career</title>
-				<meta name="keywords" content="career business incubator" />
+				<meta
+					name="description"
+					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+				/>
+				{/* Twitter Tags */}
+				<meta name="twitter:title" content="Freedom Business Area" />
+				<meta
+					name="twitter:description"
+					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+				/>
+				<meta name="twitter:image" content="/code-of-relevancy-logo.png" />
+				<meta name="twitter:image:alt" content="Freedom Business Area" />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content="@codeofrelevancy" />
+				{/* Open Graph Tags */}
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content="Freedom Business Area" />
+				<meta
+					property="og:description"
+					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+				/>
+				<meta property="og:url" content="https://fba.ink" />
+				<meta property="og:site_name" content="Freedom Business Area" />
+				<meta property="og:image" content="/code-of-relevancy-logo.png" />
+				<meta property="og:image:width" content="200" />
+				<meta property="og:image:height" content="200" />
+				<meta property="og:locale" content="en" />
+				<meta
+					name="keywords"
+					content="career business incubator, work in business incubator"
+				/>
 			</Head>
 
 			<Hero />

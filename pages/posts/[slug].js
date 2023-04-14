@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { renderMetaTags, useQuerySubscription } from 'react-datocms'
-import { request } from '../../lib/datocms'
-import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
+import { imageFields, request, seoMetaTagsFields } from '../../lib/datocms'
 
 import { useRouter } from 'next/router'
 import { MoreStories } from '../../components/Post/MoreStories'
@@ -32,12 +31,16 @@ export async function getStaticProps({ params, locale }) {
       query PostBySlug($slug: String) {
         post(locale: ${locale}, filter: {slug: {eq: $slug}}) {
           seo: _seoMetaTags {
-            ...metaTagsFragment
+            ...seoMetaTagsFields
           }
           title
           slug
           content {
-            value
+            links
+      			value
+      			blocks {
+        			id
+      			}
           }
           date
           ogImage: coverImage{
@@ -45,7 +48,7 @@ export async function getStaticProps({ params, locale }) {
           }
           coverImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
-              ...responsiveImageFragment
+              ...imageFields
             }
           }
           author {
@@ -62,7 +65,7 @@ export async function getStaticProps({ params, locale }) {
           date
           coverImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
-              ...responsiveImageFragment
+              ...imageFields
             }
           }
           author {
@@ -73,8 +76,8 @@ export async function getStaticProps({ params, locale }) {
           }
         }
       }
-      ${responsiveImageFragment}
-      ${metaTagsFragment}
+      ${imageFields}
+      ${seoMetaTagsFields}
     `,
 		variables: {
 			slug: params.slug,
@@ -86,7 +89,7 @@ export async function getStaticProps({ params, locale }) {
 			subscription: {
 				...graphqlRequest,
 				initialData: await request(graphqlRequest),
-				token: process.env.NEXT_PUBLIC_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+				token: process.env.NEXT_PUBLIC_DATOCMS_READONLY_TOKEN,
 			},
 		},
 	}

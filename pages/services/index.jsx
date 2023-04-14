@@ -15,11 +15,10 @@ import { LinkScroll } from '../../components/ui/LinkScroll'
 import { request } from '../../lib/datocms'
 
 export async function getStaticProps({ locale }) {
-	const formattedLocale = locale.split('-')[0]
 	const graphqlRequest = {
 		query: `
       {
-        allComments(locale: ${formattedLocale}) {
+        comments: allComments(locale: ${locale}) {
           slug
           text
           user
@@ -39,6 +38,7 @@ export async function getStaticProps({ locale }) {
 			subscription: {
 				...graphqlRequest,
 				initialData: await request(graphqlRequest),
+				token: process.env.NEXT_PUBLIC_DATOCMS_READONLY_TOKEN,
 			},
 			...(await serverSideTranslations(locale, ['services'])),
 		},
@@ -48,11 +48,38 @@ export async function getStaticProps({ locale }) {
 const index = ({ props, subscription }) => {
 	const { t } = useTranslation()
 	const { data } = useQuerySubscription(subscription)
-	const { allComments } = data
+
 	return (
 		<>
 			<Head>
 				<title>Freedom Business Area - Service</title>
+				<meta
+					name="description"
+					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+				/>
+				{/* Twitter Tags */}
+				<meta name="twitter:title" content="Freedom Business Area" />
+				<meta
+					name="twitter:description"
+					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+				/>
+				<meta name="twitter:image" content="/code-of-relevancy-logo.png" />
+				<meta name="twitter:image:alt" content="Freedom Business Area" />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content="@codeofrelevancy" />
+				{/* Open Graph Tags */}
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content="Freedom Business Area" />
+				<meta
+					property="og:description"
+					content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."
+				/>
+				<meta property="og:url" content="https://fba.ink" />
+				<meta property="og:site_name" content="Freedom Business Area" />
+				<meta property="og:image" content="/code-of-relevancy-logo.png" />
+				<meta property="og:image:width" content="200" />
+				<meta property="og:image:height" content="200" />
+				<meta property="og:locale" content="en" />
 				<meta
 					name="keywords"
 					content="incubator, business incubator, it incubator, services business incubator"
@@ -72,7 +99,7 @@ const index = ({ props, subscription }) => {
 			</GreenSection>
 			<ForWhom />
 			<ServiceWhatYouGet />
-			<Reviews reviews={allComments} />
+			<Reviews reviews={data.comments} />
 			<Consultation numSection={'07'} />
 		</>
 	)

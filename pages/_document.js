@@ -7,13 +7,9 @@ export default class MyDocument extends Document {
 			<Html lang={language} className="scrollbar-hide scroll-smooth">
 				<Head>
 					<meta
-						http-equiv="Content-Type"
+						httpEquiv="Content-Type"
 						content="text/html; charset=UTF-8"
 					></meta>
-					<meta
-						name="viewport"
-						content="width=device-width, initial-scale=1.0"
-					/>
 					<meta
 						name="description"
 						content="Бизнес-инкубатор Freedom Business Area предлагает комплексные услуги по бизнес-эмиграции, регистрации предприятия (открытия фирмы ооо), продвижения своего бизнеса в Польше."

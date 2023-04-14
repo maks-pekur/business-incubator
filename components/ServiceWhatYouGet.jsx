@@ -24,14 +24,14 @@ export const ServiceWhatYouGet = () => {
 						</div>
 						<div className="flex flex-col items-start space-y-3">
 							{[...Array(8)].map((item, idx) => (
-								<div className="border-b-[1px] w-full">
+								<div key={idx} className="border-b-[1px] w-full">
 									<Disclosure as="div">
 										{({ open }) => (
 											<>
 												<Disclosure.Button className="w-full text-start py-3 md:text-2xl flex items-center justify-between">
 													{t(`services:05.questions.${idx + 1}.q`)}
 													<ChevronRightIcon
-														className={open && 'rotate-90 transform'}
+														className={open ? 'rotate-90 transform' : ''}
 														width={24}
 														height={24}
 													/>

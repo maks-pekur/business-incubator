@@ -108,7 +108,7 @@ const index = ({ subscription }) => {
 											<Disclosure.Button className="w-full text-start py-3 md:text-2xl flex items-center justify-between">
 												{item.question}
 												<ChevronRightIcon
-													className={open && 'rotate-90 transform'}
+													className={open ? 'rotate-90 transform' : ''}
 													width={24}
 													height={24}
 												/>

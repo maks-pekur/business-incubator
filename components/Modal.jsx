@@ -1,7 +1,7 @@
 import { Dialog } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-import ContactForm from '../components/ui/ContactForm'
+import { ContactForm } from '../components/ui/ContactForm'
 import { useModal } from '../hooks/useModal'
 import { Heading } from './ui/Heading'
 

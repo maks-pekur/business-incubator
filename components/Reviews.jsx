@@ -52,7 +52,7 @@ export const Reviews = ({ reviews }) => {
 						slidesPerView={device === 'mobile' ? 1 : 2}
 						className="grid"
 					>
-						{reviews.map(review => (
+						{reviews.map((review, idx) => (
 							<SwiperSlide>
 								<Link
 									href={review.path}

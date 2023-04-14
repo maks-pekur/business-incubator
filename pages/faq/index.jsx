@@ -19,7 +19,7 @@ export async function getStaticProps({ locale }) {
 	const graphqlRequest = {
 		query: `
       {
-        allFaqs(locale: ${formattedLocale}) {
+        faqs: allFaqs(locale: ${formattedLocale}) {
 					id
           question
 					answer
@@ -33,15 +33,15 @@ export async function getStaticProps({ locale }) {
 			subscription: {
 				...graphqlRequest,
 				initialData: await request(graphqlRequest),
+				token: process.env.NEXT_PUBLIC_EXAMPLE_CMS_DATOCMS_API_TOKEN,
 			},
 		},
 	}
 }
 
 const index = ({ subscription }) => {
-	const {
-		data: { allFaqs },
-	} = useQuerySubscription(subscription)
+	const { data, error, status } = useQuerySubscription(subscription)
+
 	const getFormatedText = text => {
 		return text.split('\n').map((str, i) => <p key={`p_${i}`}>{str}</p>)
 	}
@@ -54,8 +54,21 @@ const index = ({ subscription }) => {
 					<div className="mb-10">
 						<NumSection number={'01'} variant={'green'} title={'F.A.Q.'} />
 					</div>
+					{error && (
+						<div className="max-w-screen-sm my-12 mx-auto">
+							<h1 className="title-font text-lg font-bold text-gray-900 mb-3">
+								Error: {error.code}
+							</h1>
+							<div className="my-5">{error.message}</div>
+							{error.response && (
+								<pre className="bg-gray-100 p-5 mt-5 font-mono">
+									{JSON.stringify(error.response, null, 2)}
+								</pre>
+							)}
+						</div>
+					)}
 					<div>
-						{allFaqs.map(item => (
+						{data.faqs.map(item => (
 							<div
 								key={item.id}
 								className="border-b-[1px] border-black w-full p-3"

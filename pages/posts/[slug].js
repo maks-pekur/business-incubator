@@ -13,6 +13,7 @@ import { blogTranslation } from '../../translations/blog'
 export async function getStaticPaths({ locales }) {
 	const data = await request({ query: `{ allPosts { slug } }` })
 	const pathsArray = []
+
 	data.allPosts.map(post => {
 		locales.map(language => {
 			pathsArray.push({ params: { slug: post.slug }, locale: language })
@@ -26,11 +27,10 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-	const formattedLocale = locale.split('-')[0]
 	const graphqlRequest = {
 		query: `
       query PostBySlug($slug: String) {
-        post(locale: ${formattedLocale}, filter: {slug: {eq: $slug}}) {
+        post(locale: ${locale}, filter: {slug: {eq: $slug}}) {
           seo: _seoMetaTags {
             ...metaTagsFragment
           }
@@ -38,17 +38,6 @@ export async function getStaticProps({ params, locale }) {
           slug
           content {
             value
-            blocks {
-              __typename
-              ...on ImageBlockRecord {
-                id
-                image {
-                  responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
-                    ...responsiveImageFragment
-                  }
-                }
-              }
-            }
           }
           date
           ogImage: coverImage{
@@ -66,7 +55,7 @@ export async function getStaticProps({ params, locale }) {
             }
           }
         }
-        morePosts: allPosts(locale: ${formattedLocale}, orderBy: date_DESC, first: 2, filter: {slug: {neq: $slug}}) {
+        morePosts: allPosts(locale: ${locale}, orderBy: date_DESC, first: 2, filter: {slug: {neq: $slug}}) {
           title
           slug
           excerpt
@@ -97,6 +86,7 @@ export async function getStaticProps({ params, locale }) {
 			subscription: {
 				...graphqlRequest,
 				initialData: await request(graphqlRequest),
+				token: process.env.NEXT_PUBLIC_EXAMPLE_CMS_DATOCMS_API_TOKEN,
 			},
 		},
 	}
@@ -104,25 +94,36 @@ export async function getStaticProps({ params, locale }) {
 
 const Post = ({ subscription }) => {
 	const { locale } = useRouter()
-	const {
-		data: { post, morePosts },
-	} = useQuerySubscription(subscription)
-
-	const metaTags = post.seo
+	const { data, error, status } = useQuerySubscription(subscription)
+	const metaTags = data.post.seo
 
 	return (
 		<>
 			<Head>{renderMetaTags(metaTags)}</Head>
 
 			<div className="max-w-6xl mx-auto bg-white rounded-3xl p-6 md:p-10 my-20 md:my-36">
+				{error && (
+					<div className="max-w-screen-sm my-12 mx-auto">
+						<h1 className="title-font text-lg font-bold text-gray-900 mb-3">
+							Error: {error.code}
+						</h1>
+						<div className="my-5">{error.message}</div>
+						{error.response && (
+							<pre className="bg-gray-100 p-5 mt-5 font-mono">
+								{JSON.stringify(error.response, null, 2)}
+							</pre>
+						)}
+					</div>
+				)}
+
 				<article>
 					<PostHeader
-						title={post.title}
-						coverImage={post.coverImage}
-						date={post.date}
-						author={post.author}
+						title={data.post.title}
+						coverImage={data.post.coverImage}
+						date={data.post.date}
+						author={data.post.author}
 					/>
-					<PostBody content={post.content} />
+					<PostBody content={data.post.content} />
 				</article>
 			</div>
 
@@ -130,7 +131,7 @@ const Post = ({ subscription }) => {
 				<div className="mb-10">
 					<Heading tag={'h2'}>{blogTranslation.more[locale]}</Heading>
 				</div>
-				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+				{data.morePosts.length > 0 && <MoreStories posts={data.morePosts} />}
 			</div>
 		</>
 	)

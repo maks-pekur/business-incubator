@@ -9,8 +9,7 @@ import { metaTagsFragment, responsiveImageFragment } from '../../lib/fragments'
 
 import { blogTranslation } from '../../translations/blog'
 
-export async function getStaticProps({ locale }) {
-	const formattedLocale = locale.split('-')[0]
+export async function getServerSideProps({ locale }) {
 	const graphqlRequest = {
 		query: `
       {
@@ -19,7 +18,7 @@ export async function getStaticProps({ locale }) {
             ...metaTagsFragment
           }
         }
-        allPosts(locale: ${formattedLocale}) {
+        posts: allPosts(locale: ${locale}) {
           title
           slug
           excerpt
@@ -37,8 +36,8 @@ export async function getStaticProps({ locale }) {
           }
         }
       }
-      ${metaTagsFragment}
       ${responsiveImageFragment}
+			${metaTagsFragment}
     `,
 	}
 
@@ -47,6 +46,7 @@ export async function getStaticProps({ locale }) {
 			subscription: {
 				...graphqlRequest,
 				initialData: await request(graphqlRequest),
+				token: process.env.NEXT_PUBLIC_EXAMPLE_CMS_DATOCMS_API_TOKEN,
 			},
 		},
 	}
@@ -54,10 +54,8 @@ export async function getStaticProps({ locale }) {
 
 const index = ({ subscription }) => {
 	const { locale } = useRouter()
-	const {
-		data: { allPosts, blog },
-	} = useQuerySubscription(subscription)
-	const metaTags = blog.seo
+	const { data, error, status } = useQuerySubscription(subscription)
+	const metaTags = data.blog.seo
 
 	return (
 		<>
@@ -71,8 +69,23 @@ const index = ({ subscription }) => {
 						variant={'green'}
 					/>
 				</div>
+
+				{error && (
+					<div className="max-w-screen-sm my-12 mx-auto">
+						<h1 className="title-font text-lg font-bold text-gray-900 mb-3">
+							Error: {error.code}
+						</h1>
+						<div className="my-5">{error.message}</div>
+						{error.response && (
+							<pre className="bg-gray-100 p-5 mt-5 font-mono">
+								{JSON.stringify(error.response, null, 2)}
+							</pre>
+						)}
+					</div>
+				)}
+
 				<div>
-					<MoreStories posts={allPosts} />
+					<MoreStories posts={data.posts} />
 				</div>
 			</section>
 		</>

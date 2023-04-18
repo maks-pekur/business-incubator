@@ -6,12 +6,13 @@ import { useRef, useState } from 'react'
 import { Form, Formik } from 'formik'
 import { useTranslation } from 'next-i18next'
 import PhoneInput from 'react-phone-input-2'
-import { toast, ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import * as Yup from 'yup'
 import { Button } from './ui/Button'
 
 import uploadImg from '../public/assets/images/upload.svg'
 
+import Link from 'next/link'
 import 'react-phone-input-2/lib/style.css'
 
 const resumeSchema = Yup.object().shape({
@@ -254,11 +255,18 @@ export const Resume = () => {
 								/>
 								<label
 									htmlFor="checkbox"
-									className={`${
+									className={`text-sm ${
 										errors.checkbox ? 'text-red-500' : 'text-gray-500'
 									}`}
 								>
-									{t('career:resume.policy')}
+									{t('career:resume.policy')}{' '}
+									<Link
+										href="/privacy"
+										target="_blank"
+										className="text-black underline"
+									>
+										{t('career:resume.policy_link')}
+									</Link>
 								</label>
 							</div>
 						</div>

@@ -9,10 +9,18 @@ import { ModalProvider } from '../hooks/useModal'
 import '../styles/globals.css'
 
 const coockieText = {
-	uk: 'Цей сайт використовує coockie-файли та інші технології для надання кращого користувацького досвіду та аналізу використання наших продуктів і послуг.',
-	en: 'This site uses coockie files and other technologies to provide a better user experience and analysis of the use of our products and services.',
-	pl: 'Ta strona internetowa wykorzystuje pliki coockie i inne technologie w celu zapewnienia lepszego doświadczenia użytkownika i analizy korzystania z naszych produktów i usług.',
-	ru: 'Этот сайт использует coockie-файлы и другие технологии для предоставления лучшего пользовательского опыта и анализа использования наших продуктов и услуг.',
+	message: {
+		uk: 'Цей сайт використовує coockie-файли та інші технології для надання кращого користувацького досвіду та аналізу використання наших продуктів і послуг.',
+		en: 'This site uses coockie files and other technologies to provide a better user experience and analysis of the use of our products and services.',
+		pl: 'Ta strona internetowa wykorzystuje pliki coockie i inne technologie w celu zapewnienia lepszego doświadczenia użytkownika i analizy korzystania z naszych produktów i usług.',
+		ru: 'Этот сайт использует coockie-файлы и другие технологии для предоставления лучшего пользовательского опыта и анализа использования наших продуктов и услуг.',
+	},
+	btn: {
+		uk: 'Так, я згоден',
+		en: 'Yes I agree',
+		pl: 'Tak, zgadzam się.',
+		ru: 'Да, я согласен.',
+	},
 }
 const App = ({ Component, pageProps }) => {
 	const { locale } = useRouter()
@@ -26,14 +34,20 @@ const App = ({ Component, pageProps }) => {
 			</DeviceProvider>
 			<CookieConsent
 				location="top"
-				buttonText="Ok"
+				buttonText={coockieText.btn[locale]}
 				cookieName="fba_coockie"
+				expires={999}
+				overlay
 				style={{
 					background: '#2B373B',
 					display: 'flex',
 					alignItems: 'center',
+					textAlign: 'center',
 					justifyContent: 'center',
 					borderRadius: '0px 0px 30px 30px',
+					padding: '10px 30px',
+					zIndex: 10000,
+					opacity: 1,
 				}}
 				buttonStyle={{
 					color: '#4e503b',
@@ -42,9 +56,12 @@ const App = ({ Component, pageProps }) => {
 					borderRadius: '30px',
 					padding: '12px 30px',
 				}}
-				expires={150}
+				overlayStyle={{
+					backgroundColor: 'rgba(0,0,0,0.8)',
+					zIndex: 9999,
+				}}
 			>
-				{coockieText[locale]}
+				{coockieText.message[locale]}
 			</CookieConsent>
 		</ModalProvider>
 	)

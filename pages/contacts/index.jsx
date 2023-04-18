@@ -68,11 +68,23 @@ const index = () => {
 						/>
 					</div>
 					<div className="w-full flex flex-col items-end">
-						<div className="md:max-w-[50%] space-y-10 mb-10">
-							<Heading tag={'h2'}>{t('contact:title')}</Heading>
-							<Heading tag={'h4'} classNames={'text-gray-500'}>
+						<div className="md:max-w-[50%] mb-10">
+							<Heading tag={'h2'} classNames="mb-8">
+								{t('contact:title')}
+							</Heading>
+							<Heading tag={'h4'} classNames={'text-gray-500 mb-4'}>
 								{t('contact:text_1')}
 							</Heading>
+							<div className="text-sm text-gray-500 mb-6">
+								{t('contact:text_2')}{' '}
+								<Link
+									href="/privacy"
+									target="_blank"
+									className="text-black underline"
+								>
+									{t('contact:text_3')}
+								</Link>
+							</div>
 							<SocialLinks fill={'#929292'} />
 						</div>
 						<div className="w-full flex flex-col md:items-end mb-10">

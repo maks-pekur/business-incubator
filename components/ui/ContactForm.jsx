@@ -2,10 +2,11 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
-import { toast, ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import { consultation } from '../../translations/consultation'
 import { Button } from './Button'
 
+import Link from 'next/link'
 import 'react-phone-input-2/lib/style.css'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -16,10 +17,21 @@ const style = {
 }
 
 const chcekboxText = {
-	ru: 'Даю согласие на обработку персональных данных',
-	uk: 'Даю згоду на обробку персональних даних',
-	pl: 'Wyrażam zgodę na przetwarzanie danych osobowych',
-	en: 'I agree to the processing of my personal data.',
+	text: {
+		ru: 'Я согласен получать от фонда Freedom Business Area с юридическим адресом в Радоме, в электронном виде, на указанный мной адрес электронной почты, или по телефону, коммерческую информацию об услугах, предлагаемых фондом Freedom Business Area с юридическим адресом в Радоме. Мне известно, что я могу отозвать свое согласие в любое время. Информацию об обработке персональных данных Фондом Freedom Business Area с юридическим адресом в Радоме можно найти в разделе',
+
+		uk: 'Я погоджуюся отримувати від Фундації Freedom Business Area, що базується у Радомі в електронному вигляді на вказану мною електронну адресу або по телефону комерційну інформацію, що стосується послуг, пропонованих Фундацією Freedom Business Area, що базується у Радомі. Мені відомо, що я можу в будь-який момент відкликати свою згоду. Інформацію про обробку персональних даних Фундацією Freedom Business Area, що базується у Радомі можна знайти в',
+
+		pl: 'Wyrażam zgodę na otrzymywanie od Fundacji Freedom Business Area z siedzibą w Radomiu drogą elektroniczną, na wskazany przeze mnie adres e-mail lub telefonicznie informacji handlowych dotyczących oferowanych przez Fundację Freedom Business z siedzibą w Radomiu usług. Jestem świadomy/a, że w każdej chwili mogę wycofać swoją zgodę. Informacje na temat przetwarzania danych osobowych przez Fundację Freedom Business z siedzibą w Radomiu znajdują się w',
+
+		en: 'I agree to receive from the Freedom Business Area Foundation based in Radom electronically, at the e-mail address I have indicated, or by telephone, commercial information concerning the services offered by the Freedom Business Area Foundation based in Radom. I am aware that I may withdraw my consent at any time. Information on the processing of personal data by Freedom Business Foundation based in Radom can be found in the',
+	},
+	link: {
+		ru: 'Политика конфиденциальности.',
+		uk: 'Політика конфіденційності.',
+		pl: 'Polityce Prywatności.',
+		en: 'Privacy Policy.',
+	},
 }
 
 const toastText = {
@@ -244,11 +256,18 @@ export const ContactForm = () => {
 							/>
 							<label
 								htmlFor="checkbox"
-								className={`text-gray-500 ${
+								className={`text-gray-500 text-sm ${
 									errors.checkbox?.type === 'required' && 'text-red-500'
 								}`}
 							>
-								{chcekboxText[locale]}
+								{chcekboxText.text[locale]}{' '}
+								<Link
+									className="text-black underline"
+									href="/privacy"
+									target="_blank"
+								>
+									{chcekboxText.link[locale]}
+								</Link>
 							</label>
 						</div>
 					)}

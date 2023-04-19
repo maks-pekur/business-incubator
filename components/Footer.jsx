@@ -55,10 +55,10 @@ export const Footer = () => {
 								stroke={'#929292'}
 							/>
 							<Link
-								href="tel:+48737308669"
+								href="tel:+48799289778"
 								className="hover:text-white transition duration-300"
 							>
-								+48 737 308 669
+								+48 799 289 778
 							</Link>
 						</div>
 						<div className="flex items-center space-x-3">

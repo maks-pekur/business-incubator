@@ -94,7 +94,7 @@ const index = () => {
 							</div>
 							<div className="md:w-[50%] flex items-center space-x-6 border-t-[1px] border-black py-6">
 								<Image src={phone} width={40} height={40} alt="mail" />
-								<Link href={'tel:+48737308669'}>+48 737 308 669</Link>
+								<Link href={'tel:++48799289778'}>+48 799 289 778</Link>
 							</div>
 							<div className="md:w-[50%] flex items-center space-x-6 border-t-[1px] border-black py-6">
 								<Image src={local} width={40} height={40} alt="mail" />

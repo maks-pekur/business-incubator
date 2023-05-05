@@ -248,11 +248,11 @@ export const ContactForm = () => {
 					control={control}
 					rules={{ required: true }}
 					render={({ field }) => (
-						<div className="w-full flex space-x-6">
+						<div className="w-full flex flex-col md:flex-row items-center space-y-6 space-x-6">
 							<input
 								{...field}
 								type="checkbox"
-								className="border-[1px] border-black placeholder:text-gray-500"
+								className="border-[1px] border-black placeholder:text-gray-500 h-6 w-6"
 							/>
 							<label
 								htmlFor="checkbox"
